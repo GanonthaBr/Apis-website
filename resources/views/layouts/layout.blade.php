@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>HELPZ - Free Charity Website Template</title>
+        <title>Apis Sahel</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="Free Website Template" name="keywords" />
-        <meta content="Free Website Template" name="description" />
+        <meta content="Apis-Sahel" name="keywords" />
+        <meta content="Action et Programme d'Impact au Sahel" name="description" />
 
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon" />
