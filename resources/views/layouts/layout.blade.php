@@ -8,7 +8,7 @@
         <meta content="Action et Programme d'Impact au Sahel" name="description" />
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon" />
+        <link href="{{asset('img/apis.png')}}" rel="icon" />
 
         <!-- Google Font -->
         <link
