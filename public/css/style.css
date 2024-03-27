@@ -442,7 +442,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #17468a;
+    color: #fff;
     background: rgba(256, 256, 256, 0.2);
     font-size: 22px;
     transition: 0.3s;
