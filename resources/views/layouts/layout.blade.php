@@ -15,7 +15,12 @@
             href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
         <!-- CSS Libraries -->
         <link
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -113,14 +118,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p>
-                            &copy; <a href="#">Your Site Name</a>, All Right
-                            Reserved.
+                           {{Date('Y')}} &copy; <a href="apis-sahel.org">Apis Sahel  </a>, Tout Droit réservé.
                         </p>
                     </div>
                     <div class="col-md-6">
                         <p>
-                            Designed By
-                            <a href="https://htmlcodex.com">HTML Codex</a>
+                            Conçu  par
+                            <a href="https://htmlcodex.com">Apis Sahel</a>
                         </p>
                     </div>
                 </div>
