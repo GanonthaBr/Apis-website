@@ -364,4 +364,4 @@
         <!-- Blog Start -->
         @include('partials.blogs.index')
         <!-- Blog End -->
-@endsection
+@stop

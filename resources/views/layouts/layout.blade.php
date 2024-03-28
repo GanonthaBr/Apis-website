@@ -42,9 +42,11 @@
     </head>
 
     <body>
+  <!-- Debut Top Bar -->
+      
+     @yield('content')
+       
 
-        
-@yield('content')
     
         
         <!-- Footer Start -->

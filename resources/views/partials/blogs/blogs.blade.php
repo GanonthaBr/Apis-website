@@ -1,9 +1,4 @@
-@extends('layouts.layout') 
-  @section('content')
-            @include('includes.topbar')
-            @include('partials.navbar')
-
-            <div class="container blog">
+<div class="container">
                 <div class="section-header text-center">
                     <p>Our Blog</p>
                     <h2>Latest news & articles directly from our blog</h2>
@@ -86,5 +81,3 @@
                     </div>
                 </div>
             </div>
-        
-@stop
