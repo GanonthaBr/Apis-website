@@ -12,13 +12,13 @@
                               La sécurité alimentaire est une condition préalable à la santé et au bien-être de tous. APIS œuvre pour un accès physique, social et économique à une nourriture suffisante, saine et nutritive pour les communautés rurales.
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
+                                <a class="btn btn-custom" href="">Faire un Don</a>
                                 <a
                                     class="btn btn-custom btn-play"
                                     data-toggle="modal"
                                     data-src="https://www.youtube.com/embed/F5y8mjrP1TM"
                                     data-target="#videoModal"
-                                    >Watch Video</a
+                                    >Voir Vidéo</a
                                 >
                             </div>
                         </div>
@@ -34,14 +34,14 @@
                                 APIS intervient dans les situations d'urgence humanitaire pour sauver des vies, soulager la souffrance et préserver la dignité des populations affectées par les conflits armés, les catastrophes naturelles et les épidémies.
                                 
                             </p>
-                            <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
+                             <div class="carousel-btn">
+                                <a class="btn btn-custom" href="">Faire un Don</a>
                                 <a
                                     class="btn btn-custom btn-play"
                                     data-toggle="modal"
-                                    data-src="https://youtu.be/i78losNIjIY"
+                                    data-src="https://www.youtube.com/embed/F5y8mjrP1TM"
                                     data-target="#videoModal"
-                                    >Watch Video</a
+                                    >Voir Vidéo</a
                                 >
                             </div>
                         </div>
@@ -56,14 +56,14 @@
                                 {{-- Ecrire en 2 phrases une description de APIS oeuvrant dans la nutrition et la sante --}}
                                 APIS s'engage à améliorer la santé et la nutrition des populations rurales en leur donnant accès à des services de santé de qualité et à une alimentation saine et nutritive.
                             </p>
-                            <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
+                             <div class="carousel-btn">
+                                <a class="btn btn-custom" href="">Faire un Don</a>
                                 <a
                                     class="btn btn-custom btn-play"
                                     data-toggle="modal"
-                                    data-src="https://youtu.be/i78losNIjIY"
+                                    data-src="https://www.youtube.com/embed/F5y8mjrP1TM"
                                     data-target="#videoModal"
-                                    >Watch Video</a
+                                    >Voir Vidéo</a
                                 >
                             </div>
                         </div>
@@ -78,14 +78,15 @@
                                 {{-- Ecrire en 2 phrases une description de APIS oeuvrant pour  l'education et le developpement --}}
                                 APIS s'engage à améliorer l'accès à une éducation de qualité pour les enfants et les jeunes des communautés rurales, en particulier les filles, pour leur permettre de réaliser leur plein potentiel et de contribuer au développement de leur communauté.
                             </p>
-                            <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
+                           
+                             <div class="carousel-btn">
+                                <a class="btn btn-custom" href="">Faire un Don</a>
                                 <a
                                     class="btn btn-custom btn-play"
                                     data-toggle="modal"
-                                    data-src="https://youtu.be/i78losNIjIY"
+                                    data-src="https://www.youtube.com/embed/F5y8mjrP1TM"
                                     data-target="#videoModal"
-                                    >Watch Video</a
+                                    >Voir Vidéo</a
                                 >
                             </div>
                         </div>
