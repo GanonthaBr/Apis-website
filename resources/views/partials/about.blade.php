@@ -5,13 +5,13 @@
                         <div
                             class="about-img"
                             data-parallax="scroll"
-                            data-image-src="img/about.jpg"
+                            data-image-src="img/carousel-4.png"
                         ></div>
                     </div>
                     <div class="col-lg-6">
                         <div class="section-header">
-                            <p>Learn About Us</p>
-                            <h2>Worldwide non-profit charity organization</h2>
+                            <p>À propos de nous.</p>
+                            <h2>Actions et Programmes d'impacts au Sahel</h2>
                         </div>
                         <div class="about-tab">
                             <ul class="nav nav-pills nav-justified">
@@ -46,48 +46,19 @@
                                     id="tab-content-1"
                                     class="container tab-pane active"
                                 >
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. In vitae pellentesque
-                                    turpis. Donec in hendrerit dui, vel blandit
-                                    massa. Ut vestibulum suscipit cursus. Cras
-                                    quis porta nulla, ut placerat risus. Aliquam
-                                    nec magna eget velit luctus dictum.
-                                    Phasellus et felis sed purus tristique
-                                    dignissim. Morbi sit amet leo at purus
-                                    accumsan pellentesque. Vivamus fermentum
-                                    nisi vel dapibus blandit. Lorem ipsum dolor
-                                    sit amet, consectetur adipiscing elit.
+                                 Créée par un groupe de spécialistes œuvrant ou ayant servis dans le domaine de la sécurité alimentaire, santé et nutrition et développement socio-économique des communautés rurales. Ceux-ci sont conscients que leur contribution dans leurs domaines respectifs est d’une grande importante pour conjuguer les efforts avec les autres fils et filles de la nation qui se voient dans l’obligation de développer des actions et programmes appropriés pour relever le défi que rencontre le peuple sahélien vivant en milieu rural en général et le peuple nigérien en particulier.
                                 </div>
                                 <div
                                     id="tab-content-2"
                                     class="container tab-pane fade"
                                 >
-                                    Sed tincidunt, magna ut vehicula volutpat,
-                                    turpis diam condimentum justo, posuere
-                                    congue turpis massa in mi. Proin ornare at
-                                    massa at fermentum. Nunc aliquet sed nisi
-                                    iaculis ornare. Nam semper tortor eget est
-                                    egestas, eu sagittis nunc sodales. Interdum
-                                    et malesuada fames ac ante ipsum primis in
-                                    faucibus. Praesent bibendum sapien sed purus
-                                    molestie malesuada. Lorem ipsum dolor sit
-                                    amet, consectetur adipiscing elit.
+                                  Développer de façon participative des Nouvelles «Connaissances, Attitudes et Pratiques (CAP)», Programmes et Initiatives d'Impact et de Développement Rurale; ainsi que le Renforcement des Capacités des Organisations Paysanes (OP).
                                 </div>
                                 <div
                                     id="tab-content-3"
                                     class="container tab-pane fade"
                                 >
-                                    Aliquam dolor odio, mollis sed feugiat sit
-                                    amet, feugiat ut sapien. Nunc eu dignissim
-                                    lorem. Suspendisse at hendrerit enim.
-                                    Interdum et malesuada fames ac ante ipsum
-                                    primis in faucibus. Sed condimentum semper
-                                    turpis vel facilisis. Nunc vel faucibus
-                                    orci. Mauris ut mauris rhoncus, efficitur
-                                    nisi at, venenatis quam. Praesent egestas
-                                    pretium enim sit amet finibus. Curabitur at
-                                    erat molestie, tincidunt lorem eget,
-                                    consequat ligula.
+                                   Accompagner les Communautés Rurales dans la Satisfaction de leurs Besoins de Base et de Changement de leur Mentalité vis à vis d'un Développement Harmonieux.
                                 </div>
                             </div>
                         </div>
