@@ -17,17 +17,38 @@
                 >
                     <div class="navbar-nav ml-auto">
                         <a href="index.html" class="nav-item nav-link active"
-                            >Home</a
+                            >Accueil</a
                         >
-                        <a href="about.html" class="nav-item nav-link">About</a>
+                        {{-- <a href="about.html" class="nav-item nav-link">Qui sommes-nous?</a> --}}
+                    <div class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-toggle="dropdown"
+                                >Qui sommes-nous?</a
+                            >
+                            <div class="dropdown-menu">
+                                <a href="single.html" class="dropdown-item"
+                                    >Mot du Secretaire</a
+                                >
+                                <a href="service.html" class="dropdown-item"
+                                    >Notre histoire</a
+                                >
+                                <a href="team.html" class="dropdown-item"
+                                    >Notre Equipe</a
+                                >
+                               
+                            </div>
+                        </div> 
+                        
                         <a href="causes.html" class="nav-item nav-link"
-                            >Causes</a
+                            >Domaines d'intervention</a
                         >
                         <a href="event.html" class="nav-item nav-link"
-                            >Events</a
+                            >Événements</a
                         >
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <div class="nav-item dropdown">
+                        <a href="blog.html" class="nav-item nav-link">Actualités</a>
+                        {{-- <div class="nav-item dropdown">
                             <a
                                 href="#"
                                 class="nav-link dropdown-toggle"
@@ -51,7 +72,7 @@
                                     >Become A Volunteer</a
                                 >
                             </div>
-                        </div>
+                        </div> --}}
                         <a href="contact.html" class="nav-item nav-link"
                             >Contact</a
                         >
