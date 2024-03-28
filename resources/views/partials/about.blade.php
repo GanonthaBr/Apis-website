@@ -47,6 +47,10 @@
                                     class="container tab-pane active"
                                 >
                                  Créée par un groupe de spécialistes œuvrant ou ayant servis dans le domaine de la sécurité alimentaire, santé et nutrition et développement socio-économique des communautés rurales. Ceux-ci sont conscients que leur contribution dans leurs domaines respectifs est d’une grande importante pour conjuguer les efforts avec les autres fils et filles de la nation qui se voient dans l’obligation de développer des actions et programmes appropriés pour relever le défi que rencontre le peuple sahélien vivant en milieu rural en général et le peuple nigérien en particulier.
+                            <div class="carousel-btn">
+                                <a class="btn btn-custom" href="">En savoir plus</a>
+                            </div>
+
                                 </div>
                                 <div
                                     id="tab-content-2"
