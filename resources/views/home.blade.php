@@ -1,1 +1,1 @@
-@extends('frontend.master')
+@include('frontend.master')

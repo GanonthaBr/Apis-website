@@ -49,7 +49,7 @@
                         <a href="event.html" class="nav-item nav-link"
                             >Événements</a
                         >
-                        <a href="blog.html" class="nav-item nav-link">Actualités</a>
+                        <a href="/blogs" class="nav-item nav-link">Actualités</a>
                         {{-- <div class="nav-item dropdown">
                             <a
                                 href="#"

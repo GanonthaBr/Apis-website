@@ -42,6 +42,8 @@
     </head>
 
     <body>
+
+        
 @yield('content')
     
         

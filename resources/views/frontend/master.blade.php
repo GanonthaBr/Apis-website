@@ -362,6 +362,6 @@
         <!-- Contact End -->
 
         <!-- Blog Start -->
-        @include('partials.blogs')
+        @include('partials.blogs.index')
         <!-- Blog End -->
 @endsection

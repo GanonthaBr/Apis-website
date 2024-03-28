@@ -21,16 +21,16 @@ h6 {
 }
 
 a {
-    color: #4a4c70;
+    color: #fff;
     transition: 0.3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #17468a;
+    color: #fff;
     outline: none;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .btn.btn-custom {
@@ -67,6 +67,99 @@ a:focus {
 [class*=" flaticon-"]:after {
     font-size: inherit;
     margin-left: 0;
+}
+/**********************************/
+/****** Extra CSS ******/
+/**********************************/
+/* BLOG */
+
+.blog {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+/* TOP BAR */
+.top-bar {
+    position: absolute;
+    height: 45px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-bar .top-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-bar .top-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-bar .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 45px;
+    padding: 0 10px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-bar .text:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-bar .text i {
+    font-size: 16px;
+    color: #17468a;
+    margin-right: 5px;
+}
+
+.top-bar.include .text p {
+    color: #17468a;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.top-bar .social {
+    display: flex;
+    height: 45px;
+    font-size: 0;
+    justify-content: flex-end;
+}
+
+.top-bar .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 100%;
+    font-size: 16px;
+    color: #17468a;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-bar .social a:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-bar .social a:hover {
+    color: #ffffff;
+    background: #17468a;
+}
+
+@media (min-width: 992px) {
+    .top-bar {
+        padding: 0 60px;
+    }
 }
 
 /**********************************/
