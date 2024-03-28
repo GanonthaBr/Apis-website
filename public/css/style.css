@@ -259,17 +259,18 @@ a:focus {
 
 .navbar .navbar-brand {
     margin: 0;
-    color: #ffffff;
+    /* color: #ffffff;
     font-size: 45px;
     line-height: 0px;
     font-weight: 700;
     letter-spacing: 5px;
-    text-transform: uppercase;
+    text-transform: uppercase; */
+    background: #fff;
+    border-radius: 10px;
 }
-
 .navbar .navbar-brand img {
     max-width: 100%;
-    max-height: 40px;
+    max-height: 70px;
 }
 
 .navbar-dark .navbar-nav .nav-link,

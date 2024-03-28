@@ -1,7 +1,9 @@
 
      <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Helpz</a>
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/apis.png" alt="">
+                </a>
                 <button
                     type="button"
                     class="navbar-toggler"
@@ -29,13 +31,13 @@
                             >
                             <div class="dropdown-menu">
                                 <a href="single.html" class="dropdown-item"
-                                    >Mot du Secretaire</a
+                                    >Mot du Secrétaire</a
                                 >
                                 <a href="service.html" class="dropdown-item"
                                     >Notre histoire</a
                                 >
                                 <a href="team.html" class="dropdown-item"
-                                    >Notre Equipe</a
+                                    >Notre Équipe</a
                                 >
                                
                             </div>
