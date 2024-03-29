@@ -12,7 +12,7 @@
                     </div>
                     <div class="col-12">
                         <a href="/">Accueil</a>
-                        <a href="/blogs">Contacts</a>
+                        <a href="/contacts">Contacts</a>
                     </div>
                 </div>
             </div>

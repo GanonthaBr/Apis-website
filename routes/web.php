@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
@@ -15,3 +16,5 @@ Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
 //Events
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
+//About
+Route::get('/about', [AboutController::class, 'index'])->name('about.index');

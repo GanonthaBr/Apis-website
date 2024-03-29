@@ -50,7 +50,7 @@
         <!-- Video Modal End -->
 
         <!-- Debut de About -->
-        @include('partials.about')
+        @include('partials.about.about')
         <!-- Fin de About-->
 
         <!-- Debut des Services -->

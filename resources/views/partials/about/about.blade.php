@@ -1,3 +1,4 @@
+        {{-- About Starts --}}
    <div class="about">
             <div class="container">
                 <div class="row align-items-center">
@@ -70,3 +71,5 @@
                 </div>
             </div>
         </div>
+
+        {{-- About Ends --}}
