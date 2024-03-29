@@ -8,11 +8,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>A propos de Nous</h2>
+                        <h2>À propos de Nous</h2>
                     </div>
                     <div class="col-12">
                         <a href="/">Accueil</a>
-                        <a href="/about">A propos</a>
+                        <a href="/about">À propos</a>
                     </div>
                 </div>
             </div>
