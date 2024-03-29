@@ -90,27 +90,6 @@ a:focus {
     color: #17468a;
     transition: 0.3s;
 }
-.top-bar {
-    position: absolute;
-    height: 45px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.top-bar .top-bar-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.top-bar .top-bar-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
 
 .top-bar.include .text {
     border-left: 1px solid #17468a;
@@ -136,6 +115,84 @@ a:focus {
 @media (min-width: 992px) {
     .top-bar {
         padding: 0 60px;
+    }
+}
+/* NAV BAR */
+
+.navbar.include .navbar-brand {
+    margin: 0;
+    color: #4a4c70;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    background: #fff;
+    border-radius: 10px;
+}
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 70px;
+}
+
+.navbar-dark.include .navbar-nav .nav-link {
+    padding: 10px 15px 8px 15px;
+    color: #777777;
+}
+
+.navbar-dark.include .navbar-nav .nav-link:hover,
+.navbar-dark.include .navbar-nav .nav-link.active {
+    color: #222;
+    transition: none;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        top: 45px;
+        padding: 20px 60px;
+        background: transparent !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        z-index: 9;
+    }
+
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background: #17468a !important;
+        border-bottom: none;
+    }
+
+    .page .navbar {
+        background: #17468a !important;
+    }
+
+    .navbar a.nav-link {
+        padding: 8px 15px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 15px;
+        background: #17468a !important;
+    }
+
+    .navbar a.nav-link {
+        padding: 5px;
+    }
+
+    .navbar .dropdown-menu {
+        box-shadow: none;
     }
 }
 

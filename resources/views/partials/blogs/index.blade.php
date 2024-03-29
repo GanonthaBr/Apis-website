@@ -1,7 +1,7 @@
 @extends('layouts.layout') 
   @section('content')
             @include('includes.topbar')
-            @include('partials.navbar')
+            @include('includes.navbar')
 
             <div class="container blog">
                 <div class="section-header text-center">
