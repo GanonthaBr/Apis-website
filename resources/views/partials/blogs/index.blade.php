@@ -9,11 +9,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Nos Actualites</h2>
+                        <h2>Nos Actualités</h2>
                     </div>
                     <div class="col-12">
                         <a href="/">Accueil</a>
-                        <a href="/blogs">Actualites</a>
+                        <a href="/blogs">Actualités</a>
                     </div>
                 </div>
             </div>

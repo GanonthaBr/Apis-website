@@ -21,7 +21,6 @@
                         <a href="/" class="nav-item nav-link active"
                             >Accueil</a
                         >
-                        {{-- <a href="about.html" class="nav-item nav-link">Qui sommes-nous?</a> --}}
                     <div class="nav-item dropdown">
                             <a
                                 href="#"

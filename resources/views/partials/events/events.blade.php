@@ -1,3 +1,4 @@
+  {{-- Events Starts --}}
   <div class="event">
             <div class="container">
                 <div class="section-header text-center">
@@ -70,3 +71,4 @@
                 </div>
             </div>
         </div>
+{{-- Events Ends --}}

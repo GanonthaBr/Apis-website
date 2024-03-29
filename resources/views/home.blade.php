@@ -274,7 +274,7 @@
         <!-- Fin de Donate End -->
 
         <!-- Debut de Evenements -->
-        @include('partials.events')
+        @include('partials.events.events')
         <!-- Fin de Evenements -->
 
         <!-- Team Start -->
