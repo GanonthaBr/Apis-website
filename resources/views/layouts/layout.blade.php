@@ -122,13 +122,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p>
-                           {{Date('Y')}} &copy; <a href="apis-sahel.org">Apis Sahel  </a>, Tout Droit réservé.
+                           {{Date('Y')}} &copy; <a href="https://apis-sahel.org">Apis Sahel  </a>, Tout Droit réservé.
                         </p>
                     </div>
                     <div class="col-md-6">
                         <p>
                             Conçu  par
-                            <a href="https://htmlcodex.com">Apis Sahel</a>
+                            <a href="https://apis-sahel.org">Apis Sahel</a>
                         </p>
                     </div>
                 </div>
