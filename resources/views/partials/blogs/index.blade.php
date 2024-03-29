@@ -3,7 +3,7 @@
             @include('includes.topbar')
             @include('includes.navbar')
 
-            <div class="container blog">
+            <div class="container partial-content">
                 <div class="section-header text-center">
                     <p>Our Blog</p>
                     <h2>Latest news & articles directly from our blog</h2>

@@ -1,7 +1,7 @@
 
      <div class="navbar navbar-expand-lg bg-dark navbar-dark include">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">
+                <a href="/" class="navbar-brand">
                     <img src="img/apis.png" alt="">
                 </a>
                 <button
@@ -18,7 +18,7 @@
                     id="navbarCollapse"
                 >
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link active"
+                        <a href="/" class="nav-item nav-link active"
                             >Accueil</a
                         >
                         {{-- <a href="about.html" class="nav-item nav-link">Qui sommes-nous?</a> --}}
@@ -30,23 +30,23 @@
                                 >Qui sommes-nous?</a
                             >
                             <div class="dropdown-menu">
-                                <a href="single.html" class="dropdown-item"
+                                <a href="/about-us" class="dropdown-item"
                                     >Mot du Secrétaire</a
                                 >
-                                <a href="service.html" class="dropdown-item"
+                                <a href="/about" class="dropdown-item"
                                     >Notre histoire</a
                                 >
-                                <a href="team.html" class="dropdown-item"
+                                <a href="/team" class="dropdown-item"
                                     >Notre Équipe</a
                                 >
                                
                             </div>
                         </div> 
                         
-                        <a href="causes.html" class="nav-item nav-link"
+                        <a href="/services" class="nav-item nav-link"
                             >Domaines d'intervention</a
                         >
-                        <a href="event.html" class="nav-item nav-link"
+                        <a href="/events" class="nav-item nav-link"
                             >Événements</a
                         >
                         <a href="/blogs" class="nav-item nav-link">Actualités</a>
@@ -75,7 +75,7 @@
                                 >
                             </div>
                         </div> --}}
-                        <a href="contact.html" class="nav-item nav-link"
+                        <a href="/contacts" class="nav-item nav-link"
                             >Contact</a
                         >
                     </div>

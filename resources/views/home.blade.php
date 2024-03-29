@@ -358,7 +358,7 @@
         <!-- Testimonial End -->
 
         <!-- Contact Start -->
-        @include('partials.contact')
+        @include('partials.contacts.contact')
         <!-- Contact End -->
 
         <!-- Blog Start -->
