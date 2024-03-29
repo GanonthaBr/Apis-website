@@ -30,6 +30,7 @@ a:active,
 a:focus {
     color: #fff;
     outline: none;
+    text-decoration: none;
 }
 .footer a:hover,
 .footer a:active,
@@ -773,6 +774,8 @@ a:focus {
     border-radius: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     transition: none;
+    color: #17468a;
+    opacity: 0.8;
 }
 
 .about .about-tab .nav.nav-pills .nav-link:hover,
@@ -780,6 +783,7 @@ a:focus {
     color: #17468a;
     padding-bottom: 7px;
     border-bottom: 3px solid #17468a;
+    opacity: 1;
 }
 
 .about .about-tab .tab-content {
