@@ -2,6 +2,24 @@
   @section('content')
             @include('includes.topbar')
             @include('includes.navbar')
+
+      <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Nous Contacter</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="/">Accueil</a>
+                        <a href="/blogs">Contacts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->  
+
+        <!-- Contacts Start -->
            <div class="contact partial-content">
             <div class="container">
                 <div class="section-header text-center">
@@ -74,4 +92,5 @@
                 </div>
             </div>
         </div>
+        <!-- Contacts End -->
 @stop
