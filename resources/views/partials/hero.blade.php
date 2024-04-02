@@ -6,7 +6,7 @@
                             <img src="img/carousel-5.png" alt="Image" />
                         </div>
                         <div class="carousel-text">
-                            <h1>Sécurité alimentaire pour tous.</h1>
+                            <h1>Sécurité alimentaire.</h1>
                             <p>
                         {{-- Ecrire une breve description sur la securite alimentaire --}}
                               La sécurité alimentaire est une condition préalable à la santé et au bien-être de tous. APIS œuvre pour un accès physique, social et économique à une nourriture suffisante, saine et nutritive pour les communautés rurales.
