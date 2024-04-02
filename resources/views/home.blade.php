@@ -61,7 +61,7 @@
         <div
             class="facts"
             data-parallax="scroll"
-            data-image-src="img/facts.jpg"
+            data-image-src="img/page-header.jpg"
         >
             <div class="container">
                 <div class="row">
@@ -69,10 +69,10 @@
                         <div class="facts-item">
                             <i class="flaticon-home"></i>
                             <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">
-                                    150
+                                <h3 data-toggle="counter-up">
+                                    4
                                 </h3>
-                                <p>Countries</p>
+                                <p>Pays intervenus</p>
                             </div>
                         </div>
                     </div>
@@ -80,10 +80,10 @@
                         <div class="facts-item">
                             <i class="flaticon-charity"></i>
                             <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">
+                                <h3  data-toggle="counter-up">
                                     400
                                 </h3>
-                                <p>Volunteers</p>
+                                <p>Voluntaires  réunis</p>
                             </div>
                         </div>
                     </div>
@@ -92,12 +92,12 @@
                             <i class="flaticon-kindness"></i>
                             <div class="facts-text">
                                 <h3
-                                    class="facts-dollar"
+                                  
                                     data-toggle="counter-up"
                                 >
-                                    10000
+                                    100
                                 </h3>
-                                <p>Our Goal</p>
+                                <p>Communautés  aidées</p>
                             </div>
                         </div>
                     </div>
@@ -106,12 +106,11 @@
                             <i class="flaticon-donation"></i>
                             <div class="facts-text">
                                 <h3
-                                    class="facts-dollar"
+                                    
                                     data-toggle="counter-up"
                                 >
-                                    5000
-                                </h3>
-                                <p>Raised</p>
+                                    15                                </h3>
+                                <p>Année d'existence</p>
                             </div>
                         </div>
                     </div>

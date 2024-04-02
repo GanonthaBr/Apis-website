@@ -70,10 +70,9 @@
                                     <p style="text-align: center; color:#fff">OU</p>
                                     <button
                                         class="btn btn-custom"
-                                        type="submit"
-                                    >
-                                        Nous Contacter.
-                                    </button>
+                                        onclick="window.location.href='{{ route('contacts.index') }}' " 
+                                    >Nous Contacter.
+                                </button>
                                 </div>
                             </form>
                         </div>
