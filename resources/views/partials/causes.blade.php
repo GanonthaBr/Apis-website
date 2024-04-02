@@ -7,7 +7,7 @@
                 <div class="owl-carousel causes-carousel">
                     <div class="causes-item">
                         <div class="causes-img">
-                            <img src="img/causes-1.jpg" alt="Image" />
+                            <img src="img/cause-3.png" alt="Image" />
                         </div>
                         {{-- <div class="causes-progress">
                             <div class="progress">
@@ -71,7 +71,7 @@
                     </div>
                     <div class="causes-item">
                         <div class="causes-img">
-                            <img src="img/causes-3.jpg" alt="Image" />
+                            <img src="img/cause-2.png" alt="Image" />
                         </div>
                         {{-- <div class="causes-progress">
                             <div class="progress">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="causes-item">
                         <div class="causes-img">
-                            <img src="img/causes-4.jpg" alt="Image" />
+                            <img src="img/cause-1.png" alt="Image" />
                         </div>
                         {{-- <div class="causes-progress">
                             <div class="progress">
