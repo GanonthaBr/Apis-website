@@ -57,7 +57,7 @@
          @include('partials.services')
         <!-- Fin des Services -->
 
-        <!-- Facts Start -->
+        <!--Debut des Facts -->
         <div
             class="facts"
             data-parallax="scroll"
@@ -118,9 +118,9 @@
                 </div>
             </div>
         </div>
-        <!-- Facts End -->
+        <!-- Debut des Facts  -->
 
-        <!-- Causes Start -->
+        <!-- Debut des Causes -->
         <div class="causes">
             <div class="container">
                 <div class="section-header text-center">
@@ -267,21 +267,21 @@
                 </div>
             </div>
         </div>
-        <!-- Causes End -->
+        <!-- Debut des Causes -->
 
-        <!-- Debut de Donate -->
+        <!-- Debut de Donation -->
          @include('partials.donate')
-        <!-- Fin de Donate End -->
+        <!-- Fin de Donation -->
 
         <!-- Debut de Evenements -->
         @include('partials.events.events')
         <!-- Fin de Evenements -->
 
-        <!-- Team Start -->
+        <!-- Debut de Equipe -->
        @include('partials.team')
-        <!-- Team End -->
+        <!-- Fin de Equipe-->
 
-        <!-- Volunteer Start -->
+        <!-- Debut de Voluntariat -->
         <div
             class="volunteer"
             data-parallax="scroll"
@@ -351,17 +351,17 @@
                 </div>
             </div>
         </div>
-        <!-- Volunteer End -->
+        <!-- Fin de Voluntariat -->
 
-        <!-- Testimonial Start -->
+        <!-- Debut des Temoignages-->
         @include('partials.testimonials')
-        <!-- Testimonial End -->
+        <!-- Fin des Temoignages -->
 
-        <!-- Contact Start -->
+        <!-- Debut des Contacts -->
         @include('partials.contacts.contact')
-        <!-- Contact End -->
+        <!-- Fin des Contacts-->
 
-        <!-- Blog Start -->
+        <!-- Debut des Blogs-->
         @include('partials.blogs.blogs')
-        <!-- Blog End -->
+        <!-- Fin des Blogs-->
 @stop
