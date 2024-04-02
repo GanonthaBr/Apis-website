@@ -5,11 +5,15 @@
                     <h2>Envoyez nous un message</h2>
                 </div>
                 <div class="contact-img">
-                    <img src="img/contact.jpg" alt="Image" />
+                    <img src="img/cause-3.png" alt="Image" />
                 </div>
                 <div class="contact-form">
              
-                
+                 <div id="success">
+                  
+                    {{session('success')}}
+                  
+                 </div>
                     <form
                         name="sentMessage"
                         {{-- id="contactForm" --}}
@@ -82,7 +86,7 @@
                             <p class="help-block text-danger">
                                 @error('message')
                                    {{$message}}
-                               @enderror
+                                @enderror
                             </p>
                         </div>
                         <div>
