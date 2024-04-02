@@ -994,8 +994,9 @@ a:focus {
 }
 
 .causes .causes-text h3 {
-    font-size: 22px;
-    font-weight: 700;
+    margin: 0.5rem 0;
+    font-size: 26px;
+    font-weight: 800;
 }
 
 .causes .causes-text p {
