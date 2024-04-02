@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('contacts', function (Blueprint $table) {
+            //name, subject, message, email or phone and message fields
             $table->id();
+            $table->string('name');
+            $table->string('subject')->nullable();
+            $table->string('email')->unique();
+            $table->text('message');
             $table->timestamps();
         });
     }

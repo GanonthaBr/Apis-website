@@ -14,6 +14,7 @@ Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
 
 //Contacts
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
+Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 //Events
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 //About
