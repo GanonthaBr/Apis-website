@@ -1,8 +1,8 @@
  <div class="service">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>What We Do?</p>
-                    <h2>We believe that we can save more lifes with you</h2>
+                    <p>Que faisons-nous?</p>
+                    <h2>Accompagner le monde rural & les Organisations Paysannes</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
@@ -11,7 +11,7 @@
                                 <i class="flaticon-diet"></i>
                             </div>
                             <div class="service-text">
-                                <h3>Healthy Food</h3>
+                                <h3>Sécurité Alimentaire.</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Phase nec
                                     preti facils ornare velit non metus tortor
@@ -25,7 +25,7 @@
                                 <i class="flaticon-water"></i>
                             </div>
                             <div class="service-text">
-                                <h3>Pure Water</h3>
+                                <h3>Accès a l'Eau.</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Phase nec
                                     preti facils ornare velit non metus tortor
@@ -39,7 +39,7 @@
                                 <i class="flaticon-healthcare"></i>
                             </div>
                             <div class="service-text">
-                                <h3>Health Care</h3>
+                                <h3>Santé et Nutrition.</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Phase nec
                                     preti facils ornare velit non metus tortor
@@ -53,7 +53,7 @@
                                 <i class="flaticon-education"></i>
                             </div>
                             <div class="service-text">
-                                <h3>Primary Education</h3>
+                                <h3>Education</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Phase nec
                                     preti facils ornare velit non metus tortor
@@ -67,7 +67,7 @@
                                 <i class="flaticon-home"></i>
                             </div>
                             <div class="service-text">
-                                <h3>Residence Facilities</h3>
+                                <h3>Accompagnement Social</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Phase nec
                                     preti facils ornare velit non metus tortor
@@ -81,7 +81,7 @@
                                 <i class="flaticon-social-care"></i>
                             </div>
                             <div class="service-text">
-                                <h3>Social Care</h3>
+                                <h3>Urgence Humanitaire</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet elit. Phase nec
                                     preti facils ornare velit non metus tortor

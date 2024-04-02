@@ -12,7 +12,7 @@
                     <div class="col-lg-6">
                         <div class="section-header">
                             <p>À propos de nous.</p>
-                            <h2>Actions et Programmes d'impacts au Sahel</h2>
+                            <h2>Actions et Programmes d'Impacts au Sahel</h2>
                         </div>
                         <div class="about-tab">
                             <ul class="nav nav-pills nav-justified">
