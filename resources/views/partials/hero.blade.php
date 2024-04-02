@@ -73,7 +73,7 @@
                             <img src="img/carousel-1.png" alt="Image" />
                         </div>
                         <div class="carousel-text">
-                            <h1>Éducation et Développement </h1>
+                            <h1>Éducation et Développement Social </h1>
                             <p>
                                 {{-- Ecrire en 2 phrases une description de APIS oeuvrant pour  l'education et le developpement --}}
                                 APIS s'engage à améliorer l'accès à une éducation de qualité pour les enfants et les jeunes des communautés rurales, en particulier les filles, pour leur permettre de réaliser leur plein potentiel et de contribuer au développement de leur communauté.
