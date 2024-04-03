@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DomaineInterventionController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -19,3 +20,9 @@ Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.st
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 //About
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+
+//Domaine d'intervention
+Route::get('/domaineIntervention', [DomaineInterventionController::class, 'index'])->name('domaineIntervention.index');
+Route::get('/domaineIntervention', [DomaineInterventionController::class, 'index'])->name('santeNutrition.index');
+Route::get('/domaineIntervention', [DomaineInterventionController::class, 'index'])->name('urgenceAlimentaire.index');
+Route::get('/domaineIntervention', [DomaineInterventionController::class, 'index'])->name('educationDeveloppement.index');

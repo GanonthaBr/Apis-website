@@ -51,16 +51,16 @@
                                 >Domaines d'intervention</a
                             >
                             <div class="dropdown-menu">
-                                <a href="/about-us" class="dropdown-item"
+                                <a href="/domaineIntervention" class="dropdown-item"
                                     >Sécurité alimentaire</a
                                 >
-                                <a href="/about" class="dropdown-item"
+                                <a href="/domaineIntervention" class="dropdown-item"
                                     >Santé et Nutrition</a
                                 >
-                                <a href="/about" class="dropdown-item"
+                                <a href="/domaineIntervention" class="dropdown-item"
                                     >Urgence humanitaire</a
                                 >
-                                <a href="/team" class="dropdown-item"
+                                <a href="/domaineIntervention" class="dropdown-item"
                                     >Éducation et développement Social</a
                                 >
                                
