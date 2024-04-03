@@ -64,10 +64,6 @@
                                
                             </div>
                     </div> 
-                        
-                        {{-- <a href="/services" class="nav-item nav-link"
-                            >Domaines d'intervention</a
-                        > --}}
                         <a href="/events" class="nav-item nav-link"
                             >Événements</a
                         >

@@ -53,22 +53,6 @@
                             </p>
                         </div>
                     </div>
-                    {{-- <div class="testimonial-item">
-                        <div class="testimonial-profile">
-                            <img src="img/testimonial-4.jpg" alt="Image" />
-                            <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi
-                                facilis ornare velit non vulputa. Aliqu metus
-                                tortor, auctor id gravid vivera quis
-                            </p>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>

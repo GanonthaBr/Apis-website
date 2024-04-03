@@ -21,7 +21,7 @@
                         <a href="/" class="nav-item nav-link active"
                             >Accueil</a
                         >
-                        {{-- <a href="about.html" class="nav-item nav-link">Qui sommes-nous?</a> --}}
+
                     <div class="nav-item dropdown">
                             <a
                                 href="#"
@@ -43,38 +43,33 @@
                             </div>
                         </div> 
                         
-                        <a href="/services" class="nav-item nav-link"
-                            >Domaines d'intervention</a
-                        >
-                        <a href="/events" class="nav-item nav-link"
-                            >Événements</a
-                        >
-                        <a href="/blogs" class="nav-item nav-link">Actualités</a>
-                        {{-- <div class="nav-item dropdown">
+                        <div class="nav-item dropdown">
                             <a
                                 href="#"
                                 class="nav-link dropdown-toggle"
                                 data-toggle="dropdown"
-                                >Pages</a
+                                >Domaines d'intervention</a
                             >
                             <div class="dropdown-menu">
-                                <a href="single.html" class="dropdown-item"
-                                    >Detail Page</a
+                                <a href="/about-us" class="dropdown-item"
+                                    >Sécurité alimentaire</a
                                 >
-                                <a href="service.html" class="dropdown-item"
-                                    >What We Do</a
+                                <a href="/about" class="dropdown-item"
+                                    >Santé et Nutrition</a
                                 >
-                                <a href="team.html" class="dropdown-item"
-                                    >Meet The Team</a
+                                <a href="/about" class="dropdown-item"
+                                    >Urgence humanitaire</a
                                 >
-                                <a href="donate.html" class="dropdown-item"
-                                    >Donate Now</a
+                                <a href="/team" class="dropdown-item"
+                                    >Éducation et développement Social</a
                                 >
-                                <a href="volunteer.html" class="dropdown-item"
-                                    >Become A Volunteer</a
-                                >
+                               
                             </div>
-                        </div> --}}
+                    </div> 
+                        <a href="/events" class="nav-item nav-link"
+                            >Événements</a
+                        >
+                        <a href="/blogs" class="nav-item nav-link">Actualités</a>
                         <a href="/contacts" class="nav-item nav-link"
                             >Contact</a
                         >

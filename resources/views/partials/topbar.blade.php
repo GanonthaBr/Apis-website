@@ -4,7 +4,6 @@
                     <div class="col-md-8">
                         <div class="top-bar-left">
                             <div class="text">
-                                {{-- <i class="fa fa-phone-alt"></i> --}}
                                 <p>ACTIONS ET PROGRAMMES <br> D'IMPACT AU SAHEL</p>
                             </div>
                             <div class="text">
