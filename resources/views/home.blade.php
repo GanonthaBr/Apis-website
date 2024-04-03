@@ -136,7 +136,7 @@
         <!-- Fin de Equipe-->
 
         <!-- Debut de Voluntariat -->
-        <div
+        {{-- <div
             class="volunteer"
             data-parallax="scroll"
             data-image-src="img/volunteer.jpg"
@@ -204,7 +204,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Fin de Voluntariat -->
 
         <!-- Debut des Temoignages-->
