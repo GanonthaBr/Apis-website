@@ -40,12 +40,12 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
-                            <h2>Useful Links</h2>
-                            <a href="">Terms of use</a>
-                            <a href="">Privacy policy</a>
+                            <h2>Liens Utiles</h2>
+                            <a href="">Conditions d'utilisation</a>
+                            <a href="">Politiques de confidentialités</a>
                             <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="">Aides</a>
+                            <a href="">Questions & Réponses</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -54,10 +54,10 @@
                             <form>
                                 <input
                                     class="form-control"
-                                    placeholder="Email goes here"
+                                    placeholder="Votre Email"
                                 />
-                                <button class="btn btn-custom">Submit</button>
-                                <label>Don't worry, we don't spam!</label>
+                                <button class="btn btn-custom">Envoyer</button>
+                                <label>Nous ne faisons pas de spam!</label>
                             </form>
                         </div>
                     </div>
