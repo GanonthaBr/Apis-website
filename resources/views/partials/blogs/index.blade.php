@@ -24,8 +24,8 @@
         <div class="blog partial-content">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Our Blog</p>
-                    <h2>Latest news & articles directly from our blog</h2>
+                  <p>Nos Actualités</p>
+                    <h2>Découvrez nos dernières actualités à travers de blogs posts.</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
