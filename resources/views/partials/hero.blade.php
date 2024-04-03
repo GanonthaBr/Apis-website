@@ -70,7 +70,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-1.png" alt="Image" />
+                            <img src="img/education-1.png" alt="Image" />
                         </div>
                         <div class="carousel-text">
                             <h1>Éducation et Développement Social </h1>
