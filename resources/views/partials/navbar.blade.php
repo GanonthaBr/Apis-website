@@ -40,11 +40,34 @@
                                 >
                                
                             </div>
-                        </div> 
+                    </div> 
+                    <div class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-toggle="dropdown"
+                                >Domaines d'intervention</a
+                            >
+                            <div class="dropdown-menu">
+                                <a href="/about-us" class="dropdown-item"
+                                    >Sécurité alimentaire</a
+                                >
+                                <a href="/about" class="dropdown-item"
+                                    >Santé et Nutrition</a
+                                >
+                                <a href="/about" class="dropdown-item"
+                                    >Urgence humanitaire</a
+                                >
+                                <a href="/team" class="dropdown-item"
+                                    >Éducation et développement Social</a
+                                >
+                               
+                            </div>
+                    </div> 
                         
-                        <a href="/services" class="nav-item nav-link"
+                        {{-- <a href="/services" class="nav-item nav-link"
                             >Domaines d'intervention</a
-                        >
+                        > --}}
                         <a href="/events" class="nav-item nav-link"
                             >Événements</a
                         >
