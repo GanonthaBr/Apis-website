@@ -30,13 +30,13 @@
                                 >Qui sommes-nous?</a
                             >
                             <div class="dropdown-menu">
-                                <a href="/about-us" class="dropdown-item"
+                                <a href="/about" class="dropdown-item"
                                     >Mot du Secrétaire</a
                                 >
                                 <a href="/about" class="dropdown-item"
                                     >Notre histoire</a
                                 >
-                                <a href="/team" class="dropdown-item"
+                                <a href="/about" class="dropdown-item"
                                     >Notre Équipe</a
                                 >
                                
