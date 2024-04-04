@@ -1,8 +1,8 @@
  <div class="team">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Meet Our Team</p>
-                    <h2>Awesome guys behind our charity activities</h2>
+                    <p>Notre Equipe</p>
+                    <h2>Notre équipe de pilotage de nos activités</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
@@ -107,4 +107,4 @@
                     </div>
                 </div>
             </div>
-        </div>
+</div>
