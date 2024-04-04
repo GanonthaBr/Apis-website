@@ -23,18 +23,18 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="single-content">
-                            <h1 class="domaine-title">Santé et Nutrition</h1>
+                            <h1 class="domaine-title">Education et Développement Integré</h1>
                             <img src="img/sante-nutrition.jpeg" />
+                             <h3>Education</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur APIS croit fermement en l'importance de donner à chaque enfant un avenir prometteur. Que ce soit au Niger ou dans le monde entier, nous nous engageons à offrir aux enfants un bon départ dans la vie, en leur donnant accès à l'éducation, à la protection contre les dangers et en leur fournissant les soins nécessaires. Notre objectif est de transformer leur vie et de façonner un avenir meilleur que nous partageons tous.
+                                L'ONG APIS s'engage dans le secteur de l'éducation, offrant un accès équitable à l'apprentissage de qualité pour tous, même dans les situations d'urgence humanitaire. À travers des programmes innovants et adaptés, nous favorisons le développement cognitif, social et émotionnel des enfants et des jeunes, renforçant ainsi leurs perspectives d'avenir. En partenariat avec les communautés et les autorités locales, nous mettons en œuvre des initiatives axées sur l'éducation formelle et non formelle, assurant ainsi la résilience éducative même dans les contextes les plus difficiles.
                             </p>
-                            <h3>Chef de département de Santé et Nutrition</h3>
+                            <h3>Développement Integré</h3>
+                           
                             <p>
-                            Le chef de département santé et nutrition joue un rôle crucial au sein d'APIS,                            étant responsable de la direction technique de notre travail dans les domaines de                           la santé et de la nutrition. Cela comprend les secteurs liés à la santé des                           nouveau-nés, des enfants et des mères, à la nutrition, à la santé des                         adolescents, à la santé sexuelle et reproductive, à la planification familiale, à                           la santé et à la nutrition scolaires, ainsi qu'au renforcement du système de                          santé.
+                           L'ONG APIS s'engage dans le développement intégré des communautés. Notre approche holistique aborde les besoins multiples des populations, de l'agriculture durable à l'éducation en passant par la santé et l'accès à l'eau. En collaborant avec les parties prenantes locales, nous visons à créer des changements durables et équilibrés, favorisant ainsi l'autonomisation et la résilience des communautés pour un avenir meilleur.
                             </p>
-                            <p>
-                              Ce chef de département est chargé de définir l'orientation stratégique du secteur de la santé, de concevoir de nouveaux programmes et projets, ainsi que d'identifier et de mettre en œuvre des partenariats stratégiques. Il/elle garantit la qualité et l'apprentissage des programmes pour une série de projets, conseille le personnel technique sur le terrain et représente APIS au plus haut niveau lors de plaidoyers auprès du gouvernement du Niger, des partenaires  et des principales parties prenantes nationales et internationales.
-                            </p>
+                           
                         </div>
                         <h6>D'autres liens</h6>
                         <div class="single-tags">
