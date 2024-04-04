@@ -2182,3 +2182,35 @@ a:focus {
 .domaine-links a {
     color: #4a4c70;
 }
+
+/* Strategies in the About page */
+.strategies .nav.nav-pills .nav-link {
+    padding: 10px;
+    font-weight: 600;
+    background: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    transition: none;
+    color: #17468a;
+    opacity: 0.8;
+}
+
+.strategies .nav.nav-pills .nav-link.active {
+    color: #fff;
+    padding-bottom: 7px;
+    opacity: 1;
+    background: #17468a !important;
+}
+.strategies .nav.nav-pills .nav-link:hover {
+    border-bottom: 3px solid #17468a;
+}
+/* .strategies .tab-pane {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+*/
+.strategies .tab-content .tab-pane img {
+    width: 100%;
+}
