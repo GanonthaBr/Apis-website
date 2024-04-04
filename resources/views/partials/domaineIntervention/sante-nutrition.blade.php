@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-12">
                         <a href="/">Accueil</a>
-                        <a href="/domaineIntervention">Domaines d'intervention</a>
+                        <a href="/santenutrition">Domaines d'intervention</a>
                     </div>
                 </div>
             </div>
