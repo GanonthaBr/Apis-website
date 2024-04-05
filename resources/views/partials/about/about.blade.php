@@ -6,7 +6,7 @@
                         <div
                             class="about-img"
                             data-parallax="scroll"
-                            data-image-src="img/carousel-4.png"
+                            data-image-src="img/about-image.png"
                         ></div>
                     </div>
                     <div class="col-lg-6">
