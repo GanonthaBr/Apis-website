@@ -2186,13 +2186,15 @@ a:focus {
 /* Strategies in the About page */
 .strategies .nav.nav-pills .nav-link {
     padding: 10px;
+    margin: 0 5px;
     font-weight: 600;
-    background: none;
+    background: #e4e3e3;
     border-radius: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: none;
     transition: none;
     color: #17468a;
     opacity: 0.8;
+    height: 3rem;
 }
 
 .strategies .nav.nav-pills .nav-link.active {
@@ -2204,13 +2206,7 @@ a:focus {
 .strategies .nav.nav-pills .nav-link:hover {
     border-bottom: 3px solid #17468a;
 }
-/* .strategies .tab-pane {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-}
-*/
+
 .strategies .tab-content .tab-pane img {
     width: 100%;
 }
