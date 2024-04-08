@@ -104,7 +104,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="{{asset('img/team-1.jpg"')}} alt="Team Image" />
+                                <img src="{{asset('img/team-1.jpg')}}" alt="Team Image" />
                             </div>
                             <div class="team-text">
                                 <h2>Donald John</h2>
