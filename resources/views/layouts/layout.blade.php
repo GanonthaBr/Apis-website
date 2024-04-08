@@ -75,6 +75,6 @@
         <script src="mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="{{asset('js/main.js')}}" ></script>
+        <script src="{{asset('js/main.js')}}" async></script>
     </body>
 </html>

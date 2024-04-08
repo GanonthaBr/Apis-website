@@ -9,9 +9,7 @@
             }
         }, 1);
     };
-    $(window).on("load", function () {
-        $("#preloader").fadeOut("slow");
-    });
+
     loader();
 
     // Back to top button
