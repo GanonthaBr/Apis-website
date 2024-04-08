@@ -22,7 +22,7 @@ Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
 //Domaine d'intervention
-Route::get('/santenutrition', [DomaineInterventionController::class, 'santenutrition']);
-Route::get('/urgencehumanitaire', [DomaineInterventionController::class, 'urgencehumanitaire']);
-Route::get('/securitealimentaire', [DomaineInterventionController::class, 'securitealimentaire']);
-Route::get('/educationdeveloppement', [DomaineInterventionController::class, 'educationdeveloppement']);
+Route::get('/santenutrition', [DomaineInterventionController::class, 'santenutrition'])->name('domaines.santenutrition');
+Route::get('/urgencehumanitaire', [DomaineInterventionController::class, 'urgencehumanitaire'])->name('domaines.urgencehumanitaire');
+Route::get('/securitealimentaire', [DomaineInterventionController::class, 'securitealimentaire'])->name('domaines.securitealimentaire');
+Route::get('/educationdeveloppement', [DomaineInterventionController::class, 'educationdeveloppement'])->name('domaines.educationdeveloppement');

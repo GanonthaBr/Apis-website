@@ -125,16 +125,16 @@
                                 >Domaines d'intervention</a
                             >
                             <div class="dropdown-menu">
-                                <a href="/securitealimentaire" class="dropdown-item"
+                                 <a href="{{route('domaines.securitealimentaire')}}" class="dropdown-item"
                                     >Sécurité alimentaire</a
                                 >
-                                <a href="/santenutrition" class="dropdown-item"
+                                <a href="{{route('domaines.santenutrition')}}" class="dropdown-item"
                                     >Santé et Nutrition</a
                                 >
-                                <a href="/urgencehumanitaire" class="dropdown-item"
+                                <a href="{{route('domaines.urgencehumanitaire')}}" class="dropdown-item"
                                     >Urgence humanitaire</a
                                 >
-                                <a href="/educationdeveloppement" class="dropdown-item"
+                                <a href="{{route('domaines.educationdeveloppement')}}" class="dropdown-item"
                                     >Éducation et développement Social</a
                                 >
                                
