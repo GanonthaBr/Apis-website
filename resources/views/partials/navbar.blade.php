@@ -104,13 +104,13 @@
                                 >Qui sommes-nous?</a
                             >
                             <div class="dropdown-menu">
-                                <a href="/about" class="dropdown-item"
+                                <a href="{{route('about.index')}}" class="dropdown-item"
                                     >Mot du Secrétaire</a
                                 >
-                                <a href="/about" class="dropdown-item"
+                                <a href="{{route('about.index')}}" class="dropdown-item"
                                     >Notre histoire</a
                                 >
-                                <a href="/about" class="dropdown-item"
+                                <a href="{{route('about.index')}}" class="dropdown-item"
                                     >Notre Équipe</a
                                 >
                                
