@@ -14,7 +14,7 @@
             <div id="tab1" class="container tab-pane active row">
         <div class="row">
             <div class="col-lg-6">
-                <img src="img/carousel-4.png" alt="Image 1">
+                <img src="{{asset('img/carousel-4.png')}}" alt="Image 1">
             </div>
             <div class="col py-4">
                 <p>APIS développe un partenariat avec les institutions nationales, internationales, publiques et privées et toutes les structures œuvrant dans les domaines de la sécurité alimentaire, santé et nutrition et le développement intégré ;</p>
@@ -32,10 +32,10 @@
          <div class="row">
               <div class="col-lg-6">
                 <div class="row">
-                    <img src="img/approche-1.png" alt="Image 2" class="py-3">
+                    <img src="{{asset('img/approche-1.png')}}" alt="Image 2" class="py-3">
                 </div>
                 <div class="row">
-                    <img src="img/approche-2.png" alt="Image 2" class="py-3">
+                    <img src="{{asset('img/approche-2.png')}}" alt="Image 2" class="py-3">
                 </div>
               </div>
               <div class="col py-4">
@@ -57,7 +57,7 @@
             <div id="tab3" class="container tab-pane">
             <div class="row">
                    <div class="col-lg-6">
-                        <img src="img/ressource-humaine.png" alt="Image 3">
+                        <img src="{{asset('img/ressource-humaine.png')}}" alt="Image 3">
                    </div>
                    <div class="col py-5">
                     <h3>l’ONG dispose d’une assise technique le permettant de développer et d’initier des actions afin de faire face à des situations qui affectent le monde rural</h3>

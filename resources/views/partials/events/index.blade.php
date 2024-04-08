@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="event-item">
-                            <img src="img/event-1-0.png" alt="Image" />
+                            <img src="{{asset('img/event-1-0.png')}}" alt="Image" />
                             <div class="event-content">
                                 <div class="event-meta">
                                     <p>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="event-item">
-                            <img src="img/event-1-1.png" alt="Image" />
+                            <img src="{{asset('img/event-1-1.png')}}" alt="Image" />
                             <div class="event-content">
                                 <div class="event-meta">
                                     <p>

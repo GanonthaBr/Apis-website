@@ -3,7 +3,7 @@
                 <div class="owl-carousel">
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-5.png" alt="Image" />
+                            <img src="{{asset('img/carousel-5.png')}}" alt="Image" />
                         </div>
                         <div class="carousel-text">
                             <h1>Sécurité alimentaire.</h1>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-2.png" alt="Image" />
+                            <img src="{{asset('img/carousel-2.png')}}" alt="Image" />
                         </div>
                         <div class="carousel-text">
                             <h1>Urgence Humanitaire</h1>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-4.png" alt="Image" />
+                            <img src="{{asset('img/carousel-4.png')}}" alt="Image" />
                         </div>
                         <div class="carousel-text">
                             <h1>Santé et Nutrition</h1>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/education-1.png" alt="Image" />
+                            <img src="{{asset('img/education-1.png')}}" alt="Image" />
                         </div>
                         <div class="carousel-text">
                             <h1>Éducation et Développement Social </h1>

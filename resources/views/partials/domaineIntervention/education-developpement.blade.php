@@ -24,7 +24,7 @@
                     <div class="col-lg-8">
                         <div class="single-content">
                             <h1 class="domaine-title">Education et Développement Integré</h1>
-                            <img src="img/sante-nutrition.jpeg" />
+                            <img src="{{asset('img/sante-nutrition.jpeg')}}" />
                              <h3>Education</h3>
                             <p>
                                 L'ONG APIS s'engage dans le secteur de l'éducation, offrant un accès équitable à l'apprentissage de qualité pour tous, même dans les situations d'urgence humanitaire. À travers des programmes innovants et adaptés, nous favorisons le développement cognitif, social et émotionnel des enfants et des jeunes, renforçant ainsi leurs perspectives d'avenir. En partenariat avec les communautés et les autorités locales, nous mettons en œuvre des initiatives axées sur l'éducation formelle et non formelle, assurant ainsi la résilience éducative même dans les contextes les plus difficiles.

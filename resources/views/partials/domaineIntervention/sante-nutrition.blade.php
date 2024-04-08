@@ -24,7 +24,7 @@
                     <div class="col-lg-8">
                         <div class="single-content">
                             <h1 class="domaine-title">Santé et Nutrition</h1>
-                            <img src="img/sante-nutrition.jpeg" />
+                            <img src="{{asset('img/sante-nutrition.jpeg')}}" />
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur APIS croit fermement en l'importance de donner à chaque enfant un avenir prometteur. Que ce soit au Niger ou dans le monde entier, nous nous engageons à offrir aux enfants un bon départ dans la vie, en leur donnant accès à l'éducation, à la protection contre les dangers et en leur fournissant les soins nécessaires. Notre objectif est de transformer leur vie et de façonner un avenir meilleur que nous partageons tous.
                             </p>

@@ -1,7 +1,7 @@
     <div
             class="donate"
             data-parallax="scroll"
-            data-image-src="img/donate.jpg"
+            data-image-src="{{asset('img/donate.jpg')}}"
         >
             <div class="container">
                 <div class="row align-items-center">

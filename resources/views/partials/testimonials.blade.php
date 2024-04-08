@@ -9,7 +9,7 @@
                 <div class="owl-carousel testimonials-carousel">
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/testimonial-1.png" alt="Image" />
+                            <img src="{{asset('img/testimonial-1.png')}}" alt="Image" />
                             <div class="testimonial-name">
                                 <h3>Abdoulaye Djibo</h3>
                                 <p>Paysan</p>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/testimonial-2.png" alt="Image" />
+                            <img src="{{asset('img/testimonial-2.png')}}" alt="Image" />
                             <div class="testimonial-name">
                                 <h3>Mariama Kadri</h3>
                                 <p>Paysane</p>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/testimonial-3.png" alt="Image" />
+                            <img src="{{asset('img/testimonial-3.png')}}" alt="Image" />
                             <div class="testimonial-name">
                                 <h3>Hadiza Liman</h3>
                                 <p>Paysane</p>

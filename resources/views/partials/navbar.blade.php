@@ -76,7 +76,7 @@
             </div> --}}
              <div class="container-fluid">
                 <a href="/" class="navbar-brand">
-                    <img src="img/apis.png" alt="">
+                    <img src="{{asset('img/apis.png')}}" alt="">
                 </a>
                 <button
                     type="button"

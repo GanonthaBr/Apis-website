@@ -14,7 +14,7 @@
                                 <div class="recent-post ">
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="img/post-1.jpg" />
+                                            <img src="{{asset('img/post-1.jpg')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
                                             <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="img/post-1.jpg" />
+                                            <img src="{{asset('img/post-1.jpg')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
                                             <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="img/post-1.jpg" />
+                                            <img src="{{asset('img/post-1.jpg')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
                                             <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="img/post-1.jpg" />
+                                            <img src="{{asset('img/post-1.jpg')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
                                             <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -66,7 +66,7 @@
 
                             <div class="sidebar-widget">
                                 <div class="image-widget">
-                                    <a href="#"><img src="img/blog-1.jpg" alt="Image"></a>
+                                    <a href="#"><img src="{{asset('img/blog-1.jpg')}}" alt="Image"></a>
                                 </div>
                             </div>
 
@@ -88,7 +88,7 @@
 
                             <div class="sidebar-widget">
                                 <div class="image-widget">
-                                    <a href="#"><img src="img/blog-2.jpg" alt="Image"></a>
+                                    <a href="#"><img src="{{asset('img/blog-2.jpg')}}" alt="Image"></a>
                                 </div>
                             </div>
 

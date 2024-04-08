@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-12">
                         <a href="/">Accueil</a>
-                        <a href="/securitealimentaire ">Domaines d'intervention</a>
+                        <a href="{{route('domaines.securitealimentaire')}}">Domaines d'intervention</a>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                     <div class="col-lg-8">
                         <div class="single-content">
                             <h1 class="domaine-title">Sécurité Alimentaire et Moyens de subsistance</h1>
-                            <img src="img/sante-nutrition.jpeg" />
+                            <img src="{{asset('img/sante-nutrition.jpeg')}}" />
                             <p>
                                
                                 Notre ONG s'engage à garantir à chaque individu un accès à une alimentation adéquate et à des moyens de subsistance durables. Pour ce faire, nous mettons en œuvre des initiatives visant à promouvoir des pratiques agricoles durables, la diversification des cultures et le développement de jardins potagers. Nous soutenons également le renforcement des moyens de subsistance des communautés locales en améliorant leurs pratiques de production, en facilitant l'accès aux marchés et en offrant des opportunités de formation professionnelle et d'accès au microcrédit. Nous accordons une attention particulière à l'autonomisation des femmes et des jeunes, car nous croyons que leur participation active est essentielle pour garantir la durabilité à long terme de nos interventions.

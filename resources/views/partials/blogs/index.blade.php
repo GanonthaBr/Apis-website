@@ -31,7 +31,7 @@
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-1.jpg" alt="Image">
+                                <img src="{{asset('img/blog-1.jpg')}}" alt="Image">
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -48,7 +48,7 @@
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-2.jpg" alt="Image">
+                                <img src="{{asset('img/blog-2.jpg')}}" alt="Image">
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -65,7 +65,7 @@
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-3.jpg" alt="Image">
+                                <img src="{{asset('img/blog-3.jpg')}}" alt="Image">
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -82,7 +82,7 @@
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-1.jpg" alt="Image">
+                                <img src="{{asset('img/blog-1.jpg')}}" alt="Image">
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -99,7 +99,7 @@
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-2.jpg" alt="Image">
+                                <img src="{{asset('img/blog-2.jpg')}}" alt="Image">
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>
@@ -116,7 +116,7 @@
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-3.jpg" alt="Image">
+                                <img src="{{asset('img/blog-3.jpg')}}" alt="Image">
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">Lorem ipsum dolor sit</a></h3>

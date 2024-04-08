@@ -5,7 +5,7 @@
                     <h2>Envoyez nous un message</h2>
                 </div>
                 <div class="contact-img">
-                    <img src="img/cause-3.png" alt="Image" />
+                    <img src="{{asset('img/cause-3.png')}}" alt="Image" />
                 </div>
                 <div class="contact-form">
              
