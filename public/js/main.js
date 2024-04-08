@@ -51,6 +51,10 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
+    //prevent shacking effects when an anchor tag is clicked
+    $(".dropdown-menu a").click(function (e) {
+        e.stopPropagation();
+    });
 
     // Main carousel
     $(".carousel .owl-carousel").owlCarousel({
