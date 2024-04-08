@@ -92,8 +92,14 @@
                 </div>
             </div>
         </div>
-{{-- Strategies - Approches - Ressources Humaines --}}
+{{-- Mot du Secretaire  Starts--}}
+@include('partials.about.motsDuSecretaireExecutif')
+{{-- Mot du Secretaire Ends --}}
+{{-- Strategies - Approches - Ressources Humaines Starts --}}
         @include('partials.about.strategies')
+{{-- Strategies - Approches - Ressources Humaines Ends --}}
+
+{{-- Team Starts --}}
         <div>
             <div class="container">
                 <div class="section-header text-center">
@@ -204,7 +210,7 @@
                 </div>
             </div>
         </div>
-      
+{{-- Team Ends --}}
 
         {{-- About Ends --}}
 
