@@ -66,11 +66,11 @@
                                
                             </div>
                     </div> 
-                        <a href="/events" class="nav-item nav-link"
+                        <a href="{{route('events.index')}}" class="nav-item nav-link"
                             >Événements</a
                         >
-                        <a href="/blogs" class="nav-item nav-link">Actualités</a>
-                        <a href="/contacts" class="nav-item nav-link"
+                        <a href="{{route('blogs.index')}}" class="nav-item nav-link">Actualités</a>
+                        <a href="{{route('contacts.index')}}" class="nav-item nav-link"
                             >Contact</a
                         >
                     </div>
