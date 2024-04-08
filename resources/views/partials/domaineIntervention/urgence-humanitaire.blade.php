@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-12">
                         <a href="/">Accueil</a>
-                        <a href="/urgencehumanitaire">Domaines d'intervention</a>
+                        <a href="{{route('domaines.urgencehumanitaire')}}">Domaines d'intervention</a>
                     </div>
                 </div>
             </div>

@@ -92,14 +92,14 @@
                     id="navbarCollapse"
                 >
                     <div class="navbar-nav ml-auto">
-                        <a href="/" class="nav-item nav-link active"
+                          <a href="/" class="nav-item nav-link  {{ Request::is('/') ? 'active' : '' }}"
                             >Accueil</a
                         >
 
                     <div class="nav-item dropdown">
                             <a
                                 href="#"
-                                class="nav-link dropdown-toggle"
+                                class="nav-link dropdown-toggle {{ Request::is('about*') ? 'active' : '' }}"
                                 data-toggle="dropdown"
                                 >Qui sommes-nous?</a
                             >
@@ -120,12 +120,12 @@
                         <div class="nav-item dropdown">
                             <a
                                 href="#"
-                                class="nav-link dropdown-toggle"
+                                class="nav-link dropdown-toggle  {{ Request::is('domaines*') ? 'active' : '' }}"
                                 data-toggle="dropdown"
                                 >Domaines d'intervention</a
                             >
                             <div class="dropdown-menu">
-                                 <a href="{{route('domaines.securitealimentaire')}}" class="dropdown-item"
+                                <a href="{{route('domaines.securitealimentaire')}}" class="dropdown-item"
                                     >Sécurité alimentaire</a
                                 >
                                 <a href="{{route('domaines.santenutrition')}}" class="dropdown-item"
@@ -140,11 +140,10 @@
                                
                             </div>
                     </div> 
-                        <a href="{{route('events.index')}}" class="nav-item nav-link"
-                            >Événements</a
+                        <a href="{{route('events.index')}}" class="nav-item nav-link {{ Request::routeIs('events.index') ? 'active' : '' }}"> Événements</a
                         >
-                        <a href="route('blogs.index')}}" class="nav-item nav-link">Actualités</a>
-                        <a href="{{route('contacts.index')}}" class="nav-item nav-link"
+                        <a href="{{route('blogs.index')}}" class="nav-item nav-link {{ Request::routeIs('blogs.index') ? 'active' : '' }} ">Actualités</a>
+                        <a href="{{route('contacts.index')}}" class="nav-item nav-link {{ Request::routeIs('contacts.index') ? 'active' : '' }} "
                             >Contact</a
                         >
                     </div>
