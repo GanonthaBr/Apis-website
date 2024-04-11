@@ -7,9 +7,9 @@
     <title>Mail content</title>
 </head>
 <body>
-    name:
-    Subject:
-    Mail:
-    Message:
+    name: {{ $name }} <br>
+    Subject: {{ $subject }} <br>
+    Mail: {{ $email }} <br>
+    {{-- Message: {{ $message }} <br> --}}
 </body>
 </html>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -38,6 +40,8 @@ class ContactController extends Controller
             'email' => $request->email,
             'message' => $request->message,
         ];
+        //send email to admin at dev@apis-sahel.org
+        Mail::to('dev@apis-sahel.org')->send(new ContactMail($data));
 
         //store
         $contact = new Contact();
