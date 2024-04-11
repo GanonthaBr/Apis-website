@@ -25,6 +25,7 @@ class ContactController extends Controller
             [
                 'name.required' => 'Le nom est obligatoire',
                 'email.required' => 'L\'email est obligatoire',
+                'email.email' => 'L\'email doit être valide',
                 'message.required' => 'Le message est obligatoire',
 
             ]
