@@ -11,7 +11,7 @@
              
                  <div id="success">
                   
-                    {{session('success')}}
+                 <div class="alert alert-success">   {{session('success')}}</div>
                   
                  </div>
                     <form
