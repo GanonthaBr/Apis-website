@@ -27,6 +27,3 @@ Route::get('/domaines/santenutrition', [DomaineInterventionController::class, 's
 Route::get('/domaines/urgencehumanitaire', [DomaineInterventionController::class, 'urgencehumanitaire'])->name('domaines.urgencehumanitaire');
 Route::get('/domaines/securitealimentaire', [DomaineInterventionController::class, 'securitealimentaire'])->name('domaines.securitealimentaire');
 Route::get('/domaines/educationdeveloppement', [DomaineInterventionController::class, 'educationdeveloppement'])->name('domaines.educationdeveloppement');
-
-//email content
-Route::get('/email', [EmailController::class, 'index']);
