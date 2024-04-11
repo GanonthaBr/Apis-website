@@ -31,6 +31,13 @@ class ContactController extends Controller
             ]
 
         );
+        //declare array $data variable with all of the request data
+        $data = [
+            'name' => $request->name,
+            'subject' => $request->subject,
+            'email' => $request->email,
+            'message' => $request->message,
+        ];
 
         //store
         $contact = new Contact();
