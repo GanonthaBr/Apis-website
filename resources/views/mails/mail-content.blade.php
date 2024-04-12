@@ -7,9 +7,15 @@
     <title>Mail content</title>
 </head>
 <body>
-    name: {{ $name }} <br>
-    Subject: {{ $subject }} <br>
-    Mail: {{ $email }} <br>
-    Message: {{ $user_message }} <br>
+   <h1>Contenu du message</h1>
+   <p><b>Nom de l'expéditeur:</b> {{ $name }}</p>
+   <p><b>Objet:</b>  {{ $subject }} </p>
+   <p> <b>Mail ou Numéro de Téléphone: </b>  {{ $email }}</p>
+   <div style="border: 1px solid #11579c; padding: 10px;" >
+       <p><b>Message:</b></p>
+       <p>{{ $user_message }}</p>
+   </div>
+ 
+  
 </body>
 </html>
