@@ -17,7 +17,7 @@ class ContactMail extends Mailable
      * Create a new message instance.
      */
     public function __construct(
-        protected array $data
+        private array $data
     ) {
     }
 
@@ -28,6 +28,7 @@ class ContactMail extends Mailable
     {
         return new Envelope(
             subject: 'Un Message venant du site web',
+            from: $this->data['email'],
         );
     }
 
