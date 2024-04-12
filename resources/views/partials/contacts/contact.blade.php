@@ -38,7 +38,7 @@
                             />
                             <p class="help-block text-danger"> 
                                @error('name')
-                                   {{$user_message}}
+                                   {{$message}}
                                @enderror
                             </p>
                         </div>
@@ -55,7 +55,7 @@
                             />
                             <p class="help-block text-danger">
                                 @error('email')
-                                   {{$user_message}}
+                                   {{$message}}
                                @enderror
                             </p>
                         </div>
@@ -72,7 +72,7 @@
                             />
                             <p class="help-block text-danger">
                                 @error('subject')
-                                   {{$user_message}}
+                                   {{$message}}
                                @enderror
                             </p>
                         </div>
@@ -84,11 +84,11 @@
                                 placeholder="Message"
                                 required="required"
                                 value="{{old('user_message')}}"
-                                data-validation-required-user_message="Please enter your user_message"
+                                data-validation-required-message="Please enter your user_message"
                             ></textarea>
                             <p class="help-block text-danger">
                                 @error('user_message')
-                                   {{$user_message}}
+                                   {{$message}}
                                 @enderror
                             </p>
                         </div>
