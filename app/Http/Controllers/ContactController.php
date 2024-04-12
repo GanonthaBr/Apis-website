@@ -21,14 +21,14 @@ class ContactController extends Controller
             [
                 'name' => 'required',
                 'email' => 'required',
-                'message' => 'required',
+                'user_message' => 'required',
             ],
-            //custom message
+            //custom user_message
             [
                 'name.required' => 'Le nom est obligatoire',
                 'email.required' => 'L\'email est obligatoire',
                 'email.email' => 'L\'email doit être valide',
-                'message.required' => 'Le message est obligatoire',
+                'user_message.required' => 'Le user_message est obligatoire',
 
             ]
 
@@ -38,7 +38,7 @@ class ContactController extends Controller
             'name' => $request->name,
             'subject' => $request->subject,
             'email' => $request->email,
-            'message' => $request->message,
+            'user_message' => $request->user_message,
         ];
         //send email to admin at dev@apis-sahel.org
         Mail::to('dev@apis-sahel.org')->send(new ContactMail($data));
@@ -48,7 +48,7 @@ class ContactController extends Controller
         $contact->name = $request->name;
         $contact->subject = $request->subject;
         $contact->email = $request->email;
-        $contact->message = $request->message;
+        $contact->user_message = $request->user_message;
         $contact->save();
 
         //redirect

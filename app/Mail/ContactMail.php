@@ -14,7 +14,7 @@ class ContactMail extends Mailable
     use Queueable, SerializesModels;
 
     /**
-     * Create a new message instance.
+     * Create a new user_message instance.
      */
     public function __construct(
         private array $data
@@ -22,7 +22,7 @@ class ContactMail extends Mailable
     }
 
     /**
-     * Get the message envelope.
+     * Get the user_message envelope.
      */
     public function envelope(): Envelope
     {
@@ -34,7 +34,7 @@ class ContactMail extends Mailable
     }
 
     /**
-     * Get the message content definition.
+     * Get the user_message content definition.
      */
     public function content(): Content
     {
@@ -44,13 +44,13 @@ class ContactMail extends Mailable
                 'name' => $this->data['name'],
                 'email' => $this->data['email'],
                 'subject' => $this->data['subject'],
-                'message' => $this->data['message']
+                'user_message' => $this->data['user_message']
             ],
         );
     }
 
     /**
-     * Get the attachments for the message.
+     * Get the attachments for the user_message.
      *
      * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */

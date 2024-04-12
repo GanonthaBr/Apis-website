@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <p>Nous Contacter</p>
-                    <h2>Envoyez nous un message</h2>
+                    <h2>Envoyez nous un user_message</h2>
                 </div>
                 <div class="contact-img">
                     <img src="{{asset('img/cause-3.png')}}" alt="Image" />
@@ -34,11 +34,11 @@
                                 placeholder="Votre Nom"
                                 required="required"
                                 value="{{old('name')}}"
-                                data-validation-required-message="Please enter your name"
+                                data-validation-required-user_message="Please enter your name"
                             />
                             <p class="help-block text-danger"> 
                                @error('name')
-                                   {{$message}}
+                                   {{$user_message}}
                                @enderror
                             </p>
                         </div>
@@ -51,11 +51,11 @@
                                 placeholder="Votre Telephone ou Email"
                                 required="required"
                                 value="{{old('email')}}"
-                                data-validation-required-message="Please enter your email"
+                                data-validation-required-user_message="Please enter your email"
                             />
                             <p class="help-block text-danger">
                                 @error('email')
-                                   {{$message}}
+                                   {{$user_message}}
                                @enderror
                             </p>
                         </div>
@@ -68,27 +68,27 @@
                                 placeholder="Object"
                                 required="required"
                                 value="{{old('subject')}}"
-                                data-validation-required-message="Please enter a subject"
+                                data-validation-required-user_message="Please enter a subject"
                             />
                             <p class="help-block text-danger">
                                 @error('subject')
-                                   {{$message}}
+                                   {{$user_message}}
                                @enderror
                             </p>
                         </div>
                         <div class="control-group">
                             <textarea
                                 class="form-control"
-                                id="message"
-                                name="message"
+                                id="user_message"
+                                name="user_message"
                                 placeholder="Message"
                                 required="required"
-                                value="{{old('message')}}"
-                                data-validation-required-message="Please enter your message"
+                                value="{{old('user_message')}}"
+                                data-validation-required-user_message="Please enter your user_message"
                             ></textarea>
                             <p class="help-block text-danger">
-                                @error('message')
-                                   {{$message}}
+                                @error('user_message')
+                                   {{$user_message}}
                                 @enderror
                             </p>
                         </div>

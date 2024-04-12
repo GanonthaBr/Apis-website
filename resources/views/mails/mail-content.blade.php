@@ -10,6 +10,6 @@
     name: {{ $name }} <br>
     Subject: {{ $subject }} <br>
     Mail: {{ $email }} <br>
-    {{-- Message: {{ $message }} <br> --}}
+    Message: {{ $user_message }} <br>
 </body>
 </html>
