@@ -28,7 +28,8 @@ class ContactMail extends Mailable
     {
         return new Envelope(
             subject: 'Un Message venant du site web',
-            from: $this->data['email'],
+            from: 'dev@apis-sahel.org',
+
         );
     }
 
