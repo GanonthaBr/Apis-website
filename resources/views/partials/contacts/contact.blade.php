@@ -10,8 +10,11 @@
                 <div class="contact-form">
              
                  <div id="success">
-                  
-                 <div class="alert alert-success">   {{session('success')}}</div>
+       
+                  @if(session('success'))
+                
+                   <div class="alert alert-success">   {{session('success')}}</div>
+                  @endif
                   
                  </div>
                     <form
