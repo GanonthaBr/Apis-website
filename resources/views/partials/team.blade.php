@@ -11,10 +11,10 @@
                                 <img src="{{asset('img/team-1.jpg')}}" alt="Team Image" />
                             </div>
                             <div class="team-text">
-                                <h2>Donald John</h2>
-                                <p>Founder & CEO</p>
+                                <h2>AGABA Jonas</h2>
+                                <p>Secrétaire Exécutif</p>
                                 <div class="team-social">
-                                    <a href=""
+                                    {{-- <a href=""
                                         ><i class="fab fa-twitter"></i
                                     ></a>
                                     <a href=""
@@ -22,10 +22,13 @@
                                     ></a>
                                     <a href=""
                                         ><i class="fab fa-linkedin-in"></i
-                                    ></a>
+                                    ></a> --}}
                                     <a href=""
-                                        ><i class="fab fa-instagram"></i
-                                    ></a>
+                                        ><i class="fab fa-envelope"></i
+                                    >
+                                {{-- add a email icon --}}
+
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -39,15 +42,7 @@
                                 <h2>Adam Phillips</h2>
                                 <p>Chef Executive</p>
                                 <div class="team-social">
-                                    <a href=""
-                                        ><i class="fab fa-twitter"></i
-                                    ></a>
-                                    <a href=""
-                                        ><i class="fab fa-facebook-f"></i
-                                    ></a>
-                                    <a href=""
-                                        ><i class="fab fa-linkedin-in"></i
-                                    ></a>
+                                  
                                     <a href=""
                                         ><i class="fab fa-instagram"></i
                                     ></a>
@@ -64,15 +59,7 @@
                                 <h2>Thomas Olsen</h2>
                                 <p>Chef Advisor</p>
                                 <div class="team-social">
-                                    <a href=""
-                                        ><i class="fab fa-twitter"></i
-                                    ></a>
-                                    <a href=""
-                                        ><i class="fab fa-facebook-f"></i
-                                    ></a>
-                                    <a href=""
-                                        ><i class="fab fa-linkedin-in"></i
-                                    ></a>
+                                   
                                     <a href=""
                                         ><i class="fab fa-instagram"></i
                                     ></a>
@@ -89,18 +76,12 @@
                                 <h2>James Alien</h2>
                                 <p>Advisor</p>
                                 <div class="team-social">
-                                    <a href=""
-                                        ><i class="fab fa-twitter"></i
-                                    ></a>
-                                    <a href=""
-                                        ><i class="fab fa-facebook-f"></i
-                                    ></a>
-                                    <a href=""
-                                        ><i class="fab fa-linkedin-in"></i
-                                    ></a>
+                                  
                                     <a href=""
                                         ><i class="fab fa-instagram"></i
                                     ></a>
+                                    {{-- add an anchor tag with envelope icon --}}
+                                    
                                 </div>
                             </div>
                         </div>
