@@ -28,7 +28,7 @@ class ContactMail extends Mailable
     {
         return new Envelope(
             subject: 'Un Message venant du site web',
-            from: 'dev@apis-sahel.org',
+            from: 'contact@apis-sahel.org',
 
         );
     }
