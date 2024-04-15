@@ -50,7 +50,7 @@
                                  Créée par un groupe de spécialistes œuvrant ou ayant servis dans le domaine de la sécurité alimentaire, santé et nutrition et développement socio-économique des communautés rurales. Ceux-ci sont conscients que leur contribution dans leurs domaines respectifs est d’une grande importante pour conjuguer les efforts avec les autres fils et filles de la nation qui se voient dans l’obligation de développer des actions et programmes appropriés pour relever le défi que rencontre le peuple sahélien vivant en milieu rural en général et le peuple nigérien en particulier.
                                  <p class="arrete">Reconnue par l’arrêté ministérielN° 728/MISPD/AR/DGAPJ/DLF</p>
                             <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">En savoir plus</a>
+                                <a class="btn btn-custom" href="{{route('about.index')}}">En savoir plus</a>
                             </div>
 
                                 </div>

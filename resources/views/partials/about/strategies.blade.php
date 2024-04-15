@@ -1,4 +1,4 @@
-<div class="container strategies">
+<div class="container strategies" id="strategies">
         <ul class="nav nav-pills nav-justified pb-3">
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="pill" href="#tab1">Stratégies</a>
