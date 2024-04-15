@@ -9,7 +9,7 @@
                     <div class="col-lg-7">
                         <div class="donate-content">
                             <div class="section-header">
-                                <p>Faire un Don</p>
+                                <h1 style="color:#17468a; font-weight:bold">Faire un Don</h1>
                                 <h2>
                                     Vos dons et aides sont des gestes qui sauvent des vies!
                                 </h2>

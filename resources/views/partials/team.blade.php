@@ -24,9 +24,8 @@
                                         ><i class="fab fa-linkedin-in"></i
                                     ></a> --}}
                                     <a href=""
-                                        ><i class="fab fa-envelope"></i
-                                    >
-                                {{-- add a email icon --}}
+                                        ><i class="fa fa-envelope"></i>
+                              
 
                                 </a>
                                 </div>
@@ -44,8 +43,7 @@
                                 <div class="team-social">
                                   
                                     <a href=""
-                                        ><i class="fab fa-instagram"></i
-                                    ></a>
+                                        ><i class="fa fa-envelope"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -61,8 +59,7 @@
                                 <div class="team-social">
                                    
                                     <a href=""
-                                        ><i class="fab fa-instagram"></i
-                                    ></a>
+                                        ><i class="fa fa-envelope"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -78,10 +75,10 @@
                                 <div class="team-social">
                                   
                                     <a href=""
-                                        ><i class="fab fa-instagram"></i
+                                        ><i class="fa fa-envelope"></i
                                     ></a>
                                     {{-- add an anchor tag with envelope icon --}}
-                                    
+
                                 </div>
                             </div>
                         </div>

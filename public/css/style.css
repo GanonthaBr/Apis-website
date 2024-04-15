@@ -1134,7 +1134,7 @@ a:focus {
 
 .team .team-social a {
     display: inline-block;
-    width: 35px;
+    width: 50%;
     height: 35px;
     margin: 0 3px;
     padding: 5px 0;
