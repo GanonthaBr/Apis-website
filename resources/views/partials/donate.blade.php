@@ -22,7 +22,9 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="donate-form">
-                            <form>
+                            <form
+                            method="#"
+                            >
                                 <div class="control-group">
                                     <input
                                         type="text"
@@ -39,7 +41,7 @@
                                         required="required"
                                     />
                                 </div>
-                                <div
+                                {{-- <div
                                     class="btn-group btn-group-toggle"
                                     data-toggle="buttons"
                                 >
@@ -59,7 +61,7 @@
                                         <input type="radio" name="options" />
                                         $30
                                     </label>
-                                </div>
+                                </div> --}}
                                 <div>
                                     <button
                                         class="btn btn-custom"
