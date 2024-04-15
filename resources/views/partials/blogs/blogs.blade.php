@@ -53,11 +53,11 @@
                             </div>
                             <div class="blog-meta">
                                 <p><i class="fa fa-user"></i><a href="">Admin</a></p>
-                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                                <p><i class="fa fa-comments"></i><a href="" >5 Comments</a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    {{-- <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
                                 <img src="{{asset('img/blog-1.jpg')}}" alt="Image">
@@ -107,7 +107,7 @@
                                 <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="row">
                     <div class="col-12">

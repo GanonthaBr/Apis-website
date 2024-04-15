@@ -1484,7 +1484,7 @@ a:focus {
 
 .blog .blog-meta p {
     margin: 0;
-    color: #777777;
+    color: #17468a;
     padding: 0 30px;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -1499,10 +1499,12 @@ a:focus {
 }
 
 .blog .blog-meta i {
-    color: #4a4c70;
+    color: #11579c;
     margin-right: 8px;
 }
-
+.blog .blog-meta a {
+    color: #000;
+}
 .blog .pagination {
     margin-bottom: 15px;
 }

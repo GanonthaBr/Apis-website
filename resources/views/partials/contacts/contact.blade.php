@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <p>Nous Contacter</p>
-                    <h2>Envoyez nous un user_message</h2>
+                    <h2>Envoyez nous un message</h2>
                 </div>
                 <div class="contact-img">
                     <img src="{{asset('img/cause-3.png')}}" alt="Image" />
