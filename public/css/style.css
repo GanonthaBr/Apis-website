@@ -1503,7 +1503,7 @@ a:focus {
     margin-right: 8px;
 }
 .blog .blog-meta a {
-    color: #000;
+    color: #11579c;
 }
 .blog .pagination {
     margin-bottom: 15px;
@@ -1517,7 +1517,7 @@ a:focus {
 
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
-    color: #17468a;
+    color: #fff;
     background: #4a4c70;
 }
 
