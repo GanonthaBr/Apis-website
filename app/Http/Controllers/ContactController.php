@@ -41,7 +41,7 @@ class ContactController extends Controller
             'user_message' => $request->user_message,
         ];
         //send email to admin at dev@apis-sahel.org
-        Mail::to('dev@apis-sahel.org')->send(new ContactMail($data));
+        Mail::to('contact@apis-sahel.org')->send(new ContactMail($data));
 
         //store
         $contact = new Contact();
