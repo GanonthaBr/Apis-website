@@ -34,7 +34,7 @@
                         </div>
                         <div class="causes-btn">
                             <a class="btn btn-custom">En savoir+</a>
-                            <a class="btn btn-custom">Faire un Don</a>
+                            <a class="btn btn-custom" href="#donate">Faire un Don</a>
                         </div>
                     </div>
                     <div class="causes-item">
@@ -66,7 +66,7 @@
                         </div>
                         <div class="causes-btn">
                             <a class="btn btn-custom">En savoir+</a>
-                            <a class="btn btn-custom">Faire un Don</a>
+                            <a class="btn btn-custom" href="#donate">Faire un Don</a>
                         </div>
                     </div>
                     <div class="causes-item">
@@ -98,7 +98,7 @@
                         </div>
                         <div class="causes-btn">
                             <a class="btn btn-custom">En savoir+</a>
-                            <a class="btn btn-custom">Faire un Don</a>
+                            <a class="btn btn-custom" href="#donate">Faire un Don</a>
                         </div>
                     </div>
                     <div class="causes-item">
@@ -130,7 +130,7 @@
                         </div>
                         <div class="causes-btn">
                             <a class="btn btn-custom">En savoir+</a>
-                            <a class="btn btn-custom">Faire un Don</a>
+                            <a class="btn btn-custom" href="#donate">Faire un Don</a>
                         </div>
                     </div>
                 </div>

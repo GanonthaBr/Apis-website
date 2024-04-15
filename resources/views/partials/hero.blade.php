@@ -12,7 +12,7 @@
                               La sécurité alimentaire est une condition préalable à la santé et au bien-être de tous. APIS œuvre pour un accès physique, social et économique à une nourriture suffisante, saine et nutritive pour les communautés rurales.
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Faire un Don</a>
+                                <a class="btn btn-custom" href="#donate">Faire un Don</a>
                                 <a
                                     class="btn btn-custom btn-play"
                                     data-toggle="modal"

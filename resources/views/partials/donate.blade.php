@@ -1,5 +1,6 @@
     <div
             class="donate"
+            id="donate"
             data-parallax="scroll"
             data-image-src="{{asset('img/donate.jpg')}}"
         >
