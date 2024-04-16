@@ -96,6 +96,7 @@
                             <button
                                 class="btn btn-custom"
                                 type="submit"
+                                onclick="submitClicked()"
                                 id="sendMessageButton"
                             >
                                 Envoyer Message

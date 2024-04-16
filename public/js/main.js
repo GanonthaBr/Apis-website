@@ -1,5 +1,5 @@
 (function ($) {
-    "use strict";
+    ("use strict");
 
     // loader
     var loader = function () {
@@ -177,5 +177,20 @@
                 items: 2,
             },
         },
+    });
+    // disable button after with id: sendMessageButton submit for 10 seconds then enable it, with a message
+    $("#sendMessageButton").click(function (event) {
+        event.preventDefault();
+        $(this).prop("disabled", true); //disable the button
+
+        //show message
+        $(this).html("Encours d'envoi...");
+
+        $(this).closest("form").submit(); //submit the form manually
+
+        //reanble button
+        setTimeout(function () {
+            $("#sendMessageButton").prop("disabled", false);
+        }, 10000);
     });
 })(jQuery);
