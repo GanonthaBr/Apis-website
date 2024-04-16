@@ -34,6 +34,7 @@
                                 name="name"
                                 placeholder="Votre Nom"
                                 required="required"
+                                @error('name') is-invalid @enderror
                                 value="{{old('name')}}"
                                 data-validation-required-message="Please enter your name"
                                 novalidate="novalidate"

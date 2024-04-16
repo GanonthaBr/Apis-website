@@ -23,7 +23,7 @@ class ContactController extends Controller
                 'email' => 'required',
                 'user_message' => 'required',
             ],
-            //custom user_message
+            //custom error messages
             [
                 'name.required' => 'Le nom est obligatoire',
                 'email.required' => 'L\'email est obligatoire',
