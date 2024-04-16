@@ -23,6 +23,7 @@
                         novalidate="novalidate"
                         action="{{route('contacts.store')}}"
                         method="POST"
+                        id="formId"
                     >
                     @csrf
                         <div class="control-group">

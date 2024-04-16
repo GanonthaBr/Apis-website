@@ -186,7 +186,24 @@
         //show message
         $(this).html("Encours d'envoi...");
 
-        $(this).closest("form").submit(); //submit the form manually
+        //get the form data
+        var formData = $(this).closest("form").serialize();
+
+        //send the form data using AJAX
+        $.ajax({
+            type: "POST",
+            url: $(this).closest("form").attr("action"),
+            data: formData,
+            success: function (response) {
+                //clear the form fileds
+                $("#formId")[0].reset();
+                //show message
+                $(this).html("Envoyer Message");
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                //handle any errors
+            },
+        });
 
         //reanble button
         setTimeout(function () {
