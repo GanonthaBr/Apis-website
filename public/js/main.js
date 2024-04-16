@@ -217,7 +217,8 @@
                     var errorsHtml = "<ul>";
 
                     $.each(errors, function (key, value) {
-                        errorsHtml += "<li>" + value[0] + "</li>"; // Show first error message
+                        errorsHtml +=
+                            "<li class='text-danger'>" + value[0] + "</li>"; // Show first error message
                     });
 
                     errorsHtml += "</ul>";
