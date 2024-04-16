@@ -36,8 +36,10 @@
                                 required="required"
                                 value="{{old('name')}}"
                                 data-validation-required-message="Please enter your name"
+                                novalidate="novalidate"
                             />
                             <p class="help-block text-danger"> 
+                                
                                @error('name')
                                    {{$message}}
                                @enderror
