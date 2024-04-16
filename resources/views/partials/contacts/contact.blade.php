@@ -35,7 +35,7 @@
                                 placeholder="Votre Nom"
                                 required="required"
                                 value="{{old('name')}}"
-                                data-validation-required-user_message="Please enter your name"
+                                data-validation-required-message="Please enter your name"
                             />
                             <p class="help-block text-danger"> 
                                @error('name')
@@ -52,7 +52,7 @@
                                 placeholder="Votre Telephone ou Email"
                                 required="required"
                                 value="{{old('email')}}"
-                                data-validation-required-user_message="Please enter your email"
+                                data-validation-required-message="Please enter your email"
                             />
                             <p class="help-block text-danger">
                                 @error('email')
@@ -69,7 +69,7 @@
                                 placeholder="Object"
                                 required="required"
                                 value="{{old('subject')}}"
-                                data-validation-required-user_message="Please enter a subject"
+                                data-validation-required-message="Please enter a subject"
                             />
                             <p class="help-block text-danger">
                                 @error('subject')

@@ -208,8 +208,7 @@
 
                 // Insert the error message into the modal
                 $("#responseModalBody").html(
-                    "Une erreur s'est produite, veuillez réessayer Encore: " +
-                        textStatus
+                    "Une erreur s'est produite, veuillez réessayer Encore!"
                 );
 
                 // show the modal
