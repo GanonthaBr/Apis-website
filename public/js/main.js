@@ -206,11 +206,6 @@
             error: function (jqXHR, textStatus, errorThrown) {
                 //handle any errors
 
-                // Insert the error message into the modal
-                // $("#responseModalBody").html(
-                //     "Une erreur s'est produite, veuillez réessayer Encore!"
-                // );
-
                 if (jqXHR.status === 422) {
                     // If status code is 422
                     var errors = jqXHR.responseJSON.errors;
