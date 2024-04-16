@@ -207,12 +207,27 @@
                 //handle any errors
 
                 // Insert the error message into the modal
-                $("#responseModalBody").html(
-                    "Une erreur s'est produite, veuillez réessayer Encore!"
-                );
+                // $("#responseModalBody").html(
+                //     "Une erreur s'est produite, veuillez réessayer Encore!"
+                // );
 
-                // show the modal
-                $("#responseModal").modal("show");
+                if (jqXHR.status === 422) {
+                    // If status code is 422
+                    var errors = jqXHR.responseJSON.errors;
+                    var errorsHtml = "<ul>";
+
+                    $.each(errors, function (key, value) {
+                        errorsHtml += "<li>" + value[0] + "</li>"; // Show first error message
+                    });
+
+                    errorsHtml += "</ul>";
+
+                    // Insert the error messages into the modal
+                    $("#responseModalBody").html(errorsHtml);
+
+                    // Show the modal
+                    $("#responseModal").modal("show");
+                }
             },
         });
 
