@@ -199,8 +199,7 @@
                 $("#responseModalBody").html(response.message);
                 //clear the form fileds
                 $("#formId")[0].reset();
-                //show message
-                $(this).html("Envoyer Message");
+
                 // Show the modal
                 $("#responseModal").modal("show");
             },
@@ -213,5 +212,9 @@
         setTimeout(function () {
             $("#sendMessageButton").prop("disabled", false);
         }, 10000);
+    });
+    // when click the close button in the modal, change the form submit button text to "Envoyer Message"
+    $("#closeModal").click(function () {
+        $("#sendMessageButton").html("Envoyer Message");
     });
 })(jQuery);
