@@ -198,7 +198,7 @@
                 // Insert the response message into the modal
                 $("#responseModalBody").html(response.message);
                 //clear the form fileds
-                $("#formId")[0].reset();
+                $("#contactForm")[0].reset();
 
                 // Show the modal
                 $("#responseModal").modal("show");

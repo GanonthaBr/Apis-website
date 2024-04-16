@@ -19,11 +19,11 @@
                  </div>
                     <form
                         name="sentMessage"
-                        {{-- id="contactForm" --}}
+                        id="contactForm"
                         novalidate="novalidate"
                         action="{{route('contacts.store')}}"
                         method="POST"
-                        id="formId"
+                        {{-- id="formId" --}}
                     >
                     @csrf
                         <div class="control-group">
