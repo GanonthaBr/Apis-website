@@ -205,6 +205,15 @@
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 //handle any errors
+
+                // Insert the error message into the modal
+                $("#responseModalBody").html(
+                    "Une erreur s'est produite, veuillez réessayer Encore: " +
+                        textStatus
+                );
+
+                // show the modal
+                $("#responseModal").modal("show");
             },
         });
 
