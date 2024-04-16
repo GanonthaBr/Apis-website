@@ -52,6 +52,6 @@ class ContactController extends Controller
         $contact->save();
 
         //redirect
-        return redirect()->back()->with('success', 'Votre Message a été envoyé avec succès!');
+        return response()->json(['message' => 'Votre message a été envoyé avec succès!']);
     }
 }
