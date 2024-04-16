@@ -195,10 +195,14 @@
             url: $(this).closest("form").attr("action"),
             data: formData,
             success: function (response) {
+                // Insert the response message into the modal
+                $("#responseModalBody").html(response.message);
                 //clear the form fileds
                 $("#formId")[0].reset();
                 //show message
                 $(this).html("Envoyer Message");
+                // Show the modal
+                $("#responseModal").modal("show");
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 //handle any errors
