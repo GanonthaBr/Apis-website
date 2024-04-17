@@ -97,7 +97,7 @@
         var button = $(event.relatedTarget); // Button that triggered the modal
         var video = button.data("video"); // Extract video URL from data-video attribute
         var modal = $(this);
-        modal.find(".embed-responsive-item").attr("src", video);
+        modal.find(".embed-responsive-item").attr("src", video + "?autoplay=1");
     });
 
     $("#videoModal").on("hide.bs.modal", function (event) {
