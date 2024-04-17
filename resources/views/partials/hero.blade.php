@@ -17,7 +17,7 @@
                                     type="button"
                                     class="btn btn-custom btn-primary"
                                     data-toggle="modal"
-                                    data-video="https://www.youtube.com/embed/JA7VbUsdb68?si=t4rY-t95sN_Is_lX"
+                                    data-video="https://www.youtube.com/embed/vdHT9kJVIN0?si=1V3wq8tfxMc1_gfe"
                                     data-target="#videoModal"
                                     >Voir Vidéo</a
                                 >
@@ -41,7 +41,7 @@
                                     type="button"
                                     class="btn btn-custom btn-primary"
                                     data-toggle="modal"
-                                    data-video="https://www.youtube.com/embed/JA7VbUsdb68?si=t4rY-t95sN_Is_lX"
+                                    data-video="https://www.youtube.com/embed/vdHT9kJVIN0?si=1V3wq8tfxMc1_gfe"
                                     data-target="#videoModal"
                                     >Voir Vidéo</a
                                 >
@@ -64,7 +64,7 @@
                                     type="button"
                                     class="btn btn-custom btn-primary"
                                     data-toggle="modal"
-                                    data-video="https://www.youtube.com/embed/JA7VbUsdb68?si=t4rY-t95sN_Is_lX"
+                                    data-video="https://www.youtube.com/embed/vdHT9kJVIN0?si=1V3wq8tfxMc1_gfe"
                                     data-target="#videoModal"
                                     >Voir Vidéo</a
                                 >
@@ -88,7 +88,7 @@
                                     type="button"
                                     class="btn btn-custom btn-primary"
                                     data-toggle="modal"
-                                    data-video="https://www.youtube.com/embed/JA7VbUsdb68?si=t4rY-t95sN_Is_lX"
+                                    data-video="https://www.youtube.com/embed/vdHT9kJVIN0?si=1V3wq8tfxMc1_gfe"
                                     data-target="#videoModal"
                                     >Voir Vidéo</a
                                 >
