@@ -14,9 +14,10 @@
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="#donate">Faire un Don</a>
                                 <a
-                                    class="btn btn-custom btn-play"
+                                    type="button"
+                                    class="btn btn-custom btn-primary"
                                     data-toggle="modal"
-                                    data-src="https://www.youtube.com/embed/F5y8mjrP1TM"
+                                    data-video="https://www.youtube.com/embed/JA7VbUsdb68?si=t4rY-t95sN_Is_lX"
                                     data-target="#videoModal"
                                     >Voir Vidéo</a
                                 >
@@ -94,3 +95,5 @@
                 </div>
             </div>
         </div>
+
+        @include('partials.modal-video')
