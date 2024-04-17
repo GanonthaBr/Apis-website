@@ -39,12 +39,13 @@
                   @endif
                   
                  </div>
-                    <form
+                <form
                         name="sentMessage"
-                        {{-- id="contactForm" --}}
+                        id="contactForm"
                         novalidate="novalidate"
                         action="{{route('contacts.store')}}"
                         method="POST"
+                        {{-- id="formId" --}}
                     >
                     @csrf
                         <div class="control-group">
@@ -55,10 +56,13 @@
                                 name="name"
                                 placeholder="Votre Nom"
                                 required="required"
+                                @error('name') is-invalid @enderror
                                 value="{{old('name')}}"
-                                data-validation-required-user_message="Please enter your name"
+                                data-validation-required-message="Please enter your name"
+                                novalidate="novalidate"
                             />
                             <p class="help-block text-danger"> 
+                                
                                @error('name')
                                    {{$message}}
                                @enderror
@@ -73,7 +77,7 @@
                                 placeholder="Votre Telephone ou Email"
                                 required="required"
                                 value="{{old('email')}}"
-                                data-validation-required-user_message="Please enter your email"
+                                data-validation-required-message="Please enter your email"
                             />
                             <p class="help-block text-danger">
                                 @error('email')
@@ -90,7 +94,7 @@
                                 placeholder="Object"
                                 required="required"
                                 value="{{old('subject')}}"
-                                data-validation-required-user_message="Please enter a subject"
+                                data-validation-required-message="Please enter a subject"
                             />
                             <p class="help-block text-danger">
                                 @error('subject')
@@ -118,6 +122,7 @@
                             <button
                                 class="btn btn-custom"
                                 type="submit"
+                                onclick="submitClicked()"
                                 id="sendMessageButton"
                             >
                                 Envoyer Message
@@ -128,4 +133,7 @@
             </div>
         </div>
         <!-- Contacts End -->
+
+@include('partials.contacts.submit-modal')
+
 @stop
