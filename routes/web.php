@@ -27,3 +27,11 @@ Route::get('/domaines/santenutrition', [DomaineInterventionController::class, 's
 Route::get('/domaines/urgencehumanitaire', [DomaineInterventionController::class, 'urgencehumanitaire'])->name('domaines.urgencehumanitaire');
 Route::get('/domaines/securitealimentaire', [DomaineInterventionController::class, 'securitealimentaire'])->name('domaines.securitealimentaire');
 Route::get('/domaines/educationdeveloppement', [DomaineInterventionController::class, 'educationdeveloppement'])->name('domaines.educationdeveloppement');
+
+
+
+// test route
+
+Route::get('/test', function () {
+    return view('partials.blogs.blog-details');
+});

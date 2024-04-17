@@ -2,22 +2,27 @@
   @section('content')
             @include('includes.topbar')
             @include('includes.navbar')
-         <!-- Page Header Start -->
+
+          
+             <!-- Page Header Start -->
         <div class="page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Domaines d'intervention</h2> 
+                        <h2>Nos Actualités</h2>
                     </div>
                     <div class="col-12">
                         <a href="/">Accueil</a>
-                        <a href="{{route('domaines.educationdeveloppement')}}">Domaines d'intervention</a>
+                        <a href="/blogs">Actualités</a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Page Header End -->  
-               <!-- Single Post Start-->
+
+
+
+          <!-- Single Post Start-->
         <div class="single partial-content">
             <div class="container">
                 <div class="row">
@@ -37,12 +42,7 @@
                            
                         </div>
                         <h6>D'autres liens</h6>
-                        <div class="single-tags">
-                            <a href="">Santé & Nutrition</a>
-                            <a href="">Urgence humanitaire</a>
-                            <a href="">Sécurité Alimentaire</a>
-                            <a href="">Education et Développement social</a>
-                        </div>
+                       @include('partials.other-links')
                     </div>
 
     {{-- Side bar Sarts --}}
@@ -52,4 +52,10 @@
             </div>
         </div>
         <!-- Single Post End-->   
-@stop
+
+
+
+
+
+
+        @stop
