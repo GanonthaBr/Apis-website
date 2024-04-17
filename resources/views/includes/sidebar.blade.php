@@ -111,7 +111,7 @@
                             </div> --}}
 
                             <div class="sidebar-widget">
-                                <h2 class="widget-title">Tags Cloud</h2>
+                                <h2 class="widget-title">Liens Importants</h2>
                                 <div class="tag-widget">
                                     <a href="">National</a>
                                     <a href="">International</a>

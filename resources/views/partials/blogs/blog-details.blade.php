@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="single-content">
-                            <h1 class="domaine-title">Education et Développement Integré</h1>
+                            <h1 class="domaine-title">Titre du Blog</h1>
                             <img src="{{asset('img/sante-nutrition.jpeg')}}" />
                              <h3>Education</h3>
                             <p>
