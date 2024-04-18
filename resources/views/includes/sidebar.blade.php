@@ -18,10 +18,10 @@
                                             <img src="{{asset('img/blog-adh-1.png')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
-                                            <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                                            <a href="">Dans le cadre du renforcement des capacités de... </a>
                                             <div class="post-meta">
                                                 <p>Par<a href="">Admin</a></p>
-                                                <p>Sur<a href="">Web Design</a></p>
+                                                <p>Sur<a href="">APIS Sahel</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -30,10 +30,10 @@
                                             <img src="{{asset('img/blog-laba-1.png')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
-                                            <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                                            <a href="">La région de Tillabéry, située aux confins du Mali et du Burikina...</a>
                                             <div class="post-meta">
                                                 <p>Par<a href="">Admin</a></p>
-                                                <p>Sur<a href="">Web Design</a></p>
+                                                <p>Sur<a href="">APIS Sahel</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -42,10 +42,10 @@
                                             <img src="{{asset('img/blog-yagarey-1.png')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
-                                            <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                                            <a href="">Yogarey : Une Oasis d'Espoir et d'Innovation grâce à la    Métamorphose</a>
                                             <div class="post-meta">
                                                 <p>Par<a href="">Admin</a></p>
-                                                <p>Sur<a href="">Web Design</a></p>
+                                                <p>Sur<a href="">APIS Sahel</a></p>
                                             </div>
                                         </div>
                                     </div>
