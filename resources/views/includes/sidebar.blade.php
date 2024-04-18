@@ -12,9 +12,10 @@
                             <div class="sidebar-widget">
                                 <h2 class="widget-title">Publications récentes<h2>
                                 <div class="recent-post ">
+                                   
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="{{asset('img/post-1.jpg')}}" />
+                                            <img src="{{asset('img/blog-adh-1.png')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
                                             <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -26,7 +27,7 @@
                                     </div>
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="{{asset('img/post-1.jpg')}}" />
+                                            <img src="{{asset('img/blog-laba-1.png')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
                                             <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -38,19 +39,7 @@
                                     </div>
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="{{asset('img/post-1.jpg')}}" />
-                                        </div>
-                                        <div class="post-text domaine-links">
-                                            <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                            <div class="post-meta">
-                                                <p>Par<a href="">Admin</a></p>
-                                                <p>Sur<a href="">Web Design</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-item">
-                                        <div class="post-img">
-                                            <img src="{{asset('img/post-1.jpg')}}" />
+                                            <img src="{{asset('img/blog-yagarey-1.png')}}" />
                                         </div>
                                         <div class="post-text domaine-links">
                                             <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
