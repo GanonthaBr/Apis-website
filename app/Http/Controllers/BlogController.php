@@ -18,4 +18,20 @@ class BlogController extends Controller
         $post = Blog::findOrFail($id);
         return view('partials.blogs.blog-details', ['post' => $post]);
     }
+    // blog upload form
+
+    public function create()
+    {
+        return view('partials.blogs.create');
+    }
+
+    // Store a blog
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|255',
+            'content' => 'required',
+            'image' => 'nullable|image',
+        ]);
+    }
 }
