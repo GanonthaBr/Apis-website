@@ -12,7 +12,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::get();
-        return view('partials.blogs.blog-content', compact('blogs');
+        return view('partials.blogs.blog-content', compact('blogs'));
     }
     //display a single post
     public function show($id)
