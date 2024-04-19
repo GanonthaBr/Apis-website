@@ -36,6 +36,6 @@ Route::get('/domaines/educationdeveloppement', [DomaineInterventionController::c
 
 // test route
 
-Route::get('/test', function () {
-    return view('partials.blogs.blog-details');
-});
+// Route::get('/test', function () {
+//     return view('partials.blogs.blog-details');
+// });
