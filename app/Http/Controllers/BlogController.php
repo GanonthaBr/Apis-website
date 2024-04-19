@@ -31,7 +31,7 @@ class BlogController extends Controller
     {
         try {
             $request->validate([
-                'title' => 'required|255',
+                'title' => 'required',
                 'content' => 'required',
                 'image' => 'nullable|image',
             ]);

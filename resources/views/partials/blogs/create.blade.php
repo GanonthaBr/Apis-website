@@ -1,7 +1,5 @@
-@include('layouts.layout')
 
-@section('content')
-<div class="container">
+<div class="container" style="height: 80vh">
     <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="title">Titre:</label>
@@ -13,4 +11,4 @@
     <button type="submit" class="btn btn-primary" >Publier</button>
 </form>
 </div>
-@endsection
+
