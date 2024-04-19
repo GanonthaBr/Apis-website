@@ -13,6 +13,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 //Blog
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+Route::get('blog/{id}', [BlogController::class, 'show'])->name('blogs.show');
 
 //Contacts
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
