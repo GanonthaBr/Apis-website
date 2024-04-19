@@ -20,3 +20,4 @@ II - UPLOAD A BLOG
 1. create two routes: form (create) & store
 2. create the controller methods
 3. create the form
+   ==> Route to blog upload form: blog/create
