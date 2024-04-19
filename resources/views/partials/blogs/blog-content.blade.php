@@ -3,7 +3,7 @@
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="{{asset('storage/' .$blog->image)}}" alt="Image">
+                                <img src="{{ asset('storage/' . $blog->image )}}" alt="Image">
                             </div>
                             <div class="blog-text">
                                 <h3><a href="#">{{$blog->title}}</a></h3>
