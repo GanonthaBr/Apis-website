@@ -11,7 +11,8 @@ class BlogController extends Controller
     //show the blog page
     public function index()
     {
-        return view('partials.blogs.index');
+        $blogs = Blog::all();
+        return view('partials.blogs.index', ['blogs' => $blogs]);
     }
     //display a single post
     public function show($id)

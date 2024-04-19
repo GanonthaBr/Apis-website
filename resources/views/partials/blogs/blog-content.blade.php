@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    {{-- <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
                                 <img src="{{asset('img/blog-yagarey-2.png')}}" alt="Image">
@@ -49,7 +49,7 @@
                                 <p><i class="fa fa-comments"></i><a href="" >5 Comments</a></p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
