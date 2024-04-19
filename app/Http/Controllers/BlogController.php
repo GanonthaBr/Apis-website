@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Dotenv\Exception\ValidationException;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -28,19 +29,25 @@ class BlogController extends Controller
     // Store a blog
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|255',
-            'content' => 'required',
-            'image' => 'nullable|image',
-        ]);
-        //image path
+        try {
+            $request->validate([
+                'title' => 'required|255',
+                'content' => 'required',
+                'image' => 'nullable|image',
+            ]);
+            //image path
 
-        $imagePath = $request->file('image') ? $request->file('image')->store('blog_images', 'public') : null;
+            $imagePath = $request->file('image') ? $request->file('image')->store('blog_images', 'public') : null;
 
-        Blog::create([
-            'title' => $request->title,
-            'content' => $request->content,
-            'image' => $imagePath,
-        ]);
+            Blog::create([
+                'title' => $request->title,
+                'content' => $request->content,
+                'image' => $imagePath,
+            ]);
+
+            return response()->json(['message' => 'Votre blog post été ajouté avec succès!']);
+        } catch (ValidationException $e) {
+            return response()->json(['message' => $e->getMessage()]);
+        }
     }
 }
