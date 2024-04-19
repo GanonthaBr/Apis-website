@@ -14,6 +14,9 @@ Route::get('/', [HomeController::class, 'index']);
 //Blog
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
 Route::get('blog/{id}', [BlogController::class, 'show'])->name('blogs.show');
+Route::get('/blog/create', [BlogController::class, 'create'])->name('blogs.create');
+Route::post('blog', [BlogController::class, 'store'])->name('blogs.store');
+
 
 //Contacts
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
