@@ -33,5 +33,14 @@ class BlogController extends Controller
             'content' => 'required',
             'image' => 'nullable|image',
         ]);
+        //image path
+
+        $imagePath = $request->file('image') ? $request->file('image')->store('blog_images', 'public') : null;
+
+        Blog::create([
+            'title' => $request->title,
+            'content' => $request->content,
+            'image' => $imagePath,
+        ]);
     }
 }
