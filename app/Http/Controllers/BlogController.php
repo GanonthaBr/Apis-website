@@ -45,7 +45,8 @@ class BlogController extends Controller
                 'image' => $imagePath,
             ]);
 
-            return response()->json(['message' => 'Votre blog post été ajouté avec succès!']);
+            return redirect('home');
+            // return response()->json(['message' => 'Votre blog post été ajouté avec succès!']);
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
