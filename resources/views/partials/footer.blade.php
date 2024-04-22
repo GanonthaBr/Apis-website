@@ -31,11 +31,11 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Liens Utiles</h2>
-                            <a href="">Mot du Secrétaire Général</a>
-                            <a href="">À propos</a>
-                            <a href="">Récents Événements</a>
-                            <a href="">Contacts</a>
-                            <a href="">Dernières actualités</a>
+                            <a href="{{route('about.index')}}">Mot du Secrétaire Général</a>
+                            <a href="{{route('about.index')}}">À propos</a>
+                            <a href="{{route('events.index')}}">Récents Événements</a>
+                            <a href="{{route('contacts.index')}}">Contacts</a>
+                            <a href="{{route('blogs.index')}}">Dernières actualités</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
