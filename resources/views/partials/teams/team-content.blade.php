@@ -1,10 +1,4 @@
- <div class="team">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Notre Equipe</p>
-                    <h2>Notre équipe de pilotage de nos activités</h2>
-                </div>
-                <div class="row">
+ <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
@@ -14,15 +8,7 @@
                                 <h2>AGABA Jonas</h2>
                                 <p>Secrétaire Exécutif</p>
                                 <div class="team-social">
-                                    {{-- <a href=""
-                                        ><i class="fab fa-twitter"></i
-                                    ></a>
-                                    <a href=""
-                                        ><i class="fab fa-facebook-f"></i
-                                    ></a>
-                                    <a href=""
-                                        ><i class="fab fa-linkedin-in"></i
-                                    ></a> --}}
+                                    
                                     <a href=""
                                         ><i class="fa fa-envelope"></i>
                               
@@ -84,5 +70,3 @@
                         </div>
                     </div>
                 </div>
-            </div>
-</div>

@@ -132,7 +132,7 @@
         <!-- Fin de Evenements -->
 
         <!-- Debut de Equipe -->
-       @include('partials.team')
+       {{-- @include('partials.teams.team') --}}
         <!-- Fin de Equipe-->
 
         <!-- Debut de Voluntariat -->
