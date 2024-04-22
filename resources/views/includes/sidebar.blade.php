@@ -18,7 +18,7 @@
                                             <img src="{{asset('storage/' . $blog -> image)}}" />
                                         </div>
                                         <div class="post-text domaine-links">
-                                            <a href="">Dans le cadre du renforcement des capacités de... </a>
+                                            <a href=""> {{ substr($blog -> content,0,60) }}... </a>
                                             <div class="post-meta">
                                                 <p>Par<a href="">Admin</a></p>
                                                 <p>Sur<a href="">APIS Sahel</a></p>
