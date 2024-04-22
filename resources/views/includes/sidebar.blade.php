@@ -12,10 +12,10 @@
                             <div class="sidebar-widget">
                                 <h2 class="widget-title">Publications récentes<h2>
                                 <div class="recent-post ">
-                                   
-                                    <div class="post-item">
+                                   @foreach ($blogs as $blog)
+                                         <div class="post-item">
                                         <div class="post-img">
-                                            <img src="{{asset('img/blog-adh-1.png')}}" />
+                                            <img src="{{asset('storage/' . $blog -> image)}}" />
                                         </div>
                                         <div class="post-text domaine-links">
                                             <a href="">Dans le cadre du renforcement des capacités de... </a>
@@ -25,7 +25,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="post-item">
+                                   @endforeach
+                                  
+                                    {{-- <div class="post-item">
                                         <div class="post-img">
                                             <img src="{{asset('img/blog-laba-1.png')}}" />
                                         </div>
@@ -48,7 +50,7 @@
                                                 <p>Sur<a href="">APIS Sahel</a></p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     
                                 </div>
                             </div>

@@ -6,7 +6,7 @@
                                 <img src="{{ asset('storage/' . $blog->image )}}" alt="Image">
                             </div>
                             <div class="blog-text">
-                                <h3><a href="#">{{$blog->title}}</a></h3>
+                                <h3><a href="{{route('blogs.show', ['id' => $blog->id])}}">{{$blog->title}}</a></h3>
                                 {{-- <h3><a href="#">Insécurité à Tillabéry</a></h3> --}}
                                 {{-- <p>
                                    La région de Tillabéry, située aux confins du Mali et du Burkina Faso, est malheureusement le théâtre d'une insécurité persistante, alimentée par les activités des groupes armés non étatiques (GANE).
