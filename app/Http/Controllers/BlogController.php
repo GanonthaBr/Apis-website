@@ -12,7 +12,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::get();
-        return view('partials.blogs.blog-content', compact('blogs'));
+        return view('partials.blogs.index', compact('blogs'));
     }
     //display a single post
     public function show($id)
@@ -49,6 +49,7 @@ class BlogController extends Controller
             return redirect('home');
             // return response()->json(['message' => 'Votre blog post été ajouté avec succès!']);
         } catch (ValidationException $e) {
+
             return response()->json(['message' => $e->getMessage()]);
         }
     }
