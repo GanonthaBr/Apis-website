@@ -8,21 +8,23 @@
                                 <i class="fa fa-map-marker-alt"></i>Avenue Korey bongou</p>
                             <p><i class="fa fa-phone-alt"></i>(+227) 20724108 - 96410772</p>
                             <p>
-                                <i class="fa fa-envelope"></i>contact@apis-sahel.org</p>
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:contact@apis-sahel.org">contact@apis-sahel.org</a>
+                            </p>
                             <div class="footer-social">
-                                <a class="btn btn-custom" href=""
+                                <a class="btn btn-custom" target="blank" href="https://twitter.com/Ong_Apis"
                                     ><i class="fab fa-twitter"></i
                                 ></a>
-                                <a class="btn btn-custom" href=""
+                                <a class="btn btn-custom" target="blank" href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61558747800282"
                                     ><i class="fab fa-facebook-f"></i
                                 ></a>
-                                <a class="btn btn-custom" href=""
+                                <a class="btn btn-custom" target="blank" href=""
                                     ><i class="fab fa-youtube"></i
                                 ></a>
-                                <a class="btn btn-custom" href=""
+                                <a class="btn btn-custom" target="blank" href=""
                                     ><i class="fab fa-instagram"></i
                                 ></a>
-                                <a class="btn btn-custom" href=""
+                                <a class="btn btn-custom" target="blank" href="https://www.linkedin.com/company/ong-apis/people/?viewAsMember=true"
                                     ><i class="fab fa-linkedin-in"></i
                                 ></a>
                             </div>
