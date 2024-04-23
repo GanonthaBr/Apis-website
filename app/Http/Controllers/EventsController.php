@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Events;
 use Illuminate\Http\Request;
+use Dotenv\Exception\ValidationException;
 
 class EventsController extends Controller
 {
@@ -17,5 +18,33 @@ class EventsController extends Controller
     public function create()
     {
         return view('partials.events.create');
+    }
+    public function store(Request $request)
+    {
+        try {
+            $request->validate([
+                'title' => 'required',
+                'description' => 'required',
+                'date' => 'required',
+                'location' => 'required',
+                'image' => 'required',
+            ]);
+            //image path
+            $imagePath = $request->file('image') ? $request->file('image')->store('event_images', 'public') : null;
+
+            //create element
+            Events::create([
+                'title' => $request->title,
+                'description' => $request->description,
+                'date' => $request->date,
+                'start_time' => $request->start_time,
+                'end_time' => $request->end_time,
+                'location' => $request->location,
+                'image' => $imagePath,
+            ]);
+            return redirect('home');
+        } catch (ValidationException $e) {
+            return response()->json(['message' => $e->getMessage()]);
+        }
     }
 }
