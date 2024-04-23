@@ -38,13 +38,14 @@
                         <div class="col-lg-6">
                         <div class="event-item">
                             {{-- <img src="{{asset('img/event-1-1.png')}}" alt="Image" /> --}}
-                            <img src="{{asset($event->image)}}" alt="Image" />
+                           <img src="{{asset('storage/' . $event->image)}}" alt="{{$event->title}}">
                             <div class="event-content">
                                 <div class="event-meta">
                                     <p>
                                         <i class="fa fa-calendar-alt"></i
                                         >{{$event->date}}
                                     </p>
+                                   
                                     <p>
                                         <i class="far fa-clock"></i>{{substr($event->start_time,12,15)}} - {{substr($event->end_time,12,15)}}
                                     </p>
