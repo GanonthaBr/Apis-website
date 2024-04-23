@@ -12,4 +12,10 @@ class EventsController extends Controller
         $events = Events::all();
         return view('partials.events.index', compact('events'));
     }
+
+    //create 
+    public function create()
+    {
+        return view('partials.events.create');
+    }
 }
