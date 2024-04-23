@@ -149,7 +149,7 @@ a:focus {
     right: 15px;
     bottom: 15px;
     transition: background 0.5s;
-    z-index: 9;
+    z-index: 9999;
 }
 
 .back-to-top i {
@@ -1338,6 +1338,7 @@ a:focus {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .event .event-meta p {

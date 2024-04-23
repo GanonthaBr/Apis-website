@@ -18,7 +18,7 @@
                                     <p>
                                         <i class="far fa-clock"></i>8:00 - 10:00
                                     </p>
-                                    <p>
+                                    <p class="d-none d-lg-flex" >
                                     Gotheye-larbabirno
                                     </p>
                                 </div>
@@ -46,7 +46,7 @@
                                     <p>
                                         <i class="far fa-clock"></i>8:00 - 10:00
                                     </p>
-                                    <p>
+                                    <p class="d-none d-lg-flex"  >
                                         <i class="fa fa-map-marker-alt"></i>Gotheye-larbabirno
                                     </p>
                                 </div>
