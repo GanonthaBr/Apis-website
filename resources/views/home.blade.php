@@ -61,7 +61,7 @@
         <div
             class="facts"
             data-parallax="scroll"
-            data-image-src="{{asset('img/page-header.jpg')}}"
+            data-image-src="{{asset('img/bg-banner.jpg')}}"
         >
             <div class="container">
                 <div class="row">

@@ -232,7 +232,7 @@ a:focus {
     width: 45px;
     height: 100%;
     font-size: 16px;
-    color: #17468a;
+    color: #fff;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -555,7 +555,7 @@ a:focus {
     padding: 210px 0 90px 0;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(../img/page-header.jpg);
+        url(../img/bg-banner.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
