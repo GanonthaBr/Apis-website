@@ -23,6 +23,7 @@ Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.ind
 Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 //Events
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
+Route::get('/allevents', [EventsController::class, 'allEvents'])->name('events.allEvents');
 Route::get('/createev', [EventsController::class, 'create'])->name('events.create');
 Route::post('/events', [EventsController::class, 'store'])->name('events.store');
 //About
