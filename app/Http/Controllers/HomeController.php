@@ -11,7 +11,8 @@ class HomeController extends Controller
     public function index()
     {
         $blogs = Blog::get();
-        $events = Events::all();
+        $events = Events::orderBy('created_at', 'desc')->take(2)->get();
+
 
         return view('home', ['blogs' => $blogs, 'events' => $events]);
     }

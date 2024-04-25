@@ -10,8 +10,8 @@ class EventsController extends Controller
 {
     public function index()
     {
-        $events = Events::all();
-        return view('partials.events.index', compact('events'));
+        $events = Events::orderBy('created_at', 'desc')->take(2)->get();
+        return view('partials.events.events', ['events' => $events]);
     }
 
     //create 

@@ -43,7 +43,7 @@
                                 <div class="event-meta">
                                     <p>
                                         <i class="fa fa-calendar-alt"></i
-                                        >{{$event->date}}
+                                        >{{$event->date}} 
                                     </p>
                                    
                                     <p>
