@@ -59,7 +59,7 @@
                                         {{substr($event->description,0,115)}}
                                    
                                     </p>
-                                    <a class="btn btn-custom" href=""
+                                    <a class="btn btn-custom" href="{{route('events.show', ['id' => $event->id])}}"
                                         >Voir plus</a
                                     >
                                 </div>

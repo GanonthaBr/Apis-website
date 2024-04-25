@@ -9,11 +9,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Nos Actualités</h2>
+                        <h2>Nos évenements</h2>
                     </div>
                     <div class="col-12">
                         <a href="/">Accueil</a>
-                        <a href="/blogs">Actualités</a>
+                        <a href="/events">Evenements</a>
                     </div>
                 </div>
             </div>
@@ -28,14 +28,10 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="single-content">
-                            <h1 class="domaine-title">{{$blog->title}}</h1>
-                                <img src="{{asset('storage/' . $blog->image)}}" alt="image" />
-                           
-                           
-                            <p>
-                                {{$blog->content}}
-                            </p>
-                           
+                            <h1 class="domaine-title">{{$event->title}}</h1>
+                                <img src="{{asset('storage/' . $event->image)}}" alt="image" />
+                                <p>{{$event->description}}</p>
+                                <p>{{$event->location}}</p>
                         </div>
                         <h6>D'autres liens</h6>
                        @include('partials.other-links')

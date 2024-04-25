@@ -15,10 +15,16 @@ class EventsController extends Controller
         return view('partials.events.index', ['events' => $events]);
     }
     //all events
-    public function allEvents()
+    public function recentEvents()
     {
-        $events = Events::orderBy('created_at', 'desc')->get();
-        return view('partials.events.index', ['events' => $events]);
+        $events = Events::orderBy('created_at', 'desc')->take(2)->get();
+        return view('partials.events.events', ['events' => $events]);
+    }
+    //show one event
+    public function show($id)
+    {
+        $event = Events::find($id);
+        return view('partials.events.event-details', ['event' => $event]);
     }
     //create 
     public function create()
