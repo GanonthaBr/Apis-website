@@ -66,13 +66,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
-                        <div class="facts-item">
-                            <i class="flaticon-home"></i>
+                        
+
+                         <div class="facts-item">
+                            <i class="flaticon-kindness"></i>
                             <div class="facts-text">
-                                <h3 data-toggle="counter-up">
-                                    4
+                                <h3
+                                  
+                                    data-toggle="counter-up"
+                                >
+                                    100
                                 </h3>
-                                <p>Pays intervenus</p>
+                                <p>Communaunes  aidées</p>
                             </div>
                         </div>
                     </div>
@@ -83,23 +88,21 @@
                                 <h3  data-toggle="counter-up">
                                     400
                                 </h3>
-                                <p>Voluntaires  réunis</p>
+                                <p>Nombre de Bénéficiaires</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="facts-item">
-                            <i class="flaticon-kindness"></i>
+                    <div class="facts-item">
+                            <i class="flaticon-home"></i>
                             <div class="facts-text">
-                                <h3
-                                  
-                                    data-toggle="counter-up"
-                                >
-                                    100
+                                <h3 data-toggle="counter-up">
+                                    4
                                 </h3>
-                                <p>Communautés  aidées</p>
+                                <p>Départements intervenus</p>
                             </div>
                         </div>
+
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="facts-item">

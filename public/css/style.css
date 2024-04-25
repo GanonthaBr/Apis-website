@@ -175,7 +175,9 @@ a:focus {
     top: 0;
     left: 0;
     z-index: 3;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: #17478aaa;
+
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .top-bar .top-bar-left {
@@ -198,16 +200,16 @@ a:focus {
     height: 45px;
     padding: 0 10px;
     text-align: center;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    /* border-left: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .top-bar .text:last-child {
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    /* border-right: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .top-bar .text i {
     font-size: 16px;
-    color: #17468a;
+    color: #fff;
     margin-right: 5px;
 }
 
@@ -233,11 +235,11 @@ a:focus {
     height: 100%;
     font-size: 16px;
     color: #fff;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    /* border-right: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .top-bar .social a:first-child {
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    /* border-left: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .top-bar .social a:hover {
@@ -290,6 +292,8 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link.active {
     color: #fef558;
     transition: none;
+    text-decoration: underline;
+    text-underline-offset: 54px;
 }
 
 .navbar .dropdown-menu {
@@ -451,6 +455,13 @@ a:focus {
     display: flex;
     justify-content: space-between;
     z-index: 9;
+}
+.owl-carousel::before {
+    content: "";
+    background: #17478a5b;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
 }
 
 .carousel .owl-nav .owl-prev,
@@ -1762,7 +1773,7 @@ a:focus {
 }
 
 .single .related-slider .owl-nav .owl-prev:hover,
-.single .related-slider .owl-nav .owl-next:hover {
+.single .related-slider .owl-nav -next:hover {
     color: #17468a;
     background: #4a4c70;
 }

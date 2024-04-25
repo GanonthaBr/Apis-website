@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::get();
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
         $events = Events::orderBy('created_at', 'desc')->take(2)->get();
 
 
