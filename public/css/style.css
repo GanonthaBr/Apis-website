@@ -241,8 +241,8 @@ a:focus {
 }
 
 .top-bar .social a:hover {
-    color: #ffffff;
-    background: #17468a;
+    color: #17468a;
+    background: #ffffff;
 }
 
 @media (min-width: 992px) {
