@@ -28,10 +28,14 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="single-content">
+                            {{-- design a page to show event details with image, title, location, start_time and end_time. can use any bootstrap styling with icons --}}
                             <h1 class="domaine-title">{{$event->title}}</h1>
-                                <img src="{{asset('storage/' . $event->image)}}" alt="image" />
-                                <p>{{$event->description}}</p>
-                                <p>{{$event->location}}</p>
+                            <img src="{{asset('storage/' . $event->image)}}" alt="image" />
+                            <p>{{$event->description}}</p>
+                            <p><span style="font-weight: bold;">Lieu:</span> {{$event->location}}</p>
+                            <p> <span style="font-weight: bold;">Heure:</span> {{substr($event->start_time,10,12)}} - {{substr($event->end_time,10,12)}}</p>
+                            <p><span style="font-weight: bold;">Ajoute le:</span> {{substr($event->created_at,0,9)}} </p>
+                            
                         </div>
                         <h6>D'autres liens</h6>
                        @include('partials.other-links')
