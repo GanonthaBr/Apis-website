@@ -42,7 +42,7 @@
                                         class="nav-link active"
                                         data-toggle="pill"
                                         href="#tab-content-1"
-                                        >About</a
+                                        >A propos</a
                                     >
                                 </li>
                                 <li class="nav-item">

@@ -34,7 +34,7 @@ class BlogController extends Controller
             $request->validate([
                 'title' => 'required',
                 'content' => 'required',
-                'image' => 'nullable|image',
+                'image' => 'nullable|image|max:5120',
             ]);
             //image path
 

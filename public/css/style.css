@@ -22,7 +22,9 @@ h5,
 h6 {
     color: #4a4c70;
 }
-
+h1.blog {
+    font-size: 30px;
+}
 a {
     color: #fff;
     transition: 0.3s;
@@ -456,7 +458,7 @@ a:focus {
     justify-content: space-between;
     z-index: 9;
 }
-.owl-carousel::before {
+.hero .owl-carousel::before {
     content: "";
     background: #17478a5b;
     position: absolute;
@@ -519,7 +521,7 @@ a:focus {
 
 @media (max-width: 991.98px) {
     .carousel .carousel-text h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .carousel .carousel-text p {
@@ -535,7 +537,7 @@ a:focus {
 
 @media (max-width: 767.98px) {
     .carousel .carousel-text h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .carousel .carousel-text .btn {
@@ -547,7 +549,7 @@ a:focus {
 
 @media (max-width: 575.98px) {
     .carousel .carousel-text h1 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .carousel .carousel-text .btn {
@@ -576,7 +578,7 @@ a:focus {
 .page-header h2 {
     position: relative;
     color: #17468a;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;
     padding-bottom: 5px;
@@ -667,7 +669,7 @@ a:focus {
 
 .section-header h2 {
     margin: 0;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 700;
 }
 

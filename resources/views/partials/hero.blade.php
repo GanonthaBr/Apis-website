@@ -1,4 +1,4 @@
-   <div class="carousel">
+   <div class="carousel hero">
             <div class="container-fluid">
                 <div class="owl-carousel">
                     <div class="carousel-item">
