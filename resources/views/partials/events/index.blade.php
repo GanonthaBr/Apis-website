@@ -42,7 +42,7 @@
                                     </p>
                                    
                                     <p>
-                                        <i class="far fa-clock"></i>{{substr($event->start_time,12,15)}} - {{substr($event->end_time,12,15)}}
+                                        <i class="far fa-clock"></i>{{substr($event->start_time,0,3)}} - {{substr($event->end_time,0,3)}}
                                     </p>
                                     <p class="d-none d-lg-flex"  >
                                         <i class="fa fa-map-marker-alt"></i>{{$event->location}}
