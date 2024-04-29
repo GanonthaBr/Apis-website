@@ -26,38 +26,20 @@
                                         </div>
                                     </div>
                                    @endforeach
-                                  
-                                    {{-- <div class="post-item">
-                                        <div class="post-img">
-                                            <img src="{{asset('img/blog-laba-1.png')}}" />
-                                        </div>
-                                        <div class="post-text domaine-links">
-                                            <a href="">La région de Tillabéry, située aux confins du Mali et du Burikina...</a>
-                                            <div class="post-meta">
-                                                <p>Par<a href="">Admin</a></p>
-                                                <p>Sur<a href="">APIS Sahel</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-item">
-                                        <div class="post-img">
-                                            <img src="{{asset('img/blog-yagarey-1.png')}}" />
-                                        </div>
-                                        <div class="post-text domaine-links">
-                                            <a href="">Yogarey : Une Oasis d'Espoir et d'Innovation grâce à la    Métamorphose</a>
-                                            <div class="post-meta">
-                                                <p>Par<a href="">Admin</a></p>
-                                                <p>Sur<a href="">APIS Sahel</a></p>
-                                            </div>
-                                        </div>
-                                    </div> --}}
-                                    
                                 </div>
                             </div>
-
                             <div class="sidebar-widget">
                                 <div class="image-widget">
-                                    <a href="#"><img src="{{asset('img/blog-1.jpg')}}" alt="Image"></a>
+                                    @php
+                                    $latestBlog = $blogs->sortByDesc('created_at')->first();
+                                    @endphp
+
+                                   @if($latestBlog)
+                                    <a href="{{ route('blogs.show', ['id' => $latestBlog->id]) }}"><img src="{{asset('storage/' . $latestBlog->image)}}" alt="{{ $latestBlog->title }}"></a>
+                                    @else
+                                    <p>No blogs found.</p>
+                                    @endif
+                                    {{-- <a href="#"><img src="{{asset('img/blog-1.jpg')}}" alt="Image"></a> --}}
                                 </div>
                             </div>
 

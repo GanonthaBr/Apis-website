@@ -33,7 +33,7 @@
                             <img src="{{asset('storage/' . $event->image)}}" alt="image" />
                             <p>{{$event->description}}</p>
                             <p><span style="font-weight: bold;">  <i class="fa fa-map-marker-alt"></i> Lieu:</span> {{$event->location}}</p>
-                            <p> <span style="font-weight: bold;">  <i class="far fa-clock"></i>  Heure:</span> {{substr($event->start_time,10,12)}} - {{substr($event->end_time,10,12)}}</p>
+                            <p> <span style="font-weight: bold;">  <i class="far fa-clock"></i>  Heure:</span> {{substr($event->start_time,0,5)}} - {{substr($event->end_time,0,5)}}</p>
                             <p><span style="font-weight: bold;"> <i class="fa fa-calendar-alt"></i
                                         > Ajoute le:</span> {{substr($event->created_at,0,9)}} </p>
                             
