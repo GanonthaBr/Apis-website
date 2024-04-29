@@ -13,6 +13,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 //Blog
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+Route::get('/recentBlogs', [BlogController::class, 'recentBlogs'])->name('blogs.recentBlogs');
 Route::get('blog/{id}', [BlogController::class, 'show'])->name('blogs.show');
 Route::get('/create', [BlogController::class, 'create'])->name('blogs.create');
 Route::post('/blog', [BlogController::class, 'store'])->name('blogs.store');

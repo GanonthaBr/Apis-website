@@ -10,10 +10,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        // $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        $blogs = Blog::latest()->limit(3)->get();
         $events = Events::orderBy('created_at', 'desc')->take(2)->get();
 
 
-        return view('home', ['blogs' => $blogs, 'events' => $events]);
+        return view('home', ['events' => $events, 'blogs' => $blogs]);
     }
 }
