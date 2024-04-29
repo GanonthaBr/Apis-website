@@ -1,4 +1,5 @@
  <div class="row">
+         @if($blogs->count())
                 @foreach ($blogs as $blog)
                     <div class="col-lg-4">
                         <div class="blog-item">
@@ -19,6 +20,9 @@
                         </div>
                     </div>
                 @endforeach
+        @else
+            <div class="alert alert-warning col-md-8 offset-md-2 mt-3">Aucune actualité enregistrée pour le moment !</div>
+        @endif
                     {{-- <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">

@@ -72,7 +72,7 @@
                         
                     @endforeach
                 @else
-                    <p class="text-danger" ><h3>Aucun evenement au programme !!!</h3> </p>
+                    <div class="alert alert-warning col-md-8 offset-md-2 mt-3" >Aucun evenement au programme !!!</div>
                 @endif
                 </div>
             </div>
