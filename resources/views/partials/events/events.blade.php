@@ -34,6 +34,9 @@
                             </div>
                         </div>
                     </div> --}}
+                @if ($events->count())
+                    
+                
                     @foreach ($events as $event)
                         <div class="col-lg-6">
                         <div class="event-item">
@@ -68,6 +71,9 @@
                     </div>
                         
                     @endforeach
+                @else
+                    <p class="text-danger" ><h3>Aucun evenement au programme !!!</h3> </p>
+                @endif
                 </div>
             </div>
         </div>

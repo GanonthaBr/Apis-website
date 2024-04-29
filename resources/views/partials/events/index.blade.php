@@ -28,6 +28,7 @@
                     <h2>Nos plus récents et futurs événements.</h2>
                 </div>
                 <div class="row">
+                @if($events->count())
                       @foreach ($events as $event)
                         <div class="col-lg-6">
                         <div class="event-item">
@@ -53,7 +54,7 @@
                                         {{substr($event->description,0,115)}}
                                    
                                     </p>
-                                    <a class="btn btn-custom" href=""
+                                     <a class="btn btn-custom" href="{{route('events.show', ['id' => $event->id])}}"
                                         >Voir plus</a
                                     >
                                 </div>
@@ -62,6 +63,9 @@
                     </div>
                         
                     @endforeach
+                @else
+                    <div class="text-danger"> <h3>Aucun evenement au programme!!!</h3> </div>
+                @endif
                     {{-- <div class="col-lg-6">
                         <div class="event-item">
                             <img src="{{asset('img/event-1-0.png')}}" alt="Image" />
