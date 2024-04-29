@@ -19,8 +19,8 @@ class BlogServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->composer('*', function ($view) {
-            $view->with('blogs', \App\Models\Blog::all());
-        });
+        // view()->composer('*', function ($view) {
+        //     $view->with('blogs', \App\Models\Blog::all());
+        // });
     }
 }

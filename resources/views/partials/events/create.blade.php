@@ -8,9 +8,9 @@
     <label for="date">Date:</label>
     <input type="date" id="date" name="date" required>
     <label for="start_time">Heure de début:</label>
-    <input type="date" id="start_time" name="start_time" required>
+    <input type="time" id="start_time" name="start_time" required>
     <label for="end_time">Heure de fin:</label>
-    <input type="date" id="end_time" name="end_time" required>
+    <input type="time" id="end_time" name="end_time" required>
     <label for="location">Lieu:</label>
     <input type="text" id="location" name="location" placeholder="Entrer le lieu de l'événement" required>
     <label for="image">Image:</label>

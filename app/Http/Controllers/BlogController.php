@@ -8,18 +8,18 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    //show the blog page
-    // public function index()
-    // {
-    //     $blogs = Blog::orderBy('created_at', 'desc')->get();
-    //     return view('partials.blogs.index', ['blogs' => $blogs]);
-    // }
+
+    public function index()
+    {
+        $blogs = Blog::all();
+        return view('partials.blogs.index', ['blogs' => $blogs]);
+    }
     //show the recent blogs
-    // public function recentBlogs()
-    // {
-    //     $blogs = Blog::orderBy('created_at', 'desc')->take(2)->get();
-    //     return view('partials.blogs.blogs', ['blogs' => $blogs]);
-    // }
+    public function recentBlogs()
+    {
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        return view('partials.blogs.blogs', ['blogs' => $blogs]);
+    }
     //display a single post
     public function show($id)
     {
