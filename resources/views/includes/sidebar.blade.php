@@ -72,12 +72,12 @@
                             </div>
 
                             <div class="sidebar-widget">
-                                <h2 class="widget-title">Catégories</h2>
+                                <h2 class="widget-title">Réseaux Sociaux</h2>
                                 <div class="category-widget domaine-links">
-                                    <ul>
-                                        <li><a  href="">Education</a><span>(1)</span></li>
-                                        <li><a href="">Santé</a><span>(1)</span></li>
-                                        <li><a href="">Social</a><span>(1)</span></li>
+                                     <ul>
+                                        <li><a target="blank" href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61558747800282"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                                        <li><a target="blank" href="https://www.linkedin.com/company/ong-apis/people/?viewAsMember=true"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                                        <li><a target="blank" href="https://twitter.com/Ong_Apis"><i class="fab fa-twitter"></i> Twitter</a></li>
                                         {{-- <li><a href="">Politics</a><span>(65)</li> --}}
                                     </ul>
                                 </div>
