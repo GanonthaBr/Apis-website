@@ -423,11 +423,22 @@ a:focus {
     font-size: 20px;
     margin-bottom: 25px;
 }
+.hero .owl-carousel::before {
+    content: "";
+    background: #17478a5b;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
 
 .carousel .carousel-btn .btn.btn-custom {
     color: #fff;
     background: #17468a;
     border: 0;
+    position: relative;
+    z-index: 100000;
+    pointer-events: auto;
 }
 
 .carousel .carousel-btn .btn.btn-custom:hover {
@@ -457,13 +468,6 @@ a:focus {
     display: flex;
     justify-content: space-between;
     z-index: 9;
-}
-.hero .owl-carousel::before {
-    content: "";
-    background: #17478a5b;
-    position: absolute;
-    inset: 0;
-    z-index: 2;
 }
 
 .carousel .owl-nav .owl-prev,
