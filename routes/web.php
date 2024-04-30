@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\DomaineInterventionController;
-use App\Http\Controllers\EmailController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -37,7 +38,9 @@ Route::get('/domaines/urgencehumanitaire', [DomaineInterventionController::class
 Route::get('/domaines/securitealimentaire', [DomaineInterventionController::class, 'securitealimentaire'])->name('domaines.securitealimentaire');
 Route::get('/domaines/educationdeveloppement', [DomaineInterventionController::class, 'educationdeveloppement'])->name('domaines.educationdeveloppement');
 
-
+//testimonials
+Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials.index');
+Route::get('/createt', [TestimonialsController::class, 'create'])->name('testimonials.create');
 
 // test route
 
