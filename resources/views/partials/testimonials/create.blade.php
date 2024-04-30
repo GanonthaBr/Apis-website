@@ -6,25 +6,27 @@
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title" id="addTestimonialLabel">Ajouter un témoignage</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    
                 </div>
                 <div class="modal-body">
                     {{-- name --}}
                     <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input type="text" name="name" id="name" class="form-control" required>
+                        <label for="name">Nom: </label>
+                        <input type="text" name="authorImage" id="name" class="form-control" required>
                     </div>
                     {{-- occupation --}}
                     <div class="form-group">
-                        <label for="occupation">Occupation</label>
-                        <input type="text" name="occupation" id="occupation" class="form-control" required>
+                        <label for="occupation">Occupation: </label>
+                        <input type="text" name="authorImage" id="occupation" class="form-control" required>
                     </div>
                     {{-- testimonial --}}
                     <div class="form-group">
-                        <label for="testimonial">Témoignage</label>
-                        <textarea name="testimonial" id="testimonial" class="form-control" required></textarea>
+                        <label for="testimonial">Témoignage: </label>
+                        <textarea name="content" id="testimonial" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image: </label>
+                        <input type="file" name="authorImage" id="image" class="form-control" required>
                     </div>
                 </div>
                 <div class="modal-footer">

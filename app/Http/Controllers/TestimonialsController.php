@@ -17,7 +17,7 @@ class TestimonialsController extends Controller
     //create new testimonial
     public function create()
     {
-        return view('partial.testimonials.create');
+        return view('partials.testimonials.create');
     }
 
     // store a new testimonial
@@ -32,7 +32,7 @@ class TestimonialsController extends Controller
             ]);
             $testimonial = new Testimonials();
             $testimonial->authorName = $request->authorName;
-            $testimonial->authorImage = $request->authorImage ?? 'default.jpg';
+            $testimonial->authorImage = $request->authorImage ?? 'public/img/testimonial-2.png';
             $testimonial->authorPosition = $request->authorPosition;
             $testimonial->content = $request->content;
             $testimonial->save();

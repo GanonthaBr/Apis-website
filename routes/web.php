@@ -41,6 +41,7 @@ Route::get('/domaines/educationdeveloppement', [DomaineInterventionController::c
 //testimonials
 Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials.index');
 Route::get('/createt', [TestimonialsController::class, 'create'])->name('testimonials.create');
+Route::post('/testimonials', [TestimonialsController::class, 'store'])->name('testimonials.store');
 
 // test route
 
