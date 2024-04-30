@@ -211,7 +211,7 @@
         <!-- Fin de Voluntariat -->
 
         <!-- Debut des Temoignages-->
-        @include('partials.testimonials')
+        @include('partials.testimonials.testimonials')
         <!-- Fin des Temoignages -->
 
         <!-- Debut des Contacts -->
