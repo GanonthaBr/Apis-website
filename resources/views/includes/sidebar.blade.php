@@ -32,6 +32,7 @@
                                 <div class="image-widget">
                                     @php
                                     $latestBlog = $blogs->sortByDesc('created_at')->first();
+                                    $firstBlog = $blogs->sortBy('created_at')->first();
                                     @endphp
 
                                    @if($latestBlog)
@@ -61,18 +62,23 @@
 
                             <div class="sidebar-widget">
                                 <div class="image-widget">
-                                    <a href="#"><img src="{{asset('img/blog-2.jpg')}}" alt="Image"></a>
+                                    @if($firstBlog)
+                                    <a href="{{ route('blogs.show', ['id' => $firstBlog->id]) }}"><img src="{{asset('storage/' . $firstBlog->image)}}" alt="{{ $latestBlog->title }}"></a>
+                                    @else
+                                    <p>No blogs found.</p>
+                                    @endif
+                                    {{-- <a href="#"><img src="{{asset('img/side-bar-image.png')}}" alt="Image"></a> --}}
                                 </div>
                             </div>
 
                             <div class="sidebar-widget">
-                                <h2 class="widget-title">Categories</h2>
+                                <h2 class="widget-title">Catégories</h2>
                                 <div class="category-widget domaine-links">
                                     <ul>
-                                        <li><a  href="">National</a><span>(98)</span></li>
-                                        <li><a href="">International</a><span>(87)</span></li>
-                                        <li><a href="">Economics</a><span>(76)</span></li>
-                                        <li><a href="">Politics</a><span>(65)</
+                                        <li><a  href="">Education</a><span>(1)</span></li>
+                                        <li><a href="">Santé</a><span>(1)</span></li>
+                                        <li><a href="">Social</a><span>(1)</span></li>
+                                        {{-- <li><a href="">Politics</a><span>(65)</li> --}}
                                     </ul>
                                 </div>
                             </div>
@@ -83,13 +89,12 @@
                                 </div>
                             </div> --}}
 
-                            <div class="sidebar-widget">
+                             <div class="sidebar-widget">
                                 <h2 class="widget-title">Liens Importants</h2>
                                 <div class="tag-widget">
-                                    <a href="">National</a>
-                                    <a href="">International</a>
-                                    <a href="">Economics</a>
-                                
+                                    <a href="{{route('blogs.index')}}">Articles</a>
+                                    <a href="{{route('events.index')}}">Événements</a>
+                                    <a href="{{route('contacts.index')}}">Contact</a>
                                 </div>
                             </div>
 
