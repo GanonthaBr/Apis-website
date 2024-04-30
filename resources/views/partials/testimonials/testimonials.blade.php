@@ -7,7 +7,24 @@
                     </h2>
                 </div>
                 <div class="owl-carousel testimonials-carousel">
-                    <div class="testimonial-item">
+                   @foreach ($testimonials as $testimonial)
+                       <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="{{asset('storage/'. $testimonial->authorImage)}}" alt="Image" />
+                            <div class="testimonial-name">
+                                <h3>{{$testimonial->authorName}}</h3>
+                                <p>{{$testimonial->authorPosition}}</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Je suis très reconnaissante envers l'association pour le don de vivres que j'ai reçu. Cela m'a permis de nourrir ma famille pendant plusieurs jours. Merci beaucoup.
+                            </p>
+                        </div>
+                    </div>
+                   @endforeach
+                   
+                    {{-- <div class="testimonial-item">
                         <div class="testimonial-profile">
                             <img src="{{asset('img/testimonial-1.png')}}" alt="Image" />
                             <div class="testimonial-name">
@@ -52,7 +69,7 @@
                               Je suis très reconnaissante envers l'association pour le don de vivres que j'ai reçu. Cela m'a permis de nourrir ma famille pendant plusieurs jours. Merci beaucoup.
                             </p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

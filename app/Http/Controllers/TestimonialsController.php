@@ -11,8 +11,8 @@ class TestimonialsController extends Controller
     //get last three testimonials
     public function index()
     {
-        $testimonials = Testimonials::latest()->take(3)->get();
-        return view('testimonials', compact('testimonials'));
+        $testimonials = Testimonials::all();
+        return view('partials.testimonials.testimonials', compact('testimonials'));
     }
     //create new testimonial
     public function create()
