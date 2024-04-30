@@ -27,15 +27,22 @@ class TestimonialsController extends Controller
         try {
             $request->validate([
                 'authorName' => 'required',
-                'authorPosition' => 'required',
-                'content' => 'required'
+                'authorImage' => 'nullable|image|max:5120',
+                'content' => 'required',
+
             ]);
-            $testimonial = new Testimonials();
-            $testimonial->authorName = $request->authorName;
-            $testimonial->authorImage = $request->authorImage ?? 'public/img/testimonial-2.png';
-            $testimonial->authorPosition = $request->authorPosition;
-            $testimonial->content = $request->content;
-            $testimonial->save();
+            //image path
+
+            $imagePath = $request->file('authorImage') ? $request->file('authorImage')->store('testimonials_images', 'public') : null;
+
+            //create element
+            Testimonials::create([
+                'authorName' => $request->authorName,
+                'authorImage' => $imagePath,
+                'content' => $request->content,
+                'authorPosition' => $request->authorPosition,
+            ]);
+
             return redirect('home');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
