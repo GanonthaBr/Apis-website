@@ -53,10 +53,12 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-newsletter">
                             <h2>Newsletter</h2>
-                            <form>
+                            <form method="POST" action="{{route('newsletter.subscribe')}}">
+                                @scrf
                                 <input
                                     class="form-control"
                                     placeholder="Votre Email"
+                                    name="email"
                                 />
                                 <button class="btn btn-custom">Envoyer</button>
                                 <label>Nous ne faisons pas de spam!</label>
