@@ -45,6 +45,7 @@ class BlogPostedMail extends Mailable
             with: [
                 'title' => $this->blog->title,
                 'content' => $this->blog->content,
+                'image' => $this->blog->image,
             ]
         );
     }

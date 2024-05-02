@@ -46,15 +46,19 @@ class BlogController extends Controller
             //image path
 
             $imagePath = $request->file('image') ? $request->file('image')->store('blog_images', 'public') : null;
-
-            Blog::create([
+            $blog = new Blog();
+            $blog->title = $request->title;
+            $blog->content = $request->content;
+            $blog->image = $imagePath;
+            $blog->save();
+            //register Listener
+            $blg = Blog::create([
                 'title' => $request->title,
                 'content' => $request->content,
                 'image' => $imagePath,
+
             ]);
-            //register Listener
-            $blog = Blog::create($request->all());
-            event(new BlogPosted($blog));
+            event(new BlogPosted($blg));
 
 
             return redirect('home');
