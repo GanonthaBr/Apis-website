@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use Dotenv\Exception\ValidationException;
+use App\Events\BlogPosted;
 use Illuminate\Http\Request;
+use Dotenv\Exception\ValidationException;
 
 class BlogController extends Controller
 {
@@ -51,6 +52,10 @@ class BlogController extends Controller
                 'content' => $request->content,
                 'image' => $imagePath,
             ]);
+            //register Listener
+            $blog = Blog::create($request->all());
+            event(new BlogPosted($blog));
+
 
             return redirect('home');
             // return response()->json(['message' => 'Votre blog post été ajouté avec succès!']);
