@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Newsletter;
+
 use Illuminate\Http\Request;
 
 class NewsLetterController extends Controller
@@ -14,6 +16,9 @@ class NewsLetterController extends Controller
         ]);
 
         // save email to database
+        $newsletter = new Newsletter();
+        $newsletter->email = $request->email;
+        $newsletter->save();
         return back()->with('success', 'You have been successfully subscribed to our newsletter');
     }
 }

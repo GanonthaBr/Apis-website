@@ -54,7 +54,8 @@
                         <div class="footer-newsletter">
                             <h2>Newsletter</h2>
                             <form method="POST" action="{{route('newsletter.subscribe')}}">
-                                @scrf
+                                @csrf
+                                
                                 <input
                                     class="form-control"
                                     placeholder="Votre Email"

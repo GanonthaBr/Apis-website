@@ -29,7 +29,9 @@ class BlogPostedMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Blog Posted Mail',
+            subject: 'Notification sur une nouvelle article de ONG APIS',
+            from: 'contact@apis-sahel.org',
+
         );
     }
 
@@ -39,7 +41,7 @@ class BlogPostedMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'mails.newsletter',
             with: [
                 'title' => $this->blog->title,
                 'content' => $this->blog->content,
