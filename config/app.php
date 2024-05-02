@@ -122,8 +122,9 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
-    // 'providers' => [
-    //     App\Providers\BlogServiceProvider::class,
-    // ],
+    'providers' => [
+        App\Providers\BlogServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+    ],
 
 ];
