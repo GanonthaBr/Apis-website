@@ -41,7 +41,8 @@ class BlogPostedMail extends Mailable
         return new Content(
             view: 'view.name',
             with: [
-                'email' => $this->blog->email,
+                'title' => $this->blog->title,
+                'content' => $this->blog->content,
             ]
         );
     }
