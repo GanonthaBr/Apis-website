@@ -42,7 +42,7 @@
                 @endif
 
                 </div>
-            <form name="sentMessage" id="contactForm" novalidate="novalidate" action="{{route('contacts.store')}}" method="POST" {{-- id="formId" --}}>
+                 <form name="sentMessage" id="contactForm" novalidate="novalidate" action="{{route('contacts.store')}}" method="POST" {{-- id="formId" --}}>
                 @csrf
                 <div class="control-group">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Votre Nom" required="required" @error('name') is-invalid @enderror value="{{old('name')}}" data-validation-required-message="Please enter your name" novalidate="novalidate" />
@@ -82,12 +82,26 @@
                         Envoyer Message
                     </button>
                 </div>
-            </form>
+                </form>
                  </div>
             </div>
-            <div class="col-6 socials-contact contact-form" >
+             <div class="col-6 socials-contact contact-form" >
                 <h4 class="text-center">Nous contacter</h4>
-               
+               <ul>
+                <li><i class="fa fa-map-marker"></i> 123 rue de la paix, Paris, France</li>
+                <li><i class="fa fa-phone"></i> +33 123 456 789</li>
+                <li><i class="fa fa-envelope"></i> info@example.com</li>
+                <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.0730000000004!2d2.352221315674781!3d48.85661407928648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x7e1f7e3d1e0d7e8e!2sParis!5e0!3m2!1sen!2sfr!4v1616420000000!5m2!1sen!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+              
+               </ul>
+               {{-- social media --}}
+                <h5 class="text-center">Nous Suivre sur les Reseaux Sociaux</h5> <br>
+                <div class="socials row">
+                   
+                 <div class="col-4"><a class="btn" target="blank" href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61558747800282"><i class="fab fa-facebook-f"></i></a></div>
+                 <div class="col-4"><a class="btn" target="blank" href="https://twitter.com/Ong_Apis"><i class="fab fa-twitter"></i></a></div>
+                <div class="col-4"> <a class="btn" target="blank" href="https://www.linkedin.com/company/ong-apis/people/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a></div>
+              </div>
             </div>
     </div>
        

@@ -18,12 +18,12 @@
                                 <a class="btn btn-custom" target="blank" href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61558747800282"
                                     ><i class="fab fa-facebook-f"></i
                                 ></a>
-                                <a class="btn btn-custom" target="blank" href=""
+                                {{-- <a class="btn btn-custom" target="blank" href=""
                                     ><i class="fab fa-youtube"></i
                                 ></a>
                                 <a class="btn btn-custom" target="blank" href=""
                                     ><i class="fab fa-instagram"></i
-                                ></a>
+                                ></a> --}}
                                 <a class="btn btn-custom" target="blank" href="https://www.linkedin.com/company/ong-apis/people/?viewAsMember=true"
                                     ><i class="fab fa-linkedin-in"></i
                                 ></a>
