@@ -9,6 +9,7 @@ use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\DomaineInterventionController;
+use App\Http\Controllers\NewsLetterController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -43,6 +44,8 @@ Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('tes
 Route::get('/createt', [TestimonialsController::class, 'create'])->name('testimonials.create');
 Route::post('/testimonials', [TestimonialsController::class, 'store'])->name('testimonials.store');
 
+//NewsLetter
+Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('newsletter.subscribe');
 // test route
 
 // Route::get('/test', function () {

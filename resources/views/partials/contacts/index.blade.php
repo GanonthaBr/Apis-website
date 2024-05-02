@@ -91,7 +91,7 @@
                 <li><i class="fa fa-map-marker"></i> Avenue Korey bongou</li>
                 <li><i class="fa fa-phone"></i> (+227) 20724108 - 96410772</li>
                 <li><i class="fa fa-envelope"></i> contact@apis-sahel.org </li>
-                <li><iframe src="https://www.google.com/maps/embed/v1/place?q=ONG+APIS,+Niamey,+Niger&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                <li><iframe src="https://www.google.com/maps/embed/v1/place?q=ONG+APIS,+Niamey,+Niger&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
               
                </ul>
                {{-- social media --}}
