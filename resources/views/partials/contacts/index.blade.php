@@ -88,10 +88,10 @@
              <div class="col-6 socials-contact contact-form" >
                 <h4 class="text-center">Nous contacter</h4>
                <ul>
-                <li><i class="fa fa-map-marker"></i> 123 rue de la paix, Paris, France</li>
-                <li><i class="fa fa-phone"></i> +33 123 456 789</li>
-                <li><i class="fa fa-envelope"></i> info@example.com</li>
-                <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.0730000000004!2d2.352221315674781!3d48.85661407928648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x7e1f7e3d1e0d7e8e!2sParis!5e0!3m2!1sen!2sfr!4v1616420000000!5m2!1sen!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                <li><i class="fa fa-map-marker"></i> Avenue Korey bongou</li>
+                <li><i class="fa fa-phone"></i> (+227) 20724108 - 96410772</li>
+                <li><i class="fa fa-envelope"></i> contact@apis-sahel.org </li>
+                <li><iframe src="https://www.google.com/maps/embed/v1/place?q=ONG+APIS,+Niamey,+Niger&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
               
                </ul>
                {{-- social media --}}
