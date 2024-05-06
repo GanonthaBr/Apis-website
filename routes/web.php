@@ -7,9 +7,10 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\TestimonialsController;
-use App\Http\Controllers\DomaineInterventionController;
 use App\Http\Controllers\NewsLetterController;
+use App\Http\Controllers\TestimonialsController;
+use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\DomaineInterventionController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -49,9 +50,7 @@ Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('ne
 
 
 //admin
-Route::get('/admin', function () {
-    return view('admin_home');
-});
+Route::get('/admin', [AdminDashboardController::class, 'index']);
 
 // test route
 
