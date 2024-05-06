@@ -7,7 +7,7 @@
                 <div class="owl-carousel causes-carousel">
                     <div class="causes-item">
                         <div class="causes-img">
-                            <img src="{{asset('img/cause-3.png')}}" alt="Image" />
+                            <img src="{{asset('img/side-bar-image.png')}}" alt="Image" />
                         </div>
                         {{-- <div class="causes-progress">
                             <div class="progress">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="causes-item">
                         <div class="causes-img">
-                            <img src="{{asset('img/causes-2.jpg')}}" alt="Image" />
+                            <img src="{{asset('img/blog-laba-2.png')}}" alt="Image" />
                         </div>
                         {{-- <div class="causes-progress">
                             <div class="progress">
@@ -71,7 +71,7 @@
                     </div>
                     <div class="causes-item">
                         <div class="causes-img">
-                            <img src="{{asset('img/cause-2.png')}}" alt="Image" />
+                            <img src="{{asset('img/cause.png')}}" alt="Image" />
                         </div>
                         {{-- <div class="causes-progress">
                             <div class="progress">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="causes-item">
                         <div class="causes-img">
-                            <img src="{{asset('img/cause-1.png')}}" alt="Image" />
+                            <img src="{{asset('img/blog-yagarey-2.png')}}" alt="Image" />
                         </div>
                         {{-- <div class="causes-progress">
                             <div class="progress">

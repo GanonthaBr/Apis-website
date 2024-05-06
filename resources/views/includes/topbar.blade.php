@@ -7,7 +7,7 @@
                                 {{-- <i class="fa fa-phone-alt"></i> --}}
                                 {{-- <p>ACTIONS ET PROGRAMMES <br> D'IMPACT AU SAHEL</p> --}}
                                    <i class="fa fa-map-marker-alt"></i>
-                                <p>Avenue Korey bongou, Niamey-Niger</p>
+                                    <p>Avenue Korey bongou, Niamey-Niger</p>
                             </div>
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
