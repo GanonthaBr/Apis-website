@@ -228,9 +228,11 @@
         </li><!-- End Profile Nav -->
 
       </ul>
-    </nav><!-- End Icons Navigation -->
+    </nav>
+    <!-- End Icons Navigation -->
 
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
  @include('partials.admin.sidebar')
@@ -288,7 +290,8 @@
                 </div>
 
               </div>
-            </div><!-- End Sales Card -->
+            </div>
+            <!-- End Sales Card -->
 
             <!-- Revenue Card -->
             <div class="col-xxl-4 col-md-6">
@@ -323,7 +326,8 @@
                 </div>
 
               </div>
-            </div><!-- End Revenue Card -->
+            </div>
+            <!-- End Revenue Card -->
 
             <!-- Customers Card -->
             <div class="col-xxl-4 col-xl-12">
@@ -360,7 +364,8 @@
                 </div>
               </div>
 
-            </div><!-- End Customers Card -->
+            </div>
+            <!-- End Customers Card -->
 
             <!-- Reports -->
             <div class="col-12">
@@ -442,7 +447,8 @@
                 </div>
 
               </div>
-            </div><!-- End Reports -->
+            </div>
+            <!-- End Reports -->
 
             <!-- Recent Sales -->
             <div class="col-12">
@@ -516,7 +522,8 @@
                 </div>
 
               </div>
-            </div><!-- End Recent Sales -->
+            </div>
+            <!-- End Recent Sales -->
 
             <!-- Top Selling -->
             <div class="col-12">
@@ -590,7 +597,8 @@
                 </div>
 
               </div>
-            </div><!-- End Top Selling -->
+            </div>
+            <!-- End Top Selling -->
 
           </div>
         </div>

@@ -24,7 +24,7 @@
               <i class="bi bi-circle"></i><span>Accordion</span>
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a href="components-badges.html">
               <i class="bi bi-circle"></i><span>Badges</span>
             </a>
@@ -83,7 +83,7 @@
             <a href="components-tooltips.html">
               <i class="bi bi-circle"></i><span>Tooltips</span>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </li><!-- End Components Nav -->
 
@@ -102,7 +102,7 @@
               <i class="bi bi-circle"></i><span>Form Layouts</span>
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a href="forms-editors.html">
               <i class="bi bi-circle"></i><span>Form Editors</span>
             </a>
@@ -111,7 +111,7 @@
             <a href="forms-validation.html">
               <i class="bi bi-circle"></i><span>Form Validation</span>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </li><!-- End Forms Nav -->
 
@@ -143,7 +143,7 @@
               <i class="bi bi-circle"></i><span>Chart.js</span>
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a href="charts-apexcharts.html">
               <i class="bi bi-circle"></i><span>ApexCharts</span>
             </a>
@@ -152,9 +152,10 @@
             <a href="charts-echarts.html">
               <i class="bi bi-circle"></i><span>ECharts</span>
             </a>
-          </li>
+          </li> --}}
         </ul>
-      </li><!-- End Charts Nav -->
+      </li>
+      <!-- End Charts Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
@@ -171,13 +172,14 @@
               <i class="bi bi-circle"></i><span>Remix Icons</span>
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a href="icons-boxicons.html">
               <i class="bi bi-circle"></i><span>Boxicons</span>
             </a>
-          </li>
+          </li> --}}
         </ul>
-      </li><!-- End Icons Nav -->
+      </li>
+      <!-- End Icons Nav -->
 
       <li class="nav-heading">Pages</li>
 
@@ -186,49 +188,56 @@
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
-      </li><!-- End Profile Page Nav -->
+      </li>
+      <!-- End Profile Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-faq.html">
           <i class="bi bi-question-circle"></i>
           <span>F.A.Q</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li>
+      <!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-contact.html">
           <i class="bi bi-envelope"></i>
           <span>Contact</span>
         </a>
-      </li><!-- End Contact Page Nav -->
+      </li>
+      <!-- End Contact Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">
           <i class="bi bi-card-list"></i>
           <span>Register</span>
         </a>
-      </li><!-- End Register Page Nav -->
+      </li>
+      <!-- End Register Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-login.html">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Login</span>
         </a>
-      </li><!-- End Login Page Nav -->
+      </li>
+      <!-- End Login Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-error-404.html">
           <i class="bi bi-dash-circle"></i>
           <span>Error 404</span>
         </a>
-      </li><!-- End Error 404 Page Nav -->
+      </li>
+      <!-- End Error 404 Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-blank.html">
           <i class="bi bi-file-earmark"></i>
           <span>Blank</span>
         </a>
-      </li><!-- End Blank Page Nav -->
+      </li>
+      <!-- End Blank Page Nav -->
 
     </ul>
 
