@@ -78,7 +78,7 @@
                     <div class="col-md-6">
                         <p>
                             Conçu  par
-                            <a href="https://apis-sahel.org">Apis Sahel</a>
+                            <a target="_blank" href="https://www.linkedin.com/in/bruno-ganontha-payang/"> <strong>Bruno Ganontha</strong> </a>
                         </p>
                     </div>
                 </div>
