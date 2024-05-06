@@ -46,6 +46,13 @@ Route::post('/testimonials', [TestimonialsController::class, 'store'])->name('te
 
 //NewsLetter
 Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('newsletter.subscribe');
+
+
+//admin
+Route::get('/admin', function () {
+    return view('admin_home');
+});
+
 // test route
 
 // Route::get('/test', function () {
