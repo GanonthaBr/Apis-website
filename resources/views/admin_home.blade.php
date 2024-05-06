@@ -593,7 +593,8 @@
             </div><!-- End Top Selling -->
 
           </div>
-        </div><!-- End Left side columns -->
+        </div>
+        <!-- End Left side columns -->
 
         <!-- Right side columns -->
         <div class="col-lg-4">
@@ -669,7 +670,8 @@
               </div>
 
             </div>
-          </div><!-- End Recent Activity -->
+          </div>
+          <!-- End Recent Activity -->
 
           <!-- Budget Report -->
           <div class="card">
@@ -743,7 +745,8 @@
               </script>
 
             </div>
-          </div><!-- End Budget Report -->
+          </div>
+          <!-- End Budget Report -->
 
           <!-- Website Traffic -->
           <div class="card">
@@ -821,7 +824,8 @@
               </script>
 
             </div>
-          </div><!-- End Website Traffic -->
+          </div>
+          <!-- End Website Traffic -->
 
           <!-- News & Updates Traffic -->
           <div class="card">
@@ -875,14 +879,17 @@
               </div><!-- End sidebar recent posts-->
 
             </div>
-          </div><!-- End News & Updates -->
+          </div>
+          <!-- End News & Updates -->
 
-        </div><!-- End Right side columns -->
+        </div>
+        <!-- End Right side columns -->
 
       </div>
     </section>
 
-  </main><!-- End #main -->
+  </main>
+  <!-- End #main -->
   @include('partials.admin.footer')
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
