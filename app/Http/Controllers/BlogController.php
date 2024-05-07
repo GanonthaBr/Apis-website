@@ -52,13 +52,14 @@ class BlogController extends Controller
             $blog->image = $imagePath;
             $blog->save();
             //register Listener
-            $blg = Blog::create([
-                'title' => $request->title,
-                'content' => $request->content,
-                'image' => $imagePath,
 
-            ]);
-            event(new BlogPosted($blg));
+            // $blg = Blog::create([
+            //     'title' => $request->title,
+            //     'content' => $request->content,
+            //     'image' => $imagePath,
+
+            // ]);
+            event(new BlogPosted($blog));
 
 
             return redirect()->route('admin.allblogs')->with('blog-created', 'Votre blog post été ajouté avec succès!');
@@ -67,5 +68,12 @@ class BlogController extends Controller
 
             return response()->json(['message' => $e->getMessage()]);
         }
+    }
+    // delete a blog with id
+    public function destroy($id)
+    {
+        $blog = Blog::findOrFail($id);
+        $blog->delete();
+        return redirect()->route('admin.allblogs')->with('blog-deleted', 'Votre article post été supprimé avec succès!');
     }
 }

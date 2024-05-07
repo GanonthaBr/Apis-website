@@ -20,6 +20,9 @@ Route::get('/recentBlogs', [BlogController::class, 'recentBlogs'])->name('blogs.
 Route::get('blog/{id}', [BlogController::class, 'show'])->name('blogs.show');
 Route::get('/create', [BlogController::class, 'create'])->name('blogs.create');
 Route::post('/blog', [BlogController::class, 'store'])->name('blogs.store');
+Route::get('/blog/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
+Route::put('/blog/{id}', [BlogController::class, 'update'])->name('blogs.update');
+Route::delete('/blog/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
 
 
 //Contacts
