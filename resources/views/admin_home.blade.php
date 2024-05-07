@@ -630,11 +630,12 @@
 
                 @foreach ($blogs as $blog)
                     <div class="activity-item d-flex">
-                  <div class="activite-label">32 min</div>
+                  <div class="activite-label">Blog Post </div>
                   <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
                   <div class="activity-content">
-                    <p>{{substr($blog->content,0,20) }}</p>
-                    Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
+                    <p>{{substr($blog->title,0,10) }}...</p>
+                    {{-- <p>{{substr($blog->content,0,20) }}...</p> --}}
+                    {{substr($blog->content,0,10) }} <a href="#" class="fw-bold text-dark">{{substr($blog->content,11,20) }}...</a>
                   </div>
                 </div>
                 @endforeach
