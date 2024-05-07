@@ -61,7 +61,7 @@ class BlogController extends Controller
             event(new BlogPosted($blg));
 
 
-            return redirect('home');
+            return redirect()->route('admin.allblogs')->with('blog-created', 'Votre blog post été ajouté avec succès!');
             // return response()->json(['message' => 'Votre blog post été ajouté avec succès!']);
         } catch (ValidationException $e) {
 
