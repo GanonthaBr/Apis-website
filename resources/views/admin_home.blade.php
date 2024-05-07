@@ -646,7 +646,7 @@
                   <div class="activite-label">Event</div>
                   <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
                   <div class="activity-content">
-                    Voluptatem blanditiis blanditiis eveniet
+                    {{substr($event->description,0,20)}}
                   </div>
                 </div>
                 @endforeach
