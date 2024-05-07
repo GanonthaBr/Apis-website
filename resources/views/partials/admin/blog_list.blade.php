@@ -79,46 +79,7 @@
    
 </main>
 
-    <!-- JavaScript -->
- <script>
-   
-
-    // Get all confirm delete buttons
-var confirmDeleteButtons = document.querySelectorAll('.confirm-delete');
-console.log(confirmDeleteButtons);
-var formId;
-// Loop through all confirm delete buttons
-for (var i = 0; i < confirmDeleteButtons.length; i++) {
-    // Add click event listener to each confirm delete button
-    confirmDeleteButtons[i].addEventListener('click', function() {
-        // Get the form id from the data-form attribute
-        formId = this.getAttribute('data-form');
-
-        // Submit the form
-        // document.getElementById(formId).submit();
-    });
-}
-
-// document.getElementById('confirmDelete')addEventListener('click', function() {
-//        if(formId){
-//          document.getElementById('formId').submit();
-//        }
-//     });
-
-    // Get all confirm delete buttons
-var confirmButtons = document.querySelectorAll('.confirmDelete');
-console.log(confirmButtons);
-// Loop through all confirm delete buttons
-for (var i = 0; i < confirmButtons.length; i++) {
-    // Add click event listener to each confirm delete button
-    confirmButtons[i].addEventListener('click', function() {
-        // Submit the form
-        if (formId) {
-            document.getElementById(formId).submit();
-        }
-    });
-}
-</script> 
+  
 
 
 @endsection
