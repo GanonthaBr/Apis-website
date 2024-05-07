@@ -15,7 +15,7 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
+            <a href="{{route('admin.allblogs')}}">
               <i class="bi bi-circle"></i><span>Liste des articles</span>
             </a>
           </li>
