@@ -20,7 +20,7 @@
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="{{route('admin.create')}}">
               <i class="bi bi-circle"></i><span>Ajouter un article</span>
             </a>
           </li>
