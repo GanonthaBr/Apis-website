@@ -640,16 +640,18 @@
                 </div>
                 @endforeach
                 <!-- End activity item-->
-{{-- 
-                <div class="activity-item d-flex">
-                  <div class="activite-label">56 min</div>
+
+                @foreach ($events as $event)
+                    <div class="activity-item d-flex">
+                  <div class="activite-label">Event</div>
                   <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
                   <div class="activity-content">
                     Voluptatem blanditiis blanditiis eveniet
                   </div>
                 </div>
+                @endforeach
                 <!-- End activity item-->
-
+{{-- 
                 <div class="activity-item d-flex">
                   <div class="activite-label">2 hrs</div>
                   <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
