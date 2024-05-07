@@ -32,7 +32,7 @@
             @foreach ($blogs as $blog)
                 <tr>
                     <td>{{ $blog->title }}</td>
-                    <td>{{ $blog->content }}</td>
+                    <td>{{ substr($blog->content,0,50) }}...</td>
                     <td>
                         {{-- create edit button --}}
                         <a href="{{ route('admin.allblogs', $blog->id) }}" class="btn btn-primary">Modifier</a>
@@ -48,7 +48,7 @@
         </tbody>
     </table>
     {{-- add new blog button --}}
-    <a href="/admin/blog/create" class="btn btn-primary">Ajouter un blog</a>
+    <a href="{{route('admin.create')}}" class="btn btn-primary">Ajouter un blog</a>
 </main>
 
     

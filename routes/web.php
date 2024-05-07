@@ -52,6 +52,7 @@ Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('ne
 //admin
 Route::get('/admin', [AdminDashboardController::class, 'index']);
 Route::get('/allblogs', [AdminDashboardController::class, 'allbogs'])->name('admin.allblogs');
+Route::get('/createblog', [AdminDashboardController::class, 'create'])->name('admin.create');
 
 // test route
 
