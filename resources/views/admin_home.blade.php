@@ -3,13 +3,9 @@
 @section('admin-content')
     
 
-  <!-- ======= Header ======= -->
-  @include('partials.admin.header')
-  <!-- End Header -->
+  
 
-  <!-- ======= Sidebar ======= -->
- @include('partials.admin.sidebar')
-  <!-- End Sidebar-->
+ 
 
   <main id="main" class="main">
 

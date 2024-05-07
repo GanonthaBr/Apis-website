@@ -33,7 +33,12 @@
 </head>
 
 <body>
-
+<!-- ======= Header ======= -->
+  @include('partials.admin.header')
+  <!-- End Header -->
+   <!-- ======= Sidebar ======= -->
+ @include('partials.admin.sidebar')
+  <!-- End Sidebar-->
 
 @yield('admin-content')
 
