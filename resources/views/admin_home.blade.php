@@ -634,7 +634,8 @@
                   <div class="activity-content">
                     Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
                   </div>
-                </div><!-- End activity item-->
+                </div>
+                <!-- End activity item-->
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">56 min</div>
@@ -642,7 +643,8 @@
                   <div class="activity-content">
                     Voluptatem blanditiis blanditiis eveniet
                   </div>
-                </div><!-- End activity item-->
+                </div>
+                <!-- End activity item-->
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">2 hrs</div>
@@ -650,7 +652,8 @@
                   <div class="activity-content">
                     Voluptates corrupti molestias voluptatem
                   </div>
-                </div><!-- End activity item-->
+                </div>
+                <!-- End activity item-->
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">1 day</div>
@@ -658,7 +661,8 @@
                   <div class="activity-content">
                     Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
                   </div>
-                </div><!-- End activity item-->
+                </div>
+                <!-- End activity item-->
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">2 days</div>
@@ -666,7 +670,8 @@
                   <div class="activity-content">
                     Est sit eum reiciendis exercitationem
                   </div>
-                </div><!-- End activity item-->
+                </div>
+                <!-- End activity item-->
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">4 weeks</div>
@@ -674,7 +679,8 @@
                   <div class="activity-content">
                     Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
                   </div>
-                </div><!-- End activity item-->
+                </div>
+                <!-- End activity item-->
 
               </div>
 
