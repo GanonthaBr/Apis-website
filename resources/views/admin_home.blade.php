@@ -628,15 +628,18 @@
 
               <div class="activity">
 
-                <div class="activity-item d-flex">
+                @foreach ($blogs as $blog)
+                    <div class="activity-item d-flex">
                   <div class="activite-label">32 min</div>
                   <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
                   <div class="activity-content">
+                    <p>{{substr($blog->content,0,20) }}</p>
                     Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
                   </div>
                 </div>
+                @endforeach
                 <!-- End activity item-->
-
+{{-- 
                 <div class="activity-item d-flex">
                   <div class="activite-label">56 min</div>
                   <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
@@ -680,7 +683,7 @@
                     Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
                   </div>
                 </div>
-                <!-- End activity item-->
+                <!-- End activity item--> --}}
 
               </div>
 
