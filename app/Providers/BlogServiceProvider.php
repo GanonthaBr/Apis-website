@@ -21,7 +21,7 @@ class BlogServiceProvider extends ServiceProvider
     {
         view()->composer(['includes.sidebar', 'admin_home'], function ($view) {
             $view->with('blogs', \App\Models\Blog::orderBy('created_at', 'desc')->take(3)->get())
-                ->with('events', \App\Models\Events::orderBy('created_at', 'desc')->take(2));
+                ->with('events', \App\Models\Events::all()->take(2));
         });
     }
 }
