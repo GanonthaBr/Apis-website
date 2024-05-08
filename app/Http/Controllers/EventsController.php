@@ -14,6 +14,7 @@ class EventsController extends Controller
         $events = Events::orderBy('created_at', 'desc')->get();
         return view('partials.events.index', ['events' => $events]);
     }
+
     //all events
     public function recentEvents()
     {

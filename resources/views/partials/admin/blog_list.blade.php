@@ -47,7 +47,10 @@
 
                             {{-- <button type="submit" class="btn btn-danger">Supprimer</button> --}}
                         </form>
-                        <!-- Delete Confirmation Modal -->
+                       
+                    </td>
+                </tr>
+                 <!-- Delete Confirmation Modal -->
                         <div class="modal fade" id="deleteModal{{$blog->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -67,8 +70,6 @@
                                 </div>
                             </div>
                         </div>
-                    </td>
-                </tr>
                 @endforeach
             </tbody>
         </table>

@@ -58,6 +58,7 @@ Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('ne
 //admin
 Route::get('/admin', [AdminDashboardController::class, 'index'])->name('admin');
 Route::get('/allblogs', [AdminDashboardController::class, 'allbogs'])->name('admin.allblogs');
+Route::get('/allEvents', [AdminDashboardController::class, 'allEvents'])->name('admin.allEvents');
 Route::get('/createblog', [AdminDashboardController::class, 'create'])->name('admin.create');
 
 // test route

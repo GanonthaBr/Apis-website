@@ -1,0 +1,58 @@
+@extends('layouts.admin_layout')
+@section('admin-content')
+
+{{-- table of events list with edit and update button --}}
+<main class="main" id="main">
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Liste des événements</h1>
+        {{-- display success message if event is created --}}
+        @if (session()->has('event-created'))
+        <div class="alert alert-success" role="alert">
+            {{ session()->get('event-created') }}
+        </div>
+        @endif
+        {{-- display success message if event is deleted --}}
+        @if (session()->has('event-deleted'))
+        <div class="alert alert-success" role="alert">
+            {{ session()->get('event-deleted') }}
+        </div>
+        @endif
+
+        <table id="eventsTable" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Heure de début</th>
+                    <th>Heure de fin</th>
+                    <th>Lieu</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($events as $event)
+
+                <tr>
+                    <td>{{ $event->title }}</td>
+                    <td>{{ substr($event->description,0,50) }}...</td>
+                    <td>{{ $event->date }}</td>
+                    <td>{{ $event->start_time }}</td>
+                    <td>{{ $event->end_time }}</td>
+                    <td>{{ $event->location }}</td>
+                    <td>
+                        <a href="{{ route('events.edit', $event->id) }}" class="btn btn-primary">Modifier</a>
+                        <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$event->id}}" data-toggle="modal" data-target="#deleteModal{{$event->id}}">Supprimer</button>
+
+                        <form id="deleteForm{{$event->id}}" action="{{ route('events.destroy', $event->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+                        </form>
+                </tr>
+                @endforeach
+
+            </tbody>
+        </table>
+    </div>
+</main>
+@endsection

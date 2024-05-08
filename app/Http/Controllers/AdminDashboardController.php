@@ -22,6 +22,12 @@ class AdminDashboardController extends Controller
         $blogs = Blog::all();
         return view('partials.admin.blog_list', ['blogs' => $blogs]);
     }
+    // all events
+    public function allEvents()
+    {
+        $events = Events::all();
+        return view('partials.events.event_list', ['events' => $events]);
+    }
     // create a new blog
     public function create()
     {
