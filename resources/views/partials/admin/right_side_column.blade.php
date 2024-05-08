@@ -1,5 +1,4 @@
 <div class="col-lg-4">
-
         <!-- Recent Activity -->
         <div class="card">
           <div class="filter">
@@ -8,18 +7,14 @@
               <li class="dropdown-header text-start">
                 <h6>Filter</h6>
               </li>
-
               <li><a class="dropdown-item" href="#">Today</a></li>
               <li><a class="dropdown-item" href="#">This Month</a></li>
               <li><a class="dropdown-item" href="#">This Year</a></li>
             </ul>
           </div>
-
           <div class="card-body">
             <h5 class="card-title">Recent Activity <span>| Today</span></h5>
-
             <div class="activity">
-
               @foreach ($blogs as $blog)
               <div class="activity-item d-flex">
                 <div class="activite-label">Blog Post </div>
@@ -32,7 +27,6 @@
               </div>
               @endforeach
               <!-- End activity item-->
-
               @foreach ($events as $event)
               <div class="activity-item d-flex">
                 <div class="activite-label">Event</div>
@@ -43,45 +37,7 @@
               </div>
               @endforeach
               <!-- End activity item-->
-              {{--
-                <div class="activity-item d-flex">
-                  <div class="activite-label">2 hrs</div>
-                  <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
-                  <div class="activity-content">
-                    Voluptates corrupti molestias voluptatem
-                  </div>
-                </div>
-                <!-- End activity item-->
-
-                <div class="activity-item d-flex">
-                  <div class="activite-label">1 day</div>
-                  <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
-                  <div class="activity-content">
-                    Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
-                  </div>
-                </div>
-                <!-- End activity item-->
-
-                <div class="activity-item d-flex">
-                  <div class="activite-label">2 days</div>
-                  <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
-                  <div class="activity-content">
-                    Est sit eum reiciendis exercitationem
-                  </div>
-                </div>
-                <!-- End activity item-->
-
-                <div class="activity-item d-flex">
-                  <div class="activite-label">4 weeks</div>
-                  <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
-                  <div class="activity-content">
-                    Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
-                  </div>
-                </div>
-                <!-- End activity item--> --}}
-
             </div>
-
           </div>
         </div>
         <!-- End Recent Activity -->
@@ -100,7 +56,6 @@
               <li><a class="dropdown-item" href="#">This Year</a></li>
             </ul>
           </div>
-
           <div class="card-body pb-0">
             <h5 class="card-title">Budget Report <span>| This Month</span></h5>
 
@@ -289,7 +244,8 @@
                 <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
               </div>
 
-            </div><!-- End sidebar recent posts-->
+            </div>
+            <!-- End sidebar recent posts-->
 
           </div>
         </div>

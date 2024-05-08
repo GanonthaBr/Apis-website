@@ -1,12 +1,6 @@
 @extends('layouts.admin_layout')
 
 @section('admin-content')
-
-
-
-
-
-
 <main id="main" class="main">
 
   <div class="pagetitle">
@@ -53,11 +47,11 @@
                   <div class="ps-3">
                     <h6>
                       @php
-                          $totalBlogs = $blogs->count();
+                      $totalBlogs = $blogs->count();
                       @endphp
                       {{$totalBlogs}}
                     </h6>
-                    <span class="text-success small pt-1 fw-bold">Total d'articles  publiés</span> 
+                    <span class="text-success small pt-1 fw-bold">Total d'articles publiés</span>
 
                   </div>
                 </div>
@@ -94,11 +88,11 @@
                   <div class="ps-3">
                     <h6>
                       @php
-                          $totalEvents = $events->count();
+                      $totalEvents = $events->count();
                       @endphp
                       {{$totalEvents}}
                     </h6>
-                    <span class="text-success small pt-2 fw-bold">Total Événements</span> 
+                    <span class="text-success small pt-2 fw-bold">Total Événements</span>
 
                   </div>
                 </div>
