@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Events;
 use Illuminate\Http\Request;
 use Dotenv\Exception\ValidationException;
+use Illuminate\Console\Scheduling\Event;
 
 class EventsController extends Controller
 {
@@ -57,5 +58,12 @@ class EventsController extends Controller
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
+    }
+
+    //edit view
+    public function edit($id)
+    {
+        $event = Event::findOrFail($id);
+        return view('partials.events.edit', ['event' => $event]);
     }
 }
