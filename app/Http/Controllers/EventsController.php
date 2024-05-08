@@ -63,7 +63,15 @@ class EventsController extends Controller
     //edit view
     public function edit($id)
     {
-        $event = Event::findOrFail($id);
+        $event = Events::findOrFail($id);
         return view('partials.events.edit', ['event' => $event]);
+    }
+    //delete an event
+
+    public function destroy($id)
+    {
+        $event = Events::findOrFail($id);
+        $event->delete();
+        return redirect()->route('events.events')->with('event-deleted', 'Votre article evenement été retiré avec succès!');
     }
 }

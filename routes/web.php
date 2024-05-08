@@ -34,6 +34,8 @@ Route::get('/recentEvents', [EventsController::class, 'recentEvents'])->name('ev
 Route::get('/createev', [EventsController::class, 'create'])->name('events.create');
 Route::post('/events', [EventsController::class, 'store'])->name('events.store');
 Route::get('/events/{id}', [EventsController::class, 'show'])->name('events.show');
+Route::get('/events/{id}/edit', [EventsController::class, 'edit'])->name('events.edit');
+Route::delete('/events/{id}', [EventsController::class, 'destroy'])->name('events.destroy');
 //About
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
