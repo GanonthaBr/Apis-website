@@ -74,4 +74,36 @@ class EventsController extends Controller
         $event->delete();
         return redirect()->route('events.events')->with('event-deleted', 'Votre article evenement été retiré avec succès!');
     }
+    //update event
+    public function update(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'title' => 'required',
+                'description' => 'required',
+                'date' => 'required',
+                'location' => 'required',
+                'image' => 'nullable|image|max:5120',
+            ]);
+            //image path
+            // $imagePath = $request->file('image') ? $request->file('image')->store('event_images', 'public') : null;
+            $event = Events::findOrFail($id);
+            $event->title = $request->title;
+            $event->description = $request->description;
+            $event->date = $request->date;
+            $event->start_time = $request->start_time;
+            $event->end_time = $request->end_time;
+            $event->location = $request->location;
+            // $event->image = $imagePath;
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('event_images', 'public');
+                $event->image = $imagePath;
+            }
+
+            $event->save();
+            return redirect()->route('events.events')->with('event-updated', 'Votre article evenement été mis à jour avec succès!');
+        } catch (ValidationException $e) {
+            return response()->json(['message' => $e->getMessage()]);
+        }
+    }
 }
