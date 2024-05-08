@@ -12,9 +12,9 @@ class AdminDashboardController extends Controller
     {
         //get all blogs and events in order from the last added
 
-        // $blogs = Blog::all();
+        $blogs = Blog::all();
         $events = Events::all();
-        return view('admin_home', ['$events' => $events]);
+        return view('admin_home', ['events' => $events, 'blogs' => $blogs]);
     }
     // all blogs
     public function allbogs()
