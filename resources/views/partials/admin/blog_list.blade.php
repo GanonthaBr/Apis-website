@@ -1,7 +1,6 @@
 @extends('layouts.admin_layout')
 
 @section('admin-content')
-
 <main class="main" id="main">
     {{-- create Bootstrap table with three columns --}}
     <div class="container-fluid px-4">
@@ -37,7 +36,7 @@
                     <td>{{ substr($blog->content,0,50) }}...</td>
                     <td>
                         {{-- create edit button --}}
-                        <a href="{{ route('admin.allblogs', $blog->id) }}" class="btn btn-primary">Modifier</a>
+                        <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-primary">Modifier</a>
                         {{-- create delete button --}}
                         <!-- Delete Button -->
                         <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$blog->id}}" data-toggle="modal" data-target="#deleteModal{{$blog->id}}">Supprimer</button>
@@ -78,8 +77,4 @@
 
 
 </main>
-
-
-
-
 @endsection

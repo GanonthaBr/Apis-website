@@ -76,4 +76,32 @@ class BlogController extends Controller
         $blog->delete();
         return redirect()->route('admin.allblogs')->with('blog-deleted', 'Votre article post été supprimé avec succès!');
     }
+    //edit
+    public function edit($id)
+    {
+        $blog = Blog::findOrFail($id);
+        return view('partials.admin.blog_edit', ['blog' => $blog]);
+    }
+    // update with title, content and image
+    public function update(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'title' => 'required',
+                'content' => 'required',
+                'image' => 'nullable|image|max:5120',
+            ]);
+            $blog = Blog::findOrFail($id);
+            $blog->title = $request->title;
+            $blog->content = $request->content;
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('blog_images', 'public');
+                $blog->image = $imagePath;
+            }
+            $blog->save();
+            return redirect()->route('admin.allblogs')->with('blog-updated', 'Votre article post été modifié avec succès!');
+        } catch (ValidationException $e) {
+            return response()->json(['message' => $e->getMessage()]);
+        }
+    }
 }
