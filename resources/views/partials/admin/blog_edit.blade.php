@@ -1,22 +1,16 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>{{config('app.name')}}-ADMIN</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/apis.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{asset('assets/img/apis.png')}}" rel="icon">
+  <link href="{{asset('assets/img/apple-touch-icon.png"')}} rel=" apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -38,43 +32,43 @@
 </head>
 
 <body>
-<!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   @include('partials.admin.header')
   <!-- End Header -->
-   <!-- ======= Sidebar ======= -->
- @include('partials.admin.sidebar')
+  <!-- ======= Sidebar ======= -->
+  @include('partials.admin.sidebar')
   <!-- End Sidebar-->
 
-<main class="main" id="main">
+  <main class="main" id="main">
     {{-- edit blog form --}}
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Modifier un blog</h1>
-        {{-- display success message if blog is updated --}}
-        @if (session()->has('blog-updated'))
-        <div class="alert alert-success" role="alert">
-            {{ session()->get('blog-updated') }}
+      <h1 class="mt-4">Modifier un blog</h1>
+      {{-- display success message if blog is updated --}}
+      @if (session()->has('blog-updated'))
+      <div class="alert alert-success" role="alert">
+        {{ session()->get('blog-updated') }}
+      </div>
+      @endif
+      {{-- create form --}}
+      <form action="{{ route('blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
+        <div class="mb-3">
+          <label for="title" class="form-label">Titre</label>
+          <input type="text" class="form-control" id="title" name="title" value="{{ $blog->title }}">
         </div>
-        @endif
-        {{-- create form --}}
-        <form action="{{ route('blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            @method('PUT')
-            <div class="mb-3">
-                <label for="title" class="form-label">Titre</label>
-                <input type="text" class="form-control" id="title" name="title" value="{{ $blog->title }}">
-            </div>
-            <div class="mb-3">
-                <label for="image" class="form-label">Image</label>
-                <input type="file" class="form-control" id="image" name="image">
-            </div>
-            <div class="mb-3">
-                <label for="content" class="form-label">Contenu</label>
-                <textarea class="form-control" id="content" name="content" rows="3">{{ $blog->content }}</textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Modifier</button>
-        </form>
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input type="file" class="form-control" id="image" name="image">
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Contenu</label>
+          <textarea class="form-control" id="content" name="content" rows="3">{{ $blog->content }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Modifier</button>
+      </form>
     </div>
-</main>
+  </main>
 
   <!-- Vendor JS Files -->
   <script src="{{asset('assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
@@ -89,10 +83,10 @@
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
   <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
