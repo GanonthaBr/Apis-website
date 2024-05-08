@@ -8,7 +8,7 @@ form to add a new testimonial
                 <input type="text" id="name" name="authorName" />
 
                 <label for="occupation">occupation</label>
-                <input type="text" id="occupation" name="authorPosition"/>
+                <input type="text" id="occupation" name="authorPosition" />
 
                 <label for="content">Content</label>
                 <textarea id="content" name="content"></textarea>
@@ -21,5 +21,3 @@ form to add a new testimonial
         </div>
     </div>
 </div>
-
-                    

@@ -1,48 +1,31 @@
-    <div
-            class="donate"
-            id="donate"
-            data-parallax="scroll"
-            data-image-src="{{asset('img/donate.jpg')}}"
-        >
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <div class="donate-content">
-                            <div class="section-header">
-                                <h1 style="color:#17468a; font-weight:bold">Faire un Don</h1>
-                                <h2>
-                                    Vos dons et aides sont des gestes qui sauvent des vies!
-                                </h2>
-                            </div>
-                            <div class="donate-text">
-                                <p>
-                                    Léguer à l'ONG APIS, c'est plus qu'une donation; c'est changer des vies, promouvoir l'égalité des genres et créer un impact durable. Votre appui permet à APIS de poursuivre ses programmes pour des communautés sûres, équitables et prospères, offrant un avenir meilleur aux milliers  d'enfants et familles.
-                                </p>
-                            </div>
+    <div class="donate" id="donate" data-parallax="scroll" data-image-src="{{asset('img/donate.jpg')}}">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="donate-content">
+                        <div class="section-header">
+                            <h1 style="color:#17468a; font-weight:bold">Faire un Don</h1>
+                            <h2>
+                                Vos dons et aides sont des gestes qui sauvent des vies!
+                            </h2>
+                        </div>
+                        <div class="donate-text">
+                            <p>
+                                Léguer à l'ONG APIS, c'est plus qu'une donation; c'est changer des vies, promouvoir l'égalité des genres et créer un impact durable. Votre appui permet à APIS de poursuivre ses programmes pour des communautés sûres, équitables et prospères, offrant un avenir meilleur aux milliers d'enfants et familles.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="donate-form">
-                            <form
-                            method="#"
-                            >
-                                <div class="control-group">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Nom"
-                                        required="required"
-                                    />
-                                </div>
-                                <div class="control-group">
-                                    <input
-                                        type="email"
-                                        class="form-control"
-                                        placeholder="Téléphone ou Email"
-                                        required="required"
-                                    />
-                                </div>
-                                {{-- <div
+                </div>
+                <div class="col-lg-5">
+                    <div class="donate-form">
+                        <form method="#">
+                            <div class="control-group">
+                                <input type="text" class="form-control" placeholder="Nom" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" placeholder="Téléphone ou Email" required="required" />
+                            </div>
+                            {{-- <div
                                     class="btn-group btn-group-toggle"
                                     data-toggle="buttons"
                                 >
@@ -63,23 +46,17 @@
                                         $30
                                     </label>
                                 </div> --}}
-                                <div>
-                                    <button
-                                        class="btn btn-custom"
-                                        type="submit"
-                                    >
-                                        Faire le Don Maintenant!
-                                    </button>
-                                    <p style="text-align: center; color:#fff">OU</p>
-                                    <button
-                                        class="btn btn-custom"
-                                        onclick="window.location.href='{{ route('contacts.index') }}' " 
-                                    >Nous Contacter.
+                            <div>
+                                <button class="btn btn-custom" type="submit">
+                                    Faire le Don Maintenant!
                                 </button>
-                                </div>
-                            </form>
-                        </div>
+                                <p style="text-align: center; color:#fff">OU</p>
+                                <button class="btn btn-custom" onclick="window.location.href='contacts.index'  ">Nous Contacter.
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
