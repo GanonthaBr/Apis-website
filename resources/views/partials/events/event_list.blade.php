@@ -6,9 +6,9 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Liste des événements</h1>
         {{-- display success message if event is created --}}
-        @if (session()->has('event-created'))
+        @if (session()->has('event-updated'))
         <div class="alert alert-success" role="alert">
-            {{ session()->get('event-created') }}
+            {{ session()->get('event-updated') }}
         </div>
         @endif
         {{-- display success message if event is deleted --}}

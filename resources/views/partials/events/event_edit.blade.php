@@ -79,6 +79,10 @@
         <label for="location" class="form-label">Lieu</label>
         <input type="text" class="form-control" id="location" name="location" value="{{ $event->location }}">
       </div>
+       <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input type="file" class="form-control" id="image" name="image">
+        </div>
       <button type="submit" class="btn btn-primary">Sauvegarder</button>
     </form>
   </div>

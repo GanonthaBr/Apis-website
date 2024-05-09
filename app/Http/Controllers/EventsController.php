@@ -102,7 +102,7 @@ class EventsController extends Controller
             }
 
             $event->save();
-            return redirect()->route('admin.allEvents')->with('event-updated', 'Votre article evenement été mis à jour avec succès!');
+            return redirect()->route('admin.allEvents')->with('event-updated', 'Votre  evenement été mis à jour avec succès!');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
