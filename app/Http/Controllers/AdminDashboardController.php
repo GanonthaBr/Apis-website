@@ -50,4 +50,7 @@ class AdminDashboardController extends Controller
     {
         return view('partials.admin.create_testimonial');
     }
+    //user requests
+
+
 }
