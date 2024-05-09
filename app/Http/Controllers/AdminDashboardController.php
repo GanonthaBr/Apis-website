@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Events;
+use App\Models\Testimonials;
 use Illuminate\Http\Request;
 
 class AdminDashboardController extends Controller
@@ -37,5 +38,11 @@ class AdminDashboardController extends Controller
     public function createEvent()
     {
         return view('partials.admin.create_event');
+    }
+    //all testimonials
+    public function allTestimonials()
+    {
+        $testimonials = Testimonials::all();
+        return view('partials.testimonials.testimonials_list', ['testimonials' => $testimonials]);
     }
 }

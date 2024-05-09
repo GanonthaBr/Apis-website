@@ -20,6 +20,12 @@ class TestimonialsController extends Controller
         return view('partials.testimonials.create');
     }
 
+    //testimonial edit
+    public function edit($id)
+    {
+        $testimonial = Testimonials::find($id);
+        return view('partials.testimonials.testimonial_edit', compact('testimonial'));
+    }
     // store a new testimonial
     // the authorImage should be optional and have a default value
     public function store(Request $request)
