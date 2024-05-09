@@ -11,6 +11,7 @@
         <table id="articlesTable" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
+                    <th>Heure</th>
                     <th>Nom</th>
                     <th>Email</th>
                     <th>Object</th>
@@ -23,6 +24,7 @@
                 @foreach ($messages as $message)
 
                 <tr>
+                    <td>{{ $message->created_at_human }}</td>
                     <td>{{ $message->name }}</td>
                     <td>{{ $message->email }}</td>
                     <td>{{ $message->subject }}</td>
