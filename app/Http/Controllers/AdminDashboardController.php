@@ -33,4 +33,9 @@ class AdminDashboardController extends Controller
     {
         return view('partials.admin.create_blog');
     }
+    //create a new event
+    public function createEvent()
+    {
+        return view('partials.admin.create_event');
+    }
 }

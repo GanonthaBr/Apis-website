@@ -40,7 +40,7 @@
            </a>
          </li>
          <li>
-           <a href="forms-layouts.html">
+           <a href="{{route('admin.createEvent')}}">
              <i class="bi bi-circle"></i><span>Ajouter un événement</span>
            </a>
          </li>
