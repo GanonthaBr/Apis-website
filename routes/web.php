@@ -67,7 +67,7 @@ Route::get('/createblog', [AdminDashboardController::class, 'create'])->name('ad
 Route::get('/createvent', [AdminDashboardController::class, 'createEvent'])->name('admin.createEvent');
 Route::get('alltestimonials', [AdminDashboardController::class, 'allTestimonials'])->name('admin.allTestimonials');
 Route::get('/createTestimonial', [AdminDashboardController::class, 'createTestimonial'])->name('admin.createTestimonial');
-Route::get('/allrequests', [AdminDashboardController::class, 'userRequests'])->name('allrequests');
+Route::get('/allrequests', [AdminDashboardController::class, 'userRequests'])->name('admin.allrequests');
 
 // test route
 

@@ -1,5 +1,6 @@
 @php
-$AllMessages = $messages->count()
+$AllMessages = $messages->count();
+$countm = 0;
 @endphp
 
 <header id="header" class="header fixed-top d-flex align-items-center">
@@ -115,25 +116,32 @@ $AllMessages = $messages->count()
 
           <li class="dropdown-header">
             Vous avez {{$AllMessages}} nouveaux messages
-            <a href="{{route('allrequests')}}"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+            <a href="{{route('admin.allrequests')}}"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
           </li>
           <li>
             <hr class="dropdown-divider">
           </li>
           @foreach ($messages as $message)
+          @if ($countm == 3)
+              @break
+          @endif
+
           <li class="message-item">
             <a href="{{route('message.show', $message->id)}}">
               <img src="assets/img/profile.jpg" alt="" class="rounded-circle">
               <div>
                 <h4>{{$message->name}}</h4>
                 <p>{{substr($message->user_message,0,20)}}...</p>
-                <p>4 hrs. ago</p>
+                <p>{{$message->created_at_human}}</p>
               </div>
             </a>
           </li>
           <li>
             <hr class="dropdown-divider">
           </li>
+          @php
+              $countm++;
+          @endphp
           @endforeach
 
           <!-- 
@@ -166,7 +174,7 @@ $AllMessages = $messages->count()
           </li> -->
 
           <li class="dropdown-footer">
-            <a href="{{route('allrequests')}}">Show all messages</a>
+            <a href="{{route('admin.allrequests')}}">Show all messages</a>
           </li>
 
         </ul><!-- End Messages Dropdown Items -->
