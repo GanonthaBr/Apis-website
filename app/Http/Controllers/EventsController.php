@@ -65,7 +65,7 @@ class EventsController extends Controller
     public function edit($id)
     {
         $event = Events::findOrFail($id);
-        return view('partials.events.edit', ['event' => $event]);
+        return view('partials.events.event_edit', ['event' => $event]);
     }
     //delete an event
 
@@ -102,7 +102,7 @@ class EventsController extends Controller
             }
 
             $event->save();
-            return redirect()->route('events.events')->with('event-updated', 'Votre article evenement été mis à jour avec succès!');
+            return redirect()->route('admin.allEvents')->with('event-updated', 'Votre article evenement été mis à jour avec succès!');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
