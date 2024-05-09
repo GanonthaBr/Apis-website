@@ -49,7 +49,7 @@ class TestimonialsController extends Controller
                 'authorPosition' => $request->authorPosition,
             ]);
 
-            return redirect('home');
+            return redirect()->route('admin.allTestimonials')->with('testimonial-success', 'Votre temoignage  été ajouté avec succès! ');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }

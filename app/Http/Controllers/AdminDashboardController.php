@@ -45,4 +45,9 @@ class AdminDashboardController extends Controller
         $testimonials = Testimonials::all();
         return view('partials.testimonials.testimonials_list', ['testimonials' => $testimonials]);
     }
+    //create testimonial
+    public function createTestimonial()
+    {
+        return view('partials.admin.create_testimonial');
+    }
 }

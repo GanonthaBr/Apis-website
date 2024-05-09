@@ -59,7 +59,7 @@
            </a>
          </li>
          <li>
-           <a href="{{route('testimonials.create')}}">
+           <a href="{{route('admin.createTestimonial')}}">
              <i class="bi bi-circle"></i><span>Ajouter Temoignages</span>
            </a>
          </li>
