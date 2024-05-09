@@ -50,6 +50,7 @@ Route::get('/domaines/educationdeveloppement', [DomaineInterventionController::c
 Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials.index');
 Route::get('/createt', [TestimonialsController::class, 'create'])->name('testimonials.create');
 Route::post('/testimonials', [TestimonialsController::class, 'store'])->name('testimonials.store');
+Route::get('/testimonial/{id}/edit', [TestimonialsController::class, 'edit'])->name('testimonials.edit');
 
 //NewsLetter
 Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('newsletter.subscribe');
@@ -61,6 +62,7 @@ Route::get('/allblogs', [AdminDashboardController::class, 'allbogs'])->name('adm
 Route::get('/allEvents', [AdminDashboardController::class, 'allEvents'])->name('admin.allEvents');
 Route::get('/createblog', [AdminDashboardController::class, 'create'])->name('admin.create');
 Route::get('/createvent', [AdminDashboardController::class, 'createEvent'])->name('admin.createEvent');
+Route::get('alltestimonials', [AdminDashboardController::class, 'allTestimonials'])->name('admin.allTestimonials');
 
 // test route
 
