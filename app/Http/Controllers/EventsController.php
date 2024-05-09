@@ -55,7 +55,7 @@ class EventsController extends Controller
                 'location' => $request->location,
                 'image' => $imagePath,
             ]);
-            return redirect('home');
+            return redirect()->route('admin.allEvents')->with('event-created', 'Votre événement été créé avec succès!');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
