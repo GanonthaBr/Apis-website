@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\Events;
 use App\Models\Testimonials;
 use Illuminate\Http\Request;
@@ -51,6 +52,9 @@ class AdminDashboardController extends Controller
         return view('partials.admin.create_testimonial');
     }
     //user requests
-
-
+    public function userRequests()
+    {
+        $messages = Contact::all();
+        return view('partials.admin.messages_list', ['messages' => $messages]);
+    }
 }

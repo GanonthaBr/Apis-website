@@ -115,7 +115,7 @@ $AllMessages = $messages->count()
 
           <li class="dropdown-header">
             Vous avez {{$AllMessages}} nouveaux messages
-            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+            <a href="{{route('allrequests')}}"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
           </li>
           <li>
             <hr class="dropdown-divider">
@@ -166,7 +166,7 @@ $AllMessages = $messages->count()
           </li> -->
 
           <li class="dropdown-footer">
-            <a href="#">Show all messages</a>
+            <a href="{{route('allrequests')}}">Show all messages</a>
           </li>
 
         </ul><!-- End Messages Dropdown Items -->
