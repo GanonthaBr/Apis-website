@@ -51,6 +51,7 @@ Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('tes
 Route::get('/createt', [TestimonialsController::class, 'create'])->name('testimonials.create');
 Route::post('/testimonials', [TestimonialsController::class, 'store'])->name('testimonials.store');
 Route::get('/testimonial/{id}/edit', [TestimonialsController::class, 'edit'])->name('testimonials.edit');
+Route::put('/testimonial/{id}', [TestimonialsController::class, 'update'])->name('testimonials.update');
 
 //NewsLetter
 Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('newsletter.subscribe');
