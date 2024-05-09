@@ -80,6 +80,10 @@
 
             </tbody>
         </table>
+         {{-- add new testimonial button --}}
+        <a href="{{route('admin.createEvent')}}" class="btn btn-primary">Ajouter un testimonial</a>
+
+
     </div>
 </main>
 @endsection

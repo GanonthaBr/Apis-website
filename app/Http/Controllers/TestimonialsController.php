@@ -54,4 +54,40 @@ class TestimonialsController extends Controller
             return response()->json(['message' => $e->getMessage()]);
         }
     }
+    //update
+    public function update(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'authorName' => 'required',
+                'authorImage' => 'nullable|image|max:5120',
+                'content' => 'required',
+
+            ]);
+            //image path
+
+            // $imagePath = $request->file('authorImage') ? $request->file('authorImage')->store('testimonials_images', 'public') : null;
+
+            //create element
+            $testimonial = Testimonials::findOrFail($id);
+            $testimonial->authorName = $request->authorName;
+            $testimonial->content = $request->content;
+            $testimonial->authorPosition = $request->authorPosition;
+            if ($request->has('authorImage')) {
+                $imagePath = $request->file('AuthorImage')->store('testimonials_images', 'public');
+                $testimonial->image = $imagePath;
+            }
+            $testimonial->save();
+
+            return redirect()->route('admin.allTestimonials')->with('testimonial-success', 'Votre temoignage  été modifié avec succès!');
+        } catch (ValidationException $e) {
+            return response()->json(['message' => $e->getMessage()]);
+        }
+    }
+    //delete
+    public function destroy($id)
+    {
+        Testimonials::find($id)->delete();
+        return redirect()->route('admin.allTestimonials')->with('testimonial-deleted', 'Votre temoignage  été supprimé avec succès!');
+    }
 }

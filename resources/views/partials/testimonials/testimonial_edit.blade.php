@@ -57,7 +57,7 @@
       @method('PUT')
       <div class="mb-3">
           <label for="title" class="form-label">Name: </label>
-          <input type="text" class="form-control" id="title" name="authorName" value="{{ $testimonial->title }}">
+          <input type="text" class="form-control" id="title" name="authorName" value="{{ $testimonial->authorName }}">
         </div>
         <div class="mb-3">
           <label for="occupation" class="form-label">Occupation: </label>

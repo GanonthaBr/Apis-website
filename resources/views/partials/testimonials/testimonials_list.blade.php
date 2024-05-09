@@ -6,15 +6,15 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Liste des temoignages</h1>
         {{-- display success message if testimonial is created --}}
-        @if (session()->has('testimony-created'))
+        @if (session()->has('testimonial-success'))
         <div class="alert alert-success" role="alert">
-            {{ session()->get('testimony-created') }}
+            {{ session()->get('testimonial-success') }}
         </div>
         @endif
         {{-- display success message if testimonial is deleted --}}
-        @if (session()->has('testimony-deleted'))
+        @if (session()->has('testimonial-deleted'))
         <div class="alert alert-success" role="alert">
-            {{ session()->get('testimony-deleted') }}
+            {{ session()->get('testimonial-deleted') }}
         </div>
         @endif
 
@@ -33,17 +33,17 @@
                 @foreach ($testimonials as $testimonial)
 
                 <tr>
-                    <td>{{ $testimonial->AuthorName }}</td>
+                    <td>{{ $testimonial->authorName }}</td>
                     <td>{{ $testimonial->authorPosition }}</td>
                     <td>{{ substr($testimonial->content,0,50) }}...</td>
                     <td>
                         {{-- create edit button --}}
-                        <a href="{{ route('testimonial.edit', $testimonial->id) }}" class="btn btn-primary">Modifier</a>
+                        <a href="{{ route('testimonials.edit', $testimonial->id) }}" class="btn btn-primary">Modifier</a>
                         {{-- create delete button --}}
                         <!-- Delete Button -->
                         <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$testimonial->id}}" data-toggle="modal" data-target="#deleteModal{{$testimonial->id}}">Supprimer</button>
 
-                        <form id="deleteForm{{$testimonial->id}}" action="{{ route('blogs.destroy', $testimonial->id) }}" method="POST" class="d-inline">
+                        <form id="deleteForm{{$testimonial->id}}" action="{{ route('testimonials.destroy', $testimonial->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
 
@@ -76,7 +76,7 @@
             </tbody>
         </table>
         {{-- add new testimonial button --}}
-        <a href="{{route('admin.create')}}" class="btn btn-primary">Ajouter un testimonial</a>
+        <a href="{{route('admin.createTestimonial')}}" class="btn btn-primary">Ajouter un testimonial</a>
 
 
 </main>

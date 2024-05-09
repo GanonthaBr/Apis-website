@@ -52,6 +52,7 @@ Route::get('/createt', [TestimonialsController::class, 'create'])->name('testimo
 Route::post('/testimonials', [TestimonialsController::class, 'store'])->name('testimonials.store');
 Route::get('/testimonial/{id}/edit', [TestimonialsController::class, 'edit'])->name('testimonials.edit');
 Route::put('/testimonial/{id}', [TestimonialsController::class, 'update'])->name('testimonials.update');
+Route::delete('/testimonial/{id}', [TestimonialsController::class, 'destroy'])->name('testimonials.destroy');
 
 //NewsLetter
 Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('newsletter.subscribe');
@@ -64,6 +65,7 @@ Route::get('/allEvents', [AdminDashboardController::class, 'allEvents'])->name('
 Route::get('/createblog', [AdminDashboardController::class, 'create'])->name('admin.create');
 Route::get('/createvent', [AdminDashboardController::class, 'createEvent'])->name('admin.createEvent');
 Route::get('alltestimonials', [AdminDashboardController::class, 'allTestimonials'])->name('admin.allTestimonials');
+Route::get('/createTestimonial', [AdminDashboardController::class, 'createTestimonial'])->name('admin.createTestimonial');
 
 // test route
 
