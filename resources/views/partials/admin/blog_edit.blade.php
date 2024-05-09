@@ -65,7 +65,7 @@
           <label for="content" class="form-label">Contenu</label>
           <textarea class="form-control" id="content" name="content" rows="3">{{ $blog->content }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Modifier</button>
+        <button type="submit" class="btn btn-primary">Sauvegarder</button>
       </form>
     </div>
   </main>

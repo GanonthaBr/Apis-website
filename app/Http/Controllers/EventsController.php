@@ -73,7 +73,7 @@ class EventsController extends Controller
     {
         $event = Events::findOrFail($id);
         $event->delete();
-        return redirect()->route('events.events')->with('event-deleted', 'Votre article evenement été retiré avec succès!');
+        return redirect()->route('admin.allEvents')->with('event-deleted', 'Votre article evenement été retiré avec succès!');
     }
     //update event
     public function update(Request $request, $id)
