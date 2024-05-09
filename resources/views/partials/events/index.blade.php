@@ -61,7 +61,7 @@
 
             @endforeach
             @else
-            <div class="alert alert-warning col-md-8 offset-md-2 mt-3">Aucun evenement au programme !!!</div>
+            <div class="alert alert-warning col-md-8 offset-md-2 mt-3">Aucun événement au programme !!!</div>
 
             @endif
             {{-- <div class="col-lg-6">

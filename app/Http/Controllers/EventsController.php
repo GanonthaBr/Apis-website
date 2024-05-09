@@ -73,7 +73,7 @@ class EventsController extends Controller
     {
         $event = Events::findOrFail($id);
         $event->delete();
-        return redirect()->route('admin.allEvents')->with('event-deleted', 'Votre article evenement été retiré avec succès!');
+        return redirect()->route('admin.allEvents')->with('event-deleted', 'Votre événement été retiré avec succès!');
     }
     //update event
     public function update(Request $request, $id)
@@ -102,7 +102,7 @@ class EventsController extends Controller
             }
 
             $event->save();
-            return redirect()->route('admin.allEvents')->with('event-updated', 'Votre  evenement été mis à jour avec succès!');
+            return redirect()->route('admin.allEvents')->with('event-updated', 'Votre  événement été mis à jour avec succès!');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
