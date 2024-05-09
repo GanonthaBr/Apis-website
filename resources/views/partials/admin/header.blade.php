@@ -122,7 +122,7 @@ $AllMessages = $messages->count()
           </li>
           @foreach ($messages as $message)
           <li class="message-item">
-            <a href="#">
+            <a href="{{route('message.show', $message->id)}}">
               <img src="assets/img/profile.jpg" alt="" class="rounded-circle">
               <div>
                 <h4>{{$message->name}}</h4>
