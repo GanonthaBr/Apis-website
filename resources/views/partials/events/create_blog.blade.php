@@ -1,4 +1,8 @@
-<div class="container">
+@extends('layouts.admin_layout')
+
+@section('admin-content')
+    <main class="main" id="main">
+        <div class="container">
     <form action="{{ route('events.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="title">Titre:</label>
@@ -17,3 +21,5 @@
         <input type="file" id="image" name="image">
         <button type="submit" class="btn btn-primary">Publier</button>
 </div>
+    </main>
+@endsection
