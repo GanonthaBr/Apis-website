@@ -5,6 +5,12 @@
     {{-- create Bootstrap table with three columns --}}
     <div class="container-fluid px-4">
         <h1 class="mt-4">Liste des temoignages</h1>
+          <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Temoignages</li>
+      </ol>
+    </nav>
         {{-- display success message if testimonial is created --}}
         @if (session()->has('testimonial-success'))
         <div class="alert alert-success" role="alert">

@@ -5,6 +5,12 @@
 <main class="main" id="main">
     <div class="container-fluid px-4">
         <h1 class="mt-4">Liste des événements</h1>
+          <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Evenements</li>
+      </ol>
+    </nav>
         {{-- display success message if event is updated --}}
         @if (session()->has('event-updated'))
         <div class="alert alert-success" role="alert">

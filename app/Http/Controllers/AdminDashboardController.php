@@ -27,7 +27,7 @@ class AdminDashboardController extends Controller
     public function allEvents()
     {
         $events = Events::all();
-        return view('partials.events.event_list', ['events' => $events]);
+        return view('partials.admin.event_list', ['events' => $events]);
     }
     // create a new blog
     public function create()
@@ -43,7 +43,7 @@ class AdminDashboardController extends Controller
     public function allTestimonials()
     {
         $testimonials = Testimonials::all();
-        return view('partials.testimonials.testimonials_list', ['testimonials' => $testimonials]);
+        return view('partials.admin.testimonials_list', ['testimonials' => $testimonials]);
     }
     //create testimonial
     public function createTestimonial()
