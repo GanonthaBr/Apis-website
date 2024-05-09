@@ -50,14 +50,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">Email: {{ $message->email }}</h6>
                 <h6 class="card-subtitle mb-2 text-muted">Object: {{ $message->subject }}</h6>
                 <p class="card-text">Message: {{ $message->user_message }}</p>
-                {{-- <form action="{{ route('messages.reply', $message->id) }}" method="POST">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="reply" class="form-label">Répondre</label>
-                        <textarea class="form-control" id="reply" name="reply" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
-                </form> --}}
+                
             </div>
     </div>
   </main>

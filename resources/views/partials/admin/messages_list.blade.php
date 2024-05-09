@@ -15,6 +15,7 @@
                     <th>Email</th>
                     <th>Object</th>
                     <th>Contenu</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +27,9 @@
                     <td>{{ $message->email }}</td>
                     <td>{{ $message->subject }}</td>
                     <td>{{ substr($message->user_message,0,50) }}...</td>
-                    
+                    <td>
+                        <a href="{{route('message.show', $message->id)}}"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir</span></a>
+                    </td>
                 </tr>
                
                 @endforeach
