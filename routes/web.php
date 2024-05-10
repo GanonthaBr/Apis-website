@@ -13,6 +13,7 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\DomaineInterventionController;
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/stats', [HomeController::class, 'getStats'])->name('stats');
 
 //Blog
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');

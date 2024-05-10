@@ -42,6 +42,7 @@
 <!--Debut des Facts -->
 <div class="facts" data-parallax="scroll" data-image-src="{{asset('img/bg-banner.jpg')}}">
     <div class="container">
+        @foreach($stats as $stats)
         <div class="row">
             <div class="col-lg-3 col-md-6">
 
@@ -50,7 +51,7 @@
                     <i class="flaticon-kindness"></i>
                     <div class="facts-text">
                         <h3 data-toggle="counter-up">
-                            100
+                            {{$stats->communities_helped}}
                         </h3>
                         <p>Communaunes aidées</p>
                     </div>
@@ -61,7 +62,7 @@
                     <i class="flaticon-charity"></i>
                     <div class="facts-text">
                         <h3 data-toggle="counter-up">
-                            400
+                            {{$stats->number_of_beneficiaries}}
                         </h3>
                         <p>Nombre de Bénéficiaires</p>
                     </div>
@@ -72,7 +73,7 @@
                     <i class="flaticon-home"></i>
                     <div class="facts-text">
                         <h3 data-toggle="counter-up">
-                            4
+                            {{$stats->departments_helped}}
                         </h3>
                         <p>Départements intervenus</p>
                     </div>
@@ -84,12 +85,14 @@
                     <i class="flaticon-donation"></i>
                     <div class="facts-text">
                         <h3 data-toggle="counter-up">
-                            15 </h3>
+                            {{$stats->year_of_experience}}
+                        </h3>
                         <p>Année d'existence</p>
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </div>
 <!-- Debut des Facts  -->
