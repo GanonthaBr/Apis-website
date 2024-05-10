@@ -23,13 +23,19 @@ class BlogServiceProvider extends ServiceProvider
         view()->composer(['includes.sidebar', 'partials.admin.header', 'partials.admin.messages_list', 'partials.admin.right_side_column'], function ($view) {
             $view->with('blogs', \App\Models\Blog::orderBy('created_at', 'desc')->take(3)->get())
                 ->with('events', \App\Models\Events::all()->take(2))
-                ->with('messages', \App\Models\Contact::where('read', false)->latest()->get()->map(
+                ->with('messages', \App\Models\Contact::latest()->get()->map(
                     function ($message) {
                         $message->created_at_human = $message->created_at->diffForHumans();
                         return $message;
                     }
                 ))
-                ->with('unreadCount', \App\Models\Contact::where('read', false)->count());
+                ->with('newMessages', \App\Models\Contact::where('read', false)->latest()->get()->map(
+                    function ($message) {
+                        $message->created_at_human = $message->created_at->diffForHumans();
+                        return $message;
+                    }
+                ));
+            // ->with('unreadCount', \App\Models\Contact::where('read', false)->count());
         });
     }
 }

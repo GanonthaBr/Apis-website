@@ -18,6 +18,11 @@ class ContactController extends Controller
     public function show($id)
     {
         $message = Contact::find($id);
+        if ($message) {
+            //set the 'read' field to 1
+            $message->read = 1;
+            $message->save();
+        }
         return view('partials.admin.message_detail', ['message' => $message]);
     }
     //store

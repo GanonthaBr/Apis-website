@@ -1,5 +1,5 @@
 @php
-$AllMessages = $messages->count();
+$newMessage = $newMessages->count();
 $countm = 0;
 @endphp
 
@@ -109,19 +109,23 @@ $countm = 0;
 
         <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
           <i class="bi bi-chat-left-text"></i>
-          <span class="badge bg-success badge-number">{{$AllMessages}}</span>
+          <span class="badge bg-success badge-number">{{$newMessage}}</span>
         </a><!-- End Messages Icon -->
 
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
 
           <li class="dropdown-header">
-            Vous avez {{$AllMessages}} nouveaux messages
+            @if ($newMessage > 0)
+            Vous avez {{$newMessage}} nouveaux messages!
             <a href="{{route('admin.allrequests')}}"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+            @else
+            Vous n'avez pas de nouveaux messages!
+            @endif
           </li>
           <li>
             <hr class="dropdown-divider">
           </li>
-          @foreach ($messages as $message)
+          @foreach ($newMessages as $message)
           @if ($countm == 3)
               @break
           @endif
@@ -143,35 +147,6 @@ $countm = 0;
               $countm++;
           @endphp
           @endforeach
-
-          <!-- 
-          <li class="message-item">
-            <a href="#">
-              <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-              <div>
-                <h4>Anna Nelson</h4>
-                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                <p>6 hrs. ago</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-
-          <li class="message-item">
-            <a href="#">
-              <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-              <div>
-                <h4>David Muldon</h4>
-                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                <p>8 hrs. ago</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <hr class="dropdown-divider">
-          </li> -->
 
           <li class="dropdown-footer">
             <a href="{{route('admin.allrequests')}}">Show all messages</a>
