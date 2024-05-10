@@ -29,7 +29,7 @@ $countm = 0;
         </a>
       </li><!-- End Search Icon-->
 
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
 
         <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
           <i class="bi bi-bell"></i>
@@ -102,7 +102,7 @@ $countm = 0;
 
         </ul><!-- End Notification Dropdown Items -->
 
-      </li>
+      </li> --}}
       <!-- End Notification Nav  -->
 
       <li class="nav-item dropdown">
