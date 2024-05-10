@@ -29,6 +29,7 @@ Route::delete('/blog/{id}', [BlogController::class, 'destroy'])->name('blogs.des
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
 Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 Route::get('/message/{id}/show', [ContactController::class, 'show'])->name('message.show');
+Route::delete('/message/{id}', [ContactController::class, 'destroy'])->name('message.destroy');
 //Events
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 Route::get('/recentEvents', [EventsController::class, 'recentEvents'])->name('events.recentEvents');

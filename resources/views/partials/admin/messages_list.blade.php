@@ -5,7 +5,18 @@
     {{-- create Bootstrap table with three columns --}}
     <div class="container-fluid px-4">
         <h1 class="mt-4">Liste des messages</h1>
-       
+        {{-- display success message if message-deleted --}}
+        @if (session()->has('contact-deleted'))
+        <div class="alert alert-success" role="alert">
+            {{ session()->get('contact-deleted') }}
+        </div>
+        @endif
+        {{-- display success message if message is deleted --}}
+        @if (session()->has('message-deleted'))
+        <div class="alert alert-success" role="alert">
+            {{ session()->get('message-deleted') }}
+        </div>
+        @endif
 
         {{-- create table --}}
         <table id="articlesTable" class="table table-striped table-bordered" style="width:100%">
@@ -30,9 +41,36 @@
                     <td>{{ $message->subject }}</td>
                     <td>{{ substr($message->user_message,0,50) }}...</td>
                     <td>
-                        <a href="{{route('message.show', $message->id)}}"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir</span></a>
+                        <a href="{{route('message.show', $message->id)}}"><span class=" btn btn-primary ">Voir</span></a>
+                        <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$message->id}}" data-toggle="modal" data-target="#deleteModal{{$message->id}}">Supprimer</button>
+
+                        <form id="deleteForm{{$message->id}}" action="{{ route('message.destroy', $message->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+
+                        </form>
                     </td>
                 </tr>
+                <!-- Delete Confirmation Modal -->
+                        <div class="modal fade" id="deleteModal{{$message->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete this message post?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-danger confirmDelete" id="confirmDelete{{$message->id}}">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                
                 @endforeach
             </tbody>
