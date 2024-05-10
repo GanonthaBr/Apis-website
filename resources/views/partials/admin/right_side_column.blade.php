@@ -197,7 +197,7 @@
 
         <!-- News & Updates Traffic -->
         <div class="card">
-          <div class="filter">
+          {{-- <div class="filter">
             <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
               <li class="dropdown-header text-start">
@@ -208,19 +208,21 @@
               <li><a class="dropdown-item" href="#">This Month</a></li>
               <li><a class="dropdown-item" href="#">This Year</a></li>
             </ul>
-          </div>
+          </div> --}}
 
           <div class="card-body pb-0">
-            <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
+            <h5 class="card-title">News &amp; Articles</h5>
 
             <div class="news">
-              <div class="post-item clearfix">
-                <img src="assets/img/news-1.jpg" alt="">
-                <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
-                <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
+              @foreach ($blogs as $blog)
+                  <div class="post-item clearfix">
+                <img src="{{ asset('storage/' . $blog->image )}}" alt="">
+                <h4><a href="#">{{$blog->title}}</a></h4>
+                <p>{{substr($blog->content,0,25)}}...</p>
               </div>
+              @endforeach
 
-              <div class="post-item clearfix">
+              {{-- <div class="post-item clearfix">
                 <img src="assets/img/news-2.jpg" alt="">
                 <h4><a href="#">Quidem autem et impedit</a></h4>
                 <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>
@@ -242,7 +244,7 @@
                 <img src="assets/img/news-5.jpg" alt="">
                 <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
                 <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
-              </div>
+              </div> --}}
 
             </div>
             <!-- End sidebar recent posts-->
