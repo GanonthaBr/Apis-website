@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->text('user_message');
             $table->timestamps();
+            $table->boolean('read')->default(false);
         });
     }
 

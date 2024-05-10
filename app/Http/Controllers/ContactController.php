@@ -15,11 +15,11 @@ class ContactController extends Controller
         return view('partials.contacts.index');
     }
     //show
-    // public function show($id)
-    // {
-    //     $message = Contact::find($id);
-    //     return view('partials.admin.message_detail', ['message' => $message]);
-    // }
+    public function show($id)
+    {
+        $message = Contact::find($id);
+        return view('partials.admin.message_detail', ['message' => $message]);
+    }
     //store
     public function store(Request $request)
     {
