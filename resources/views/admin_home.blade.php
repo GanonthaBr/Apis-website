@@ -141,7 +141,7 @@
           <!-- End Customers Card -->
 
           <!-- Reports -->
-          {{-- <div class="col-12">
+          <div class="col-12">
             <div class="card">
 
               <div class="filter">
@@ -220,7 +220,7 @@
               </div>
 
             </div>
-          </div> --}}
+          </div>
           <!-- End Reports -->
 
           <!-- Recent Sales -->

@@ -217,7 +217,7 @@
               @foreach ($blogs as $blog)
                   <div class="post-item clearfix">
                 <img src="{{ asset('storage/' . $blog->image )}}" alt="">
-                <h4><a href="#">{{$blog->title}}</a></h4>
+                <h4><a href="{{route('blogs.show', $blog->id)}}">{{$blog->title}}</a></h4>
                 <p>{{substr($blog->content,0,25)}}...</p>
               </div>
               @endforeach
