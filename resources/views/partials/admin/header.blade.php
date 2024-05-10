@@ -109,7 +109,9 @@ $countm = 0;
 
         <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
           <i class="bi bi-chat-left-text"></i>
+          @if($newMessage)
           <span class="badge bg-success badge-number">{{$newMessage}}</span>
+          @endif
         </a><!-- End Messages Icon -->
 
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
