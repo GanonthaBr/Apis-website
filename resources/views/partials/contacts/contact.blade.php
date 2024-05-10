@@ -53,7 +53,7 @@
                        </p>
                    </div>
                    <div>
-                       <button class="btn btn-custom" type="submit" onclick="submitClicked()" id="sendMessageButton">
+                       <button class="btn btn-custom" type="submit"  id="sendMessageButton">
                            Envoyer Message
                        </button>
                    </div>
