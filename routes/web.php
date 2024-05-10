@@ -14,6 +14,8 @@ use App\Http\Controllers\DomaineInterventionController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/stats', [HomeController::class, 'getStats'])->name('stats');
+Route::get('/stats/{id}', [HomeController::class, 'edit'])->name('stats.edit');
+Route::put('/stats/{id}', [HomeController::class, 'update'])->name('stats.update');
 
 //Blog
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');

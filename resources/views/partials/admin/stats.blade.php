@@ -41,6 +41,6 @@
 
     </div>
     @endforeach
-    <button class="btn btn-primary" >Modifier</button>
+    <a href="{{route('stats.edit',$stats->id)}}" class="btn btn-primary" >Modifier</a>
 </main>
 @endsection

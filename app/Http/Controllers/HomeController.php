@@ -26,4 +26,21 @@ class HomeController extends Controller
         $stats = Stats::all();
         return view('partials.admin.stats', ['stats' => $stats]);
     }
+    public function edit($id)
+    {
+        $stats = Stats::find($id);
+        return view('partials.admin.stats_edit', ['stats' => $stats]);
+    }
+    // update stats with  nombre de beneficiaires aides, nombre de departement intervenus, nombre d'annees d'existence, nombre de communes aides 
+    public function update(Request $request, $id)
+    {
+        $stats = Stats::find($id);
+        $stats->number_of_beneficiaries = $request->beneficiaires;
+        $stats->departments_helped = $request->departments;
+        $stats->year_of_experience = $request->year;
+        $stats->communities_helped = $request->communities;
+        $stats->save();
+
+        return redirect()->route('stats')->with('stats-updated', 'Stats updated successfully');
+    }
 }
