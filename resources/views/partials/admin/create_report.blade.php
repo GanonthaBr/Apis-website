@@ -11,6 +11,10 @@
                 <input type="text" class="form-control" id="title" name="title" required>
             </div>
             <div class="mb-3">
+                <label for="author" class="form-label">Nom de l'auteur: </label>
+                <input type="text" class="form-control" id="author" name="author" required>
+            </div>
+            <div class="mb-3">
                 <label for="description" class="form-label">Description:</label>
                 <textarea name="description" class="form-control" id="description" required></textarea>
             </div>

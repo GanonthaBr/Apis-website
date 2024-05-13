@@ -36,8 +36,8 @@
                                 <a href="{{route('about.index')}}" class="dropdown-item"
                                     >Notre histoire</a
                                 >
-                                <a href="{{route('about.index')}}" class="dropdown-item"
-                                    >Notre Équipe</a
+                                <a href="{{route('report')}}" class="dropdown-item"
+                                    >Rapports d'activités </a
                                 >
                                
                             </div>

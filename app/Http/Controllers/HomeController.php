@@ -53,7 +53,7 @@ class HomeController extends Controller
     //create report
     public function createReport()
     {
-        return view('partials.admin.report_create');
+        return view('partials.admin.create_report');
     }
     //store report
     //upload report with a title, description, image and a file in pdf format
@@ -61,6 +61,7 @@ class HomeController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'author' => 'nullable',
             'description' => 'required',
             'image' => 'nullable|image|max:5120',
             'file' => 'required|mimes:pdf|max:10240',
@@ -75,6 +76,7 @@ class HomeController extends Controller
         $report->description = $request->description;
         $report->image = $imagePath;
         $report->file = $pdfPath;
+        $report->author = $request->author;
         $report->save();
 
         return redirect()->route('report')->with('report-created', 'Report created successfully');

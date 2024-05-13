@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Models\Contact;
 use App\Models\Events;
+use App\Models\Report;
+use App\Models\Contact;
 use App\Models\Testimonials;
 use Illuminate\Http\Request;
 
@@ -56,5 +57,11 @@ class AdminDashboardController extends Controller
     {
         $messages = Contact::all();
         return view('partials.admin.messages_list', ['messages' => $messages]);
+    }
+    //all reports
+    public function allreports()
+    {
+        $reports = Report::all();
+        return view('partials.admin.report_list', ['reports' => $reports]);
     }
 }

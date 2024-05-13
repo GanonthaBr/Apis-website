@@ -65,6 +65,24 @@
          </li>
        </ul>
      </li>
+     <li class="nav-item">
+       <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+         <i class="bi bi-layout-text-window-reverse"></i><span>Rapports</span><i class="bi bi-chevron-down ms-auto"></i>
+       </a>
+       <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+         <li>
+           <a href="{{route('admin.allreports')}}">
+             <i class="bi bi-circle"></i><span>Liste des Rapports</span>
+           </a>
+         </li>
+         <li class="nav-item">
+       <a class="nav-link collapsed" href="{{route('report.create')}}">
+         <i class="bi bi-inbox"></i>
+         <span>Ajouter un rapport</span>
+       </a>
+     </li>
+       </ul>
+     </li>
      <!-- End Tables Nav -->
 
 
@@ -89,12 +107,7 @@
      </li>
      <!-- End F.A.Q Page Nav -->
 
-     <li class="nav-item">
-       <a class="nav-link collapsed" href="pages-contact.html">
-         <i class="bi bi-inbox"></i>
-         <span>Rapports</span>
-       </a>
-     </li>
+     
      <!-- End Contact Page Nav -->
 
      {{-- <li class="nav-item">

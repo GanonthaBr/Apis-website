@@ -75,6 +75,7 @@ Route::get('/createvent', [AdminDashboardController::class, 'createEvent'])->nam
 Route::get('alltestimonials', [AdminDashboardController::class, 'allTestimonials'])->name('admin.allTestimonials');
 Route::get('/createTestimonial', [AdminDashboardController::class, 'createTestimonial'])->name('admin.createTestimonial');
 Route::get('/allrequests', [AdminDashboardController::class, 'userRequests'])->name('admin.allrequests');
+Route::get('/allreports', [AdminDashboardController::class, 'allreports'])->name('admin.allreports');
 
 // test route
 
