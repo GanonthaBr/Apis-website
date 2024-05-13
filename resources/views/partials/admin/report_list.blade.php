@@ -43,7 +43,7 @@
                     <td>{{ $report->Auteur }}</td>
                     
                     <td>
-                        <a href="{{ route('events.edit', $report->id) }}" class="btn btn-primary">Modifier</a>
+                        <a href="{{ route('report.edit', $report->id) }}" class="btn btn-primary">Modifier</a>
                         <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$report->id}}" data-toggle="modal" data-target="#deleteModal{{$report->id}}">Supprimer</button>
 
                         <form id="deleteForm{{$report->id}}" action="{{ route('reports.destroy', $report->id) }}" method="POST" class="d-inline">

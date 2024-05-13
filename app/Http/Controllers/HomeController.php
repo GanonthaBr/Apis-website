@@ -7,6 +7,7 @@ use App\Models\Stats;
 use App\Models\Events;
 use App\Models\Report;
 use App\Models\Testimonials;
+use Exception;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -59,27 +60,32 @@ class HomeController extends Controller
     //upload report with a title, description, image and a file in pdf format
     public function reportStore(Request $request)
     {
-        $request->validate([
-            'title' => 'required',
-            'author' => 'nullable',
-            'description' => 'required',
-            'image' => 'nullable|image|max:5120',
-            'file' => 'required|mimes:pdf|max:10240',
-        ]);
-        //image path
-        $imagePath = $request->file('image') ? $request->file('image')->store('report_images', 'public') : null;
-        //PDF path 
-        $pdfPath = $request->file('file') ? $request->file('file')->store('report_files', 'public') : null;
+        try {
 
-        $report = new Report();
-        $report->title = $request->title;
-        $report->description = $request->description;
-        $report->image = $imagePath;
-        $report->file = $pdfPath;
-        $report->author = $request->author;
-        $report->save();
+            $request->validate([
+                'title' => 'required',
+                'author' => 'nullable',
+                'description' => 'required',
+                'image' => 'nullable|image|max:5120',
+                'file' => 'required|mimes:pdf|max:10240',
+            ]);
+            //image path
+            $imagePath = $request->file('image') ? $request->file('image')->store('report_images', 'public') : null;
+            //PDF path 
+            $pdfPath = $request->file('file') ? $request->file('file')->store('report_files', 'public') : null;
 
-        return redirect()->route('admin.allreports')->with('report-created', 'Report created successfully');
+            $report = new Report();
+            $report->title = $request->title;
+            $report->description = $request->description;
+            $report->image = $imagePath;
+            $report->file = $pdfPath;
+            $report->author = $request->author;
+            $report->save();
+
+            return redirect()->route('admin.allreports')->with('report-created', 'Report created successfully');
+        } catch (Exception $e) {
+            return redirect()->route('admin.allreports')->with('report-error', 'An error occured while creating the report');
+        }
     }
     // delete a report with id
     public function destroy($id)
@@ -87,5 +93,40 @@ class HomeController extends Controller
         $report = Report::findOrFail($id);
         $report->delete();
         return redirect()->route('admin.allreports')->with('report-deleted', 'Report has been deleted');
+    }
+    // edit a report
+    public function reportEdit($id)
+    {
+        $report = Report::find($id);
+        return view('partials.admin.report_edit', ['report' => $report]);
+    }
+    //update a report
+    public function reportUpdate(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'title' => 'required',
+                'author' => 'nullable',
+                'description' => 'required',
+                'image' => 'nullable|image|max:5120',
+                'file' => 'nullable|mimes:pdf|max:10240',
+            ]);
+            $report = Report::find($id);
+            $report->title = $request->title;
+            $report->description = $request->description;
+            $report->author = $request->author;
+            if ($request->file('image')) {
+                $imagePath = $request->file('image')->store('report_images', 'public');
+                $report->image = $imagePath;
+            }
+            if ($request->file('file')) {
+                $pdfPath = $request->file('file')->store('report_files', 'public');
+                $report->file = $pdfPath;
+            }
+            $report->save();
+            return redirect()->route('admin.allreports')->with('report-updated', 'Report updated successfully');
+        } catch (Exception $e) {
+            return redirect()->route('admin.allreports')->with('report-error', 'An error occured while updating the report');
+        }
     }
 }

@@ -20,6 +20,8 @@ Route::get('/reports', [HomeController::class, 'reportList'])->name('report');
 Route::post('/reports', [HomeController::class, 'reportStore'])->name('report.store');
 Route::get('/createreport', [HomeController::class, 'createReport'])->name('report.create');
 Route::delete('/reports/{id}', [HomeController::class, 'destroy'])->name('reports.destroy');
+Route::get('/reports/{id}', [HomeController::class, 'reportEdit'])->name('report.edit');
+Route::put('/reports/{id}', [HomeController::class, 'reportUpdate'])->name('report.update');
 
 //Blog
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
