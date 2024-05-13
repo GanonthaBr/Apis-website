@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Stats;
 use App\Models\Events;
+use App\Models\Report;
 use App\Models\Testimonials;
 use Illuminate\Http\Request;
 
@@ -42,5 +43,11 @@ class HomeController extends Controller
         $stats->save();
 
         return redirect()->route('stats')->with('stats-updated', 'Stats updated successfully');
+    }
+    //report list
+    public function reportList()
+    {
+        $reports = Report::all();
+        return view('partials.report', ['reports' => $reports]);
     }
 }
