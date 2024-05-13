@@ -50,4 +50,33 @@ class HomeController extends Controller
         $reports = Report::all();
         return view('partials.report', ['reports' => $reports]);
     }
+    //create report
+    public function createReport()
+    {
+        return view('partials.admin.report_create');
+    }
+    //store report
+    //upload report with a title, description, image and a file in pdf format
+    public function reportStore(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'file' => 'required|mimes:pdf|max:4096',
+        ]);
+        //image path
+        $imagePath = $request->file('image') ? $request->file('image')->store('report_images', 'public') : null;
+        //PDF path 
+        $pdfPath = $request->file('file') ? $request->file('file')->store('report_files', 'public') : null;
+
+        $report = new Report();
+        $report->title = $request->title;
+        $report->description = $request->description;
+        $report->image = $imagePath;
+        $report->file = $pdfPath;
+        $report->save();
+
+        return redirect()->route('report')->with('report-created', 'Report created successfully');
+    }
 }

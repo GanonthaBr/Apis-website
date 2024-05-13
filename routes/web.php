@@ -17,6 +17,8 @@ Route::get('/stats', [HomeController::class, 'getStats'])->name('stats');
 Route::get('/stats/{id}', [HomeController::class, 'edit'])->name('stats.edit');
 Route::put('/stats/{id}', [HomeController::class, 'update'])->name('stats.update');
 Route::get('/reports', [HomeController::class, 'reportList'])->name('report');
+Route::post('/reports', [HomeController::class, 'reportStore'])->name('report.store');
+Route::get('/createreport', [HomeController::class, 'createReport'])->name('report.create');
 
 //Blog
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');

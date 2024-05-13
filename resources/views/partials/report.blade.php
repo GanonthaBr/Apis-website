@@ -55,9 +55,11 @@
                         Lutter efficacement contre l’insécurité alimentaire qui affecte le monde rural les plus vulnérables constitués des femmes et enfants.
                     </p>
                 </div>
-                <div class="causes-btn">
-                    <a class="btn btn-custom">En savoir+</a>
-                    <a class="btn btn-custom" href="#donate">Faire un Don</a>
+                <div class="report-btn">
+                    <a href="#">Lire le Raport &nbsp; </a>
+                    <!-- <i class="far fa-arrow-up"></i> -->
+                    <i class="fa fa-angle-right" style="font-size:22px"></i>
+                    <!-- <a class="btn btn-custom" href="#donate">Faire un Don</a> -->
                 </div>
             </div>
 
