@@ -62,8 +62,8 @@ class HomeController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'file' => 'required|mimes:pdf|max:4096',
+            'image' => 'nullable|image|max:5120',
+            'file' => 'required|mimes:pdf|max:10240',
         ]);
         //image path
         $imagePath = $request->file('image') ? $request->file('image')->store('report_images', 'public') : null;

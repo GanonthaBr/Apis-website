@@ -44,24 +44,26 @@
 <div class="causes">
     <div class="container">
         <div class="owl-carousel causes-carousel">
+            @foreach ($reports as $report)
             <div class="causes-item">
                 <div class="causes-img">
-                    <img src="{{asset('img/side-bar-image.png')}}" alt="Image" />
+                    <img src="{{asset('storage/' . $report->image)}}" alt="Image" />
                 </div>
 
                 <div class="causes-text">
                     <h3>Adopter</h3>
                     <p>
-                        Lutter efficacement contre l’insécurité alimentaire qui affecte le monde rural les plus vulnérables constitués des femmes et enfants.
+                        {{$report->description}}
                     </p>
                 </div>
                 <div class="report-btn">
-                    <a href="#">Lire le Raport &nbsp; </a>
+                    <a href="{{asset('storage/' . $report->file)}}" target="_blank">Lire le Raport &nbsp; </a>
                     <!-- <i class="far fa-arrow-up"></i> -->
                     <i class="fa fa-angle-right" style="font-size:22px"></i>
                     <!-- <a class="btn btn-custom" href="#donate">Faire un Don</a> -->
                 </div>
             </div>
+            @endforeach
 
         </div>
     </div>

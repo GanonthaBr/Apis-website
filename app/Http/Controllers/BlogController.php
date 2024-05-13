@@ -53,12 +53,6 @@ class BlogController extends Controller
             $blog->save();
             //register Listener
 
-            // $blg = Blog::create([
-            //     'title' => $request->title,
-            //     'content' => $request->content,
-            //     'image' => $imagePath,
-
-            // ]);
             event(new BlogPosted($blog));
 
 

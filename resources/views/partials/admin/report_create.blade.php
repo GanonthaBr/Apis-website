@@ -4,9 +4,8 @@
 <main class="main" id="main">
 
     <div class="container-fluid px-4">
-        <form action="{{route('report.store')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('report.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
-
             <div class="mb-3">
                 <label for="title" class="form-label">Titre</label>
                 <input type="text" class="form-control" id="title" name="title" required>
