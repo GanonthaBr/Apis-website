@@ -57,10 +57,10 @@
                     </p>
                 </div>
                 <div class="report-btn">
-                    <a href="{{asset('storage/' . $report->file)}}" target="_blank">Lire le Raport &nbsp; </a>
+                    
+                    <a href="{{asset('storage/' . $report->file)}}" target="_blank">Lire le Raport &nbsp;  <i class="fa fa-angle-right" style="font-size:20px"></i> </a>
                     <!-- <i class="far fa-arrow-up"></i> -->
-                    <i class="fa fa-angle-right" style="font-size:22px"></i>
-                    <!-- <a class="btn btn-custom" href="#donate">Faire un Don</a> -->
+                    <a>Auteur: {{$report->author}}</a> 
                 </div>
             </div>
             @endforeach

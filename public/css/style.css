@@ -1029,7 +1029,7 @@ a:focus {
 .report-btn {
     margin-top: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     color: #11579c;
     font-weight: bold;
     cursor: pointer;

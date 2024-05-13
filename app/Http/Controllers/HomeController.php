@@ -79,6 +79,13 @@ class HomeController extends Controller
         $report->author = $request->author;
         $report->save();
 
-        return redirect()->route('report')->with('report-created', 'Report created successfully');
+        return redirect()->route('admin.allreports')->with('report-created', 'Report created successfully');
+    }
+    // delete a report with id
+    public function destroy($id)
+    {
+        $report = Report::findOrFail($id);
+        $report->delete();
+        return redirect()->route('admin.allreports')->with('report-deleted', 'Report has been deleted');
     }
 }

@@ -17,12 +17,7 @@
             {{ session()->get('report-created') }}
         </div>
         @endif
-        {{-- display success message if report is created --}}
-        @if (session()->has('report-created'))
-        <div class="alert alert-success" role="alert">
-            {{ session()->get('report-created') }}
-        </div>
-        @endif
+       
         {{-- display success message if report is deleted --}}
         @if (session()->has('report-deleted'))
         <div class="alert alert-success" role="alert">
@@ -51,7 +46,7 @@
                         <a href="{{ route('events.edit', $report->id) }}" class="btn btn-primary">Modifier</a>
                         <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$report->id}}" data-toggle="modal" data-target="#deleteModal{{$report->id}}">Supprimer</button>
 
-                        <form id="deleteForm{{$report->id}}" action="{{ route('events.destroy', $report->id) }}" method="POST" class="d-inline">
+                        <form id="deleteForm{{$report->id}}" action="{{ route('reports.destroy', $report->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
                         </form>
