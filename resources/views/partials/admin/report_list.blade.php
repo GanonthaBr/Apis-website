@@ -11,10 +11,16 @@
         <li class="breadcrumb-item active">Rapports</li>
       </ol>
     </nav>
-        {{-- display success message if report is updated --}}
+        {{-- display success message if report is created --}}
         @if (session()->has('report-created'))
         <div class="alert alert-success" role="alert">
             {{ session()->get('report-created') }}
+        </div>
+        @endif
+        {{-- display success message if report is updated --}}
+        @if (session()->has('report-updated'))
+        <div class="alert alert-success" role="alert">
+            {{ session()->get('report-updated') }}
         </div>
         @endif
        

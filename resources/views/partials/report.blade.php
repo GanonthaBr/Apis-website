@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="causes-text">
-                    <h3>Adopter</h3>
+                    <h3>{{$report->title}}</h3>
                     <p>
                         {{$report->description}}
                     </p>
