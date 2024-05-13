@@ -113,7 +113,7 @@
         items: 1,
         smartSpeed: 450,
         dots: false,
-        loop: true,
+        loop: false,
         responsive: {
             0: {
                 items: 1,

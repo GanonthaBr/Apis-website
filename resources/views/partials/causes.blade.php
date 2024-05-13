@@ -101,38 +101,7 @@
                     <a class="btn btn-custom" href="#donate">Faire un Don</a>
                 </div>
             </div>
-            <div class="causes-item">
-                <div class="causes-img">
-                    <img src="{{asset('img/blog-yagarey-2.png')}}" alt="Image" />
-                </div>
-                {{-- <div class="causes-progress">
-                            <div class="progress">
-                                <div
-                                    class="progress-bar"
-                                    role="progressbar"
-                                    aria-valuenow="85"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                >
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div> --}}
-                <div class="causes-text">
-                    <h3>Renforcer</h3>
-                    <p>
-                        Renforcer les capacités des Organisations paysannes à travers des activités d’information, de formation et de communication.
-                    </p>
-                </div>
-                <div class="causes-btn">
-                    <a class="btn btn-custom">En savoir+</a>
-                    <a class="btn btn-custom" href="#donate">Faire un Don</a>
-                </div>
-            </div>
+           
         </div>
     </div>
 </div>

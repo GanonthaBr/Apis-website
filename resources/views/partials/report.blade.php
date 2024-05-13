@@ -41,6 +41,29 @@
         </div>
     </div>
 </div> --}}
+<div class="causes">
+    <div class="container">
+        <div class="owl-carousel causes-carousel">
+            <div class="causes-item">
+                <div class="causes-img">
+                    <img src="{{asset('img/side-bar-image.png')}}" alt="Image" />
+                </div>
+
+                <div class="causes-text">
+                    <h3>Adopter</h3>
+                    <p>
+                        Lutter efficacement contre l’insécurité alimentaire qui affecte le monde rural les plus vulnérables constitués des femmes et enfants.
+                    </p>
+                </div>
+                <div class="causes-btn">
+                    <a class="btn btn-custom">En savoir+</a>
+                    <a class="btn btn-custom" href="#donate">Faire un Don</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 <!-- Blog End -->
 
 @stop
