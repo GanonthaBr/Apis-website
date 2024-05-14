@@ -34,7 +34,9 @@ class BlogServiceProvider extends ServiceProvider
                         $message->created_at_human = $message->created_at->diffForHumans();
                         return $message;
                     }
-                ));
+                ))
+                //with logged in user's infos
+                ->with('user', auth()->user());
             // ->with('unreadCount', \App\Models\Contact::where('read', false)->count());
         });
     }

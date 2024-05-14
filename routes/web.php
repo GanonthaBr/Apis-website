@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
@@ -69,22 +70,23 @@ Route::delete('/testimonial/{id}', [TestimonialsController::class, 'destroy'])->
 Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('newsletter.subscribe');
 
 
-//admin
-Route::get('/admin', [AdminDashboardController::class, 'index'])->name('admin');
-Route::get('/allblogs', [AdminDashboardController::class, 'allbogs'])->name('admin.allblogs');
-Route::get('/allEvents', [AdminDashboardController::class, 'allEvents'])->name('admin.allEvents');
-Route::get('/createblog', [AdminDashboardController::class, 'create'])->name('admin.create');
-Route::get('/createvent', [AdminDashboardController::class, 'createEvent'])->name('admin.createEvent');
-Route::get('alltestimonials', [AdminDashboardController::class, 'allTestimonials'])->name('admin.allTestimonials');
-Route::get('/createTestimonial', [AdminDashboardController::class, 'createTestimonial'])->name('admin.createTestimonial');
-Route::get('/allrequests', [AdminDashboardController::class, 'userRequests'])->name('admin.allrequests');
-Route::get('/allreports', [AdminDashboardController::class, 'allreports'])->name('admin.allreports');
 
-// test route
 
-// Route::get('/test', function () {
-//     return view('partials.blogs.blog-details');
-// });
+
+//protected Routes
+Route::group(['middleware' => 'auth'], function () {
+    //the routes go here...
+    //admin
+    Route::get('/admin', [AdminDashboardController::class, 'index'])->name('admin');
+    Route::get('/allblogs', [AdminDashboardController::class, 'allbogs'])->name('admin.allblogs');
+    Route::get('/allEvents', [AdminDashboardController::class, 'allEvents'])->name('admin.allEvents');
+    Route::get('/createblog', [AdminDashboardController::class, 'create'])->name('admin.create');
+    Route::get('/createvent', [AdminDashboardController::class, 'createEvent'])->name('admin.createEvent');
+    Route::get('alltestimonials', [AdminDashboardController::class, 'allTestimonials'])->name('admin.allTestimonials');
+    Route::get('/createTestimonial', [AdminDashboardController::class, 'createTestimonial'])->name('admin.createTestimonial');
+    Route::get('/allrequests', [AdminDashboardController::class, 'userRequests'])->name('admin.allrequests');
+    Route::get('/allreports', [AdminDashboardController::class, 'allreports'])->name('admin.allreports');
+});
 
 Auth::routes();
 

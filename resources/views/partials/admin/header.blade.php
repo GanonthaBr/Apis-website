@@ -129,7 +129,7 @@ $countm = 0;
           </li>
           @foreach ($newMessages as $message)
           @if ($countm == 3)
-              @break
+          @break
           @endif
 
           <li class="message-item">
@@ -146,7 +146,7 @@ $countm = 0;
             <hr class="dropdown-divider">
           </li>
           @php
-              $countm++;
+          $countm++;
           @endphp
           @endforeach
 
@@ -162,14 +162,14 @@ $countm = 0;
 
         <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
           <img src="{{asset('assets/img/apis.png')}}" alt="Profile" class="rounded-circle">
-          <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+          <span class="d-none d-md-block dropdown-toggle ps-2">Admin-{{$user->name}}</span>
         </a>
         <!-- End Profile Iamge Icon -->
 
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
           <li class="dropdown-header">
-            <h6>Admin</h6>
-            <span>Communication</span>
+            <h6>{{$user->name}}</h6>
+            <span>{{$user->email}}</span>
           </li>
           <li>
             <hr class="dropdown-divider">
@@ -207,8 +207,15 @@ $countm = 0;
 
           <li>
             <a class="dropdown-item d-flex align-items-center" href="#">
-              <i class="bi bi-box-arrow-right"></i>
-              <span>Sign Out</span>
+
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit">
+                  <!-- Logout -->
+                  <span>Sign Out</span>
+                  <i class="bi bi-box-arrow-right"></i>
+                </button>
+              </form>
             </a>
           </li>
 
