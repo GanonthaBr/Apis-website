@@ -85,3 +85,7 @@ Route::get('/allreports', [AdminDashboardController::class, 'allreports'])->name
 // Route::get('/test', function () {
 //     return view('partials.blogs.blog-details');
 // });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
