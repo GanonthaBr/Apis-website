@@ -212,7 +212,7 @@ $countm = 0;
                 @csrf
                 <button type="submit">
                   <!-- Logout -->
-                  <span>Sign Out</span>
+                  <span>Déconnexion</span>
                   <i class="bi bi-box-arrow-right"></i>
                 </button>
               </form>

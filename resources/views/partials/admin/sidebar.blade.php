@@ -76,11 +76,11 @@
            </a>
          </li>
          <li class="nav-item">
-       <a class="nav-link collapsed" href="{{route('report.create')}}">
-         <i class="bi bi-inbox"></i>
-         <span>Ajouter un rapport</span>
-       </a>
-     </li>
+           <a class="nav-link collapsed" href="{{route('report.create')}}">
+             <i class="bi bi-inbox"></i>
+             <span>Ajouter un rapport</span>
+           </a>
+         </li>
        </ul>
      </li>
      <!-- End Tables Nav -->
@@ -107,7 +107,7 @@
      </li>
      <!-- End F.A.Q Page Nav -->
 
-     
+
      <!-- End Contact Page Nav -->
 
      {{-- <li class="nav-item">
@@ -119,9 +119,19 @@
      <!-- End Register Page Nav -->
 
      <li class="nav-item">
-       <a class="nav-link collapsed" href="pages-login.html">
-         <i class="bi bi-box-arrow-in-right"></i>
-         <span>Login</span>
+       <a class="nav-link collapsed" href="#">
+         <form method="POST" action="{{ route('logout') }}">
+           @csrf
+           <button type="submit">
+             <!-- Logout -->
+             <span>Déconnexion</span>
+             <i class="bi bi-box-arrow-in-right"></i>
+
+             {{-- <span>Sign Out</span>
+                  <i class="bi bi-box-arrow-right"></i> --}}
+           </button>
+         </form>
+
        </a>
      </li>
      <!-- End Login Page Nav -->
