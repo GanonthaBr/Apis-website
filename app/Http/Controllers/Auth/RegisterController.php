@@ -64,7 +64,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $image_name = null;
+        // $image_name = null;
 
         if (isset($data['image'])) {
             $image = $data['image'];
