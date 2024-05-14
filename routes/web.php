@@ -77,7 +77,7 @@ Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('ne
 Route::group(['middleware' => 'auth'], function () {
     //the routes go here...
     //admin
-    Route::get('/admin', [AdminDashboardController::class, 'index'])->name('admin');
+    Route::get('/adminapis', [AdminDashboardController::class, 'index'])->name('admin');
     Route::get('/allblogs', [AdminDashboardController::class, 'allbogs'])->name('admin.allblogs');
     Route::get('/allEvents', [AdminDashboardController::class, 'allEvents'])->name('admin.allEvents');
     Route::get('/createblog', [AdminDashboardController::class, 'create'])->name('admin.create');
