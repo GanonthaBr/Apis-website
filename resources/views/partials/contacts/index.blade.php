@@ -30,7 +30,7 @@
             <img src="{{asset('img/cause-3.png')}}" alt="Image" />
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
 
                 <div class="contact-form">
                     <h4 class="text-center">Envoyez nous un message</h4>
@@ -85,7 +85,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-6 socials-contact contact-form">
+            <div class="col-12 col-md-6 socials-contact contact-form">
                 <h4 class="text-center">Nous contacter</h4>
                 <ul>
                     <li><i class="fa fa-map-marker"></i> Avenue Korey bongou</li>
