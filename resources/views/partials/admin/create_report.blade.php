@@ -26,7 +26,7 @@
                 <label for="file" class="form-label">Document du rapport en pdf:</label>
                 <input type="file" name="file" class="form-control" id="file" accept="application/pdf" required>
             </div>
-            <button type="submit">Upload Report</button>
+            <button type="submit" class="btn btn-primary">Publier le Report</button>
         </form>
     </div>
 
