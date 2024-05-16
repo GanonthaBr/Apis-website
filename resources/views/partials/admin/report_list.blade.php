@@ -46,7 +46,7 @@
                 <tr>
                     <td>{{ $report->title }}</td>
                     <td>{{ substr($report->description,0,50) }}...</td>
-                    <td>{{ $report->Auteur }}</td>
+                    <td>{{ $report->author }}</td>
                     
                     <td>
                         <a href="{{ route('report.edit', $report->id) }}" class="btn btn-primary">Modifier</a>
