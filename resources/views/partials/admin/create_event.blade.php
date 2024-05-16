@@ -3,7 +3,7 @@
 @section('admin-content')
 <main class="main" id="main">
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Ajouter un blog</h1>
+        <h1 class="mt-4">Ajouter un événement</h1>
         <form action="{{ route('events.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
