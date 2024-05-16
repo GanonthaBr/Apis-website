@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Causes;
 use App\Models\Stats;
 use App\Models\Events;
 use App\Models\Report;
@@ -17,11 +18,12 @@ class HomeController extends Controller
         // $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
         $blogs = Blog::latest()->limit(3)->get();
         $stats = Stats::all();
+        $causes = Causes::all();
         $testimonials = Testimonials::all();
         $events = Events::orderBy('created_at', 'desc')->take(2)->get();
 
 
-        return view('home', ['events' => $events, 'stats' => $stats, 'blogs' => $blogs, 'testimonials' => $testimonials,]);
+        return view('home', ['events' => $events, 'stats' => $stats, 'causes' => $causes, 'blogs' => $blogs, 'testimonials' => $testimonials,]);
     }
     public function getStats()
     {
