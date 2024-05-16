@@ -3,7 +3,7 @@
 <main class="main" id="main">
     {{-- create a form to add new blog with title, image and content --}}
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Ajouter un Temoignages</h1>
+        <h1 class="mt-4">Ajouter un Temoignage</h1>
         {{-- display success message if blog is created --}}
         @if (session()->has('testimonial-success'))
         <div class="alert alert-success" role="alert">
@@ -29,7 +29,7 @@
           <label for="content" class="form-label">Contenu</label>
           <textarea class="form-control" id="content" name="content" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        <button type="submit" class="btn btn-primary">Publier</button>
         </form>
 </main>
 @endsection
