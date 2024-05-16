@@ -3,7 +3,7 @@
 <main class="main" id="main">
     {{-- create a form to add new cause with name, image and description --}}
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Ajouter un cause</h1>
+        <h1 class="mt-4">Ajouter une cause</h1>
         {{-- display success message if cause is created --}}
         @if (session()->has('cause-created'))
         <div class="alert alert-success" role="alert">
