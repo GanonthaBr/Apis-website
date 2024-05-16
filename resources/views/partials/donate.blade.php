@@ -51,7 +51,7 @@
                                     Faire le Don Maintenant!
                                 </button>
                                 <p style="text-align: center; color:#fff">OU</p>
-                                <button class="btn btn-custom" onclick="window.location.href='contacts.index'  ">Nous Contacter.
+                                <button class="btn btn-custom" href='#contacts'  >Nous Contacter.
                                 </button>
                             </div>
                         </form>

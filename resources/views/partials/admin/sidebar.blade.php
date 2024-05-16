@@ -65,6 +65,7 @@
          </li>
        </ul>
      </li>
+     
      <li class="nav-item">
        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
          <i class="bi bi-collection-fill"></i><span>Rapports</span><i class="bi bi-chevron-down ms-auto"></i>

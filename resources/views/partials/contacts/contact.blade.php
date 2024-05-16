@@ -1,4 +1,4 @@
-   <div class="contact">
+   <div class="contact" id="contact">
        <div class="container">
            <div class="section-header text-center">
                <p>Nous Contacter</p>
