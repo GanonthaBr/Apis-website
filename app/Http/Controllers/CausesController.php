@@ -46,6 +46,22 @@ class CausesController extends Controller
     public function edit($id)
     {
         $cause = Causes::find($id);
-        return view('partials.admin.edit_causes', ['cause' => $cause]);
+        return view('partials.admin.causes_edit', ['cause' => $cause]);
+    }
+    // update
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+        $cause = Causes::find($id);
+        $cause->name = $request->name;
+        $cause->description = $request->description;
+        if ($request->file('image')) {
+            $cause->image = $request->file('image')->store('cause_images', 'public');
+        }
+        $cause->save();
+        return redirect()->route('admin.allcauses')->with('cause-updated', 'La cause a été mise à jour avec succès.');
     }
 }

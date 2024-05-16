@@ -88,6 +88,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/allrequests', [AdminDashboardController::class, 'userRequests'])->name('admin.allrequests');
     Route::get('/allreports', [AdminDashboardController::class, 'allreports'])->name('admin.allreports');
     Route::get('/allcauses', [AdminDashboardController::class, 'allcauses'])->name('admin.allcauses');
+    Route::get('/createCause', [AdminDashboardController::class, 'createCause'])->name('admin.createcause');
 });
 
 // Causes
@@ -96,6 +97,7 @@ Route::get('/createcause', [CausesController::class, 'create'])->name('causes.cr
 Route::post('/causes', [CausesController::class, 'store'])->name('causes.store');
 Route::delete('/cause/{id}', [CausesController::class, 'destroy'])->name('causes.destroy');
 Route::get('/causes/{id}', [CausesController::class, 'edit'])->name('causes.edit');
+Route::put('/causes/{id}', [CausesController::class, 'update'])->name('causes.update');
 
 
 Auth::routes();

@@ -72,7 +72,7 @@
             </tbody>
         </table>
         {{-- add new cause button --}}
-        <a href="{{route('admin.create')}}" class="btn btn-primary">Ajouter un cause</a>
+        <a href="{{route('admin.createcause')}}" class="btn btn-primary">Ajouter une cause</a>
 
 
 </main>
