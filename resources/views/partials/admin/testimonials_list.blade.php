@@ -4,11 +4,11 @@
 <main class="main" id="main">
     {{-- create Bootstrap table with three columns --}}
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Liste des temoignages</h1>
+        <h1 class="mt-4">Liste des témoignage</h1>
           <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active">Temoignages</li>
+        <li class="breadcrumb-item active">Témoignage</li>
       </ol>
     </nav>
         {{-- display success message if testimonial is created --}}
@@ -82,7 +82,7 @@
             </tbody>
         </table>
         {{-- add new testimonial button --}}
-        <a href="{{route('admin.createTestimonial')}}" class="btn btn-primary">Ajouter un testimonial</a>
+        <a href="{{route('admin.createTestimonial')}}" class="btn btn-primary">Ajouter un témoignage</a>
 
 
 </main>
