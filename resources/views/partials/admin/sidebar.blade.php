@@ -84,6 +84,24 @@
          </li>
        </ul>
      </li>
+     <li class="nav-item">
+       <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+         <i class="bi bi-collection-fill"></i><span>Causes</span><i class="bi bi-chevron-down ms-auto"></i>
+       </a>
+       <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+         <li>
+           <a href="{{route('admin.allcauses')}}">
+             <i class="bi bi-circle"></i><span>Liste des Causes</span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link collapsed" href="{{route('causes.create')}}">
+             <i class="bi bi-inbox"></i>
+             <span>Ajouter une cause</span>
+           </a>
+         </li>
+       </ul>
+     </li>
      <!-- End Tables Nav -->
 
 

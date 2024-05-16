@@ -1,5 +1,5 @@
 @extends('layouts.admin_layout')
-@section('admin-description')
+@section('admin-content')
 <main class="main" id="main">
     {{-- create a form to add new cause with name, image and description --}}
     <div class="container-fluid px-4">

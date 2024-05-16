@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Causes;
 use App\Models\Events;
 use App\Models\Report;
 use App\Models\Contact;
@@ -63,5 +64,11 @@ class AdminDashboardController extends Controller
     {
         $reports = Report::all();
         return view('partials.admin.report_list', ['reports' => $reports]);
+    }
+    // all causes
+    public function allCauses()
+    {
+        $causes = Causes::all();
+        return view('partials.admin.create_causes', ['causes' => $causes]);
     }
 }
