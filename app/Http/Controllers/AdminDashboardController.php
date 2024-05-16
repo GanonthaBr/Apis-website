@@ -69,6 +69,6 @@ class AdminDashboardController extends Controller
     public function allCauses()
     {
         $causes = Causes::all();
-        return view('partials.admin.create_causes', ['causes' => $causes]);
+        return view('partials.admin.causes_list', ['causes' => $causes]);
     }
 }

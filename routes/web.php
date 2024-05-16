@@ -94,6 +94,8 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/causes', [CausesController::class, 'index'])->name('allcauses');
 Route::get('/createcause', [CausesController::class, 'create'])->name('causes.create');
 Route::post('/causes', [CausesController::class, 'store'])->name('causes.store');
+Route::delete('/cause/{id}', [CausesController::class, 'destroy'])->name('causes.destroy');
+Route::get('/causes/{id}', [CausesController::class, 'edit'])->name('causes.edit');
 
 
 Auth::routes();

@@ -35,4 +35,17 @@ class CausesController extends Controller
         $causes->save();
         return redirect()->route('admin.allcauses')->with('cause-created', 'La cause a été ajoutée avec succès.');
     }
+    // destroy
+    public function destroy($id)
+    {
+        $cause = Causes::find($id);
+        $cause->delete();
+        return redirect()->route('admin.allcauses')->with('cause-deleted', 'La cause a été supprimée avec succès.');
+    }
+    // edit
+    public function edit($id)
+    {
+        $cause = Causes::find($id);
+        return view('partials.admin.edit_causes', ['cause' => $cause]);
+    }
 }
