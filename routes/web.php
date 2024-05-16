@@ -11,6 +11,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\CausesController;
 use App\Http\Controllers\DomaineInterventionController;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -87,6 +88,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/allrequests', [AdminDashboardController::class, 'userRequests'])->name('admin.allrequests');
     Route::get('/allreports', [AdminDashboardController::class, 'allreports'])->name('admin.allreports');
 });
+
+// Causes
+Route::get('/causes', [CausesController::class, 'index'])->name('allcauses');
+
 
 Auth::routes();
 
