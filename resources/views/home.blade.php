@@ -53,7 +53,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->communities_helped}}
                         </h3>
-                        <p>Communaunes aidées</p>
+                        <p>Communes aidées</p>
                     </div>
                 </div>
             </div>
