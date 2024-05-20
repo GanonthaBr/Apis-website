@@ -98,9 +98,15 @@ class BlogController extends Controller
                 'content' => 'required',
                 'image' => 'nullable|image|max:5120',
             ]);
+            //sanitize with HTMLPurifier
+            $config = HTMLPurifier_Config::createDefault();
+            $purifier = new HTMLPurifier($config);
+            $dirty_html = $request->content;
+            $clean_html = $purifier->purify($dirty_html);
+
             $blog = Blog::findOrFail($id);
             $blog->title = $request->title;
-            $blog->content = $request->content;
+            $blog->content = $clean_html;
             if ($request->hasFile('image')) {
                 $imagePath = $request->file('image')->store('blog_images', 'public');
                 $blog->image = $imagePath;
