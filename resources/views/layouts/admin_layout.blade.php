@@ -61,6 +61,7 @@
   <script>
     window.onload = function() {
       CKEDITOR.replace('content');
+      CKEDITOR.replace('description');
     }
   </script>
 

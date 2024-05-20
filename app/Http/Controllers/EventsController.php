@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Events;
 use Illuminate\Http\Request;
 use Dotenv\Exception\ValidationException;
+use HTMLPurifier;
+use HTMLPurifier_Config;
 use Illuminate\Console\Scheduling\Event;
 
 class EventsController extends Controller
@@ -42,13 +44,18 @@ class EventsController extends Controller
                 'location' => 'required',
                 'image' => 'required',
             ]);
+            //sanitize user input
+            $config = HTMLPurifier_Config::createDefault();
+            $purifier = new HTMLPurifier($config);
+            $dirty_html = $request->description;
+            $clean_html = $purifier->purify($dirty_html);
             //image path
             $imagePath = $request->file('image') ? $request->file('image')->store('event_images', 'public') : null;
 
             //create element
             Events::create([
                 'title' => $request->title,
-                'description' => $request->description,
+                'description' => $clean_html,
                 'date' => $request->date,
                 'start_time' => $request->start_time,
                 'end_time' => $request->end_time,
@@ -86,11 +93,17 @@ class EventsController extends Controller
                 'location' => 'required',
                 'image' => 'nullable|image|max:5120',
             ]);
-            //image path
-            // $imagePath = $request->file('image') ? $request->file('image')->store('event_images', 'public') : null;
+            //sanitize user input
+            $config = HTMLPurifier_Config::createDefault();
+            $purifier = new HTMLPurifier($config);
+            $dirty_html = $request->description;
+            $clean_html = $purifier->purify($dirty_html);
+
+
+
             $event = Events::findOrFail($id);
             $event->title = $request->title;
-            $event->description = $request->description;
+            $event->description = $clean_html;
             $event->date = $request->date;
             $event->start_time = $request->start_time;
             $event->end_time = $request->end_time;
