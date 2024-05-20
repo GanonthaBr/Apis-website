@@ -53,7 +53,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->communities_helped}}
                         </h3>
-                        <p>Communes aidées</p>
+                        <p>Communes intervenues</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->year_of_experience}}
                         </h3>
-                        <p>Année d'existence</p>
+                        <p>Années d'expérience.</p>
                     </div>
                 </div>
             </div>
