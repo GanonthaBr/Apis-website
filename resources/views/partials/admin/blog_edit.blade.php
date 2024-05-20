@@ -84,7 +84,13 @@
   <script src="{{asset('assets/js/main.js')}}"></script>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
+{{-- text area formatting: CKEditor --}}
+  <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+  <script>
+    window.onload = function() {
+      CKEDITOR.replace('content');
+    }
+  </script>
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

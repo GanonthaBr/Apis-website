@@ -1,11 +1,16 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
+// use HTMLPurifier;
+use HTMLPurifier;
 use App\Models\Blog;
 use App\Events\BlogPosted;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 use Dotenv\Exception\ValidationException;
+use HTMLPurifier_Config;
 
 class BlogController extends Controller
 {
@@ -46,9 +51,17 @@ class BlogController extends Controller
             //image path
 
             $imagePath = $request->file('image') ? $request->file('image')->store('blog_images', 'public') : null;
+
+            //sanitize with HTMLPurifier
+            $config = HTMLPurifier_Config::createDefault();
+            $purifier = new HTMLPurifier($config);
+            $dirty_html = $request->content;
+            $clean_html = $purifier->purify($dirty_html);
+
+
             $blog = new Blog();
             $blog->title = $request->title;
-            $blog->content = $request->content;
+            $blog->content = $clean_html;
             $blog->image = $imagePath;
             $blog->save();
             //register Listener
