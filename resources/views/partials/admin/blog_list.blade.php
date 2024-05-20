@@ -33,7 +33,7 @@
 
                 <tr>
                     <td>{{ $blog->title }}</td>
-                    <td>{{ substr($blog->content,0,50) }}...</td>
+                    <td>{!! substr($blog->content,0,50) !!}...</td> 
                     <td>
                         {{-- create edit button --}}
                         <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-primary">Modifier</a>

@@ -18,7 +18,7 @@
                                 <h3><a href="{{route('blogs.show', ['id' => $blog->id])}}">{{$blog->title}}</a></h3>
                                 <p>
 
-                                    {{ substr($blog->content,0,150) }}...
+                                    {!! substr($blog->content,0,150) !!}...
                                 </p>
                             </div>
                             <div class="blog-meta">

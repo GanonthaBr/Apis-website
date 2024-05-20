@@ -33,14 +33,14 @@
 </head>
 
 <body>
-<!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   @include('partials.admin.header')
   <!-- End Header -->
-   <!-- ======= Sidebar ======= -->
- @include('partials.admin.sidebar')
+  <!-- ======= Sidebar ======= -->
+  @include('partials.admin.sidebar')
   <!-- End Sidebar-->
 
-@yield('admin-content')
+  @yield('admin-content')
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -55,10 +55,17 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  {{-- text area formatting: CKEditor --}}
+  <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+  <script>
+    window.onload = function() {
+      CKEDITOR.replace('content');
+    }
+  </script>
 
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 

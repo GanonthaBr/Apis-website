@@ -33,7 +33,7 @@
 
 
                     <p>
-                        {{$blog->content}}
+                        {!!$blog->content!!}
                     </p>
 
                 </div>
