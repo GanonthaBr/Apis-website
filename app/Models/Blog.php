@@ -14,4 +14,9 @@ class Blog extends Model
         'content',
         'image',
     ];
+    //add relationship
+    public function comments()
+    {
+        return $this->hasMany(Comments::class);
+    }
 }
