@@ -50,7 +50,7 @@
                          <i class="flaticon-education"></i>
                      </div>
                      <div class="service-text">
-                         <h3>Education</h3>
+                         <h3>Education et Accompagnement Jardins Potager Scolaires JPS</h3>
                          <p>
                              APIS s'engage à éduquer les enfants ruraux, leur offrant un avenir lumineux et des opportunités égales.
                          </p>
@@ -63,7 +63,7 @@
                          <i class="flaticon-home"></i>
                      </div>
                      <div class="service-text">
-                         <h3>Accompagnement Social</h3>
+                         <h3>Renforcement des capacités communautaires.</h3>
                          <p>
                              APIS s'investit dans le soutien social des communautés rurales, visant leur épanouissement et autonomie durable.
                          </p>
