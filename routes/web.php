@@ -12,6 +12,7 @@ use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\CausesController;
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\DomaineInterventionController;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -99,6 +100,8 @@ Route::delete('/cause/{id}', [CausesController::class, 'destroy'])->name('causes
 Route::get('/causes/{id}', [CausesController::class, 'edit'])->name('causes.edit');
 Route::put('/causes/{id}', [CausesController::class, 'update'])->name('causes.update');
 
+// comments
+Route::post('/comments', [CommentsController::class, 'store'])->name('comments.store');
 
 Auth::routes();
 

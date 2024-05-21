@@ -35,7 +35,16 @@
                     <p>
                         {!!$blog->content!!}
                     </p>
+@foreach ($blog->comments as $comment)
+    <p>{{ $comment->text }}</p>
+@endforeach
 
+<form method="POST" action="{{ route('comments.store') }}">
+    @csrf
+    <input type="hidden" name="blog_id" value="{{ $blog->id }}">
+    <textarea name="text"></textarea>
+    <button type="submit">Add Comment</button>
+</form>
                 </div>
                 <h6>D'autres liens</h6>
                 @include('partials.other-links')
