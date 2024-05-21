@@ -35,3 +35,16 @@ II - ADD AUTHENTICATION FEATURE
 5. run the command:
    npm install
    npm run dev
+
+III - ADD COMMENT SECTION UNDER EACH BLOG POST
+
+1. create a Comment model with:
+    - comment content
+    - user id
+    - blog post id
+2. create a migration file
+3. update the blog model to add relationship with comment
+4. create a controller method to store the comment
+5. update the BlogController
+6. update the blog view
+7. update routes
