@@ -29,7 +29,9 @@ class BlogController extends Controller
     //display a single post
     public function show($id)
     {
-        $blog = Blog::findOrFail($id);
+        // $blog = Blog::findOrFail($id);
+        //get blog with comments
+        $blog  = Blog::with('comments')->findOrFail($id);
         return view('partials.blogs.blog-details', ['blog' => $blog]);
     }
     // blog upload form
