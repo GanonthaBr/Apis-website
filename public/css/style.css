@@ -23,6 +23,7 @@ h4,
 h5,
 h6 {
     color: #4a4c70;
+    text-align: center;
 }
 h1.blog {
     font-size: 30px;

@@ -21,7 +21,7 @@
              <div class="col-lg-4 col-md-6">
                  <div class="service-item">
                      <div class="service-icon">
-                         <i class="flaticon-water"></i>
+                         <i class="flaticon-donation"></i>
                      </div>
                      <div class="service-text">
                          <h3>AGR.</h3>
