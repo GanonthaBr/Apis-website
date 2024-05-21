@@ -75,7 +75,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->departments_helped}}
                         </h3>
-                        <p>Départements intervenus</p>
+                        <p>Départements</p>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->year_of_experience}}
                         </h3>
-                        <p>Années d'expérience.</p>
+                        <p>Expérience.</p>
                     </div>
                 </div>
             </div>
