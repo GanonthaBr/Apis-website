@@ -24,7 +24,7 @@
                          <i class="flaticon-water"></i>
                      </div>
                      <div class="service-text">
-                         <h3>Accès a l'Eau.</h3>
+                         <h3>AGR.</h3>
                          <p>
                              APIS promet l'accès à l'eau potable pour les communautés rurales, garantissant la santé et développement durable.
                          </p>
