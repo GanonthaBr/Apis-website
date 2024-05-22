@@ -49,8 +49,8 @@
                      <form method="POST" action="{{ route('comments.store') }}">
                             @csrf
                             <input type="hidden" name="blog_id" value="{{ $blog->id }}">
-                            <textarea class="form-control" name="comment"></textarea>
-                            <button class="btn"  type="submit">Ajouter un commentaire</button>
+                            <textarea class="form-control  {{ auth()->check() ? '' : 'not-logged-in' }}" name="comment" required></textarea>
+                            <button class="btn comment-button"  type="submit">Ajouter un commentaire</button>
                         </form>
                 </div>
                 <h6>D'autres liens</h6>
@@ -67,7 +67,13 @@
 
 
 
-
+<script>
+   var elemen=  document.querySelector('.not-logged-in');
+   elemen.addEventListener('click',function (e){
+    e.preventDefault();
+   
+   })
+</script>
 
 
 @stop
