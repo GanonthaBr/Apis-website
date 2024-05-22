@@ -35,39 +35,38 @@
                     <p>
                         {!!$blog->content!!}
                     </p>
-                    <!-- displaying comments & style with bootstrap-->
-                    <div class="comments">
-                        <h3>Comments</h3>
 
-                        <form method="POST" action="{{ route('comments.store') }}">
-                            @csrf
-                            <input type="hidden" name="blog_id" value="{{ $blog->id }}">
-                            <textarea name="comment"></textarea>
-                            <button type="submit">Add Comment</button>
-                        </form>
-
+                </div>
+                <div class="comments">
+                      <h3>Comments</h3>
                         @foreach($blog->comments as $comment)
                         <div class="comment">
                             <!-- <h4>{{ $comment->user_name }}</h4> -->
                             <p>{{ $comment->comment }}</p>
                         </div>
                         @endforeach
-                    </div>
-                    <h6>D'autres liens</h6>
-                    @include('partials.other-links')
+                     <form method="POST" action="{{ route('comments.store') }}">
+                            @csrf
+                            <input type="hidden" name="blog_id" value="{{ $blog->id }}">
+                            <textarea class="form-control" name="comment"></textarea>
+                            <button class="btn"  type="submit">Add Comment</button>
+                        </form>
                 </div>
-
-                {{-- Side bar Sarts --}}
-                @include('includes.sidebar')
-                {{-- Side bar Ends --}}
+                <h6>D'autres liens</h6>
+                @include('partials.other-links')
             </div>
+
+            {{-- Side bar Sarts --}}
+            @include('includes.sidebar')
+            {{-- Side bar Ends --}}
         </div>
     </div>
-    <!-- Single Post End-->
+</div>
+<!-- Single Post End-->
 
 
 
 
 
 
-    @stop
+@stop
