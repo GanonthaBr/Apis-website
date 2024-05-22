@@ -111,6 +111,44 @@ a:focus {
     color: #fff;
 }
 
+/* login modal  */
+
+.login-card {
+    /* display: none; */
+    position: fixed; /* or 'fixed' */
+    top: 50%; /* center the card vertically */
+    left: 50%; /* center the card horizontally */
+    transform: translate(
+        -50%,
+        -50%
+    ); /* adjust the card's position to its center */
+    z-index: 10000;
+    height: 400px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #17468a;
+    color: #fff;
+}
+.login-card h3 {
+    color: #fff;
+}
+.login-card span {
+    font-size: 8;
+    font-style: italic;
+}
+.login-card button {
+    width: 90%;
+    margin: 10px;
+    background: #fff;
+    color: #17468a;
+    font-weight: bold;
+}
+.login-card button:hover {
+    color: #17468a;
+    background: #fff;
+}
+
 /**********************************/
 /****** Loader & Back to Top ******/
 /**********************************/
