@@ -43,7 +43,7 @@
                         <div class="comment">
                             <!-- <h4>{{ $comment->user_name }}</h4> -->
                             <p>{{ $comment->comment }}</p>
-                            <p class="comment-added">Ajoutée {{$comment->created_at->locale('fr')->diffForHumans()}} </p>
+                            <p class="comment-added">Ajoutée par {{$comment->user->name}} , {{$comment->created_at->locale('fr')->diffForHumans()}} </p>
                         </div>
                         @endforeach
                      <form method="POST" action="{{ route('comments.store') }}">
