@@ -83,6 +83,20 @@ a:focus {
     font-size: inherit;
     margin-left: 0;
 }
+/**********************************/
+/****** Extra CSS ******/
+/**********************************/
+
+.comment {
+    margin-top: 20px;
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    background: #f5f4f4;
+}
+.comments {
+    margin-top: 20px;
+}
 
 /**********************************/
 /****** Loader & Back to Top ******/

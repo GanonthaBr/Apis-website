@@ -35,32 +35,39 @@
                     <p>
                         {!!$blog->content!!}
                     </p>
-@foreach ($blog->comments as $comment)
-    <p>{{ $comment->comment }}</p>
-@endforeach
+                    <!-- displaying comments & style with bootstrap-->
+                    <div class="comments">
+                        <h3>Comments</h3>
 
-<form method="POST" action="{{ route('comments.store') }}">
-    @csrf
-    <input type="hidden" name="blog_id" value="{{ $blog->id }}">
-    <textarea name="comment"></textarea>
-    <button type="submit">Add Comment</button>
-</form>
+                        <form method="POST" action="{{ route('comments.store') }}">
+                            @csrf
+                            <input type="hidden" name="blog_id" value="{{ $blog->id }}">
+                            <textarea name="comment"></textarea>
+                            <button type="submit">Add Comment</button>
+                        </form>
+
+                        @foreach($blog->comments as $comment)
+                        <div class="comment">
+                            <!-- <h4>{{ $comment->user_name }}</h4> -->
+                            <p>{{ $comment->comment }}</p>
+                        </div>
+                        @endforeach
+                    </div>
+                    <h6>D'autres liens</h6>
+                    @include('partials.other-links')
                 </div>
-                <h6>D'autres liens</h6>
-                @include('partials.other-links')
-            </div>
 
-            {{-- Side bar Sarts --}}
-            @include('includes.sidebar')
-            {{-- Side bar Ends --}}
+                {{-- Side bar Sarts --}}
+                @include('includes.sidebar')
+                {{-- Side bar Ends --}}
+            </div>
         </div>
     </div>
-</div>
-<!-- Single Post End-->
+    <!-- Single Post End-->
 
 
 
 
 
 
-@stop
+    @stop
