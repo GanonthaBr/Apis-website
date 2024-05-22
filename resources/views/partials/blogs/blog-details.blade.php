@@ -49,6 +49,11 @@
                     @endforeach
                     <div class="login-card card">
                         <h3>Connectez-vous pour commenter</h3>
+                        <!-- cross to close the modal -->
+                        <span class="close">
+                            <i class="fas fa-times"></i>
+
+                        </span>
                         <div class="modal-body">
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
@@ -127,10 +132,17 @@
 
 <script>
     var elemen = document.querySelector('.not-logged-in');
-    var loginModal = document.querySelector('#loginModal');
+    var loginModal = document.querySelector('.login-card');
+    var closeBtn = document.querySelector('.close');
     elemen.addEventListener('click', function(e) {
         e.preventDefault();
-        loginModal.show();
+        if (elemen) {
+            loginModal.style.display = 'block';
+        }
+    });
+    closeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        loginModal.style.display = 'none';
     })
 </script>
 

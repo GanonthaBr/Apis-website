@@ -114,7 +114,7 @@ a:focus {
 /* login modal  */
 
 .login-card {
-    /* display: none; */
+    display: none;
     position: fixed; /* or 'fixed' */
     top: 50%; /* center the card vertically */
     left: 50%; /* center the card horizontally */
@@ -147,6 +147,20 @@ a:focus {
 .login-card button:hover {
     color: #17468a;
     background: #fff;
+}
+.login-card .close {
+    z-index: 100001;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    /* font-size: 40px; */
+    /* height: 100px; */
+    padding: 5px;
+    cursor: pointer;
+    border: #fff 1px solid;
+    border-radius: 100%;
 }
 
 /**********************************/
