@@ -60,7 +60,7 @@
                     
                     <a href="{{asset('storage/' . $report->file)}}" target="_blank">Lire le Raport &nbsp;  <i class="fa fa-angle-right" style="font-size:20px"></i> </a>
                     <!-- <i class="far fa-arrow-up"></i> -->
-                    <a>Auteur: {{$report->author}}</a> 
+                    <a>Publié par: {{$report->author}}</a> 
                 </div>
             </div>
             @endforeach
