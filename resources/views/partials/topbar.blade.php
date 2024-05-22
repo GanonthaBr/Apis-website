@@ -15,7 +15,7 @@
 
                       <div class="text">
                           <i class="fa fa-envelope"></i>
-                          <p><a href="mailto:contact@apis-niger.org">contact@apis-niger.org</a></p>
+                          <p><a href="mailto:contact@apis-sahel.org">contact@apis-sahel.org</a></p>
                       </div>
                   </div>
               </div>
