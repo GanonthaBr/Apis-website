@@ -36,13 +36,13 @@
                         {!!$blog->content!!}
                     </p>
 @foreach ($blog->comments as $comment)
-    <p>{{ $comment->text }}</p>
+    <p>{{ $comment->comment }}</p>
 @endforeach
 
 <form method="POST" action="{{ route('comments.store') }}">
     @csrf
     <input type="hidden" name="blog_id" value="{{ $blog->id }}">
-    <textarea name="text"></textarea>
+    <textarea name="comment"></textarea>
     <button type="submit">Add Comment</button>
 </form>
                 </div>

@@ -14,12 +14,13 @@ class CommentsController extends Controller
         try {
             $request->validate([
                 'comment' => 'required',
-                'blog_id' => 'required|exists:blog_id',
+                'blog_id' => 'required|exists:blogs,id',
             ]);
             $comment  = new Comments();
-            $comment->user_id = auth()->id();
+
+            $comment->user_id = 1;
             $comment->blog_id = $request->blog_id;
-            $comment->comment = $request->text;
+            $comment->comment = $request->comment;
             $comment->save();
             return redirect()->back();
         } catch (Exception $e) {
