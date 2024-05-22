@@ -98,6 +98,10 @@ a:focus {
 .comments {
     margin-top: 20px;
 }
+.comment-added {
+    font-size: 5;
+    font-style: italic;
+}
 .comments button {
     color: #fff;
     background-color: #11579c;
