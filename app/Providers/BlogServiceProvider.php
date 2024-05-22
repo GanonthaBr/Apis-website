@@ -25,13 +25,13 @@ class BlogServiceProvider extends ServiceProvider
                 ->with('events', \App\Models\Events::all()->take(2))
                 ->with('messages', \App\Models\Contact::latest()->get()->map(
                     function ($message) {
-                        $message->created_at_human = $message->created_at->diffForHumans();
+                        $message->created_at_human = $message->created_at->locale('fr')->diffForHumans();
                         return $message;
                     }
                 ))
                 ->with('newMessages', \App\Models\Contact::where('read', false)->latest()->get()->map(
                     function ($message) {
-                        $message->created_at_human = $message->created_at->diffForHumans();
+                        $message->created_at_human = $message->created_at->locale('fr')->diffForHumans();
                         return $message;
                     }
                 ))
