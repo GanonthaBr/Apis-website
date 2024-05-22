@@ -18,7 +18,7 @@ class CommentsController extends Controller
             ]);
             $comment  = new Comments();
 
-            $comment->user_id = 1;
+            $comment->user_id = auth()->id();
             $comment->blog_id = $request->blog_id;
             $comment->comment = $request->comment;
             $comment->save();

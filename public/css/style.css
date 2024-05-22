@@ -90,7 +90,7 @@ a:focus {
 .comment {
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 10px;
     /* border: 1px solid #ddd; */
     border-radius: 5px;
     background: #f5f4f4;
@@ -106,6 +106,9 @@ a:focus {
     color: #fff;
     background-color: #11579c;
     margin-top: 20px;
+}
+.comments button:hover {
+    color: #fff;
 }
 
 /**********************************/

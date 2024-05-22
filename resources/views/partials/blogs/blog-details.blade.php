@@ -50,7 +50,7 @@
                             @csrf
                             <input type="hidden" name="blog_id" value="{{ $blog->id }}">
                             <textarea class="form-control" name="comment"></textarea>
-                            <button class="btn"  type="submit">Add Comment</button>
+                            <button class="btn"  type="submit">Ajouter un commentaire</button>
                         </form>
                 </div>
                 <h6>D'autres liens</h6>
