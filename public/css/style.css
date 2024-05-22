@@ -101,6 +101,7 @@ a:focus {
 .comments button {
     color: #fff;
     background-color: #11579c;
+    margin-top: 20px;
 }
 
 /**********************************/
