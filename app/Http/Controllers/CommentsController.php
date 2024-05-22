@@ -16,8 +16,10 @@ class CommentsController extends Controller
                 'comment' => 'required',
                 'blog_id' => 'required|exists:blog_id',
             ]);
-            $comment  = new Comments($request->all());
+            $comment  = new Comments();
             $comment->user_id = auth()->id();
+            $comment->blog_id = $request->blog_id;
+            $comment->comment = $request->text;
             $comment->save();
             return redirect()->back();
         } catch (Exception $e) {
