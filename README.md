@@ -52,3 +52,12 @@ III - ADD COMMENT SECTION UNDER EACH BLOG POST
 Commands to Run
 
 1-user tatble: php artisan make:migration add_is_admin_to_users_table --table=users 2. php artisasn migrate
+
+IV - Next steps
+
+1. Registration for new users
+2. Redirect issues
+3. Display number of comments on the preview
+4. Display several images per blog
+5. Mot du secretaire
+6. Handle comments from admin dashboard
