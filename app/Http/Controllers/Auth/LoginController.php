@@ -52,4 +52,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    // override the authenticated method
+    protected function authenticated(Request $request, $user)
+    {
+        if ($user->isAdmin()) { //check if user is admin
+            return redirect()->route('admin');
+        }
+        return redirect()->intended($this->redirectTo);
+    }
 }
