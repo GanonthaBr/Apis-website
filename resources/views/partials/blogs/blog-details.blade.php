@@ -76,7 +76,7 @@
                     <form method="POST" action="{{ route('comments.store') }}">
                         @csrf
                         <input type="hidden" name="blog_id" value="{{ $blog->id }}">
-                        <textarea class="form-control  {{ auth()->check() ? '' : 'not-logged-in' }}" name="comment" required></textarea>
+                        <textarea class="form-control  {{ auth()->check() ? '' : 'not-logged-in' }}"  name="comment" required></textarea>
                         <button class="btn comment-button" type="submit">Ajouter un commentaire</button>
                     </form>
                 </div>

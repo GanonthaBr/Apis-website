@@ -41,7 +41,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo;
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -58,6 +58,6 @@ class LoginController extends Controller
         if ($user->isAdmin()) { //check if user is admin
             return redirect()->route('admin');
         }
-        return redirect()->intended($this->redirectTo);
+        return redirect()->back();
     }
 }
