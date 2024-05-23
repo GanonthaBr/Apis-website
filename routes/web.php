@@ -76,7 +76,7 @@ Route::post('/newsletter', [NewsLetterController::class, 'subscribe'])->name('ne
 
 
 //protected Routes
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => ['auth']], function () {
     //the routes go here...
     //admin
     Route::get('/adminapis', [AdminDashboardController::class, 'index'])->name('admin');
@@ -91,6 +91,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/allcauses', [AdminDashboardController::class, 'allcauses'])->name('admin.allcauses');
     Route::get('/createCause', [AdminDashboardController::class, 'createCause'])->name('admin.createcause');
 });
+
 
 // Causes
 Route::get('/causes', [CausesController::class, 'index'])->name('allcauses');

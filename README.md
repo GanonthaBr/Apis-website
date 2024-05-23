@@ -48,3 +48,7 @@ III - ADD COMMENT SECTION UNDER EACH BLOG POST
 5. update the BlogController
 6. update the blog view
 7. update routes
+
+Commands to Run
+
+1-user tatble: php artisan make:migration add_is_admin_to_users_table --table=users 2. php artisasn migrate
