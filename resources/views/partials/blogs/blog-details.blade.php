@@ -85,7 +85,7 @@
 
                         </span>
                         <div class="modal-body">
-                            <form method="POST" action="{{ route('register') }}" enctype=" multipart/form-data">
+                            <form method="POST" action="{{ route('registerFromBlog') }}" enctype=" multipart/form-data">
                                 @csrf
 
                                 <div class="mb-3">
@@ -97,10 +97,7 @@
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
-                                <div class=" mb-3">
-                                    <label for="image" class="form-label">Image</label>
-                                    <input id="image" type="file" class="form-control" name="image">
-                                </div>
+
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Mot de passe</label>
                                     <input type="password" class="form-control" id="password" name="password" required>
@@ -146,6 +143,7 @@
     var elemen = document.querySelector('.not-logged-in');
     var loginModal = document.querySelector('.login-card');
     var registerModal = document.querySelector('.register-card');
+    var closeBtn = document.querySelector('.close');
     var closeBtn = document.querySelector('.close');
     var registerBtn = document.querySelector('.register-btn');
 

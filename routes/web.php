@@ -11,6 +11,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CausesController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\DomaineInterventionController;
@@ -105,5 +106,5 @@ Route::put('/causes/{id}', [CausesController::class, 'update'])->name('causes.up
 Route::post('/comments', [CommentsController::class, 'store'])->name('comments.store');
 
 Auth::routes();
-
+Route::post('/register-from-blog', [RegisterController::class, 'registerBlog'])->name('registerFromBlog');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
