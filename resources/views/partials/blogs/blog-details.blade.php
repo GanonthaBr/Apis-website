@@ -77,7 +77,7 @@
 
                     </div>
                     {{-- Register Modal --}}
-                    <div class="register-card card">
+                    <div class="register-card">
                         <h3>Enregistrez-vous pour commenter</h3>
                         <!-- cross to close the modal -->
                         <span class="close">
@@ -85,7 +85,7 @@
 
                         </span>
                         <div class="modal-body">
-                            <form method="POST" action="{{ route('register') }}">
+                            <form method="POST" action="{{ route('register') }}" enctype=" multipart/form-data">
                                 @csrf
 
                                 <div class="mb-3">
@@ -97,19 +97,22 @@
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
-
+                                <div class=" mb-3">
+                                    <label for="image" class="form-label">Image</label>
+                                    <input id="image" type="file" class="form-control" name="image">
+                                </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Mot de passe</label>
                                     <input type="password" class="form-control" id="password" name="password" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="password_confirmation" class="form-label">Confirmer le mot de passe</label>
-                                    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
+                                    <label for="password-confirm" class="form-label">Confirmer le mot de passe</label>
+                                    <input type="password" class="form-control" id="password-confirm" name="password_confirmation" required>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">S'inscrire</button>
-                                <span style="font-size: 20;">Deja un utilisateur? <a href="#" style="text-decoration: underline">Se connecter</a> </span>
+                                <span style="font-size: 20;">Deja un utilisateur? <span class="login-btn" style="text-decoration: underline">Se connecter</span> </span>
                             </form>
                         </div>
                     </div>
