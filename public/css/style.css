@@ -204,16 +204,15 @@ a:focus {
     color: #17468a;
     background: #fff;
 }
-.register-card .close {
+.register-card .fermer {
     z-index: 100001;
-
     position: absolute;
     top: 0;
     right: 0;
     color: #fff;
     /* font-size: 40px; */
     /* height: 100px; */
-    padding: 3px;
+    padding: 5px;
     cursor: pointer;
     border: #fff 1px solid;
     border-radius: 100%;

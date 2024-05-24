@@ -80,7 +80,7 @@
                     <div class="register-card">
                         <h3>Enregistrez-vous pour commenter</h3>
                         <!-- cross to close the modal -->
-                        <span class="close">
+                        <span class="fermer">
                             <i class="fas fa-times"></i>
 
                         </span>
@@ -144,7 +144,7 @@
     var loginModal = document.querySelector('.login-card');
     var registerModal = document.querySelector('.register-card');
     var closeBtn = document.querySelector('.close');
-    var closeBtn = document.querySelector('.close');
+    var closeBtnR = document.querySelector('.fermer');
     var registerBtn = document.querySelector('.register-btn');
 
     registerModal.style.display = 'none';
@@ -155,6 +155,11 @@
             loginModal.style.display = 'block';
         }
     });
+   closeBtnR.addEventListener('click', function(e){
+    e.preventDefault();
+    // console.log(registerModal);
+    registerModal.style.display = 'none'
+   })
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
         loginModal.style.display = 'none';
