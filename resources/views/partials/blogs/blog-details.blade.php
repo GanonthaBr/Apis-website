@@ -47,6 +47,7 @@
                     </div>
 
                     @endforeach
+                    {{-- Login --}}
                     <div class="login-card card">
                         <h3>Connectez-vous pour commenter</h3>
                         <!-- cross to close the modal -->
@@ -54,6 +55,7 @@
                             <i class="fas fa-times"></i>
 
                         </span>
+
                         <div class="modal-body">
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
@@ -72,57 +74,64 @@
                                 <span style="font-size: 20;">Nouvel utilisateur? <a href="#" style="text-decoration: underline">Creer un Compte</a> </span>
                             </form>
                         </div>
+
                     </div>
+                    {{-- Register Modal --}}
+                    <div class="register-card card">
+                        <h3>Connectez-vous pour commenter</h3>
+                        <!-- cross to close the modal -->
+                        <span class="close">
+                            <i class="fas fa-times"></i>
+
+                        </span>
+                        <div class="modal-body register">
+                            <form method="POST" action="{{ route('register') }}">
+                                @csrf
+
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password_confirmation" class="form-label">Confirmer le mot de passe</label>
+                                    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">S'inscrire</button>
+                                <span style="font-size: 20;">Deja un utilisateur? <a href="#" style="text-decoration: underline">Se connecter</a> </span>
+                            </form>
+                        </div>
+                    </div>
+
                     <form method="POST" action="{{ route('comments.store') }}">
                         @csrf
                         <input type="hidden" name="blog_id" value="{{ $blog->id }}">
-                        <textarea class="form-control  {{ auth()->check() ? '' : 'not-logged-in' }}"  name="comment" required></textarea>
+                        <textarea class="form-control  {{ auth()->check() ? '' : 'not-logged-in' }}" name="comment" required></textarea>
                         <button class="btn comment-button" type="submit">Ajouter un commentaire</button>
                     </form>
                 </div>
-                <!-- The Modal -->
-                {{-- <div class="modal" id="loginModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Login</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
 
-      <!-- Modal Body -->
-      <div class="modal-body">
-        <form method="POST" action="{{ route('login') }}">
-                @csrf
-
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                <h6>D'autres liens</h6>
+                @include('partials.other-links')
             </div>
 
+            {{-- Side bar Sarts --}}
+            @include('includes.sidebar')
+            {{-- Side bar Ends --}}
         </div>
     </div>
-</div> --}}
-
-<h6>D'autres liens</h6>
-@include('partials.other-links')
-</div>
-
-{{-- Side bar Sarts --}}
-@include('includes.sidebar')
-{{-- Side bar Ends --}}
-</div>
-</div>
 </div>
 <!-- Single Post End-->
 
@@ -133,6 +142,7 @@
 <script>
     var elemen = document.querySelector('.not-logged-in');
     var loginModal = document.querySelector('.login-card');
+    var registerModal = document.querySelector('.register-card');
     var closeBtn = document.querySelector('.close');
     elemen.addEventListener('click', function(e) {
         e.preventDefault();
