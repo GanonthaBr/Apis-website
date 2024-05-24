@@ -113,8 +113,7 @@ a:focus {
 
 /* login modal  */
 
-.login-card,
-.register-card {
+.login-card {
     display: none;
     position: fixed; /* or 'fixed' */
     top: 50%; /* center the card vertically */
@@ -131,30 +130,25 @@ a:focus {
     background: #17468a;
     color: #fff;
 }
-.login-card h3,
-.register-card h3 {
+.login-card h3 {
     color: #fff;
 }
-.login-card span,
-.register-card span {
+.login-card span {
     font-size: 8;
     font-style: italic;
 }
-.login-card button:hover,
-.register-card button {
+.login-card button {
     width: 90%;
     margin: 10px;
     background: #fff;
     color: #17468a;
     font-weight: bold;
 }
-.login-card button:hover,
-.register-card button:hover {
+.login-card button:hover {
     color: #17468a;
     background: #fff;
 }
-.login-card .close,
-.register-card .close {
+.login-card .close {
     z-index: 100001;
 
     position: absolute;
@@ -167,6 +161,9 @@ a:focus {
     cursor: pointer;
     border: #fff 1px solid;
     border-radius: 100%;
+}
+.login-card .register-btn {
+    cursor: pointer;
 }
 
 /**********************************/

@@ -71,20 +71,20 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Se connecter</button>
-                                <span style="font-size: 20;">Nouvel utilisateur? <a href="#" style="text-decoration: underline">Creer un Compte</a> </span>
+                                <span style="font-size: 20;">Nouvel utilisateur? <span class="register-btn" style="text-decoration: underline">Creer un Compte</> </span>
                             </form>
                         </div>
 
                     </div>
                     {{-- Register Modal --}}
                     <div class="register-card card">
-                        <h3>Connectez-vous pour commenter</h3>
+                        <h3>Enregistrez-vous pour commenter</h3>
                         <!-- cross to close the modal -->
                         <span class="close">
                             <i class="fas fa-times"></i>
 
                         </span>
-                        <div class="modal-body register">
+                        <div class="modal-body">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
 
@@ -144,6 +144,10 @@
     var loginModal = document.querySelector('.login-card');
     var registerModal = document.querySelector('.register-card');
     var closeBtn = document.querySelector('.close');
+    var registerBtn = document.querySelector('.register-btn');
+
+    registerModal.style.display = 'none';
+
     elemen.addEventListener('click', function(e) {
         e.preventDefault();
         if (elemen) {
@@ -153,7 +157,13 @@
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
         loginModal.style.display = 'none';
-    })
+    });
+    //show register modal if the register btn is clicked
+    registerBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        loginModal.style.display = 'none';
+        registerModal.style.display = 'block';
+    });
 </script>
 
 
