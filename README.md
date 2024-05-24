@@ -55,7 +55,7 @@ Commands to Run
 
 IV - Next steps
 
-1. Registration for new users
+1. Registration for new users : DONE ✅
 2. Redirect issues
 3. Display number of comments on the preview
 4. Display several images per blog
