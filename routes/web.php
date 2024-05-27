@@ -104,6 +104,7 @@ Route::put('/causes/{id}', [CausesController::class, 'update'])->name('causes.up
 
 // comments
 Route::post('/comments', [CommentsController::class, 'store'])->name('comments.store');
+Route::delete('/comment/{id}', [CommentsController::class, 'destroy'])->name('comments.destroy');
 
 Auth::routes();
 Route::post('/register-from-blog', [RegisterController::class, 'registerBlog'])->name('registerFromBlog');

@@ -10,11 +10,7 @@ use Illuminate\Http\Request;
 class CommentsController extends Controller
 {
     // list of all comments
-    public function index()
-    {
-        $comments = Comments::all();
-        return view('partials.blogs.blog-content', compact('comments'));
-    }
+
     public function store(Request $request)
     {
         try {
@@ -29,6 +25,21 @@ class CommentsController extends Controller
             $comment->comment = $request->comment;
             $comment->save();
             return redirect()->back();
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+    }
+
+    //delete a comment
+    public function destroy($id)
+    {
+        try {
+            $comment = Comments::find($id);
+            if ($comment) {
+                $comment->delete();
+                return redirect()->back();
+            }
+            return response()->json(['error' => 'Comment not found'], 404);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
