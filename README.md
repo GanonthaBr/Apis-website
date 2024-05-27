@@ -60,5 +60,5 @@ IV - Next steps
 3. Display number of comments on the preview ✅
 4. Display several images per blog
 5. Mot du secretaire
-6. Handle comments from admin dashboard
+6. Handle comments from admin dashboard ✅
 7. Add author to blog article
