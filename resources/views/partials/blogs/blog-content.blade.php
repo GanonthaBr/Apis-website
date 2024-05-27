@@ -15,7 +15,7 @@
              </div>
              <div class="blog-meta">
                  <p><i class="fa fa-user"></i><a href="">Admin</a></p>
-                 <p><i class="fa fa-comments"></i><a href="">0 Commentaires</a></p>
+                 <p><i class="fa fa-comments"></i><a href="">{{$blog->comments->count()}} Commentaires</a></p>
              </div>
          </div>
      </div>
