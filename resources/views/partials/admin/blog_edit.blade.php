@@ -67,6 +67,60 @@
         </div>
         <button type="submit" class="btn btn-primary">Sauvegarder</button>
       </form>
+      {{-- List of comments for this blogs--}}
+         @if ($blog->comments->count()==0)
+          <h1 class="mt-4">Pas de commentaires</h1>
+         @else
+         
+         <h1 class="mt-4">Liste des commentaires</h1>
+         <table id="articlesTable" class="table table-striped table-bordered" style="width:100%">
+             <thead>
+                 <tr>
+                     <th>Commentaire</th>
+                     <th>Actions</th>
+                 </tr>
+             </thead>
+             <tbody>
+               
+                 {{-- loop through comments and display them in table --}}
+                 @foreach ($blog->comments as $comment)
+                 <tr>
+                     <td>{{ $comment->comment }}</td>
+                     <td>
+                         {{-- create delete button --}}
+                         <!-- Delete Button -->
+                         <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$comment->id}}" data-toggle="modal" data-target="#deleteModal{{$comment->id}}">Supprimer</button>
+                         <form id="deleteForm{{$comment->id}}" action="{{ route('comments.destroy', $comment->id) }}" method="POST" class="d-inline">
+                             @csrf
+                             @method('DELETE')
+                         </form>
+                     </td>
+                 </tr>
+                 <!-- Delete Confirmation Modal -->
+                 <div class="modal fade" id="deleteModal{{$comment->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                     <div class="modal-dialog" role="document">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <span aria-hidden="true">&times;</span>
+                                 </button>
+                             </div>
+                             <div class="modal-body">
+                                 Are you sure you want to delete this blog post?
+                             </div>
+                             <div class="modal-footer">
+                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                 <button type="button" class="btn btn-danger confirmDelete" id="confirmDelete{{$comment->id}}">Delete</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 @endforeach
+                 
+             </tbody>
+         </table>
+         @endif
     </div>
   </main>
 
