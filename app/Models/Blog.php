@@ -19,4 +19,9 @@ class Blog extends Model
     {
         return $this->hasMany(Comments::class)->orderBy('created_at', 'desc');
     }
+    //add relationship to images
+    public function images()
+    {
+        return $this->hasMany('App\Models\BlogImages');
+    }
 }
