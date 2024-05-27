@@ -69,7 +69,7 @@
       </form>
       {{-- List of comments for this blogs--}}
          @if ($blog->comments->count()==0)
-          <h1 class="mt-4">Pas de commentaires</h1>
+          <h1 class="mt-4 text-danger">Pas de commentaires</h1>
          @else
          
          <h1 class="mt-4">Liste des commentaires</h1>

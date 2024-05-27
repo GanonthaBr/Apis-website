@@ -39,14 +39,17 @@
                 </div>
                 <div class="comments">
                     <h3>Comments</h3>
+                    @if ($blog->comments->count()==0)
+                    <p class="mt-4 text-alert">Pas de commentaires encore</p>
+                    @else
                     @foreach($blog->comments as $comment)
                     <div class="comment">
                         <!-- <h4>{{ $comment->user_name }}</h4> -->
                         <p>{{ $comment->comment }}</p>
                         <p class="comment-added">Ajoutée par {{$comment->user->name}} , {{$comment->created_at->locale('fr')->diffForHumans()}} </p>
                     </div>
-
                     @endforeach
+                    @endif
                     {{-- Login --}}
                     <div class="login-card card">
                         <h3>Connectez-vous pour commenter</h3>
@@ -71,7 +74,8 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Se connecter</button>
-                                <span style="font-size: 20;">Nouvel utilisateur? <span class="register-btn" style="text-decoration: underline">Creer un Compte</> </span>
+                                <span style="font-size: 20;">Nouvel utilisateur? <span class="register-btn" style="text-decoration: underline">Creer un Compte
+                                        </> </span>
                             </form>
                         </div>
 
@@ -155,11 +159,11 @@
             loginModal.style.display = 'block';
         }
     });
-   closeBtnR.addEventListener('click', function(e){
-    e.preventDefault();
-    // console.log(registerModal);
-    registerModal.style.display = 'none'
-   })
+    closeBtnR.addEventListener('click', function(e) {
+        e.preventDefault();
+        // console.log(registerModal);
+        registerModal.style.display = 'none'
+    })
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
         loginModal.style.display = 'none';
