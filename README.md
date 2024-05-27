@@ -62,3 +62,12 @@ IV - Next steps
 5. Mot du secretaire
 6. Handle comments from admin dashboard ✅
 7. Add author to blog article
+
+<!-- Add Multiple images per Blog -->
+
+1. create a new migration file: php artisan make:migration create_blog_images_table --create=blog_images
+2. create the structure of the image table in the migratio file
+3. create the table: php artisan migrate
+4. In the Blog model, define a relationship to the BlogImage
+5. In the BlogImage model, define a relationship to the Blog
+6. In the BlogController, create a new method to store the images
