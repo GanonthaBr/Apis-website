@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Dotenv\Exception\ValidationException;
+use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 // use Symfony\Component\HttpFoundation\Request;
@@ -82,37 +84,40 @@ class RegisterController extends Controller
                 $image->move(public_path('images'), $image_name);
             }
 
-
-
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
                 'image' => $image_name,
             ]);
-        } catch (\Exception $e) {
-            dd($e->getMessage());
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()]);
         }
     }
     //register from blog
     public function registerBlog(Request $request)
     {
-        //valide the request data
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        try {
+            //valide the request data
+            $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'string', 'min:8', 'confirmed'],
 
-        ]);
-        //create a new user
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-        //login the user
-        auth()->login($user);
-        //redirect back
-        return redirect()->back();
+            ]);
+            //create a new user
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+            //login the user
+            auth()->login($user);
+            //redirect back
+            // json(['message' => 'Compte crée avec succès. Connectez-vous pour commenter.']);
+            return redirect()->back();
+        } catch (Exception $e) {
+            return response()->json(['message' => $e->getMessage()]);
+        }
     }
 }

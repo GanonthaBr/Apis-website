@@ -38,6 +38,16 @@
 
                 </div>
                 <div class="comments">
+                    {{-- display compte registered success message from session --}}
+                    @if (session('message'))
+                    <div class="alert alert-success">
+                        {{ session('message') }}
+                    </div>
+                    @elseif(session('error'))
+                        <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                    @endif
                     <h3>Comments</h3>
                     @if ($blog->comments->count()==0)
                     <p class="mt-4 text-alert">Pas de commentaires encore</p>
