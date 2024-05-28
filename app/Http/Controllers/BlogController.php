@@ -61,7 +61,7 @@ class BlogController extends Controller
             $dirty_html = $request->content;
             $clean_html = $purifier->purify($dirty_html);
 
-
+            //create blog
             $blog = new Blog();
             $blog->title = $request->title;
             $blog->content = $clean_html;
@@ -73,19 +73,13 @@ class BlogController extends Controller
                 foreach ($request->file('images') as $image) {
 
                     $imagePaths = $image->store('cause_images_list', 'public');
-                    $blogImage =     $blog->images()->create([
+                    $blog->images()->create([
                         'image' => $imagePaths,
                     ]);
                 }
             }
-
-
             //register Listener
-
             event(new BlogPosted($blog));
-
-
-
             return redirect()->route('admin.allblogs')->with('blog-created', 'Votre blog post été ajouté avec succès!');
         } catch (ValidationException $e) {
 
