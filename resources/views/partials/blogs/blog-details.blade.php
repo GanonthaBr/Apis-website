@@ -30,15 +30,23 @@
                 <div class="single-content">
                     <h1 class="domaine-title blog">{{$blog->title}}</h1>
                     <img src="{{asset('storage/' . $blog->image)}}" alt="image" />
-
-
                     <p>
                         {!!$blog->content!!}
                     </p>
-
+                    <h3>Plus d'images</h3>
+                    {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
+                    <div class="row">
+                        @foreach($blog->images as $image)
+                        <div class="col-md-4">
+                            <a href="{{asset('storage/' . $image->image)}}" data-lightbox="blog-images">
+                                <img src="{{asset('storage/' . $image->image)}}" alt="image" class="img-fluid" />
+                            </a>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
-                
-                
+
+
                 <div class="comments">
                     {{-- display compte registered success message from session --}}
                     @if (session('message'))
@@ -46,7 +54,7 @@
                         {{ session('message') }}
                     </div>
                     @elseif(session('error'))
-                        <div class="alert alert-error">
+                    <div class="alert alert-error">
                         {{ session('error') }}
                     </div>
                     @endif

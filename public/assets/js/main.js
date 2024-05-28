@@ -347,7 +347,7 @@
 // sumbit delete form
 // Get all confirm delete buttons
 var confirmDeleteButtons = document.querySelectorAll(".confirm-delete");
-console.log(confirmDeleteButtons);
+// console.log(confirmDeleteButtons);
 var formId;
 // Loop through all confirm delete buttons
 for (var i = 0; i < confirmDeleteButtons.length; i++) {
@@ -361,7 +361,7 @@ for (var i = 0; i < confirmDeleteButtons.length; i++) {
 // Delete Blog
 // Get all confirm delete buttons
 var confirmButtons = document.querySelectorAll(".confirmDelete");
-console.log(confirmButtons);
+// console.log(confirmButtons);
 // Loop through all confirm delete buttons
 for (var i = 0; i < confirmButtons.length; i++) {
     // Add click event listener to each confirm delete button
