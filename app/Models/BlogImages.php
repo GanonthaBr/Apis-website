@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class BlogImages extends Model
 {
     use HasFactory;
+    protected $fillable = ['image'];
     public function blog()
     {
         return $this->belongsTo('App\Models\Blog');
