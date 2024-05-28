@@ -18,6 +18,10 @@
                 <input type="text" class="form-control" id="title" name="title">
             </div>
             <div class="mb-3">
+                <label for="author" class="form-label">Auteur:</label>
+                <input type="text" class="form-control" id="author" name="author">
+            </div>
+            <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
                 <input type="file" class="form-control" id="image" name="image">
             </div>
@@ -25,6 +29,7 @@
             <div class="mb-3">
                 <label for="images" class="form-label">Plus d'images </label>
                 <input type="file" class="form-control" id="images" name="images[]" multiple>
+            </div>
             <div class="mb-3">
                 <label for="content" class="form-label">Contenu</label>
                 {{-- <textarea class="form-control" id="content" name="content" rows="3"></textarea> --}}

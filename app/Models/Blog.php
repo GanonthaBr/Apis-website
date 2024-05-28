@@ -13,6 +13,7 @@ class Blog extends Model
         'title',
         'content',
         'image',
+        'author',
     ];
     //add relationship
     public function comments()
