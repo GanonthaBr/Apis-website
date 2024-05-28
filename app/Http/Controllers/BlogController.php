@@ -9,8 +9,6 @@ use App\Models\Blog;
 use HTMLPurifier_Config;
 use App\Events\BlogPosted;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Config;
 use Dotenv\Exception\ValidationException;
 
 class BlogController extends Controller
@@ -46,7 +44,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         try {
-            DB::beginTransaction();
+
             $request->validate([
                 'title' => 'required',
                 'content' => 'required',
@@ -73,46 +71,24 @@ class BlogController extends Controller
             // dd($request->images);
             if ($request->file('images')) {
                 foreach ($request->file('images') as $image) {
-                    if (!$image->isValid()) {
-                        // The image file is not valid, return an error
-                        return redirect()->back()->withErrors(['images' => 'One or more images are invalid.']);
-                    }
+
                     $imagePaths = $image->store('cause_images_list', 'public');
                     $blogImage =     $blog->images()->create([
                         'image' => $imagePaths,
                     ]);
-                    if (!$blogImage) {
-                        // The BlogImages record was not created, return an error
-                        return redirect()->back()->withErrors(['images' => 'Failed to create a BlogImages record.']);
-                    }
                 }
             }
-            // add images
-            // if ($request->hasFile('images')) {
 
-            //     foreach ($request->file('images') as $image) {
-            //         $name = time() . '.' . $image->extension();
-            //         $image->move(public_path() . '/images/', $name);
-
-            //         $blog->images()->create([
-            //             'image' => '/images/' . $name,
-            //         ]);
-            //     }
-
-            // }
-
-            // dd($request->images);
 
             //register Listener
 
             event(new BlogPosted($blog));
 
-            DB::commit();
+
 
             return redirect()->route('admin.allblogs')->with('blog-created', 'Votre blog post été ajouté avec succès!');
-            // return response()->json(['message' => 'Votre blog post été ajouté avec succès!']);
         } catch (ValidationException $e) {
-            DB::rollBack();
+
             return response()->json(['message' => $e->getMessage()]);
         }
     }
