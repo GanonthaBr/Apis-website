@@ -27,7 +27,7 @@ class SendBlogPostedNotification
         // send email to all subscribers
         $subscribers = Newsletter::all();
         foreach ($subscribers as $subscriber) {
-            // Mail::to($subscriber->email)->send(new BlogPostedMail($event->blog));
+            Mail::to($subscriber->email)->send(new BlogPostedMail($event->blog));
         }
     }
 }

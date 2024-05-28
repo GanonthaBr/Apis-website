@@ -58,7 +58,7 @@ IV - Next steps
 1. Registration for new users : DONE ✅
 2. Redirect issues
 3. Display number of comments on the preview ✅
-4. Display several images per blog
+4. Display several images per blog✅
 5. Mot du secretaire
 6. Handle comments from admin dashboard ✅
 7. Add author to blog article
@@ -71,3 +71,4 @@ IV - Next steps
 4. In the Blog model, define a relationship to the BlogImage
 5. In the BlogImage model, define a relationship to the Blog
 6. In the BlogController, create a new method to store the images
+7. Edit previous post to add more images
