@@ -61,7 +61,7 @@ IV - Next steps
 4. Display several images per blog✅
 5. Mot du secretaire
 6. Handle comments from admin dashboard ✅
-7. Add author to blog article
+7. Add author to blog article: migratation, $fillable,
 
 <!-- Add Multiple images per Blog -->
 
