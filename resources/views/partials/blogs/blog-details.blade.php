@@ -37,6 +37,8 @@
                     </p>
 
                 </div>
+                
+                
                 <div class="comments">
                     {{-- display compte registered success message from session --}}
                     @if (session('message'))

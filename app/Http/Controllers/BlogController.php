@@ -79,7 +79,7 @@ class BlogController extends Controller
                 }
             }
             //register Listener
-            event(new BlogPosted($blog));
+            // event(new BlogPosted($blog));
             return redirect()->route('admin.allblogs')->with('blog-created', 'Votre blog post été ajouté avec succès!');
         } catch (ValidationException $e) {
 
