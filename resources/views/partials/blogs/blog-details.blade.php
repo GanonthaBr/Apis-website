@@ -36,6 +36,11 @@
                     <h3>Plus d'images</h3>
                     {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
                     <div class="row">
+                        @if($blog->images->count()==0)
+                        <div class="m-4">
+                            <p class="text-center mt-4 alert-success">Pas d'images supplémentaires</p>
+                        </div>
+                        @endif
                         @foreach($blog->images as $image)
                         <div class="col-md-4">
                             <a href="{{asset('storage/' . $image->image)}}" data-lightbox="blog-images">
