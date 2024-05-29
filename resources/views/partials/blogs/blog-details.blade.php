@@ -33,6 +33,7 @@
                     <p>
                         {!!$blog->content!!}
                     </p>
+                    
                     <h3>Plus d'images</h3>
                     {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
                     <div class="row">
@@ -49,6 +50,9 @@
                         </div>
                         @endforeach
                     </div>
+                    <p class="font-weight-100 text-right">
+                        Publié le <b>  {{substr($blog->created_at, 0,10)}} </b>, par {{$blog->author}}
+                    </p>
                 </div>
 
 
