@@ -9,6 +9,7 @@ use App\Models\Blog;
 use HTMLPurifier_Config;
 use App\Events\BlogPosted;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Dotenv\Exception\ValidationException;
 
 class BlogController extends Controller
@@ -48,6 +49,7 @@ class BlogController extends Controller
             $request->validate([
                 'title' => 'required',
                 'content' => 'required',
+                'author' => 'nullable',
                 'image' => 'nullable|image|max:5120',
                 'images.*' => 'image|mimes:jpeg,jpg,png,gif,svg|max:4096'
             ]);
@@ -66,6 +68,7 @@ class BlogController extends Controller
             $blog->title = $request->title;
             $blog->content = $clean_html;
             $blog->image = $imagePath;
+            $blog->author = $request->author ?? Auth::user()->name;
             $blog->save();
 
             // dd($request->images);
