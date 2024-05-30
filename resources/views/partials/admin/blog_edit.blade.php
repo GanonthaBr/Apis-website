@@ -61,6 +61,11 @@
           <label for="image" class="form-label">Image</label>
           <input type="file" class="form-control" id="image" name="image">
         </div>
+        {{-- more images --}}
+            <div class="mb-3">
+                <label for="images" class="form-label">Plus d'images </label>
+                <input type="file" class="form-control" id="images" name="images[]" multiple>
+            </div>
         <div class="mb-3">
           <label for="content" class="form-label">Contenu</label>
           <textarea class="form-control" id="content" name="content" rows="3">{{ $blog->content }}</textarea>

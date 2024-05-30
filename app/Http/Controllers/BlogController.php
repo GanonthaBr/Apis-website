@@ -125,8 +125,7 @@ class BlogController extends Controller
             $request->validate([
                 'title' => 'required',
                 'content' => 'required',
-                'image' => 'nullable|image|max:5120',
-
+                'image' => 'nullable|image|max:5120', 'images.*' => 'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:4096'
             ]);
             //sanitize with HTMLPurifier
             $config = HTMLPurifier_Config::createDefault();
@@ -140,6 +139,16 @@ class BlogController extends Controller
             if ($request->hasFile('image')) {
                 $imagePath = $request->file('image')->store('blog_images', 'public');
                 $blog->image = $imagePath;
+            }
+            // add new images to the existing ones
+            if ($request->file('images')) {
+                foreach ($request->file('images') as $image) {
+
+                    $imagePaths = $image->store('cause_images_list', 'public');
+                    $blog->images()->create([
+                        'image' => $imagePaths,
+                    ]);
+                }
             }
             $blog->save();
             return redirect()->route('admin.allblogs')->with('blog-updated', 'Votre article post été modifié avec succès!');
