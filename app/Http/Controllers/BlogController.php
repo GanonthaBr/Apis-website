@@ -8,9 +8,11 @@ use HTMLPurifier;
 use App\Models\Blog;
 use HTMLPurifier_Config;
 use App\Events\BlogPosted;
+use App\Models\BlogImages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Dotenv\Exception\ValidationException;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -51,7 +53,7 @@ class BlogController extends Controller
                 'content' => 'required',
                 'author' => 'nullable',
                 'image' => 'nullable|image|max:5120',
-                'images.*' => 'image|mimes:jpeg,jpg,png,gif,svg|max:4096'
+                'images.*' => 'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:4096'
             ]);
             //image path
 
@@ -96,6 +98,15 @@ class BlogController extends Controller
         $blog->delete();
         return redirect()->route('admin.allblogs')->with('blog-deleted', 'Votre article post été supprimé avec succès!');
     }
+    // delete image
+    public function deleteImage($id)
+    {
+        $image = BlogImages::findOrFail($id);
+        Storage::delete($image->image);
+        $image->delete();
+        $image->save();
+        return redirect()->route('admin.allblogs')->with('image-deleted', 'Votre image a été supprimée avec succès!');
+    }
     //edit
     public function edit($id)
     {
@@ -110,6 +121,7 @@ class BlogController extends Controller
                 'title' => 'required',
                 'content' => 'required',
                 'image' => 'nullable|image|max:5120',
+
             ]);
             //sanitize with HTMLPurifier
             $config = HTMLPurifier_Config::createDefault();

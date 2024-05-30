@@ -67,11 +67,33 @@
         </div>
         <button type="submit" class="btn btn-primary">Sauvegarder</button>
       </form>
+      <h3>Plus d'images</h3>
+                    {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
+                    <div class="row">
+                        @if($blog->images->count()==0)
+                        <div class="m-4">
+                            <p class="text-center mt-4 alert-success">Pas d'images supplémentaires</p>
+                        </div>
+                        @endif
+                        @foreach($blog->images as $image)
+                        <div class="col-md-4">
+                            <a href="{{asset('storage/' . $image->image)}}" data-lightbox="blog-images">
+                                <img src="{{asset('storage/' . $image->image)}}" alt="image" class="img-fluid" />
+                            </a>
+                            {{-- delete button --}}
+                            <form action="{{ route('blogs.deleteImage', $image->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Supprimer</button>
+                            </form>
+                        </div>
+                        @endforeach
+                    </div>
       {{-- List of comments for this blogs--}}
          @if ($blog->comments->count()==0)
           <h1 class="mt-4 text-danger">Pas de commentaires</h1>
          @else
-         
+        
          <h1 class="mt-4">Liste des commentaires</h1>
          <table id="articlesTable" class="table table-striped table-bordered" style="width:100%">
              <thead>
@@ -125,6 +147,10 @@
   </main>
 
   <!-- Vendor JS Files -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+
   <script src="{{asset('assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('assets/vendor/chart.js/chart.umd.js')}}"></script>
