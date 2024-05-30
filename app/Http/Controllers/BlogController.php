@@ -102,9 +102,14 @@ class BlogController extends Controller
     public function deleteImage($id)
     {
         $image = BlogImages::findOrFail($id);
-        Storage::delete($image->image);
+        if (Storage::exists($image->image)) {
+
+            Storage::delete($image->image);
+        } else {
+            echo 'File does not exist';
+        }
         $image->delete();
-        $image->save();
+        // $image->save();
         return redirect()->route('admin.allblogs')->with('image-deleted', 'Votre image a été supprimée avec succès!');
     }
     //edit
