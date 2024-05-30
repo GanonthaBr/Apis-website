@@ -24,7 +24,7 @@
           <div class="col-xxl-4 col-md-6">
             <div class="card info-card sales-card">
 
-            
+
 
               <div class="card-body">
                 <h5 class="card-title">Articles <span>| Nombre</span></h5>
@@ -60,7 +60,6 @@
                   <li class="dropdown-header text-start">
                     <h6>Filter</h6>
                   </li>
-
                   <li><a class="dropdown-item" href="#">Today</a></li>
                   <li><a class="dropdown-item" href="#">This Month</a></li>
                   <li><a class="dropdown-item" href="#">This Year</a></li>
@@ -95,7 +94,7 @@
           <div class="col-xxl-4 col-xl-12">
 
             <div class="card info-card customers-card">
-{{-- 
+              {{--
               <div class="filter">
                 <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -118,16 +117,48 @@
                   </div>
                   <div class="ps-3">
                     <h6>{{$user->name}}</h6>
-                    <span class="text-danger small pt-1 fw-bold">{{$user->email}}</span> 
+                    <span class="text-danger small pt-1 fw-bold">{{$user->email}}</span>
+
+                  </div>
+                </div>
+
+              </div>
+              {{-- images gallery --}}
+
+            </div>
+
+          </div>
+          <!-- End Customers Card -->
+          <div class="col-xxl-4 col-md-6">
+            {{-- images gallery --}}
+            <div class="card info-card customers-card">
+              <div class="card-body">
+                <h5 class="card-title">Galerie</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-images"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>
+                      @php
+                      $totalImages = $images->count();
+                      @endphp
+                      {{$totalImages}}
+                    </h6>
+                    <span class="text-success small pt-1 fw-bold">Total d'images publiées</span>
 
                   </div>
                 </div>
 
               </div>
             </div>
-
+            <!-- gallery images -->
+            <div class="flex-lg-wrap">
+              @foreach ($images as $imagePath)
+              <img src="{{asset('storage/'.$imagePath->image)}}" alt="image" style="width: 100px; height: 100px;">
+              @endforeach
+            </div>
           </div>
-          <!-- End Customers Card -->
 
           <!-- Reports -->
           {{-- <div class="col-12">
@@ -364,12 +395,12 @@
 
         </div>
       </div>
+
       <!-- End Left side columns -->
 
       <!-- Right side columns -->
       @include('partials.admin.right_side_column')
       <!-- End Right side columns -->
-
     </div>
   </section>
 

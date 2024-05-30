@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\BlogImages;
 use App\Models\Causes;
 use App\Models\Events;
 use App\Models\Report;
@@ -15,10 +16,10 @@ class AdminDashboardController extends Controller
     public function index()
     {
         //get all blogs and events in order from the last added
-
+        $images = BlogImages::all();
         $blogs = Blog::all();
         $events = Events::all();
-        return view('admin_home', ['events' => $events, 'blogs' => $blogs]);
+        return view('admin_home', ['events' => $events, 'images' => $images, 'blogs' => $blogs]);
     }
     // all blogs
     public function allbogs()

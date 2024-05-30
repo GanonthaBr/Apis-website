@@ -1,13 +1,11 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 // use HTMLPurifier;
 use HTMLPurifier;
 use App\Models\Blog;
 use HTMLPurifier_Config;
-use App\Events\BlogPosted;
 use App\Models\BlogImages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,13 +29,12 @@ class BlogController extends Controller
     //display a single post
     public function show($id)
     {
-        // $blog = Blog::findOrFail($id);
         //get blog with comments
         $blog  = Blog::with('comments')->findOrFail($id);
         return view('partials.blogs.blog-details', ['blog' => $blog]);
     }
-    // blog upload form
 
+    // blog upload form
     public function create()
     {
         return view('partials.blogs.create');
@@ -47,7 +44,6 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         try {
-
             $request->validate([
                 'title' => 'required',
                 'content' => 'required',
@@ -56,7 +52,6 @@ class BlogController extends Controller
                 'images.*' => 'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:4096'
             ]);
             //image path
-
             $imagePath = $request->file('image') ? $request->file('image')->store('blog_images', 'public') : null;
 
             //sanitize with HTMLPurifier
@@ -76,7 +71,6 @@ class BlogController extends Controller
             // dd($request->images);
             if ($request->file('images')) {
                 foreach ($request->file('images') as $image) {
-
                     $imagePaths = $image->store('cause_images_list', 'public');
                     $blog->images()->create([
                         'image' => $imagePaths,
@@ -87,7 +81,6 @@ class BlogController extends Controller
             // event(new BlogPosted($blog));
             return redirect()->route('admin.allblogs')->with('blog-created', 'Votre blog post été ajouté avec succès!');
         } catch (ValidationException $e) {
-
             return response()->json(['message' => $e->getMessage()]);
         }
     }
@@ -103,14 +96,11 @@ class BlogController extends Controller
     {
         $image = BlogImages::findOrFail($id);
         if (Storage::exists($image->image)) {
-
             Storage::delete($image->image);
-        } else {
-            echo 'File does not exist';
         }
         $image->delete();
-        // $image->save();
-        return redirect()->route('admin.allblogs')->with('image-deleted', 'Votre image a été supprimée avec succès!');
+        //redirect to the current page
+        return redirect()->back();
     }
     //edit
     public function edit($id)
@@ -133,6 +123,7 @@ class BlogController extends Controller
             $dirty_html = $request->content;
             $clean_html = $purifier->purify($dirty_html);
 
+            //process the requests and make the Blog Model body
             $blog = Blog::findOrFail($id);
             $blog->title = $request->title;
             $blog->content = $clean_html;
@@ -150,6 +141,7 @@ class BlogController extends Controller
                     ]);
                 }
             }
+            //save blog after updating
             $blog->save();
             return redirect()->route('admin.allblogs')->with('blog-updated', 'Votre article post été modifié avec succès!');
         } catch (ValidationException $e) {

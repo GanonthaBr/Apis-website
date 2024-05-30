@@ -27,8 +27,6 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -38,7 +36,6 @@
   <!-- ======= Sidebar ======= -->
   @include('partials.admin.sidebar')
   <!-- End Sidebar-->
-
   <main class="main" id="main">
     {{-- edit blog form --}}
     <div class="container-fluid px-4">
@@ -62,10 +59,10 @@
           <input type="file" class="form-control" id="image" name="image">
         </div>
         {{-- more images --}}
-            <div class="mb-3">
-                <label for="images" class="form-label">Plus d'images </label>
-                <input type="file" class="form-control" id="images" name="images[]" multiple>
-            </div>
+        <div class="mb-3">
+          <label for="images" class="form-label">Plus d'images </label>
+          <input type="file" class="form-control" id="images" name="images[]" multiple>
+        </div>
         <div class="mb-3">
           <label for="content" class="form-label">Contenu</label>
           <textarea class="form-control" id="content" name="content" rows="3">{{ $blog->content }}</textarea>
@@ -73,81 +70,79 @@
         <button type="submit" class="btn btn-primary">Sauvegarder</button>
       </form>
       <h3>Plus d'images</h3>
-                    {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
-                    <div class="row">
-                        @if($blog->images->count()==0)
-                        <div class="m-4">
-                            <p class="text-center mt-4 alert-success">Pas d'images supplémentaires</p>
-                        </div>
-                        @endif
-                        @foreach($blog->images as $image)
-                        <div class="col-md-4">
-                            <a href="{{asset('storage/' . $image->image)}}" data-lightbox="blog-images">
-                                <img src="{{asset('storage/' . $image->image)}}" alt="image" class="img-fluid" />
-                            </a>
-                            {{-- delete button --}}
-                            <form action="{{ route('blogs.deleteImage', $image->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Supprimer</button>
-                            </form>
-                        </div>
-                        @endforeach
-                    </div>
+      {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
+      <div class="row">
+        @if($blog->images->count()==0)
+        <div class="m-4">
+          <p class="text-center mt-4 alert-success">Pas d'images supplémentaires</p>
+        </div>
+        @endif
+        @foreach($blog->images as $image)
+        <div class="col-md-4">
+          <a href="{{asset('storage/' . $image->image)}}" data-lightbox="blog-images">
+            <img src="{{asset('storage/' . $image->image)}}" alt="image" class="img-fluid" />
+          </a>
+          {{-- delete button --}}
+          <form action="{{ route('blogs.deleteImage', $image->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Supprimer</button>
+          </form>
+        </div>
+        @endforeach
+      </div>
       {{-- List of comments for this blogs--}}
-         @if ($blog->comments->count()==0)
-          <h1 class="mt-4 text-danger">Pas de commentaires</h1>
-         @else
-        
-         <h1 class="mt-4">Liste des commentaires</h1>
-         <table id="articlesTable" class="table table-striped table-bordered" style="width:100%">
-             <thead>
-                 <tr>
-                     <th>Commentaire</th>
-                     <th>Actions</th>
-                 </tr>
-             </thead>
-             <tbody>
-               
-                 {{-- loop through comments and display them in table --}}
-                 @foreach ($blog->comments as $comment)
-                 <tr>
-                     <td>{{ $comment->comment }}</td>
-                     <td>
-                         {{-- create delete button --}}
-                         <!-- Delete Button -->
-                         <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$comment->id}}" data-toggle="modal" data-target="#deleteModal{{$comment->id}}">Supprimer</button>
-                         <form id="deleteForm{{$comment->id}}" action="{{ route('comments.destroy', $comment->id) }}" method="POST" class="d-inline">
-                             @csrf
-                             @method('DELETE')
-                         </form>
-                     </td>
-                 </tr>
-                 <!-- Delete Confirmation Modal -->
-                 <div class="modal fade" id="deleteModal{{$comment->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                         <div class="modal-content">
-                             <div class="modal-header">
-                                 <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
-                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                     <span aria-hidden="true">&times;</span>
-                                 </button>
-                             </div>
-                             <div class="modal-body">
-                                 Are you sure you want to delete this blog post?
-                             </div>
-                             <div class="modal-footer">
-                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                 <button type="button" class="btn btn-danger confirmDelete" id="confirmDelete{{$comment->id}}">Delete</button>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 @endforeach
-                 
-             </tbody>
-         </table>
-         @endif
+      @if ($blog->comments->count()==0)
+      <h1 class="mt-4 text-danger">Pas de commentaires</h1>
+      @else
+
+      <h1 class="mt-4">Liste des commentaires</h1>
+      <table id="articlesTable" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+          <tr>
+            <th>Commentaire</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {{-- loop through comments and display them in table --}}
+          @foreach ($blog->comments as $comment)
+          <tr>
+            <td>{{ $comment->comment }}</td>
+            <td>
+              <!-- Delete Button -->
+              <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$comment->id}}" data-toggle="modal" data-target="#deleteModal{{$comment->id}}">Supprimer</button>
+              <form id="deleteForm{{$comment->id}}" action="{{ route('comments.destroy', $comment->id) }}" method="POST" class="d-inline">
+                @csrf
+                @method('DELETE')
+              </form>
+            </td>
+          </tr>
+          <!-- Delete Confirmation Modal -->
+          <div class="modal fade" id="deleteModal{{$comment->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to delete this blog post?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-danger confirmDelete" id="confirmDelete{{$comment->id}}">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          @endforeach
+        </tbody>
+      </table>
+      @endif
     </div>
   </main>
 
@@ -169,7 +164,7 @@
   <script src="{{asset('assets/js/main.js')}}"></script>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-{{-- text area formatting: CKEditor --}}
+  {{-- text area formatting: CKEditor --}}
   <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
   <script>
     window.onload = function() {
