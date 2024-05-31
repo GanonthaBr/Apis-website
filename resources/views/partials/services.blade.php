@@ -52,7 +52,7 @@
                      <div class="service-text">
                          <h3>Education et Accompagnement Jardins Potager Scolaires JPS</h3>
                          <p>
-                             APIS s'engage à éduquer les enfants ruraux, leur offrant un avenir lumineux et des opportunités égales.  Des jardins enrichissant l’alimentation des élèves  et les initien aux productions maraîchères. 
+                             APIS s'engage à éduquer les enfants ruraux, leur offrant un avenir lumineux et des opportunités égales.  Des jardins enrichissant l’alimentation des élèves  et les initie aux productions maraîchères. 
                          </p>
                      </div>
                  </div>
