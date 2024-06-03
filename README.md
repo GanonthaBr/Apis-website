@@ -62,6 +62,7 @@ IV - Next steps
 5. Mot du secretaire
 6. Handle comments from admin dashboard ✅
 7. Add author to blog article: migratation, $fillable, php artisan make:migration set_default_value_for_author_in_blogs_table --table=blogs
+8. Manage multiple blog images from admin dashboard
 
 <!-- Add Multiple images per Blog -->
 
