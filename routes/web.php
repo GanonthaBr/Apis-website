@@ -16,6 +16,7 @@ use App\Http\Controllers\CausesController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\DomaineInterventionController;
 
+//Home
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/stats', [HomeController::class, 'getStats'])->name('stats');
 Route::get('/stats/{id}', [HomeController::class, 'edit'])->name('stats.edit');
