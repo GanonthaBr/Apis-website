@@ -12,7 +12,7 @@
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="{{ asset('storage/' . $blog->image )}}" alt="Image">
+                                <img src="{{ asset('storage/' . $blog->image )}}" alt="{{$blog->id}}">
                             </div>
                             <div class="blog-text">
                                 <h3><a href="{{route('blogs.show', ['id' => $blog->id])}}">{{$blog->title}}</a></h3>

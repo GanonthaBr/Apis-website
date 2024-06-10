@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Nous Contacter</h2>
+                <h2>{{ __('english_content.nous_contacter') }}</h2>
             </div>
             <div class="col-12">
                 <a href="/">Accueil</a>
@@ -23,7 +23,7 @@
 <div class="contact partial-content">
     <div class="container">
         <div class="section-header text-center">
-            <p>Nous Contacter</p>
+            <p>{{ __('english_content.nous_contacter') }}</p>
             <h2>Restez en contact avec nous</h2>
         </div>
         <div class="contact-img">
