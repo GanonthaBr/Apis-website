@@ -19,7 +19,7 @@
                 >
                     <div class="navbar-nav ml-auto">
                         <a href="/" class="nav-item nav-link  {{ Request::is('/') ? 'active' : '' }}"
-                            >Accueil</a
+                            >{{__('Accueil')}}</a
                         >
 
                     <div class="nav-item dropdown">
@@ -27,17 +27,17 @@
                                 href="#"
                                 class="nav-link dropdown-toggle {{ Request::is('about*') ? 'active' : '' }}"
                                 data-toggle="dropdown"
-                                >Qui sommes-nous?</a
+                                >{{__('Qui sommes-nous?')}}</a
                             >
                             <div class="dropdown-menu">
                                 <a href="{{route('about.index')}}" class="dropdown-item"
-                                    >Mot du Secrétaire</a
+                                    >{{__('Mot du Secrétaire')}}</a
                                 >
                                 <a href="{{route('about.index')}}" class="dropdown-item"
-                                    >Notre histoire</a
+                                    >{{__('Notre histoire')}}</a
                                 >
                                 <a href="{{route('report')}}" class="dropdown-item"
-                                    >Rapports d'activités </a
+                                    >{{__('Rapports dactivités ')}}</a
                                 >
                                
                             </div>
@@ -48,29 +48,29 @@
                                 href="#"
                                 class="nav-link dropdown-toggle  {{ Request::is('domaines*') ? 'active' : '' }}"
                                 data-toggle="dropdown"
-                                >Domaines d'intervention</a
+                                >{{__('Domaines dintervention')}}</a
                             >
                             <div class="dropdown-menu">
                                 <a href="{{route('domaines.securitealimentaire')}}" class="dropdown-item"
-                                    >Sécurité alimentaire</a
+                                    >{{__('Sécurité alimentaire')}}</a
                                 >
                                 <a href="{{route('domaines.santenutrition')}}" class="dropdown-item"
-                                    >Santé et Nutrition</a
+                                    >{{__('Santé et Nutrition')}}</a
                                 >
                                 <a href="{{route('domaines.urgencehumanitaire')}}" class="dropdown-item"
-                                    >Urgence humanitaire</a
+                                    >{{__('Urgence humanitaire')}}</a
                                 >
                                 <a href="{{route('domaines.educationdeveloppement')}}" class="dropdown-item"
-                                    >Éducation et développement Social</a
+                                    >{{__('Éducation et développement Social')}}</a
                                 >
                                
                             </div>
                     </div> 
-                        <a href="{{route('events.index')}}" class="nav-item nav-link {{ Request::routeIs('events.index') ? 'active' : '' }}"> Événements</a
+                        <a href="{{route('events.index')}}" class="nav-item nav-link {{ Request::routeIs('events.index') ? 'active' : '' }}"> {{__('Événements')}}</a
                         >
-                        <a href="{{route('blogs.index')}}" class="nav-item nav-link {{ Request::routeIs('blogs.index') ? 'active' : '' }} ">Actualités</a>
+                        <a href="{{route('blogs.index')}}" class="nav-item nav-link {{ Request::routeIs('blogs.index') ? 'active' : '' }} ">{{__('Actualités')}}</a>
                         <a href="{{route('contacts.index')}}" class="nav-item nav-link {{ Request::routeIs('contacts.index') ? 'active' : '' }} "
-                            >Contact</a
+                            >{{__('Contact')}}</a
                         >
                     </div>
                 </div>

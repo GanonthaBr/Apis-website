@@ -3,7 +3,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="responseModalLabel">Notifications</h5>
+            <h5 class="modal-title" id="responseModalLabel">{{__('Notifications')}}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -12,7 +12,7 @@
             <!-- Response message will be inserted here -->
           </div>
           <div class="modal-footer">
-            <button id="closeModal" type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+            <button id="closeModal" type="button" class="btn btn-secondary" data-dismiss="modal">{{__('Ok')}}</button>
           </div>
         </div>
       </div>
