@@ -9,11 +9,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Nos Actualités</h2>
+                <h2>{{__('Nos Actualités')}}</h2>
             </div>
             <div class="col-12">
-                <a href="/">Accueil</a>
-                <a href="/blogs">Actualités</a>
+                <a href="/">{{__('Accueil')}}</a>
+                <a href="/blogs">{{__('Actualités')}}</a>
             </div>
         </div>
     </div>
@@ -34,12 +34,12 @@
                         {!!$blog->content!!}
                     </p>
                     
-                    <h3>Plus d'images</h3>
+                    <h3>{{__('Plus dimages')}}</h3>
                     {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
                     <div class="row">
                         @if($blog->images->count()==0)
                         <div class="m-4">
-                            <p class="text-center mt-4 alert-success">Pas d'images supplémentaires</p>
+                            <p class="text-center mt-4 alert-success">{{__('Pas dimages supplémentaires')}}</p>
                         </div>
                         @endif
                         @foreach($blog->images as $image)
@@ -51,7 +51,7 @@
                         @endforeach
                     </div>
                     <p class="font-weight-100 text-right">
-                        Publié le <b>  {{substr($blog->created_at, 0,10)}} </b>, par {{$blog->author}}
+                        {{__('Publié le')}} <b>  {{substr($blog->created_at, 0,10)}} </b>, {{__('par')}} {{$blog->author}}
                     </p>
                 </div>
 
@@ -67,9 +67,9 @@
                         {{ session('error') }}
                     </div>
                     @endif
-                    <h3>Comments</h3>
+                    <h3>{{__('Commentaires')}}</h3>
                     @if ($blog->comments->count()==0)
-                    <p class="mt-4 text-alert">Pas de commentaires encore</p>
+                    <p class="mt-4 text-alert">{{__('Pas de commentaires encore')}}</p>
                     @else
                     @foreach($blog->comments as $comment)
                     <div class="comment">
@@ -81,7 +81,7 @@
                     @endif
                     {{-- Login --}}
                     <div class="login-card card">
-                        <h3>Connectez-vous pour commenter</h3>
+                        <h3>{{__('Connectez-vous pour commenter')}}</h3>
                         <!-- cross to close the modal -->
                         <span class="close">
                             <i class="fas fa-times"></i>
@@ -93,17 +93,17 @@
                                 @csrf
 
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
+                                    <label for="email" class="form-label">{{__('Email')}}</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="password" class="form-label">Mot de passe</label>
+                                    <label for="password" class="form-label">{{__('Mot de passe')}}</label>
                                     <input type="password" class="form-control" id="password" name="password" required>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Se connecter</button>
-                                <span style="font-size: 20;">Nouvel utilisateur? <span class="register-btn" style="text-decoration: underline">Creer un Compte
+                                <button type="submit" class="btn btn-primary">{{__('Se connecter')}}</button>
+                                <span style="font-size: 20;">{{__('Nouvel utilisateur?')}} <span class="register-btn" style="text-decoration: underline">{{__('Creer un Compte')}}
                                         </> </span>
                             </form>
                         </div>
@@ -111,7 +111,7 @@
                     </div>
                     {{-- Register Modal --}}
                     <div class="register-card">
-                        <h3>Enregistrez-vous pour commenter</h3>
+                        <h3>{{__('Enregistrez-vous pour commenter')}}</h3>
                         <!-- cross to close the modal -->
                         <span class="fermer">
                             <i class="fas fa-times"></i>
@@ -122,27 +122,27 @@
                                 @csrf
 
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Nom</label>
+                                    <label for="name" class="form-label">{{__('Nom')}}</label>
                                     <input type="text" class="form-control" id="name" name="name" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
+                                    <label for="email" class="form-label">{{__('Email')}}</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="password" class="form-label">Mot de passe</label>
+                                    <label for="password" class="form-label">{{__('Mot de passe')}}</label>
                                     <input type="password" class="form-control" id="password" name="password" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="password-confirm" class="form-label">Confirmer le mot de passe</label>
+                                    <label for="password-confirm" class="form-label">{{__('Confirmer le mot de passe')}}</label>
                                     <input type="password" class="form-control" id="password-confirm" name="password_confirmation" required>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">S'inscrire</button>
-                                <span style="font-size: 20;">Deja un utilisateur? <span class="login-btn" style="text-decoration: underline">Se connecter</span> </span>
+                                <button type="submit" class="btn btn-primary">{{__('Sinscrire')}}</button>
+                                <span style="font-size: 20;">{{__('Deja un utilisateur?')}} <span class="login-btn" style="text-decoration: underline">{{__('Se connecter')}}</span> </span>
                             </form>
                         </div>
                     </div>
@@ -151,12 +151,12 @@
                         @csrf
                         <input type="hidden" name="blog_id" value="{{ $blog->id }}">
                         <textarea class="form-control  {{ auth()->check() ? '' : 'not-logged-in' }}" name="comment" required></textarea>
-                        <button class="btn comment-button" type="submit">Ajouter un commentaire</button>
+                        <button class="btn comment-button" type="submit">{{__('Ajouter un commentaire')}}</button>
                     </form>
                 </div>
 
 
-                <h6>D'autres liens</h6>
+                <h6>{{__('Dautres liens')}}</h6>
                 @include('partials.other-links')
             </div>
 
