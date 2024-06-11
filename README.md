@@ -73,3 +73,9 @@ IV - Next steps
 5. In the BlogImage model, define a relationship to the Blog
 6. In the BlogController, create a new method to store the images
 7. Edit previous post to add more images
+
+STEPS TO IMPLEMENT LANGUAGE SWITCHING
+Step 1: Create Middleware
+Step 2: Register Middleware
+Step 3: Create a Route to Change Language
+Step 4: Use Links to Change Language
