@@ -44,7 +44,7 @@
 <main class="main" id="main">
   {{-- edit event form --}}
   <div class="container-fluid px-4">
-    <h1 class="mt-4">Modifier un événement</h1>
+    <h1 class="mt-4">{{__('Modifier un événement')}}</h1>
     {{-- display success message if event is updated --}}
     @if (session()->has('event-updated'))
     <div class="alert alert-success" role="alert">
@@ -56,34 +56,34 @@
       @csrf
       @method('PUT')
       <div class="mb-3">
-        <label for="title" class="form-label">Titre</label>
+        <label for="title" class="form-label"><{{__('Titre')}}/label>
         <input type="text" class="form-control" id="title" name="title" value="{{ $event->title }}">
       </div>
       <div class="mb-3">
-        <label for="description" class="form-label">Description</label>
+        <label for="description" class="form-label">{{__('Description')}}</label>
         <textarea class="form-control" id="description" name="description" rows="3">{{ $event->description }}</textarea>
       </div>
       <div class="mb-3">
-        <label for="date" class="form-label">Date</label>
+        <label for="date" class="form-label">{{__('Date')}}</label>
         <input type="date" class="form-control" id="date" name="date" value="{{ $event->date }}">
       </div>
       <div class="mb-3">
-        <label for="start_time" class="form-label">Heure de début</label>
+        <label for="start_time" class="form-label">{{__('Heure de début')}}</label>
         <input type="time" class="form-control" id="start_time" name="start_time" value="{{ $event->start_time }}">
       </div>
       <div class="mb-3">
-        <label for="end_time" class="form-label">Heure de fin</label>
+        <label for="end_time" class="form-label">{{__('Heure de fin')}}</label>
         <input type="time" class="form-control" id="end_time" name="end_time" value="{{ $event->end_time }}">
       </div>
       <div class="mb-3">
-        <label for="location" class="form-label">Lieu</label>
+        <label for="location" class="form-label">{{__('Lieu')}}</label>
         <input type="text" class="form-control" id="location" name="location" value="{{ $event->location }}">
       </div>
        <div class="mb-3">
-          <label for="image" class="form-label">Image</label>
+          <label for="image" class="form-label">{{__('Image')}}</label>
           <input type="file" class="form-control" id="image" name="image">
         </div>
-      <button type="submit" class="btn btn-primary">Sauvegarder</button>
+      <button type="submit" class="btn btn-primary">{{__('Sauvegarder')}}</button>
     </form>
   </div>
 </main>

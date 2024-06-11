@@ -9,11 +9,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Nos évenements</h2>
+                <h2>{{__('Nos évenements')}}</h2>
             </div>
             <div class="col-12">
-                <a href="/">Accueil</a>
-                <a href="/events">Evénement</a>
+                <a href="/">{{__('Accueil')}}</a>
+                <a href="/events">{{__('Evénement')}}</a>
             </div>
         </div>
     </div>
@@ -32,12 +32,12 @@
                     <h1 class="domaine-title">{{$event->title}}</h1>
                     <img src="{{asset('storage/' . $event->image)}}" alt="image" />
                     <p>{{$event->description}}</p>
-                    <p><span style="font-weight: bold;"> <i class="fa fa-map-marker-alt"></i> Lieu:</span> {{$event->location}}</p>
-                    <p> <span style="font-weight: bold;"> <i class="far fa-clock"></i> Heure:</span> {{substr($event->start_time,0,5)}} - {{substr($event->end_time,0,5)}}</p>
-                    <p><span style="font-weight: bold;"> <i class="fa fa-calendar-alt"></i> Ajoute le:</span> {{substr($event->created_at,0,9)}} </p>
+                    <p><span style="font-weight: bold;"> <i class="fa fa-map-marker-alt"></i> {{__('Lieu:')}}</span> {{$event->location}}</p>
+                    <p> <span style="font-weight: bold;"> <i class="far fa-clock"></i> {{__('Heure:')}}</span> {{substr($event->start_time,0,5)}} - {{substr($event->end_time,0,5)}}</p>
+                    <p><span style="font-weight: bold;"> <i class="fa fa-calendar-alt"></i> {{__('Ajoute le:')}}</span> {{substr($event->created_at,0,9)}} </p>
 
                 </div>
-                <h6>D'autres liens</h6>
+                <h6>{{__('Dautres liens')}}</h6>
                 @include('partials.other-links')
             </div>
 

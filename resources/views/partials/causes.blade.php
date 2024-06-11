@@ -12,24 +12,7 @@
                     <img src="{{asset('storage/' . $cause->image)}}" alt="Image" />
                     {{-- <img src="{{asset('img/side-bar-image.png')}}" alt="Image" /> --}}
                 </div>
-                {{-- <div class="causes-progress">
-                            <div class="progress">
-                                <div
-                                    class="progress-bar"
-                                    role="progressbar"
-                                    aria-valuenow="85"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                >
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div> --}}
-                <div class="causes-text">
+               <div class="causes-text">
                     <h3>{{$cause->name}}</h3>
                     {{-- <h3>Lutter</h3> --}}
                     <p>

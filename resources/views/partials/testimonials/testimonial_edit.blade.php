@@ -44,7 +44,7 @@
 <main class="main" id="main">
   {{-- edit event form --}}
   <div class="container-fluid px-4">
-    <h1 class="mt-4">Modifier un événement</h1>
+    <h1 class="mt-4">{{__('Modifier un temoignage')}}</h1>
     {{-- display success message if event is updated --}}
     @if (session()->has('testimonial-updated'))
     <div class="alert alert-success" role="alert">
@@ -56,22 +56,22 @@
       @csrf
       @method('PUT')
       <div class="mb-3">
-          <label for="title" class="form-label">Name: </label>
+          <label for="title" class="form-label">{{__('Name:')}} </label>
           <input type="text" class="form-control" id="title" name="authorName" value="{{ $testimonial->authorName }}">
         </div>
         <div class="mb-3">
-          <label for="occupation" class="form-label">Occupation: </label>
+          <label for="occupation" class="form-label">{{__('Occupation:')}} </label>
           <input type="text" class="form-control" id="occupation" name="authorPosition" value="{{$testimonial->authorPosition}}">
         </div>
           <div class="mb-3">
-          <label for="image" class="form-label">Image</label>
+          <label for="image" class="form-label">{{__('Image')}}</label>
           <input type="file" class="form-control" id="image" name="image">
         </div>
         <div class="mb-3">
-          <label for="content" class="form-label">Contenu</label>
+          <label for="content" class="form-label">{{__('Contenu')}}</label>
           <textarea class="form-control" id="content" name="content" rows="3">{{ $testimonial->content }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        <button type="submit" class="btn btn-primary">{{__('Sauvegarder')}}</button>
     </form>
   </div>
 </main>

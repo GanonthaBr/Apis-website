@@ -9,11 +9,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Nos événements</h2>
+                <h2>{{__('Nos événements')}}</h2>
             </div>
             <div class="col-12">
-                <a href="/">Accueil</a>
-                <a href="/events">Evénements</a>
+                <a href="/">{{__('Accueil')}}</a>
+                <a href="/events">{{__('Evénements')}}</a>
             </div>
         </div>
     </div>
@@ -24,8 +24,8 @@
 <div class="event">
     <div class="container">
         <div class="section-header text-center">
-            <p>Nos événements récents</p>
-            <h2>Nos plus récents et futurs événements.</h2>
+            <p>{{__('Nos événements récents')}}</p>
+            <h2>{{__('Nos plus récents et futurs événements.')}}</h2>
         </div>
         <div class="row">
             @if($events->count())
@@ -53,7 +53,7 @@
                                 {{substr($event->description,0,115)}}
 
                             </p>
-                            <a class="btn btn-custom" href="{{route('events.show', ['id' => $event->id])}}">Voir plus</a>
+                            <a class="btn btn-custom" href="{{route('events.show', ['id' => $event->id])}}">{{__('Voir plus')}}</a>
                         </div>
                     </div>
                 </div>
@@ -61,59 +61,10 @@
 
             @endforeach
             @else
-            <div class="alert alert-warning col-md-8 offset-md-2 mt-3">Aucun événement au programme !!!</div>
+            <div class="alert alert-warning col-md-8 offset-md-2 mt-3">{{__('Aucun événement au programme !!!')}}</div>
 
             @endif
-            {{-- <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{{asset('img/event-1-0.png')}}" alt="Image" />
-            <div class="event-content">
-                <div class="event-meta">
-                    <p>
-                        <i class="fa fa-calendar-alt"></i>01-Mars-2024
-                    </p>
-                    <p>
-                        <i class="far fa-clock"></i>8:00 - 10:00
-                    </p>
-                    <p>
-                        Gotheye-larbabirno
-                    </p>
-                </div>
-                <div class="event-text">
-                    <h3>Distribution</h3>
-                    <p>
-                        Événement de distribution des kits non-alimentaires à la population du village de Larbabirno.
-                    </p>
-                    <a class="btn btn-custom" href="">Voir plus</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-6">
-        <div class="event-item">
-            <img src="{{asset('img/event-1-1.png')}}" alt="Image" />
-            <div class="event-content">
-                <div class="event-meta">
-                    <p>
-                        <i class="fa fa-calendar-alt"></i>01-Mars-2024
-                    </p>
-                    <p>
-                        <i class="far fa-clock"></i>8:00 - 10:00
-                    </p>
-                    <p>
-                        <i class="fa fa-map-marker-alt"></i>Gotheye-larbabirno
-                    </p>
-                </div>
-                <div class="event-text">
-                    <h3>Distribution</h3>
-                    <p>
-                        Événement de distribution des kits non-alimentaires à la population du village de Larbabirno.
-                    </p>
-                    <a class="btn btn-custom" href="">Voir plus</a>
-                </div>
-            </div>
-        </div>
-    </div> --}}
+           
 </div>
 </div>
 </div>
