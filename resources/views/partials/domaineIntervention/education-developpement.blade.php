@@ -7,11 +7,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Domaines d'intervention</h2>
+                <h2>{{__('Domaines dintervention')}}</h2>
             </div>
             <div class="col-12">
-                <a href="/">Accueil</a>
-                <a href="{{route('domaines.educationdeveloppement')}}">Domaines d'intervention</a>
+                <a href="/">{{__('Accueil')}}</a>
+                <a href="{{route('domaines.educationdeveloppement')}}">{{(__('Domaines dintervention'))}}</a>
             </div>
         </div>
     </div>
@@ -23,20 +23,20 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="single-content">
-                    <h1 class="domaine-title">Education et Développement Integré</h1>
+                    <h1 class="domaine-title">{{__('Education et Développement Integré')}}</h1>
                     <img src="{{asset('img/sante-nutrition.jpeg')}}" />
-                    <h3>Education</h3>
+                    <h3>{{__('Education')}}</h3>
                     <p>
-                        L'ONG APIS s'engage dans le secteur de l'éducation, offrant un accès équitable à l'apprentissage de qualité pour tous, même dans les situations d'urgence humanitaire. À travers des programmes innovants et adaptés, nous favorisons le développement cognitif, social et émotionnel des enfants et des jeunes, renforçant ainsi leurs perspectives d'avenir. En partenariat avec les communautés et les autorités locales, nous mettons en œuvre des initiatives axées sur l'éducation formelle et non formelle, assurant ainsi la résilience éducative même dans les contextes les plus difficiles.
+                        {{__('education description')}}
                     </p>
-                    <h3>Développement Integré</h3>
+                    <h3></h3>
 
                     <p>
-                        L'ONG APIS s'engage dans le développement intégré des communautés. Notre approche holistique aborde les besoins multiples des populations, de l'agriculture durable à l'éducation en passant par la santé et l'accès à l'eau. En collaborant avec les parties prenantes locales, nous visons à créer des changements durables et équilibrés, favorisant ainsi l'autonomisation et la résilience des communautés pour un avenir meilleur.
+                      {{__('Développement Integré description')}}
                     </p>
 
                 </div>
-                <h6>D'autres liens</h6>
+                <h6>{{__('Dautres liens')}}</h6>
                 @include('partials.other-links')
             </div>
 

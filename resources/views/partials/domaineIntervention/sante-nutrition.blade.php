@@ -7,11 +7,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Domaines d'intervention</h2>
+                <h2>{{__('Domaines dintervention')}}</h2>
             </div>
             <div class="col-12">
-                <a href="/">Accueil</a>
-                <a href="{{route('domaines.santenutrition')}}">Domaines d'intervention</a>
+                <a href="/">{{__('Accueil')}}</a>
+                <a href="{{route('domaines.santenutrition')}}">{{__('Domaines dintervention')}}</a>
             </div>
         </div>
     </div>
@@ -23,20 +23,20 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="single-content">
-                    <h1 class="domaine-title">Santé et Nutrition</h1>
+                    <h1 class="domaine-title">{{__('Santé et Nutrition')}}</h1>
                     <img src="{{asset('img/sante-nutrition.jpeg')}}" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur APIS croit fermement en l'importance de donner à chaque enfant un avenir prometteur. Que ce soit au Niger ou dans le monde entier, nous nous engageons à offrir aux enfants un bon départ dans la vie, en leur donnant accès à l'éducation, à la protection contre les dangers et en leur fournissant les soins nécessaires. Notre objectif est de transformer leur vie et de façonner un avenir meilleur que nous partageons tous.
+                        {{__('Santé et Nutrition description')}}
                     </p>
-                    <h3>Chef de département de Santé et Nutrition</h3>
+                    <h3>{{__('Chef de département de Santé et Nutrition')}}</h3>
                     <p>
-                        Le chef de département santé et nutrition joue un rôle crucial au sein d'APIS, étant responsable de la direction technique de notre travail dans les domaines de la santé et de la nutrition. Cela comprend les secteurs liés à la santé des nouveau-nés, des enfants et des mères, à la nutrition, à la santé des adolescents, à la santé sexuelle et reproductive, à la planification familiale, à la santé et à la nutrition scolaires, ainsi qu'au renforcement du système de santé.
+                        {{__('Nutrition description one')}}
                     </p>
                     <p>
-                        Ce chef de département est chargé de définir l'orientation stratégique du secteur de la santé, de concevoir de nouveaux programmes et projets, ainsi que d'identifier et de mettre en œuvre des partenariats stratégiques. Il/elle garantit la qualité et l'apprentissage des programmes pour une série de projets, conseille le personnel technique sur le terrain et représente APIS au plus haut niveau lors de plaidoyers auprès du gouvernement du Niger, des partenaires et des principales parties prenantes nationales et internationales.
+                        {{__('Nutrition description two')}}
                     </p>
                 </div>
-                <h6>D'autres liens</h6>
+                <h6>{{__('Dautres liens')}}</h6>
                 @include('partials.other-links')
             </div>
 
