@@ -8,11 +8,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>{{ __('english_content.nous_contacter') }}</h2>
+                <h2>{{ __('contact') }}</h2>
             </div>
             <div class="col-12">
                 <a href="/">Accueil</a>
                 <a href="/contacts">Contacts</a>
+
+                {{-- <a href="/lang/en">English</a> | <a href="/lang/fr">Français</a> --}}
             </div>
         </div>
     </div>
@@ -23,7 +25,7 @@
 <div class="contact partial-content">
     <div class="container">
         <div class="section-header text-center">
-            <p>{{ __('english_content.nous_contacter') }}</p>
+            <p>{{ __('contact') }}</p>
             <h2>Restez en contact avec nous</h2>
         </div>
         <div class="contact-img">

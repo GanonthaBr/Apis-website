@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\App;
+
 return [
 
     /*
@@ -78,7 +80,8 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'fr'),
+    // App::setLocale($locale),
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
@@ -122,6 +125,7 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+
 
 
 ];

@@ -1,0 +1,6 @@
+{
+    "contact": "Contact Us",
+    "failed": ",hese credentials do not match our records.",
+    "password": ",he provided password is incorrect.",
+    "throttle": ",oo many login attempts. Please try again in :seconds seconds."
+}

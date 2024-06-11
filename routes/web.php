@@ -6,15 +6,26 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\CausesController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CommentsController;
+use App\Http\Middleware\LangDynamicSwitching;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\TestimonialsController;
-use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\CausesController;
-use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\DomaineInterventionController;
+
+
+//Language Switch
+Route::get('/lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'fr'])) { // Add other languages as needed
+        session()->put('locale', $locale);
+    }
+    return back();
+});
+
 
 //Home
 Route::get('/', [HomeController::class, 'index']);
@@ -115,3 +126,4 @@ Route::delete('/comment/{id}', [CommentsController::class, 'destroy'])->name('co
 Auth::routes();
 Route::post('/register-from-blog', [RegisterController::class, 'registerBlog'])->name('registerFromBlog');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    // });

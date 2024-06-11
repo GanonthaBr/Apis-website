@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\URL;
 
 class LangDynamicSwitching
 {
@@ -15,10 +16,10 @@ class LangDynamicSwitching
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle($request, Closure $next)
     {
-        if (Session::has('locale')) {
-            App::setLocale(Session::get('locale'));
+        if (session()->has('locale')) {
+            app()->setLocale(session('locale'));
         }
         return $next($request);
     }

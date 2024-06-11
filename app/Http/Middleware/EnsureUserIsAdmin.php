@@ -16,10 +16,10 @@ class EnsureUserIsAdmin
 
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->check()) {
+        if (auth()->check() && auth()->user()->isAdmin) {
             return $next($request);
         }
 
-        return redirect('/home');
+        return redirect('/login');
     }
 }
