@@ -118,10 +118,10 @@ $countm = 0;
 
           <li class="dropdown-header">
             @if ($newMessage > 0)
-            Vous avez {{$newMessage}} nouveaux messages!
+            Vous avez {{$newMessage}} {{__('nouveaux messages!')}}
             <a href="{{route('admin.allrequests')}}"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
             @else
-            Vous n'avez pas de nouveaux messages!
+            {{__('Vous navez pas de nouveaux messages!')}}
             @endif
           </li>
           <li>
@@ -151,7 +151,7 @@ $countm = 0;
           @endforeach
 
           <li class="dropdown-footer">
-            <a href="{{route('admin.allrequests')}}">Show all messages</a>
+            <a href="{{route('admin.allrequests')}}">{{__('Show all messages')}} </a>
           </li>
 
         </ul><!-- End Messages Dropdown Items -->
@@ -182,7 +182,7 @@ $countm = 0;
           <li>
             <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
               <i class="bi bi-person"></i>
-              <span>Mon Profil</span>
+              <span>{{__('Mon Profil')}} </span>
             </a>
           </li>
           <li>
@@ -192,7 +192,7 @@ $countm = 0;
           <li>
             <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
               <i class="bi bi-gear"></i>
-              <span>Account Settings</span>
+              <span>{{__('Account Settings')}} </span>
             </a>
           </li>
           <li>
@@ -202,7 +202,7 @@ $countm = 0;
           <li>
             <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
               <i class="bi bi-question-circle"></i>
-              <span>Need Help?</span>
+              <span> {{__('Need Help?')}} </span>
             </a>
           </li>
           <li>
@@ -216,7 +216,7 @@ $countm = 0;
                 @csrf
                 <button type="submit">
                   <!-- Logout -->
-                  <span>Déconnexion</span>
+                  <span>{{__('Déconnexion')}} </span>
                   <i class="bi bi-box-arrow-right"></i>
                 </button>
               </form>

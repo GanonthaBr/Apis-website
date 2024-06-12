@@ -42,7 +42,7 @@
   <main class="main" id="main">
     {{-- edit cause form --}}
     <div class="container-fluid px-4">
-      <h1 class="mt-4">Modifier une cause</h1>
+      <h1 class="mt-4">{{__('Modifier une cause')}} </h1>
       {{-- display success message if cause is updated --}}
       @if (session()->has('cause-updated'))
       <div class="alert alert-success" role="alert">
@@ -54,18 +54,18 @@
         @csrf
         @method('PUT')
         <div class="mb-3">
-          <label for="name" class="form-label">Titre</label>
+          <label for="name" class="form-label">{{__('Titre')}} </label>
           <input type="text" class="form-control" id="name" name="name" value="{{ $cause->name }}">
         </div>
         <div class="mb-3">
-          <label for="image" class="form-label">Image</label>
+          <label for="image" class="form-label">{{__('Image')}} </label>
           <input type="file" class="form-control" id="image" name="image">
         </div>
         <div class="mb-3">
-          <label for="description" class="form-label">Contenu</label>
+          <label for="description" class="form-label">{{__('Contenu')}} </label>
           <textarea class="form-control" id="description" name="description" rows="3">{{ $cause->description }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        <button type="submit" class="btn btn-primary">{{__('Sauvegarder')}} </button>
       </form>
     </div>
   </main>

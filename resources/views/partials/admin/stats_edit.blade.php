@@ -42,7 +42,7 @@
   <main class="main" id="main">
     {{-- edit stats form --}}
     <div class="container-fluid px-4">
-      <h1 class="mt-4">Modifier un stats</h1>
+      <h1 class="mt-4">{{__('Modifier les stats')}} </h1>
       {{-- display success message if stats is updated --}}
       @if (session()->has('stats-updated'))
       <div class="alert alert-success" role="alert">
@@ -54,22 +54,22 @@
         @csrf
         @method('PUT')
         <div class="mb-3">
-          <label for="year" class="form-label">Année d'existence:</label>
+          <label for="year" class="form-label">{{__('Année dexistence')}} :</label>
           <input type="text" class="form-control" id="year" name="year" value="{{ $stats->year_of_experience }}">
         </div>
         <div class="mb-3">
-          <label for="departments" class="form-label">Départements intervenus</label>
+          <label for="departments" class="form-label">{{__('Départements intervenus')}}:</label>
           <textarea class="form-control" id="departments" name="departments" rows="3">{{$stats->departments_helped }}</textarea>
         </div>
         <div class="mb-3">
-          <label for="communities" class="form-label">Communaunes aidées</label>
+          <label for="communities" class="form-label">{{__('Communes aidées')}}:</label>
           <textarea class="form-control" id="communities" name="communities" rows="3">{{$stats->communities_helped }}</textarea>
         </div>
         <div class="mb-3">
-          <label for="beneficiaires" class="form-label">Beneficiaires aides</label>
+          <label for="beneficiaires" class="form-label">{{__('Beneficiaires aidés')}}:</label>
           <textarea class="form-control" id="beneficiaires" name="beneficiaires" rows="3">{{$stats->number_of_beneficiaries }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        <button type="submit" class="btn btn-primary">{{__('Sauvegarder')}} </button>
       </form>
     </div>
   </main>

@@ -4,7 +4,7 @@
 <main class="main" id="main">
     {{-- create Bootstrap table with three columns --}}
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Liste des blogs</h1>
+        <h1 class="mt-4">{{__('Liste des blogs')}} </h1>
         {{-- display success message if blog is created --}}
         @if (session()->has('blog-created'))
         <div class="alert alert-success" role="alert">
@@ -22,9 +22,9 @@
         <table id="articlesTable" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th>Titre</th>
-                    <th>Contenu</th>
-                    <th>Actions</th>
+                    <th>{{__('Titre')}} </th>
+                    <th>{{__('Contenu')}} </th>
+                    <th>{{__('Actions')}} </th>
                 </tr>
             </thead>
             <tbody>
@@ -36,10 +36,10 @@
                     <td>{!! substr($blog->content,0,50) !!}...</td>
                     <td>
                         {{-- create edit button --}}
-                        <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-primary">Modifier</a>
+                        <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-primary">{{__('Modifier')}} </a>
                         {{-- create delete button --}}
                         <!-- Delete Button -->
-                        <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$blog->id}}" data-toggle="modal" data-target="#deleteModal{{$blog->id}}">Supprimer</button>
+                        <button type="button" class="btn btn-danger confirm-delete" data-form="deleteForm{{$blog->id}}" data-toggle="modal" data-target="#deleteModal{{$blog->id}}">{{__('Supprimer')}} </button>
 
                         <form id="deleteForm{{$blog->id}}" action="{{ route('blogs.destroy', $blog->id) }}" method="POST" class="d-inline">
                             @csrf
@@ -54,17 +54,17 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                                <h5 class="modal-title" id="deleteModalLabel">{{__('Confirm Delete')}} </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                Are you sure you want to delete this blog post?
+                                {{__('Are you sure you want to delete this blog post?')}}
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-danger confirmDelete" id="confirmDelete{{$blog->id}}">Delete</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('Cancel')}} </button>
+                                <button type="button" class="btn btn-danger confirmDelete" id="confirmDelete{{$blog->id}}">{{__('Delete')}} </button>
                             </div>
                         </div>
                     </div>

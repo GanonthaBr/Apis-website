@@ -42,7 +42,7 @@
   <main class="main" id="main">
     {{-- edit report form --}}
     <div class="container-fluid px-4">
-      <h1 class="mt-4">Modifier un report</h1>
+      <h1 class="mt-4">{{__('Modifier un report')}} </h1>
       {{-- display success message if report is updated --}}
       @if (session()->has('report-updated'))
       <div class="alert alert-success" role="alert">
@@ -54,26 +54,26 @@
         @csrf
         @method('PUT')
         <div class="mb-3">
-          <label for="title" class="form-label">Title:</label>
+          <label for="title" class="form-label">{{__('Title')}}:</label>
           <input type="text" class="form-control" id="title" name="title" value="{{ $report->title }}">
         </div>
         <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
+          <label for="description" class="form-label">{{__('Description')}} </label>
           <textarea class="form-control" id="description" name="description" rows="3">{{$report->description }}</textarea>
         </div>
         <div class="mb-3">
-          <label for="author" class="form-label">Author Name:</label>
+          <label for="author" class="form-label">{{__('Author Name')}}:</label>
           <textarea class="form-control" id="author" name="author" rows="3">{{$report->author }}</textarea>
         </div>
         <div class="mb-3">
-                <label for="image" class="form-label">Image: </label>
+                <label for="image" class="form-label">{{__('Image')}}: </label>
                 <input type="file" name="image" class="form-control" id="image" accept="image/*" >
             </div>
             <div class="mb-3">
-                <label for="file" class="form-label">Document du rapport en pdf:</label>
+                <label for="file" class="form-label">{{__('Document du rapport en pdf')}}:</label>
                 <input type="file" name="file" class="form-control" id="file" accept="application/pdf">
             </div>
-        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        <button type="submit" class="btn btn-primary">{{__('Sauvegarder')}} </button>
       </form>
     </div>
   </main>

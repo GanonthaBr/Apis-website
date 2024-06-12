@@ -43,13 +43,13 @@
     {{-- edit blog form --}}
     <div class="container-fluid px-4">
         {{-- details of the request message with sender name, email, subject, message content and textfield to reply--}}
-        <h1 class="mt-4">Détails du message</h1>
+        <h1 class="mt-4"> {{__('Détails du message')}} </h1>
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Nom: {{ $message->name }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Email: {{ $message->email }}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">Object: {{ $message->subject }}</h6>
-                <p class="card-text">Message: {{ $message->user_message }}</p>
+                <h5 class="card-title">{{__('Nom')}}: {{ $message->name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{__('Email')}}: {{ $message->email }}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">{{__('Object')}}: {{ $message->subject }}</h6>
+                <p class="card-text">{{__('Message')}}: {{ $message->user_message }}</p>
                 
             </div>
     </div>
