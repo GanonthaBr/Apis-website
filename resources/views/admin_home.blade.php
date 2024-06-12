@@ -4,11 +4,11 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Dashboard</h1>
+    <h1>{{__('Dashboard')}} </h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active">Dashboard</li>
+        <li class="breadcrumb-item"><a href="index.html">{{__('Home')}}</a></li>
+        <li class="breadcrumb-item active">{{__('Dashboard')}} </li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -27,7 +27,7 @@
 
 
               <div class="card-body">
-                <h5 class="card-title">Articles <span>| Nombre</span></h5>
+                <h5 class="card-title">{{__('Articles')}} <span>|{{__('Nombre')}} </span></h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -40,7 +40,7 @@
                       @endphp
                       {{$totalBlogs}}
                     </h6>
-                    <span class="text-success small pt-1 fw-bold">Total d'articles publiés</span>
+                    <span class="text-success small pt-1 fw-bold">{{__('Total darticles publiés')}} </span>
 
                   </div>
                 </div>
@@ -53,21 +53,8 @@
           <!-- Revenue Card -->
           <div class="col-xxl-4 col-md-6">
             <div class="card info-card revenue-card">
-
-              {{-- <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                  <li class="dropdown-header text-start">
-                    <h6>Filter</h6>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Today</a></li>
-                  <li><a class="dropdown-item" href="#">This Month</a></li>
-                  <li><a class="dropdown-item" href="#">This Year</a></li>
-                </ul>
-              </div> --}}
-
               <div class="card-body">
-                <h5 class="card-title">Événements <span>| Nombre</span></h5>
+                <h5 class="card-title">{{__('Événements')}} <span>{{__('Nombre')}} </span></h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -80,7 +67,7 @@
                       @endphp
                       {{$totalEvents}}
                     </h6>
-                    <span class="text-success small pt-2 fw-bold">Total Événements</span>
+                    <span class="text-success small pt-2 fw-bold">{{__('Total Événements')}} </span>
 
                   </div>
                 </div>
@@ -94,22 +81,8 @@
           <div class="col-xxl-4 col-xl-12">
 
             <div class="card info-card customers-card">
-              {{--
-              <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                  <li class="dropdown-header text-start">
-                    <h6>Filter</h6>
-                  </li>
-
-                  <li><a class="dropdown-item" href="#">Today</a></li>
-                  <li><a class="dropdown-item" href="#">This Month</a></li>
-                  <li><a class="dropdown-item" href="#">This Year</a></li>
-                </ul>
-              </div> --}}
-
               <div class="card-body">
-                <h5 class="card-title">Utilisateur</h5>
+                <h5 class="card-title">{{__('Utilisateur')}} </h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -133,7 +106,7 @@
             {{-- images gallery --}}
             <div class="card info-card customers-card">
               <div class="card-body">
-                <h5 class="card-title">Galerie</h5>
+                <h5 class="card-title">{{__('Galerie')}} </h5>
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                     <i class="bi bi-images"></i>
@@ -145,7 +118,7 @@
                       @endphp
                       {{$totalImages}}
                     </h6>
-                    <span class="text-success small pt-1 fw-bold">Total d'images publiées</span>
+                    <span class="text-success small pt-1 fw-bold">{{__('Total dimages publiées')}} </span>
 
                   </div>
                 </div>

@@ -4,14 +4,14 @@
                 <div class="col-lg-7">
                     <div class="donate-content">
                         <div class="section-header">
-                            <h1 style="color:#17468a; font-weight:bold">Faire un Don</h1>
+                            <h1 style="color:#17468a; font-weight:bold">{{__('Faire un Don')}}</h1>
                             <h2>
-                                Vos dons et aides sont des gestes qui sauvent des vies!
+                               {{__(' Vos dons et aides sont des gestes qui sauvent des vies!')}}
                             </h2>
                         </div>
                         <div class="donate-text">
                             <p>
-                                Léguer à l'ONG APIS, c'est plus qu'une donation; c'est changer des vies, promouvoir l'égalité des genres et créer un impact durable. Votre appui permet à APIS de poursuivre ses programmes pour des communautés sûres, équitables et prospères, offrant un avenir meilleur aux milliers d'enfants et familles.
+                                {{__('donate text')}}
                             </p>
                         </div>
                     </div>
@@ -25,33 +25,12 @@
                             <div class="control-group">
                                 <input type="email" class="form-control" placeholder="Téléphone ou Email" required="required" />
                             </div>
-                            {{-- <div
-                                    class="btn-group btn-group-toggle"
-                                    data-toggle="buttons"
-                                >
-                                    <label class="btn btn-custom active">
-                                        <input
-                                            type="radio"
-                                            name="options"
-                                            checked
-                                        />
-                                        $10
-                                    </label>
-                                    <label class="btn btn-custom">
-                                        <input type="radio" name="options" />
-                                        $20
-                                    </label>
-                                    <label class="btn btn-custom">
-                                        <input type="radio" name="options" />
-                                        $30
-                                    </label>
-                                </div> --}}
                             <div>
                                 <button class="btn btn-custom" type="submit">
-                                    Faire le Don Maintenant!
+                                    {{__('Faire le Don Maintenant!')}}
                                 </button>
-                                <p style="text-align: center; color:#fff">OU</p>
-                                <button class="btn btn-custom" href='#contacts'  >Nous Contacter.
+                                <p style="text-align: center; color:#fff">{{__('OU')}}</p>
+                                <button class="btn btn-custom" href='#contacts'  >
                                 </button>
                             </div>
                         </form>

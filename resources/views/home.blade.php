@@ -53,7 +53,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->communities_helped}}
                         </h3>
-                        <p>Communes intervenues</p>
+                        <p>{{__('Communes intervenues')}} </p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->number_of_beneficiaries}}
                         </h3>
-                        <p>Nombre de Bénéficiaires</p>
+                        <p>{{__('Nombre de Bénéficiaires')}} </p>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->departments_helped}}
                         </h3>
-                        <p>Départements</p>
+                        <p>{{__('Départements')}} </p>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                         <h3 data-toggle="counter-up">
                             {{$stats->year_of_experience}}
                         </h3>
-                        <p>Expérience.</p>
+                        <p>{{__('Expérience')}} </p>
                     </div>
                 </div>
             </div>
