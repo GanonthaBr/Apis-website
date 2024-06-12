@@ -54,7 +54,7 @@
                    </div>
                    <div>
                        <button class="btn btn-custom" type="submit"  id="sendMessageButton">
-                           {{_('Envoyer Message')}}
+                           {{__('Envoyer Message')}}
                        </button>
                    </div>
                </form>
