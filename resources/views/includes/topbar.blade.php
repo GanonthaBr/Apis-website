@@ -31,6 +31,14 @@
                                 <a href=""><i class="fab fa-instagram"></i></a>
                                 
                             </div>
+                             <div class="row language-switch d-flex" >
+                        <div class="col-md-6 lang {{session('locale')=='fr'?'active fr':''}}">
+                            <a href="/lang/fr" class=" {{session('locale')=='fr'?'active fr':''}}" >FR</a>
+                        </div>
+                        <div class="col-md-6 lang  {{session('locale')=='en'?'active en':''}}">
+                            <a href="/lang/en" class="{{session('locale')=='en'?'active en':''}}" >ENG</a>
+                        </div>
+                      </div>
                           
                         </div>
                         
