@@ -4,9 +4,7 @@
               <div class="col-lg-3 col-md-6">
                   <div class="footer-contact">
                       <h2>{{__('Siège Principal')}}</h2>
-                      <p>
-                          <i class="fa fa-map-marker-alt">{{__('Avenue Korey bongou')}}</i>
-                      </p>
+                      <p><i class="fa fa-map-marker-alt"></i>{{__('Avenue Korey bongou')}}</p>
                       <p><i class="fa fa-phone-alt"></i>(+227) 20724108 - 96410772</p>
                       <p>
                           <i class="fa fa-envelope"></i>

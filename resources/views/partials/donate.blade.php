@@ -20,7 +20,7 @@
                     <div class="donate-form">
                         <form method="#">
                             <div class="control-group">
-                                <input type="text" class="form-control" placeholder="Nom" required="required" />
+                                <input type="text" class="form-control" placeholder="{{__('Votre Nom')}}" required="required" />
                             </div>
                             <div class="control-group">
                                 <input type="email" class="form-control" placeholder="{{__('Votre Telephone ou Email')}}" required="required" />
@@ -30,8 +30,7 @@
                                     {{__('Faire le Don Maintenant!')}}
                                 </button>
                                 <p style="text-align: center; color:#fff">{{__('OU')}}</p>
-                                <button class="btn btn-custom" href='#contacts'  >
-                                </button>
+                                <button class="btn btn-custom" href='#contacts'  >{{__('contact us')}}</button>
                             </div>
                         </form>
                     </div>
