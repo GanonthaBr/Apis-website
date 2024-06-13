@@ -14,7 +14,7 @@
                 <a href="/">{{ __('accueil') }}</a>
                 <a href="/contacts">{{__('contacts')}}</a>
 
-                <a href="/lang/en">English</a> | <a href="/lang/fr">Français</a>
+              
             </div>
         </div>
     </div>

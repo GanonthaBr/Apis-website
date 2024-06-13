@@ -76,7 +76,7 @@
 
 
         {{-- add new blog button --}}
-        <a href="{{route('admin.create')}}" class="btn btn-primary">Ajouter un blog</a>
+        <a href="{{route('admin.create')}}" class="btn btn-primary">{{__('Ajouter un blog')}} </a>
 
 
 

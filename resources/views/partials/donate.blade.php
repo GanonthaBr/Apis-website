@@ -6,7 +6,7 @@
                         <div class="section-header">
                             <h1 style="color:#17468a; font-weight:bold">{{__('Faire un Don')}}</h1>
                             <h2>
-                               {{__(' Vos dons et aides sont des gestes qui sauvent des vies!')}}
+                               {{__('Vos dons et aides sont des gestes qui sauvent des vies!')}}
                             </h2>
                         </div>
                         <div class="donate-text">
@@ -23,7 +23,7 @@
                                 <input type="text" class="form-control" placeholder="Nom" required="required" />
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control" placeholder="Téléphone ou Email" required="required" />
+                                <input type="email" class="form-control" placeholder="{{__('Votre Telephone ou Email')}}" required="required" />
                             </div>
                             <div>
                                 <button class="btn btn-custom" type="submit">

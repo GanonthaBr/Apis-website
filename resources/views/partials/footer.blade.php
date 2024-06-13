@@ -55,12 +55,12 @@
           <div class="row">
               <div class="col-md-6">
                   <p>
-                      {{Date('Y')}} &copy; <a href="https://apis-sahel.org">{{config('app.name')}} </a>,{{__(' Tout Droit réservé.')}}
+                      {{Date('Y')}} &copy; <a href="https://apis-sahel.org">{{config('app.name')}} </a>,{{__('Tout Droit réservé')}}
                   </p>
               </div>
               <div class="col-md-6">
                   <p>
-                     {{__(' Conçu par')}}
+                     {{__('Conçu par')}}
                       <a target="_blank" href="https://www.linkedin.com/in/bruno-ganontha-payang/"> <strong>Ganontha Payang Bruno</strong> </a>
                   </p>
               </div>

@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>{{__('Nos événements')}}</h2>
+                <h2>{{__('Nos évenements')}}</h2>
             </div>
             <div class="col-12">
                 <a href="/">{{__('Accueil')}}</a>

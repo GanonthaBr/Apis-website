@@ -228,4 +228,12 @@
     $("#closeModal").click(function () {
         $("#sendMessageButton").html("Envoyer Message");
     });
+
+    //language switching
+    // I have two a in the language switching div, I want to add active class to one if it is clicked and active and instantly remove the active from the second
+    // $(".language-switch a").click(function () {
+    //     if (!$(this).hasClass("active")) {
+    //         $(".language-switch a").toggleClass("active");
+    //     }
+    // });
 })(jQuery);

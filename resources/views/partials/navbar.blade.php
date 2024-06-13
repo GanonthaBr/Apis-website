@@ -12,7 +12,7 @@
                 <a href="/" class="nav-item nav-link  {{ Request::is('/') ? 'active' : '' }}">{{__('Accueil')}}</a>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle {{ Request::is('about*') ? 'active' : '' }}" data-toggle="dropdown">Qui sommes-nous?</a>
+                    <a href="#" class="nav-link dropdown-toggle {{ Request::is('about*') ? 'active' : '' }}" data-toggle="dropdown">{{__('Qui sommes-nous?')}} </a>
                     <div class="dropdown-menu">
                         <a href="{{route('about.index')}}" class="dropdown-item">{{__('Mot du Secrétaire')}}</a>
                         <a href="{{route('about.index')}}" class="dropdown-item">{{__('Notre histoire')}}</a>

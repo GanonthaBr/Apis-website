@@ -11,7 +11,7 @@
                           {{__('Sécurité alimentaire description')}}
                        </p>
                        <div class="carousel-btn">
-                           <a class="btn btn-custom" href="#donate">Faire un Don</a>
+                           <a class="btn btn-custom" href="#donate">{{__('Faire un Don')}} </a>
                            <a type="button" class="btn btn-custom btn-primary" data-toggle="modal" data-video="https://www.youtube.com/embed/vdHT9kJVIN0?si=1V3wq8tfxMc1_gfe" data-target="#videoModal">{{__('Voir Vidéo')}}</a>
                        </div>
                    </div>

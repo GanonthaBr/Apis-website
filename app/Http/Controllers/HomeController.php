@@ -15,6 +15,10 @@ class HomeController extends Controller
 {
     public function index()
     {
+        // Check if the session variable 'key' is not set and set a default value
+        if (!session()->has('locale')) {
+            session(['locale' => 'fr']);
+        }
         // $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
         $blogs = Blog::latest()->limit(3)->get();
         $stats = Stats::all();

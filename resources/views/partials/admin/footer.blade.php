@@ -5,7 +5,7 @@
   </div>
   <div class="credits">
     {{__('Conçu par')}}
-    <a target="_blank" href="https://www.linkedin.com/in/bruno-ganontha-payang/"> <strong>Bruno Ganontha</strong> </a>
+    <a target="_blank" href="https://www.linkedin.com/in/bruno-ganontha-payang/"> <strong>Ganontha</strong> </a>
   </div>
   <div class="credits">
    
