@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Causes;
 use App\Models\Stats;
 use App\Models\Events;
+use App\Models\Partners;
 use App\Models\Report;
 use App\Models\Testimonials;
 use Exception;
@@ -25,9 +26,10 @@ class HomeController extends Controller
         $causes = Causes::all();
         $testimonials = Testimonials::all();
         $events = Events::orderBy('created_at', 'desc')->take(2)->get();
+        $partners = Partners::all();
 
 
-        return view('home', ['events' => $events, 'stats' => $stats, 'causes' => $causes, 'blogs' => $blogs, 'testimonials' => $testimonials,]);
+        return view('home', ['events' => $events, 'stats' => $stats, 'partners' => $partners, 'causes' => $causes, 'blogs' => $blogs, 'testimonials' => $testimonials,]);
     }
     public function getStats()
     {

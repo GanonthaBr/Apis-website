@@ -16,7 +16,7 @@ use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\DomaineInterventionController;
-
+use App\Http\Controllers\PartnersController;
 
 //Language Switch
 Route::get('/lang/{locale}', function ($locale) {
@@ -106,6 +106,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/allreports', [AdminDashboardController::class, 'allreports'])->name('admin.allreports');
     Route::get('/allcauses', [AdminDashboardController::class, 'allcauses'])->name('admin.allcauses');
     Route::get('/createCause', [AdminDashboardController::class, 'createCause'])->name('admin.createcause');
+    Route::get('/allpartners', [AdminDashboardController::class, 'allpartners'])->name('admin.allpartners');
 });
 
 
@@ -114,13 +115,19 @@ Route::get('/causes', [CausesController::class, 'index'])->name('allcauses');
 Route::get('/createcause', [CausesController::class, 'create'])->name('causes.create');
 Route::post('/causes', [CausesController::class, 'store'])->name('causes.store');
 Route::delete('/cause/{id}', [CausesController::class, 'destroy'])->name('causes.destroy');
-Route::get('/causes/{id}', [CausesController::class, 'edit'])->name('causes.edit');
+Route::get('/causes/{id}/edit', [CausesController::class, 'edit'])->name('causes.edit');
 Route::put('/causes/{id}', [CausesController::class, 'update'])->name('causes.update');
 
 // comments
 Route::post('/comments', [CommentsController::class, 'store'])->name('comments.store');
 Route::delete('/comment/{id}', [CommentsController::class, 'destroy'])->name('comments.destroy');
 
+//Partners
+Route::get('/partners/create', [PartnersController::class, 'create'])->name('partners.create');
+Route::post('/partners', [PartnersController::class, 'store'])->name('partners.store');
+Route::put('/partner/{id}', [PartnersController::class, 'update'])->name('partner.update');
+Route::get('/partner/{id}/edit', [PartnersController::class, 'edit'])->name('partner.edit');
+Route::delete('/partner/{id}', [PartnersController::class, 'destroy'])->name('partner.destroy');
 
 
 Auth::routes();

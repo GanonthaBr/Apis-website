@@ -86,6 +86,25 @@
      </li>
      <li class="nav-item">
        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+         <i class="bi bi-collection-fill"></i><span>{{__('Partners')}} </span><i class="bi bi-chevron-down ms-auto"></i>
+       </a>
+       <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+         <li>
+           <a href="{{route('admin.allpartners')}}">
+             <i class="bi bi-circle"></i><span>{{__('Liste des Partenaires')}} </span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link collapsed" href="{{route('partners.create')}}">
+             <i class="bi bi-inbox"></i>
+             <span>{{__('Ajouter un partenaire')}} </span>
+           </a>
+         </li>
+       </ul>
+     </li>
+
+     <li class="nav-item">
+       <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
          <i class="bi bi-collection-fill"></i><span>{{__('Causes')}} </span><i class="bi bi-chevron-down ms-auto"></i>
        </a>
        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">

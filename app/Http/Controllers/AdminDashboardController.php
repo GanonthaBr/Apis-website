@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Models\BlogImages;
 use App\Models\Causes;
 use App\Models\Events;
 use App\Models\Report;
 use App\Models\Contact;
+use App\Models\Partners;
+use App\Models\BlogImages;
 use App\Models\Testimonials;
 use Illuminate\Http\Request;
 
@@ -71,5 +72,12 @@ class AdminDashboardController extends Controller
     {
         $causes = Causes::all();
         return view('partials.admin.causes_list', ['causes' => $causes]);
+    }
+
+    // all partners
+    public function allpartners()
+    {
+        $partners = Partners::all();
+        return view('partials.admin.partners_list', ['partners' => $partners]);
     }
 }

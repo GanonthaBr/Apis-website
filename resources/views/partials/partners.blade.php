@@ -11,21 +11,13 @@
         
     </div>
     <div class="row partner-list d-flex p-sm-3 m-lg-3 pl-lg-2 align-items-center">
-        <div class="col-lg-4 col-md-6">
-            <div class="partner-item" data-alt="{{__('World Food Program')}}">
-                <img src="{{asset('img/partners/wfp.png')}}" alt="World Food Program">
+       @foreach ($partners as $partner)
+            <div class="col-lg-4 col-md-6">
+            <div class="partner-item" data-alt="{{$partner->name}}">
+                <img src="{{asset('storage/' . $partner->image)}}" alt="World Food Program">
             </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="partner-item" data-alt="{{__('World Vision')}}">
-                <img src="{{asset('img/partners/worldvision.png')}}" alt="World Vision">
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="partner-item" data-alt="{{__('Concern WorldWide')}}">
-                <img src="{{asset('img/partners/Concern WorldWide logo.png')}}" alt="Concern WorldWide">
-            </div>
-            
-        </div>
+       @endforeach
+       
     </div>
 </div>
