@@ -80,13 +80,18 @@ a:focus {
 .partners {
     background: #f3f6ff;
 }
+.partner-list {
+    margin-left: 3rem;
+}
 .partner-item img {
     height: 120px;
     width: 150px;
     border-radius: 10px;
+    margin-top: 0.5rem;
 }
 .partner-item {
     position: relative;
+    margin-bottom: 2rem;
     display: inline-block; /* Or block, depending on your layout */
 }
 

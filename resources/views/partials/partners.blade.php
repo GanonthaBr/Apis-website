@@ -10,7 +10,7 @@
         </div>
         
     </div>
-    <div class="row d-flex m-lg-3 pl-lg-2 align-items-center">
+    <div class="row partner-list d-flex p-sm-3 m-lg-3 pl-lg-2 align-items-center">
         <div class="col-lg-4 col-md-6">
             <div class="partner-item" data-alt="{{__('World Food Program')}}">
                 <img src="{{asset('img/partners/wfp.png')}}" alt="World Food Program">
