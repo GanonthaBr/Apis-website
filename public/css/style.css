@@ -76,6 +76,37 @@ a:focus {
     width: 100%;
 }
 
+/* partners */
+.partners {
+    background: #f3f6ff;
+}
+.partner-item img {
+    height: 120px;
+    width: 150px;
+    border-radius: 10px;
+}
+.partner-item {
+    position: relative;
+    display: inline-block; /* Or block, depending on your layout */
+}
+
+.partner-item::after {
+    content: attr(data-alt);
+    position: absolute;
+    left: 0;
+    bottom: 100%; /* Adjust these values as needed */
+    white-space: nowrap;
+    display: none;
+    padding: 5px;
+    color: #17468a;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.partner-item:hover::after {
+    display: block;
+}
+
 .footer a:hover,
 .footer a:active,
 .footer a:focus {
