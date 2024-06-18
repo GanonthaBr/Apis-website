@@ -33,7 +33,7 @@
                     @endif
         
         </div>
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-12">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled"><a class="page-link" href="">{{__('Previous')}}</a></li>
@@ -43,7 +43,7 @@
                     <li class="page-item"><a class="page-link" href="{{route('blogs.index')}}">{{__('Next')}}</a></li>
                 </ul>
             </div>
-        </div>
+        </div> --}}
         </div>
         </div>
         <!-- Blog End -->
