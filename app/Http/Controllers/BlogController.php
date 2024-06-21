@@ -6,11 +6,12 @@ namespace App\Http\Controllers;
 use HTMLPurifier;
 use App\Models\Blog;
 use HTMLPurifier_Config;
+use App\Events\BlogPosted;
 use App\Models\BlogImages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Dotenv\Exception\ValidationException;
 use Illuminate\Support\Facades\Storage;
+use Dotenv\Exception\ValidationException;
 
 class BlogController extends Controller
 {
@@ -78,7 +79,7 @@ class BlogController extends Controller
                 }
             }
             //register Listener
-            // event(new BlogPosted($blog));
+            event(new BlogPosted($blog));
             return redirect()->route('admin.allblogs')->with('blog-created', 'Votre blog post été ajouté avec succès!');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
