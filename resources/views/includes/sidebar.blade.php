@@ -18,7 +18,7 @@
                                             <img src="{{asset('storage/' . $blog -> image)}}" />
                                         </div>
                                         <div class="post-text domaine-links">
-                                            <a href="{{route('blogs.show',['id'=>$blog->id])}}"> {{ substr($blog -> content,0,60) }}... </a>
+                                            <a href="{{route('blogs.show',['id'=>$blog->id])}}"> {!! substr($blog -> content,0,60) !!}... </a>
                                             <div class="post-meta">
                                                 <p>{{__('Par')}} <a href="">{{__('Admin')}}</a></p>
                                                 <p>{{__('Sur')}} <a href="">{{__('APIS Sahel')}}</a></p>
