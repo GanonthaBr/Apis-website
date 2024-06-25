@@ -14,7 +14,7 @@
 
    <div style="border: 1px solid #11579c; padding: 10px;" >
        <p><b>{{__('Message:')}}</b></p>
-       <p>{{ $content }}</p>
+       <p>{!! $content !!}</p>
    </div>
  
   
