@@ -35,7 +35,6 @@
                     </p>
 
                     <h3>{{__('Plus dimages')}}</h3>
-                    {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
                     <div class="row">
                         @if($blog->images->count()==0)
                         <div class="m-4">
