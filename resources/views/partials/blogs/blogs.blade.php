@@ -5,7 +5,6 @@
                     <p>{{__('Nos Actualités')}}</p>
                     <h2>{{__('Découvrez nos dernières actualités à travers de blogs posts.')}}</h2>
                 </div>
-                {{-- @include('partials.blogs.blog-content') --}}
                 <div class="row">
                     @if($blogs->count())
                     @foreach ($blogs as $blog)
@@ -33,17 +32,7 @@
                     @endif
         
         </div>
-        {{-- <div class="row">
-            <div class="col-12">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled"><a class="page-link" href="">{{__('Previous')}}</a></li>
-                    <li class="page-item"><a class="page-link" href="">1</a></li>
-                    <li class="page-item active"><a class="page-link" href="">2</a></li>
-                    <li class="page-item"><a class="page-link" href="">3</a></li>
-                    <li class="page-item"><a class="page-link" href="{{route('blogs.index')}}">{{__('Next')}}</a></li>
-                </ul>
-            </div>
-        </div> --}}
+    
         </div>
         </div>
         <!-- Blog End -->

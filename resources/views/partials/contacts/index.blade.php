@@ -13,8 +13,6 @@
             <div class="col-12">
                 <a href="/">{{ __('accueil') }}</a>
                 <a href="/contacts">{{__('contacts')}}</a>
-
-              
             </div>
         </div>
     </div>
@@ -93,10 +91,9 @@
                     <li><i class="fa fa-map-marker"></i>{{__(' Avenue Korey bongou')}}</li>
                     <li><i class="fa fa-phone"></i> (+227) 20724108 - 96410772</li>
                     <li><i class="fa fa-envelope"></i> contact@apis-sahel.org </li>
-                    {{-- <li><iframe src="" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li> --}}
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed/v1/place?q=ONG+APIS,+Niamey,+Niger&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-</div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed/v1/place?q=ONG+APIS,+Niamey,+Niger&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                    </div>
                 </ul>
                 {{-- social media --}}
                 <h5 class="text-center">{{__('Nous Suivre sur les Reseaux Sociaux')}}</h5> <br>
