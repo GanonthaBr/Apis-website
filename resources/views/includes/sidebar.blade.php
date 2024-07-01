@@ -32,7 +32,7 @@
                                 <div class="image-widget">
                                     @php
                                     $latestBlog = $blogs->sortByDesc('created_at')->first();
-                                    $firstBlog = $blogs->sortBy('created_at')->first();
+                                    $firstBlog = $events->sortBy('created_at')->first();
                                     @endphp
 
                                    @if($latestBlog)
@@ -63,7 +63,7 @@
                             <div class="sidebar-widget">
                                 <div class="image-widget">
                                     @if($firstBlog)
-                                    <a href="{{ route('blogs.show', ['id' => $firstBlog->id]) }}"><img src="{{asset('storage/' . $firstBlog->image)}}" alt="{{ $latestBlog->title }}"></a>
+                                    <a href="{{ route('events.show', ['id' => $firstBlog->id]) }}"><img src="{{asset('storage/' . $firstBlog->image)}}" alt="{{ $latestBlog->title }}"></a>
                                     @else
                                     <p>{{__('No blogs found.')}}</p>
                                     @endif
@@ -82,13 +82,6 @@
                                     </ul>
                                 </div>
                             </div>
-
-                            {{-- <div class="sidebar-widget">
-                                <div class="image-widget">
-                                    <a href="#"><img src="img/blog-3.jpg" alt="Image"></a>
-                                </div>
-                            </div> --}}
-
                              <div class="sidebar-widget">
                                 <h2 class="widget-title">{{__('Liens Importants')}}</h2>
                                 <div class="tag-widget">
@@ -97,14 +90,5 @@
                                     <a href="{{route('contacts.index')}}">{{__('Contact')}}</a>
                                 </div>
                             </div>
-
-                            {{-- <div class="sidebar-widget">
-                                <h2 class="widget-title">Text Widget</h2>
-                                <div class="text-widget">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea nec eros. Nunc eu enim non turpis id augue.
-                                    </p>
-                                </div>
-                            </div> --}}
                         </div>
                     </div>
