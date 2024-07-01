@@ -32,7 +32,7 @@
                                 <div class="image-widget">
                                     @php
                                     $latestBlog = $blogs->sortByDesc('created_at')->first();
-                                    $firstBlog = $events->sortBy('created_at')->first();
+                                    $firstEvent = $events->sortBy('created_at')->first();
                                     @endphp
 
                                    @if($latestBlog)
@@ -62,8 +62,8 @@
 
                             <div class="sidebar-widget">
                                 <div class="image-widget">
-                                    @if($firstBlog)
-                                    <a href="{{ route('events.show', ['id' => $firstBlog->id]) }}"><img src="{{asset('storage/' . $firstBlog->image)}}" alt="{{ $latestBlog->title }}"></a>
+                                    @if($firstEvent)
+                                    <a href="{{ route('events.show', ['id' => $firstEvent->id]) }}"><img src="{{asset('storage/' . $firstEvent->image)}}" alt="{{ $latestBlog->title }}"></a>
                                     @else
                                     <p>{{__('No blogs found.')}}</p>
                                     @endif
