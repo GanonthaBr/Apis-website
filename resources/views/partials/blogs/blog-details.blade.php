@@ -1,6 +1,14 @@
 @extends('layouts.layout')
 @section('content')
 @include('includes.topbar')
+@if(Session::has('error'))
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="z-index: 100000" >
+    {{Session::get('error')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
 @include('includes.navbar')
 
 

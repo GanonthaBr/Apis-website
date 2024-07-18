@@ -25,6 +25,8 @@ class CommentsController extends Controller
             $comment->comment = $request->comment;
             $comment->save();
             return redirect()->back();
+        } catch (\Throwable) {
+            return back()->with('error', 'une erreur est survenue');
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
