@@ -16,20 +16,24 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Check if the session variable 'key' is not set and set a default value
-        if (!session()->has('locale')) {
-            session(['locale' => 'fr']);
+        try {
+            // Check if the session variable 'key' is not set and set a default value
+            if (!session()->has('locale')) {
+                session(['locale' => 'fr']);
+            }
+            // $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+            $blogs = Blog::latest()->limit(3)->get();
+            $stats = Stats::all();
+            $causes = Causes::all();
+            $testimonials = Testimonials::all();
+            $events = Events::orderBy('created_at', 'desc')->take(2)->get();
+            $partners = Partners::all();
+
+
+            return view('home', ['events' => $events, 'stats' => $stats, 'partners' => $partners, 'causes' => $causes, 'blogs' => $blogs, 'testimonials' => $testimonials,]);
+        } catch (\Throwable $e) {
+            return redirect()->route('home')->with('error', 'Une erreur est survenue');
         }
-        // $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
-        $blogs = Blog::latest()->limit(3)->get();
-        $stats = Stats::all();
-        $causes = Causes::all();
-        $testimonials = Testimonials::all();
-        $events = Events::orderBy('created_at', 'desc')->take(2)->get();
-        $partners = Partners::all();
-
-
-        return view('home', ['events' => $events, 'stats' => $stats, 'partners' => $partners, 'causes' => $causes, 'blogs' => $blogs, 'testimonials' => $testimonials,]);
     }
     public function getStats()
     {
@@ -44,14 +48,18 @@ class HomeController extends Controller
     // update stats with  nombre de beneficiaires aides, nombre de departement intervenus, nombre d'annees d'existence, nombre de communes aides 
     public function update(Request $request, $id)
     {
-        $stats = Stats::find($id);
-        $stats->number_of_beneficiaries = $request->beneficiaires;
-        $stats->departments_helped = $request->departments;
-        $stats->year_of_experience = $request->year;
-        $stats->communities_helped = $request->communities;
-        $stats->save();
+        try {
+            $stats = Stats::find($id);
+            $stats->number_of_beneficiaries = $request->beneficiaires;
+            $stats->departments_helped = $request->departments;
+            $stats->year_of_experience = $request->year;
+            $stats->communities_helped = $request->communities;
+            $stats->save();
 
-        return redirect()->route('stats')->with('stats-updated', 'Stats updated successfully');
+            return redirect()->route('stats')->with('stats-updated', 'Stats updated successfully');
+        } catch (\Throwable $e) {
+            return redirect()->route('stats')->with('error', 'An error occured while updating the stats');
+        }
     }
     //report list
     public function reportList()
@@ -91,6 +99,8 @@ class HomeController extends Controller
             $report->save();
 
             return redirect()->route('admin.allreports')->with('report-created', 'Report created successfully');
+        } catch (\Throwable $e) {
+            return redirect()->route('admin')->with('error', 'une erreur est survenue');
         } catch (Exception $e) {
             return redirect()->route('admin.allreports')->with('report-error', 'An error occured while creating the report');
         }
@@ -98,9 +108,13 @@ class HomeController extends Controller
     // delete a report with id
     public function destroy($id)
     {
-        $report = Report::findOrFail($id);
-        $report->delete();
-        return redirect()->route('admin.allreports')->with('report-deleted', 'Report has been deleted');
+        try {
+            $report = Report::findOrFail($id);
+            $report->delete();
+            return redirect()->route('admin.allreports')->with('report-deleted', 'Report has been deleted');
+        } catch (\Throwable $e) {
+            return redirect()->route('admin')->with('report-error', 'An error occured while deleting the report');
+        }
     }
     // edit a report
     public function reportEdit($id)
@@ -133,6 +147,8 @@ class HomeController extends Controller
             }
             $report->save();
             return redirect()->route('admin.allreports')->with('report-updated', 'Report updated successfully');
+        } catch (\Throwable $e) {
+            return redirect()->route('admin')->with('error', 'une erreur est survenue');
         } catch (Exception $e) {
             return redirect()->route('admin.allreports')->with('report-error', 'An error occured while updating the report');
         }
