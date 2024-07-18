@@ -17,13 +17,18 @@ class ContactController extends Controller
     //show
     public function show($id)
     {
-        $message = Contact::find($id);
-        if ($message) {
-            //set the 'read' field to 1
-            $message->read = 1;
-            $message->save();
+        try {
+            $message = Contact::find($id);
+            if ($message) {
+                //set the 'read' field to 1
+                $message->read = 1;
+                $message->save();
+            }
+            return view('partials.admin.message_detail', ['message' => $message]);
+        } catch (\Throwable $e) {
+            // handle the exception
+            return redirect()->route('admin')->with('error', 'Une erreur est survenue');
         }
-        return view('partials.admin.message_detail', ['message' => $message]);
     }
     //remove a message
     public function destroy($id)
