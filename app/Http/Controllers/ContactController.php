@@ -77,6 +77,8 @@ class ContactController extends Controller
 
             //redirect
             return response()->json(['message' => 'Votre message a été envoyé avec succès!']);
+        } catch (\Throwable $e) {
+            return redirect()->route('home')->with('error', 'une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
