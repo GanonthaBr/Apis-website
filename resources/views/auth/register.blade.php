@@ -4,6 +4,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+              {{-- logo --}}
+            <div class="text-center mb-3">
+                <img src="{{ asset('img/apis.png') }}" alt="logo" class="img-fluid" width="250">
+            </div>
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
