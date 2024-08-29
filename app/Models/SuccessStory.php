@@ -14,4 +14,10 @@ class SuccessStory extends Model
         'image',
         'video',
     ];
+
+    // Relationship between tables
+    public function images()
+    {
+        return $this->hasMany('App\Models\SuccessStoryImages');
+    }
 }
