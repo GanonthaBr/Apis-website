@@ -9,6 +9,7 @@ use App\Models\Report;
 use App\Models\Contact;
 use App\Models\Partners;
 use App\Models\BlogImages;
+use App\Models\SuccessStory;
 use App\Models\Testimonials;
 use Illuminate\Http\Request;
 
@@ -79,5 +80,11 @@ class AdminDashboardController extends Controller
     {
         $partners = Partners::all();
         return view('partials.admin.partners_list', ['partners' => $partners]);
+    }
+    //all success stories
+    public function allSuccessStories()
+    {
+        $success_stories = SuccessStory::all();
+        return view('partials.admin.success_story_list', ['success_stories' => $success_stories]);
     }
 }
