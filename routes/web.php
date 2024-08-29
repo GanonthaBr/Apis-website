@@ -10,13 +10,14 @@ use App\Http\Controllers\CausesController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\PartnersController;
 use App\Http\Middleware\LangDynamicSwitching;
 use App\Http\Controllers\NewsLetterController;
+use App\Http\Controllers\SuccessStoryController;
 use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\DomaineInterventionController;
-use App\Http\Controllers\PartnersController;
 
 //Language Switch
 Route::get('/lang/{locale}', function ($locale) {
@@ -107,6 +108,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/allcauses', [AdminDashboardController::class, 'allcauses'])->name('admin.allcauses');
     Route::get('/createCause', [AdminDashboardController::class, 'createCause'])->name('admin.createcause');
     Route::get('/allpartners', [AdminDashboardController::class, 'allpartners'])->name('admin.allpartners');
+    Route::get('/allsuccessstories', [AdminDashboardController::class, 'allSuccessStories'])->name('admin.allSuccessStories');
 });
 
 
@@ -133,4 +135,12 @@ Route::delete('/partner/{id}', [PartnersController::class, 'destroy'])->name('pa
 Auth::routes();
 Route::post('/register-from-blog', [RegisterController::class, 'registerBlog'])->name('registerFromBlog');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    // });
+// });
+
+//Success Story
+Route::get('/success_story', [SuccessStoryController::class, 'index'])->name('success_story.index');
+Route::get('/createstory', [SuccessStoryController::class, 'create'])->name('success_story.create');
+Route::post('/success_story', [SuccessStoryController::class, 'store'])->name('success_story.store');
+Route::get('/success_story/{id}/edit', [SuccessStoryController::class, 'edit'])->name('success_story.edit');
+Route::put('/success_story/{id}', [SuccessStoryController::class, 'update'])->name('success_story.update');
+Route::delete('/success_story/{id}', [SuccessStoryController::class, 'destroy'])->name('success_story.destroy');
