@@ -95,6 +95,7 @@ class RegisterController extends Controller
     //register from blog
     public function registerBlog(Request $request)
     {
+        dd($request);
         try {
             //valide the request data
             $request->validate([

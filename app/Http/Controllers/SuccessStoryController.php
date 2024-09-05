@@ -26,7 +26,7 @@ class SuccessStoryController extends Controller
     //create
     public function create()
     {
-        return view('partails.admin.success_story.create');
+        return view('partials.admin.success_story.create');
     }
     //store
     public function store(Request $request)
@@ -37,6 +37,7 @@ class SuccessStoryController extends Controller
             $request->validate([
                 'title' => 'required',
                 'description' => 'required',
+                'video' => 'nullable',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                 'images.*' => 'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:4096'
             ]);
@@ -55,6 +56,7 @@ class SuccessStoryController extends Controller
             $success_story->title = $request->title;
             $success_story->description = $clean_description;
             $success_story->image = $imagePath;
+            $success_story->video = $request->video;
             $success_story->save();
 
             // add more images if request contains images
@@ -66,9 +68,9 @@ class SuccessStoryController extends Controller
             }
 
             //return
-            return redirect()->route('admin.allsucessStories')->with('success', 'Success Story created successfully');
+            return redirect()->route('admin.allSuccessStories')->with('success', 'Success Story created successfully');
         } catch (\Throwable $e) {
-            return redirect()->route('admin.allsuccessStories')->with('error', 'Une erreur est survenue');
+            return redirect()->route('admin.allSuccessStories')->with('error', 'Une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
