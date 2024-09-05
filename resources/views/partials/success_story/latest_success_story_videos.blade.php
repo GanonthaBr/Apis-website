@@ -9,12 +9,14 @@
 
     </div>
     <div class="row p-4">
+        @foreach($success_stories as $success_story)
         <div class="col-lg-1"></div>
         <div class="col-lg-10 m-4" style="width: 300px">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="200" height="100" src="https://www.youtube.com/embed/YO4h8zVUNHU?si=xsZavUe0DzBL3ORt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="200" height="100" src="{{$success_story->video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         <div class="col-lg-1"></div>
+        @endforeach
     </div>
 </div>
