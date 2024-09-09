@@ -2,7 +2,7 @@
 
 @section('admin-content')
 <main class="main" id="main">
-    {{-- create Bootstrap table with three columns --}}
+
     <div class="container-fluid px-4">
         <h1 class="mt-4">{{__('Liste des blogs')}} </h1>
         {{-- display success message if blog is created --}}
