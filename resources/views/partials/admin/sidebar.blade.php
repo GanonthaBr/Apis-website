@@ -1,13 +1,14 @@
  <aside id="sidebar" class="sidebar">
 
    <ul class="sidebar-nav" id="sidebar-nav">
-
+    {{-- Blogs articles starts --}}
      <li class="nav-item">
        <a class="nav-link " href="{{route('admin')}}">
          <i class="bi bi-grid"></i>
          <span>{{__('Dashboard')}} </span>
        </a>
      </li>
+     {{-- Blog articles ends --}}
      <!-- End Dashboard Nav -->
 
      <li class="nav-item">
@@ -28,7 +29,7 @@
        </ul>
      </li>
      <!-- End Components Nav -->
-
+     {{-- Evenements starts --}}
      <li class="nav-item">
        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
          <i class="bi bi-journal-text"></i><span>{{__('Evénement')}} </span><i class="bi bi-chevron-down ms-auto"></i>
@@ -46,8 +47,9 @@
          </li>
        </ul>
      </li>
+     {{-- Evenements ends --}}
      <!-- End Forms Nav -->
-
+      {{-- Temoignages starts --}}
      <li class="nav-item">
        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
          <i class="bi bi-layout-text-window-reverse"></i><span>{{__('Temoignages')}} </span><i class="bi bi-chevron-down ms-auto"></i>
@@ -65,7 +67,8 @@
          </li>
        </ul>
      </li>
-     
+     {{-- Temoignages ends --}}
+     {{-- Rapport starts --}}
      <li class="nav-item">
        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
          <i class="bi bi-collection-fill"></i><span>{{__('Rapports')}} </span><i class="bi bi-chevron-down ms-auto"></i>
@@ -84,6 +87,8 @@
          </li>
        </ul>
      </li>
+     {{-- Rapports ends --}}
+     {{-- Partners starts --}}
      <li class="nav-item">
        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
          <i class="bi bi-collection-fill"></i><span>{{__('Partners')}} </span><i class="bi bi-chevron-down ms-auto"></i>
@@ -102,7 +107,9 @@
          </li>
        </ul>
      </li>
+     {{-- Partners ends --}}
 
+     {{-- Cause starts --}}
      <li class="nav-item">
        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
          <i class="bi bi-collection-fill"></i><span>{{__('Causes')}} </span><i class="bi bi-chevron-down ms-auto"></i>
@@ -121,6 +128,27 @@
          </li>
        </ul>
      </li>
+     {{-- Cause ends --}}
+     {{-- Success story starts --}}
+     <li class="nav-item">
+       <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+         <i class="bi bi-collection-fill"></i><span>{{__('Success Story')}} </span><i class="bi bi-chevron-down ms-auto"></i>
+       </a>
+       <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+         <li>
+           <a href="{{route('admin.allSuccessStories')}}">
+             <i class="bi bi-circle"></i><span>{{__('Liste des Success Story')}} </span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link collapsed" href="{{route('success_story.create')}}">
+             <i class="bi bi-inbox"></i>
+             <span>{{__('Ajouter un nouveau Success Story')}} </span>
+           </a>
+         </li>
+       </ul>
+     </li>
+     {{-- Success stiry ends --}}
      <!-- End Tables Nav -->
 
 
