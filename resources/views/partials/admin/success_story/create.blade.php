@@ -1,13 +1,13 @@
 @extends('layouts.admin_layout')
 @section('admin-content')
 <main class="main" id="main">
-    {{-- create a form to add new blog with title, image and content --}}
+    {{-- create a form to add new SS --}}
     <div class="container-fluid px-4">
-        <h1 class="mt-4">{{__('Ajouter un blog')}} </h1>
-        {{-- display success message if blog is created --}}
-        @if (session()->has('blog-created'))
+        <h1 class="mt-4">{{__('Ajouter un Success Story')}} </h1>
+        {{-- display success message if SS is created --}}
+        @if (session()->has('story-success'))
         <div class="alert alert-success" role="alert">
-            {{ session()->get('blog-created') }}
+            {{ session()->get('story-success') }}
         </div>
         @endif
         {{-- create form --}}

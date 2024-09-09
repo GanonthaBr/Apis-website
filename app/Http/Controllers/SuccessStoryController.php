@@ -68,9 +68,9 @@ class SuccessStoryController extends Controller
             }
 
             //return
-            return redirect()->route('admin.allSuccessStories')->with('success', 'Success Story created successfully');
+            return redirect()->route('admin.allSuccessStories')->with('story-success', 'Success Story created successfully');
         } catch (\Throwable $e) {
-            return redirect()->route('admin.allSuccessStories')->with('error', 'Une erreur est survenue');
+            return redirect()->route('admin.allSuccessStories')->with('story-error', 'Une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
