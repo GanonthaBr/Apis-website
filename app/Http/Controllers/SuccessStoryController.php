@@ -80,7 +80,7 @@ class SuccessStoryController extends Controller
     {
         $success_story = SuccessStory::findOrFail($id);
 
-        return view('partails.admin.success_story.edit', ['success_story' => $success_story]);
+        return view('partials.admin.success_story.edit', ['success_story' => $success_story]);
     }
     //update
     public function update(Request $request, $id)
@@ -90,6 +90,7 @@ class SuccessStoryController extends Controller
             $request->validate([
                 'title' => 'required',
                 'description' => 'required',
+                'video' => 'nullable',
                 'image' => 'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:4096',
                 'images.*' => 'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:4096'
             ]);
@@ -104,6 +105,7 @@ class SuccessStoryController extends Controller
             $success_story = SuccessStory::findOrFail($id);
             $success_story->title = $request->title;
             $success_story->description = $clean_description;
+            $success_story->video = $request->video;
             if ($request->hasFile('image')) {
                 $imagePath = $request->file('image')->store('success_story_images', 'public');
                 $success_story->image = $imagePath;
@@ -120,9 +122,10 @@ class SuccessStoryController extends Controller
             }
             //save success_story after updating
             $success_story->save();
-            return redirect()->route('admin.allsuccessStories')->with('success', 'Success Story updated successfully');
+            return redirect()->route('admin.allSuccessStories')->with('update-success', 'Success Story updated successfully');
         } catch (\Throwable $e) {
-            return redirect()->route('admin.allsuccessStories')->with('error', 'Une erreur est survenue');
+            dd($e->getMessage());
+            return redirect()->route('admin.allSuccessStories')->with('update-error', 'Une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }

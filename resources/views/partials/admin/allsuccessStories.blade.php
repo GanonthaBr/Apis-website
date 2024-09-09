@@ -6,15 +6,20 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">{{__('Liste des Success Story')}} </h1>
         {{-- display success message if success_story is created --}}
-        @if (session()->has('story-success'))
+        @if (session()->has('update-success'))
         <div class="alert alert-success" role="alert">
-            {{ session()->get('story-success') }}
+            {{ session()->get('update-success') }}
         </div>
         @endif
         {{-- display success message if success_story is deleted --}}
         @if (session()->has('delete-success'))
         <div class="alert alert-success" role="alert">
             {{ session()->get('delete-success') }}
+        </div>
+        @endif
+        @if (session()->has('update-error'))
+        <div class="alert alert-danger" role="alert">
+            {{ session()->get('update-error') }}
         </div>
         @endif
 
