@@ -14,7 +14,7 @@ class SuccessStoryController extends Controller
     {
         $success_story_list = SuccessStory::all();
 
-        return view('partails.success_story.index', ['success_story_list' => $success_story_list]);
+        return view('partials.success_story.index', ['success_story_list' => $success_story_list]);
     }
     //show
     public function show($id)

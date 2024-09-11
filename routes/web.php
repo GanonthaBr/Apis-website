@@ -141,6 +141,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/success_story', [SuccessStoryController::class, 'index'])->name('success_story.index');
 Route::get('/createstory', [SuccessStoryController::class, 'create'])->name('success_story.create');
 Route::post('/success_story', [SuccessStoryController::class, 'store'])->name('success_story.store');
+Route::get('/success_story/{id}', [SuccessStoryController::class, 'show'])->name('success_story.show');
 Route::get('/success_story/{id}/edit', [SuccessStoryController::class, 'edit'])->name('success_story.edit');
 Route::put('/success_story/{id}', [SuccessStoryController::class, 'update'])->name('success_story.update');
 Route::delete('/success_story/{id}', [SuccessStoryController::class, 'destroy'])->name('success_story.destroy');
