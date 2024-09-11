@@ -65,7 +65,7 @@
         </div>
         <div class="mb-3">
           <label for="video" class="form-label">{{__('Video')}} </label>
-          <input type="file" class="form-control" id="video" name="video">
+          <input type="text" class="form-control" id="video" name="video">
         </div>
         
         <div class="mb-3">

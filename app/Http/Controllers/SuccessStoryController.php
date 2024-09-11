@@ -125,7 +125,7 @@ class SuccessStoryController extends Controller
             $success_story->save();
             return redirect()->route('admin.allSuccessStories')->with('update-success', 'Success Story updated successfully');
         } catch (\Throwable $e) {
-            dd($e->getMessage());
+            // dd($e->getMessage());
             return redirect()->route('admin.allSuccessStories')->with('update-error', 'Une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
