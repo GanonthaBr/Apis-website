@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <a href="{{route('events.index')}}" class="nav-item nav-link {{ Request::routeIs('events.index') ? 'active' : '' }}"> {{__('Événements')}}</a>
-                <a href="{{route('blogs.index')}}" class="nav-item nav-link {{ Request::routeIs('blogs.index') ? 'active' : '' }} ">{{__('Actualités')}}</a>
+                {{-- <a href="{{route('blogs.index')}}" class="nav-item nav-link {{ Request::routeIs('blogs.index') ? 'active' : '' }} ">{{__('Actualités')}}</a> --}}
                 <div class="nav-item dropdown">
                     <a href="#" class=" nav-link dropdown-toggle {{ Request::is('blogs*') ? 'active': '' }} " data-toggle="dropdown"> {{__('Actualités')}} </a>
                     <div class="dropdown-menu">
