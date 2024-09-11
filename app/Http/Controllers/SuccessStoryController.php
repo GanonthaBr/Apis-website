@@ -67,6 +67,7 @@ class SuccessStoryController extends Controller
                 }
             }
 
+
             //return
             return redirect()->route('admin.allSuccessStories')->with('story-success', 'Success Story created successfully');
         } catch (\Throwable $e) {
@@ -137,6 +138,6 @@ class SuccessStoryController extends Controller
         $success_story = SuccessStory::findOrFail($id);
         $success_story->delete();
 
-        return redirect()->route('admin.allsuccessStories')->with('delete-success', 'Success Story deleted successfully');
+        return redirect()->route('admin.allSuccessStories')->with('delete-success', 'Success Story deleted successfully');
     }
 }

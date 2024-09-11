@@ -22,6 +22,11 @@
                 <label for="image" class="form-label">{{__('Image')}} </label>
                 <input type="file" class="form-control" id="image" name="image">
             </div>
+            {{-- more images --}}
+            <div class="mb-3">
+                <label for="images" class="form-label">{{__('Plus dimages')}} </label>
+                <input type="file" class="form-control" id="images" name="images[]" multiple>
+            </div>
             <div class="mb-3">
                 <label for="video" class="form-label">{{__('Lien de la video')}} </label>
                 <input type="text" class="form-control" id="video" name="video">

@@ -85,6 +85,6 @@ class AdminDashboardController extends Controller
     public function allSuccessStories()
     {
         $success_stories = SuccessStory::all();
-        return view('partials.admin.allSuccessStories', ['success_stories' => $success_stories]);
+        return view('partials.admin.allsuccessStories', ['success_stories' => $success_stories]);
     }
 }
