@@ -126,6 +126,9 @@
 <!-- Debut des Blogs-->
 @include('partials.blogs.blogs')
 <!-- Fin des Blogs-->
+<!-- Debut des Success Story-->
+@include('partials.success_story.latest_success_story_videos')
+<!-- Fin des Success Story-->
 
 {{-- Partners--}}
 @include('partials.partners')

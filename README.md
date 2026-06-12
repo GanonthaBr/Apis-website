@@ -79,3 +79,23 @@ Step 1: Create Middleware
 Step 2: Register Middleware
 Step 3: Create a Route to Change Language
 Step 4: Use Links to Change Language
+
+SUCCESS STORY FEATURE
+
+The feature will highlight the benefiairies speechs after receiving help from the NGO.
+There will be two types of contents:
+
+-   images and text;
+-   video only
+    The videos will be displayed on the landing page at bottom after the blog section and the images associated with text will be in a separated page. A link to the page would be on the navigation menu
+
+IMPLEMENTATION
+The feature will be implemented following these steps:
+
+1. Create a new migration file to create a new table
+2. Create the table
+3. Create a new model for the success story: title, description, image, video, more images,
+4. Create a new controller for the success story
+5. Create a new view for the success story
+6. Add a link to the success story page in the navigation menu
+7. Add a link to the success story page in the footer

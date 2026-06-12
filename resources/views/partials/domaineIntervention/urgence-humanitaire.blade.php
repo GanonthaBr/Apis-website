@@ -23,18 +23,16 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="single-content">
-                    <h1 class="domaine-title">{{__('Santé et Nutrition')}}</h1>
-                    <img src="{{asset('img/sante-nutrition.jpeg')}}" />
+                    <h1 class="domaine-title">{{__('Urgence humanitaire')}}</h1>
+                    <img src="{{asset('img/sante-nutrition.jpeg')}}" alt="Urgence humanitaire"/>
                     <p>
-                        {{__('Santé et Nutrition description')}}
+                        {{__('Urgence Humanitaire description')}}
                     </p>
-                    <h3>{{__('Chef de département de Santé et Nutrition')}}</h3>
+                    
                     <p>
-                        {{__('Nutrition description one')}}
+                        {{__('Urgence Humanitaire description two')}}
                     </p>
-                    <p>
-                        {{__('Nutrition description two')}}
-                    </p>
+                    
                 </div>
                 <h6>{{__('Dautres liens')}}</h6>
                 @include('partials.other-links')

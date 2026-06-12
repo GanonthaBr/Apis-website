@@ -3,7 +3,6 @@
 @section('admin-content')
 <main class="main" id="main">
     <h1>{{__('Les Statistiques')}} </h1>
-    {{-- nombre de beneficiaires aides, nombre de departement intervenus, nombre d'annees d'existence, nombre de communes aides --}}
     @foreach ($stats as $stats)
         <div class="row">
         <div class="col-md-3">

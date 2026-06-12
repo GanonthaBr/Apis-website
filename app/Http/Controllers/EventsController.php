@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Events;
 use Illuminate\Http\Request;
 use Dotenv\Exception\ValidationException;
-use HTMLPurifier;
-use HTMLPurifier_Config;
 use Illuminate\Console\Scheduling\Event;
 
 class EventsController extends Controller
@@ -44,18 +42,13 @@ class EventsController extends Controller
                 'location' => 'required',
                 'image' => 'required',
             ]);
-            //sanitize user input
-            $config = HTMLPurifier_Config::createDefault();
-            $purifier = new HTMLPurifier($config);
-            $dirty_html = $request->description;
-            $clean_html = $purifier->purify($dirty_html);
             //image path
             $imagePath = $request->file('image') ? $request->file('image')->store('event_images', 'public') : null;
 
             //create element
             Events::create([
                 'title' => $request->title,
-                'description' => $clean_html,
+                'description' => $request->description,
                 'date' => $request->date,
                 'start_time' => $request->start_time,
                 'end_time' => $request->end_time,
@@ -63,6 +56,8 @@ class EventsController extends Controller
                 'image' => $imagePath,
             ]);
             return redirect()->route('admin.allEvents')->with('event-created', 'Votre événement été créé avec succès!');
+        } catch (\Throwable $e) {
+            return redirect()->route('home')->with('error', 'une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
@@ -78,9 +73,13 @@ class EventsController extends Controller
 
     public function destroy($id)
     {
-        $event = Events::findOrFail($id);
-        $event->delete();
-        return redirect()->route('admin.allEvents')->with('event-deleted', 'Votre événement été retiré avec succès!');
+        try {
+            $event = Events::findOrFail($id);
+            $event->delete();
+            return redirect()->route('admin.allEvents')->with('event-deleted', 'Votre événement été retiré avec succès!');
+        } catch (\Throwable $e) {
+            return redirect()->route('admin')->with('error', 'une erreur est survenue');
+        }
     }
     //update event
     public function update(Request $request, $id)
@@ -93,17 +92,11 @@ class EventsController extends Controller
                 'location' => 'required',
                 'image' => 'nullable|image|max:5120',
             ]);
-            //sanitize user input
-            $config = HTMLPurifier_Config::createDefault();
-            $purifier = new HTMLPurifier($config);
-            $dirty_html = $request->description;
-            $clean_html = $purifier->purify($dirty_html);
-
-
-
+            //image path
+            // $imagePath = $request->file('image') ? $request->file('image')->store('event_images', 'public') : null;
             $event = Events::findOrFail($id);
             $event->title = $request->title;
-            $event->description = $clean_html;
+            $event->description = $request->description;
             $event->date = $request->date;
             $event->start_time = $request->start_time;
             $event->end_time = $request->end_time;
@@ -116,6 +109,8 @@ class EventsController extends Controller
 
             $event->save();
             return redirect()->route('admin.allEvents')->with('event-updated', 'Votre  événement été mis à jour avec succès!');
+        } catch (\Throwable $e) {
+            return redirect()->route('home')->with('error', 'une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }

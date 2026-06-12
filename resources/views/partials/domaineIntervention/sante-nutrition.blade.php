@@ -24,7 +24,7 @@
             <div class="col-lg-8">
                 <div class="single-content">
                     <h1 class="domaine-title">{{__('Santé et Nutrition')}}</h1>
-                    <img src="{{asset('img/sante-nutrition.jpeg')}}" />
+                    <img src="{{asset('img/sante-nutrition.jpeg')}}" alt="Sante et Nutrition" />
                     <p>
                         {{__('Santé et Nutrition description')}}
                     </p>

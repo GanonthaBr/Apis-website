@@ -1,6 +1,14 @@
 @extends('layouts.layout')
 @section('content')
 @include('includes.topbar')
+@if(Session::has('error'))
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="z-index: 100000" >
+    {{Session::get('error')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
 @include('includes.navbar')
 
 
@@ -33,9 +41,8 @@
                     <p>
                         {!!$blog->content!!}
                     </p>
-                    
+
                     <h3>{{__('Plus dimages')}}</h3>
-                    {{-- display more images horizontally, we can click an image to expand and loop through all , original display not too large --}}
                     <div class="row">
                         @if($blog->images->count()==0)
                         <div class="m-4">
@@ -51,7 +58,7 @@
                         @endforeach
                     </div>
                     <p class="font-weight-100 text-right">
-                        {{__('Publié le')}} <b>  {{substr($blog->created_at, 0,10)}} </b>, {{__('par')}} {{$blog->author}}
+                        {{__('Publié le')}} <b> {{substr($blog->created_at, 0,10)}} </b>, {{__('par')}} {{$blog->author}}
                     </p>
                 </div>
 

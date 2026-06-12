@@ -11,7 +11,7 @@
                 <input type="text" class="form-control" id="title" name="title" required>
             </div>
             <div class="mb-3">
-                <label for="author" class="form-label" {{__('Nom de lauteur')}}>: </label>
+                <label for="author" class="form-label"> {{__('Nom de lauteur')}}: </label>
                 <input type="text" class="form-control" id="author" name="author" required>
             </div>
             <div class="mb-3">

@@ -5,16 +5,17 @@ namespace App\Http\Controllers;
 // use HTMLPurifier;
 use HTMLPurifier;
 use App\Models\Blog;
+use App\Models\NewsLetter;
 use HTMLPurifier_Config;
+use App\Events\BlogPosted;
 use App\Models\BlogImages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Dotenv\Exception\ValidationException;
 use Illuminate\Support\Facades\Storage;
+use Dotenv\Exception\ValidationException;
 
 class BlogController extends Controller
 {
-
     public function index()
     {
         $blogs = Blog::all();
@@ -80,6 +81,8 @@ class BlogController extends Controller
             //register Listener
             // event(new BlogPosted($blog));
             return redirect()->route('admin.allblogs')->with('blog-created', 'Votre blog post été ajouté avec succès!');
+        } catch (\Throwable $e) {
+            return redirect()->route('admin.allblogs')->with('error', 'Une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }
@@ -144,6 +147,8 @@ class BlogController extends Controller
             //save blog after updating
             $blog->save();
             return redirect()->route('admin.allblogs')->with('blog-updated', 'Votre article post été modifié avec succès!');
+        } catch (\Throwable $e) {
+            return redirect()->route('admin.allblogs')->with('error', 'Une erreur est survenue');
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->getMessage()]);
         }

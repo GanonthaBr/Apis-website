@@ -24,7 +24,7 @@
             <div class="col-lg-8">
                 <div class="single-content">
                     <h1 class="domaine-title">{{__('Education et Développement Integré')}}</h1>
-                    <img src="{{asset('img/sante-nutrition.jpeg')}}" />
+                    <img src="{{asset('img/sante-nutrition.jpeg')}}" alt="Education et Développement Integré" />
                     <h3>{{__('Education')}}</h3>
                     <p>
                         {{__('education description')}}

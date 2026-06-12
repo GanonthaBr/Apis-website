@@ -13,7 +13,7 @@
    <p> <b>{{__('Mail ou Numéro de Téléphone:')}} </b>  {{ $email }}</p>
    <div style="border: 1px solid #11579c; padding: 10px;" >
        <p><b>{{__('Message:')}}</b></p>
-       <p>{{ $user_message }}</p>
+       <p>{!! $user_message !!}</p>
    </div>
  
   

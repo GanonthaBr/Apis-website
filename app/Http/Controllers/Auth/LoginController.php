@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Throwable;
 
 class LoginController extends Controller
 {
@@ -28,13 +29,17 @@ class LoginController extends Controller
      */
     public function logout(Request $request)
     {
-        $this->guard()->logout();
+        try {
+            $this->guard()->logout();
 
-        $request->session()->invalidate();
+            $request->session()->invalidate();
 
-        $request->session()->regenerateToken();
+            $request->session()->regenerateToken();
 
-        return $this->loggedOut($request) ?: redirect()->route('login');
+            return $this->loggedOut($request) ?: redirect()->route('login');
+        } catch (Throwable) {
+            return redirect()->route('login');
+        }
     }
     /**
      * Where to redirect users after login.
@@ -55,9 +60,13 @@ class LoginController extends Controller
     // override the authenticated method
     protected function authenticated(Request $request, $user)
     {
-        if ($user->isAdmin()) { //check if user is admin
-            return redirect()->route('admin');
+        try {
+            if ($user->isAdmin()) { //check if user is admin
+                return redirect()->route('admin');
+            }
+            return redirect()->back();
+        } catch (Throwable) {
+            return redirect()->back();
         }
-        return redirect()->back();
     }
 }
